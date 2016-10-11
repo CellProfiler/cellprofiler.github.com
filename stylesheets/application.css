@@ -1,0 +1,16 @@
+.main {
+  padding: 40px;
+}
+
+.sidebar {
+  background-color: #F6F7FA;
+  border-right: 1px solid #EEE;
+  bottom: 0;
+  display: block;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
