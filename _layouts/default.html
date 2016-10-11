@@ -1,88 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" http-equiv="X-UA-Compatible">
-    <meta charset="UTF-8">
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>CellProfiler | Free open-source software for measuring and analyzing cell images</title>
-    <meta content="CellProfiler" property="og:title">
-    <meta content="http://cellprofiler.org" property="og:url">
-    <meta content="http://cellprofiler.org/images/gallery.png" property="og:image">
-    <meta content="CellProfiler is a free open-source software for measuring and analyzing cell images" property="og:description">
-    <link href="/css/app.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>CellProfiler</title>
+
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="/stylesheets/application.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class="top bar">
-    <a href="https://github.com/you"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="/">
+                <img class="img-responsive" src="/images/CPLOGO.png">
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h1>CellProfiler</h1>
+
+              <ul>
+                <li>
+                  <a href="/releases/">Download</a>
+                </li>
+
+                <li>
+                  <a href="#">Help</a>
+                </li>
+
+                <li>
+                  <a href="/getting_started/">Getting started</a>
+                </li>
+
+                <li>
+                  <a href="/examples">Examples</a>
+                </li>
+
+                <li>
+                  <a href="/tutorials">Tutorials</a>
+                </li>
+
+                <li>
+                  <a href="http://forum.cellprofiler.org/">Forum</a>
+                </li>
+
+                <li>
+                  <a href="/supportplan/">Custom support</a>
+                </li>
+
+                <li>
+                  <a href="/outreach/">Educational modules</a>
+                </li>
+
+                <li>
+                  <a href="/about/">About</a>
+                </li>
+              </ul>
+
+              <h1>CellProfiler Analyst</h1>
+
+              <ul>
+                <li>
+                  <a href="/cp-analyst/#introduction">Introduction</a>
+                </li>
+
+                <li>
+                  <a href="/releases/">Download</a>
+                </li>
+
+                <li>
+                  <a href="/tutorials">Tutorials / Example data</a>
+                </li>
+
+                <li>
+                  <a href="/cpa">Documentation</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <a href="http://www.broadinstitute.org">
+                <img class="img-responsive" src="/images/broad_logo.png">
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <a href="http://www.facebook.com/cellprofiler">
+                <img class="img-responsive" src="/images/facebook.svg">
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="http://twitter.com/CellProfiler">
+                <img class="img-responsive" src="/images/twitter.svg">
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="http://www.linkedin.com/groups/4837622">
+                <img class="img-responsive" src="/images/linkedin.png">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          {{ content }}
+        </div>
+      </div>
     </div>
-    <div class="documentation-container">
-    <div class="row">
-    <div class="column-3 hidden-mobile overview-container">
-    <script src="http://code.jquery.com/jquery-latest.min.js" type= "text/javascript">
+
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.1.1.min.js">
+
     </script>
-    <section></section><a href="/"><img src="/images/CPLOGO.png" style="margin-left:20px; margin-top:20px" width="175px"></a>
-    <section class="top">
-    <a href="/releases/">Download</a>
-    </section>
-    <section class="top">
-    <a href="#">Help</a>
-    <ul class="sub" style="list-style-type:none">
-    <li>
-    <a href="/getting_started/">Getting started</a>
-    </li>
-    <li>
-    <a href="/examples">Examples</a>
-    </li>
-    <li>
-    <a href="/tutorials">Tutorials</a>
-    </li>
-    <li>
-    <a href="http://forum.cellprofiler.org/">Forum</a>
-    </li>
-    <li>
-    <a href="/supportplan/">Custom support</a>
-    </li>
-    <li>
-    <a href="/outreach/">Educational modules</a>
-    </li>
-    </ul>
-    </section>
-    <section>
-    <a href="/about/">About</a>
-    </section>
-    <section class="top"><a href="#">CellProfiler Analyst</a>
-      <ul style="list-style-type:none" class="sub">
-        <li><a href="/cp-analyst/#introduction">Introduction</a></li>
-        <li><a href="/releases/">Download</a></li>
-        <li><a href="/tutorials">Tutorials / Example data</a></li>
-        <li><a href="/cpa">Documentation</a></li>
-      </ul>
-    </section>
-    <section>
-    <a href="http://www.broadinstitute.org"><img src= "/images/broad_logo.png" style= "vertical-align: middle;height:50px">
-    <h3 class="hidden-mobile"></h3></a><a href= "http://www.facebook.com/cellprofiler">
-      <img src= "/images/facebook.svg" style= "margin-left:10px; margin-top:21px" width= "35px">
-    </a>
-    <a href= "http://twitter.com/CellProfiler">
-    <img src="/images/twitter.svg" style="margin-left:10px; margin-top:21px" width= "35px"></a>
-    <a href= "http://www.linkedin.com/groups/4837622">
-    <img src= "/images/linkedin.png" style= "margin-left:10px; margin-top:21px" width="35px">
-    </a>
-    <h4 class="hidden-mobile"></h4>
-    </section>
-    </div>
 
-    <div class="content">
-      {{ content }}
-    </div>
+    <script>
+      window.jQuery || document.write('<script src="javascripts/libraries/jquery-3.1.1.min.js"><\/script>')
+    </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    <script crossorigin="anonymous" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 
     </script>
 
-    <script src="/js/app.js">
+    <script src="/javascripts/application.js">
 
     </script>
   </body>
