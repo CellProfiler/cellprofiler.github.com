@@ -6,393 +6,657 @@ redirect_from:
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE">
-    <meta charset="UTF-8">
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>CellProfiler | Free open-source software for measuring and analyzing cell images</title>
-    <meta property="og:title" content="CellProfiler">
-    <meta property="og:url" content="http://cellprofiler.org">
-    <meta property="og:image" content="http://cellprofiler.org/images/gallery.png">
-    <meta property="og:description" content="CellProfiler is a free open-source software for measuring and analyzing cell images">
-    <link rel="stylesheet" href="/css/app.css">
-    <!--Google Analytics-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	<meta content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" http-equiv="X-UA-Compatible">
+	<meta charset="UTF-8">
+	<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<title>CellProfiler | Free open-source software for measuring and analyzing cell images</title>
+	<meta content="CellProfiler" property="og:title">
+	<meta content="http://cellprofiler.org" property="og:url">
+	<meta content="http://cellprofiler.org/images/gallery.png" property="og:image">
+	<meta content="CellProfiler is a free open-source software for measuring and analyzing cell images" property="og:description">
+	<link href="/css/app.css" rel="stylesheet"><!--Google Analytics-->
 
-      ga('create', 'UA-83178912-1', 'auto');
-      ga('send', 'pageview');
+	<script>
+	     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    </script>
-    <!-- Piwik -->
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//cellprofiler.piwikpro.com/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 1]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <noscript><p><img src="//cellprofiler.piwikpro.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
+	     ga('create', 'UA-83178912-1', 'auto');
+	     ga('send', 'pageview');
+
+	</script><!-- Piwik -->
+
+	<script type="text/javascript">
+	     var _paq = _paq || [];
+	     _paq.push(['trackPageView']);
+	     _paq.push(['enableLinkTracking']);
+	     (function() {
+	       var u="//cellprofiler.piwikpro.com/";
+	       _paq.push(['setTrackerUrl', u+'piwik.php']);
+	       _paq.push(['setSiteId', 1]);
+	       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	       g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	     })();
+	</script> <noscript>
+	<p><img alt="" src="//cellprofiler.piwikpro.com/piwik.php?idsite=1" style="border:0;"></p></noscript><!-- End Piwik Code -->
 </head>
-
-</html>
-
 <body>
-  <!--Google Analytics - PHP tracking-->
-	<?php include_once("analyticstracking.php") ?>
-	<!--End of Google Analytics - PHP tracking-->
-    <div class="top bar"></div>
-    <div class="documentation-container">
-        <div class="row">
-            <div class="column-3 hidden-mobile overview-container">
-                <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-                <section></section>
-                <a href="/"><img src="/images/CPLOGO.png" width="175px" style="margin-left:20px; margin-top:20px"></a>
-                <section class="top"><a href="/releases/">Download</a></section>
-                <section class="top"><a href="/help">Help</a>
-                    <ul style="list-style-type:none" class="sub">
-                        <li><a href="/getting_started/">Getting started</a></li>
-                        <li><a href="/examples">Examples</a></li>
-                        <li><a href="/tutorials">Tutorials</a></li>
-                        <li><a href="http://forum.cellprofiler.org/">Forum</a></li>
-                        <li><a href="/supportplan/">Custom support</a></li>
-                        <li><a href="/outreach/">Educational modules</a></li>
-                    </ul>
-                </section>
-                <section><a href="/about/">About</a></section>
-                <section class="top"><a href="/cp-analyst/">CellProfiler Analyst</a></section>
-                <section>
-                    <a href="http://www.broadinstitute.org"><img src="/images/broad_logo.png" style="vertical-align: middle;height:50px">
-                        <h3 class="hidden-mobile"><a href="http://www.facebook.com/cellprofiler"><img src="/images/facebook.svg" width="35px" style="margin-left:10px; margin-top:21px"></a><a href="http://twitter.com/CellProfiler"><img src="/images/twitter.svg" width="35px" style="margin-left:10px; margin-top:21px"></a><a href="http://www.linkedin.com/groups/4837622"><img src="/images/linkedin.png" width="35px" style="margin-left:10px; margin-top:21px"></a><h4 class="hidden-mobile"></h4></h3></a>
-                </section>
-            </div>
-            <div class="column-3 hidden-mobile empty-container"></div>
-      			<div class="column-7 mobile-column-3 details-container">
-      				<section>
-      					<div class="row">
-      						<div class="column-12">
-      							<li class="navsearch">
-      								<form action="http://google.com/search" method="get" onsubmit="location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
-      									<input maxlength="255" name="query" size="20" type="text" value="">
-      									<input type="submit" value="search">
-      								</form>
-      							</li>
-      							<hr>
-            <div class="column-7 mobile-column-3 details-container">
-                <h1 align="center">Previously Released Versions of CellProfiler</h1>
-                <center>
-                    <h2>CellProfiler 2.1</h2>
-                    <table border="1" style="margin-top:1em: margin-bottom:2em" width="55%">
-                        <tr>
-                            <td colspan="1">Release Version</td>
-                            <td colspan="3">
-                                <center>Platform</center>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="2.1.1">2.1.1</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler-release_2.1.1-6c2d896.pkg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win32_r20140723174513.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win64_r20140723174500.exe">Windows (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="2.1.0">2.1.0</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.0/CellProfiler-2.1.0.pkg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.0/CellProfiler_2.1.0_win32_r20140124153111.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.0/CellProfiler_2.1.0_win64_r20140124151645.exe">Windows (64-bit)</a></td>
-                        </tr>
-                    </table>
-                    <h2>CellProfiler 2.0</h2>
-                    <table border="1" style="margin-top:1em; margin-bottom:2em" width="55%">
-                        <tr>
-                            <td colspan="1">Release Version</td>
-                            <td colspan="3">
-                                <center>Platform</center>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="v11710">2.0.11710</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11710/CellProfiler_2.0_r11710.dmg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11710/CellProfiler_2.0_win32_r11710.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11710/CellProfiler_2.0_win64_r11710.exe">Windows (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="v10997">2.0.10997</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10997/CellProfiler_2.0_r10997.dmg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10997/CellProfiler_2.0_win32_r10997.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10997/CellProfiler_2.0_win64_r10997.exe">Windows (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="v10415">2.0.10415</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10415/CellProfiler_2.0_r10415.dmg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10415/CellProfiler_2.0_win32_r10415.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10415/CellProfiler_2.0_win64_r10415.exe">Windows (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="v10211">2.0.10211</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10211/CellProfiler_2.0_r10211.dmg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10211/CellProfiler_2.0_win32_r10211.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10211/CellProfiler_2.0_win64_r10211.exe">Windows (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="v9978">2.0.9978 beta</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9978/CellProfiler_2.0_r9978_beta.dmg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9978/CellProfiler_2.0_win32_r9978_beta.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9978/CellProfiler_2.0_win64_r9978_beta.exe">Windows (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td colspan="1"><a name="v9777">2.0.9777 beta</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9777/CellProfiler_2.0_r9777_beta.dmg">Mac</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9777/CellProfiler_2.0_win32_r9777_beta.exe">Windows (32-bit)</a></td>
-                            <td align="center"><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9777/CellProfiler_2.0_win64_r9777_beta.exe">Windows (64-bit)</a></td>
-                        </tr>
-                    </table>
-                    <h2>CellProfiler 1.0</h2>
-                    <table border="1" cellpadding="2px" width="95%">
-                        <tr>
-                            <td height="31">Release Version</td>
-                            <td colspan="6">
-                                <center>Platform</center>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1.0.9717</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Standalone_Linux32_9717.tar.gz">Linux 32-bit</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux32_MCR79.bin">MCRInstaller
-for GNU Linux 32-bit</a>)
-                                <br>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Standalone_Linux64_9717.tar.gz">Linux 64-bit</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux64_MCR711.bin">MCRInstaller
-for GNU Linux 64-bit</a>)</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/5811/CompiledCellProfilerPPCBugfixFINAL.zip">PowerPC Mac (<strong>Note: r5811</strong>)</a>
-                                <br> (MCR 7.6 is bundled with CP)</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_MacI32_9717.tar.gz" onclick="submitform2(this);">Intel Macintosh OS X 10.4+
-32/64-bit</a>
-                                <br> (MCRInstaller<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_MacI32_MCR711.dmg">Intel32.dmg</a>)</td>
-                            <td>CP Cluster: CellProfiler for cluster computing:
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_CPCluster_Linux64_9717.tar.gz">Linux 64-bit</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux64_MCR711.bin">MCRInstaller
-for GNU Linux 64-bit</a>)
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CP_DevelopersVersion9717.zip" onclick="submitform2(this);">Matlab Source</a> (Requires MATLAB R2009+)
-                            </td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_XP32_9717.zip" onclick="submitform2(this);">Windows XP 32-bit</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_XP32.exe">MCRInstaller
-for XP32</a>)
-                                <br>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Vista32_9717.zip">Windows Vista (32-bit)</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Vista32.exe">MCRInstaller
-for Vista32</a>)</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_XP64_9717.zip" onclick="submitform2(this);">Windows XP 64-bit</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_XP64.exe">MCRInstaller
-for XP64</a>)
-                                <br>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Vista64_9717.zip" onclick="submitform2(this);">Windows Vista 64-bit</a>
-                                <br> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Vista64.exe">MCRInstaller
-for Vista64</a>)</td>
-                        </tr>
-                        <tr>
-                            <td>1.0.5811Bugfix
-                                <br> (Branch 6027)</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfiler_Linux_5811Bugfix.tar.gz">Linux64</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerPPC_5811Bugfix.zip">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerTiger5811Bugfix.zip">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CP_DevelopersVersion5811Bugfix.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP325811Bugfix.zip">WindowsXP (32-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista325811Bugfix.zip">Windows Vista (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP645811Bugfix.zip">WindowsXP (64-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista645811Bugfix.zip">Windows Vista (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.5811</td>
-                            <td>Linux64</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerMacPPC5811.zip">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerMacTiger5811.zip">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CP_DevelopersVersion5811.zip">Matlab
-(Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP325811.zip">WindowsXP (32-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista325811.zip">Windows Vista (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP645811.zip">WindowsXP (64-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista645811.zip">Windows Vista (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.5122</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_LINUX.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_MAC.dmg">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_MACI.dmg">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_MATLAB.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_XP32.zip">WindowsXP (32-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_Vista32.zip">Windows Vista (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_XP64.zip">WindowsXP (64-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_Vista64.zip">Windows Vista (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4942</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Linux_1.0.4942.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MAC_1.0.4942.dmg">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MacI_1.0.4942.dmg">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MATLAB_1.0.4942.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP32_CP1.0.4942.zip">WindowsXP (32-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista32_CP1.0.4942.zip">Windows Vista (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP64_CP1.0.4942.zip">WindowsXP (64-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista64_CP1.0.4942.zip">Windows Vista (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4884</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Linux_1.0.4884.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Mac_1.0.4884.dmg">MacPPC</a></td>
-                            <td>
-                                <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MacI_1.0.4884.dmg"></a><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MACI_CellProfiler_v1.0.4884.zip">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_DevelopersVersion1.0.4884.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP32_1.0.4884.zip">WindowsXP (32-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista32_1.0.4884.zip">Windows Vista (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP64_1.0.4884.zip">WindowsXP (64-bit)</a>
-                                <br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista64_1.0.4884.zip">Windows Vista (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4828</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Linux_CellProfilerv1.0.4828.zip">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4828.dmg">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MacI_CellProfilerv1.0.4828.dmg">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv.1.0.4828.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP32_CellProfilerv1.0.4828.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP64_CellProfilerv1.0.4828.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4818</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Linux_CellProfilerv1.0.4818.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Mac_CellProfilerv1.0.4818.dmg">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MacI_CellProfilerv1.0.4818.dmg">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Matlab_CellProfilerv.1.0.4818.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP32_CellProfilerv.1.0.4818.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP64_CellProfiler_v1.0.4818.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4684</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4628.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfiler_v1.0.4684.zip">MacPPC</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MACI_CellProfiler_v1.0.4684.zip">MacIntel</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4684.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfiler_v1.0.4684.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfiler_v1.0.4684.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4666</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4666.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4666.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4666.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv%201.0.4666.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4666.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4628</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4628.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4628.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4628.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4628.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4628.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4553</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4553.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4553.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4553.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4553.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4553.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4532</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4532.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4532.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4532.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4532.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4532.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4303</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4303.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4303.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4303.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4303.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4303.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.4299</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4299.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4299.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4299.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4299.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4299.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.3755</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.3755.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3755.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3755.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.3755.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.3755.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.3544</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.3544.tar.gz">Linux</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3544.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3544.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3544.32bit.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3544.64bit.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.3443</td>
-                            <td>Linux</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3443.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3443.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3443.32bit.zip">WindowsXP (32-bit)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3443.64bit.zip">WindowsXP (64-bit)</a></td>
-                        </tr>
-                        <tr>
-                            <td>1.0.3215</td>
-                            <td>Linux</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3215.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3215.zip">Matlab (Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3215.zip">WindowsXP
-(32-bit)</a></td>
-                            <td>WindowsXP (64-bit)</td>
-                        </tr>
-                        <tr>
-                            <td>1.0</td>
-                            <td>Linux</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.zip">MacPPC</a></td>
-                            <td>MacI</td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.zip">Matlab
-(Developer)</a></td>
-                            <td><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.zip">WindowsXP
-(32-bit)</a></td>
-                            <td>WindowsXP (64-bit)</td>
-                        </tr>
-                    </table>
-                </center>
-            </div>
-        </div>
-    </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/js/app.js"></script>
+	<!--Google Analytics - PHP tracking-->
+	<?php include_once("analyticstracking.php") ?><!--End of Google Analytics - PHP tracking-->
+	<div class="top bar"></div>
+	<div class="documentation-container">
+		<div class="row">
+			<div class="column-3 hidden-mobile overview-container">
+				<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">
+				</script>
+				<section></section><a href="/"><img src="/images/CPLOGO.png" style="margin-left:20px; margin-top:20px" width="175px"></a>
+				<section class="top">
+					<a href="/releases/">Download</a>
+				</section>
+				<section class="top">
+					<a href="/help">Help</a>
+					<ul class="sub" style="list-style-type:none">
+						<li>
+							<a href="/getting_started/">Getting started</a>
+						</li>
+						<li>
+							<a href="/examples">Examples</a>
+						</li>
+						<li>
+							<a href="/tutorials">Tutorials</a>
+						</li>
+						<li>
+							<a href="http://forum.cellprofiler.org/">Forum</a>
+						</li>
+						<li>
+							<a href="/supportplan/">Custom support</a>
+						</li>
+						<li>
+							<a href="/outreach/">Educational modules</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<a href="/about/">About</a>
+				</section>
+				<section class="top">
+					<a href="/cp-analyst/">CellProfiler Analyst</a>
+				</section>
+				<section>
+					<a href="http://www.broadinstitute.org"><img src="/images/broad_logo.png" style="vertical-align: middle;height:50px">
+					<h3 class="hidden-mobile"></h3></a><a href="http://www.facebook.com/cellprofiler"><img src="/images/facebook.svg" style="margin-left:10px; margin-top:21px" width="35px"></a><a href="http://twitter.com/CellProfiler"><img src="/images/twitter.svg" style="margin-left:10px; margin-top:21px" width="35px"></a><a href="http://www.linkedin.com/groups/4837622"><img src="/images/linkedin.png" style="margin-left:10px; margin-top:21px" width="35px"></a>
+					<h4 class="hidden-mobile"></h4>
+				</section>
+			</div>
+			<div class="column-3 hidden-mobile empty-container"></div>
+			<div class="column-7 mobile-column-3 details-container">
+				<h1 align="center">Previously Released Versions of CellProfiler</h1>
+				<center>
+					<h2>CellProfiler 2.1</h2>
+					<table border="1" style="margin-top:1em: margin-bottom:2em" width="55%">
+						<tr>
+							<td colspan="1">Release Version</td>
+							<td colspan="3">
+								<center>
+									Platform
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="2.1.1" name="2.1.1">2.1.1</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler-release_2.1.1-6c2d896.pkg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win32_r20140723174513.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win64_r20140723174500.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="2.1.0" name="2.1.0">2.1.0</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.0/CellProfiler-2.1.0.pkg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.0/CellProfiler_2.1.0_win32_r20140124153111.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/releases/2.1.0/CellProfiler_2.1.0_win64_r20140124151645.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+					</table>
+					<h2>CellProfiler 2.0</h2>
+					<table border="1" style="margin-top:1em; margin-bottom:2em" width="55%">
+						<tr>
+							<td colspan="1">Release Version</td>
+							<td colspan="3">
+								<center>
+									Platform
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="v11710" name="v11710">2.0.11710</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11710/CellProfiler_2.0_r11710.dmg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11710/CellProfiler_2.0_win32_r11710.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11710/CellProfiler_2.0_win64_r11710.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="v10997" name="v10997">2.0.10997</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10997/CellProfiler_2.0_r10997.dmg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10997/CellProfiler_2.0_win32_r10997.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10997/CellProfiler_2.0_win64_r10997.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="v10415" name="v10415">2.0.10415</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10415/CellProfiler_2.0_r10415.dmg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10415/CellProfiler_2.0_win32_r10415.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10415/CellProfiler_2.0_win64_r10415.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="v10211" name="v10211">2.0.10211</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10211/CellProfiler_2.0_r10211.dmg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10211/CellProfiler_2.0_win32_r10211.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10211/CellProfiler_2.0_win64_r10211.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="v9978" name="v9978">2.0.9978 beta</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9978/CellProfiler_2.0_r9978_beta.dmg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9978/CellProfiler_2.0_win32_r9978_beta.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9978/CellProfiler_2.0_win64_r9978_beta.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="1">
+								<a id="v9777" name="v9777">2.0.9777 beta</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9777/CellProfiler_2.0_r9777_beta.dmg">Mac</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9777/CellProfiler_2.0_win32_r9777_beta.exe">Windows (32-bit)</a>
+							</td>
+							<td align="center">
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9777/CellProfiler_2.0_win64_r9777_beta.exe">Windows (64-bit)</a>
+							</td>
+						</tr>
+					</table>
+					<h2>CellProfiler 1.0</h2>
+					<table border="1" cellpadding="2px" width="95%">
+						<tr>
+							<td height="31">Release Version</td>
+							<td colspan="6">
+								<center>
+									Platform
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.9717</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Standalone_Linux32_9717.tar.gz">Linux 32-bit</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux32_MCR79.bin">MCRInstaller for GNU Linux 32-bit</a>)<br>
+								<br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Standalone_Linux64_9717.tar.gz">Linux 64-bit</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux64_MCR711.bin">MCRInstaller for GNU Linux 64-bit</a>)
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/5811/CompiledCellProfilerPPCBugfixFINAL.zip">PowerPC Mac (<strong>Note: r5811</strong>)</a><br>
+								(MCR 7.6 is bundled with CP)
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_MacI32_9717.tar.gz" onclick="submitform2(this);">Intel Macintosh OS X 10.4+ 32/64-bit</a><br>
+								(MCRInstaller<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_MacI32_MCR711.dmg">Intel32.dmg</a>)
+							</td>
+							<td>
+								CP Cluster: CellProfiler for cluster computing:<br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_CPCluster_Linux64_9717.tar.gz">Linux 64-bit</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux64_MCR711.bin">MCRInstaller for GNU Linux 64-bit</a>)<br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CP_DevelopersVersion9717.zip" onclick="submitform2(this);">Matlab Source</a> (Requires MATLAB R2009+)
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_XP32_9717.zip" onclick="submitform2(this);">Windows XP 32-bit</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_XP32.exe">MCRInstaller for XP32</a>)<br>
+								<br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Vista32_9717.zip">Windows Vista (32-bit)</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Vista32.exe">MCRInstaller for Vista32</a>)
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_XP64_9717.zip" onclick="submitform2(this);">Windows XP 64-bit</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_XP64.exe">MCRInstaller for XP64</a>)<br>
+								<br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Vista64_9717.zip" onclick="submitform2(this);">Windows Vista 64-bit</a><br>
+								(<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Vista64.exe">MCRInstaller for Vista64</a>)
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.5811Bugfix<br>
+							(Branch 6027)</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfiler_Linux_5811Bugfix.tar.gz">Linux64</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerPPC_5811Bugfix.zip">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerTiger5811Bugfix.zip">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CP_DevelopersVersion5811Bugfix.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP325811Bugfix.zip">WindowsXP (32-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista325811Bugfix.zip">Windows Vista (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP645811Bugfix.zip">WindowsXP (64-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista645811Bugfix.zip">Windows Vista (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.5811</td>
+							<td>Linux64</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerMacPPC5811.zip">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerMacTiger5811.zip">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CP_DevelopersVersion5811.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP325811.zip">WindowsXP (32-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista325811.zip">Windows Vista (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP645811.zip">WindowsXP (64-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista645811.zip">Windows Vista (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.5122</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_LINUX.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_MAC.dmg">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_MACI.dmg">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_MATLAB.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_XP32.zip">WindowsXP (32-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_Vista32.zip">Windows Vista (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_XP64.zip">WindowsXP (64-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_1.0.5122_Vista64.zip">Windows Vista (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4942</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Linux_1.0.4942.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MAC_1.0.4942.dmg">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MacI_1.0.4942.dmg">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MATLAB_1.0.4942.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP32_CP1.0.4942.zip">WindowsXP (32-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista32_CP1.0.4942.zip">Windows Vista (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP64_CP1.0.4942.zip">WindowsXP (64-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista64_CP1.0.4942.zip">Windows Vista (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4884</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Linux_1.0.4884.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Mac_1.0.4884.dmg">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_MacI_1.0.4884.dmg"></a><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MACI_CellProfiler_v1.0.4884.zip">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_DevelopersVersion1.0.4884.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP32_1.0.4884.zip">WindowsXP (32-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista32_1.0.4884.zip">Windows Vista (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_XP64_1.0.4884.zip">WindowsXP (64-bit)</a><br>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CellProfiler_Vista64_1.0.4884.zip">Windows Vista (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4828</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Linux_CellProfilerv1.0.4828.zip">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4828.dmg">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MacI_CellProfilerv1.0.4828.dmg">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv.1.0.4828.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP32_CellProfilerv1.0.4828.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP64_CellProfilerv1.0.4828.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4818</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Linux_CellProfilerv1.0.4818.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Mac_CellProfilerv1.0.4818.dmg">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MacI_CellProfilerv1.0.4818.dmg">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/Matlab_CellProfilerv.1.0.4818.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP32_CellProfilerv.1.0.4818.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/XP64_CellProfiler_v1.0.4818.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4684</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4628.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfiler_v1.0.4684.zip">MacPPC</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MACI_CellProfiler_v1.0.4684.zip">MacIntel</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4684.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfiler_v1.0.4684.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfiler_v1.0.4684.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4666</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4666.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4666.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4666.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv%201.0.4666.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4666.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4628</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4628.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4628.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4628.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4628.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4628.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4553</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4553.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4553.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4553.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4553.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4553.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4532</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4532.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4532.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4532.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4532.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4532.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4303</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4303.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4303.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4303.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4303.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4303.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.4299</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4299.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4299.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4299.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.4299.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4299.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.3755</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.3755.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3755.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3755.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv1.0.3755.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.3755.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.3544</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.3544.tar.gz">Linux</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3544.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3544.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3544.32bit.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3544.64bit.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.3443</td>
+							<td>Linux</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3443.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3443.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3443.32bit.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3443.64bit.zip">WindowsXP (64-bit)</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1.0.3215</td>
+							<td>Linux</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.3215.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.3215.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.3215.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>WindowsXP (64-bit)</td>
+						</tr>
+						<tr>
+							<td>1.0</td>
+							<td>Linux</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.zip">MacPPC</a>
+							</td>
+							<td>MacI</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.zip">Matlab (Developer)</a>
+							</td>
+							<td>
+								<a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC_CellProfilerv1.0.zip">WindowsXP (32-bit)</a>
+							</td>
+							<td>WindowsXP (64-bit)</td>
+						</tr>
+					</table>
+				</center>
+			</div>
+		</div>
+	</div>
 </body>
+</html>
