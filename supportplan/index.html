@@ -1,377 +1,523 @@
+---
+redirect_from:
+    - "/supportplan.html"
+    - "/supportplan.shtml"
+    - "/help/supportplan/"
+---
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE">
-	<meta charset="UTF-8">
-	<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-	<title>CellProfiler | Free open-source software for measuring and analyzing cell images</title>
-	<meta property="og:title" content="CellProfiler">
-	<meta property="og:url" content="http://cellprofiler.org">
-	<meta property="og:image" content="http://cellprofiler.org/images/gallery.png">
-	<meta property="og:description" content="CellProfiler is a free open-source software for measuring and analyzing cell images">
-	<link rel="stylesheet" href="/css/app.css">
-	<!--Google Analytics-->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name=
+    "viewport">
+    <meta content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" http-equiv=
+    "X-UA-Compatible">
+    <meta charset="UTF-8">
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>CellProfiler | Free open-source software for measuring and analyzing
+    cell images</title>
+    <meta content="CellProfiler" property="og:title">
+    <meta content="http://cellprofiler.org" property="og:url">
+    <meta content="http://cellprofiler.org/images/gallery.png" property=
+    "og:image">
+    <meta content=
+    "CellProfiler is a free open-source software for measuring and analyzing cell images"
+    property="og:description">
+    <link href="/css/app.css" rel="stylesheet"><!--Google Analytics-->
 
-		ga('create', 'UA-83178912-1', 'auto');
-		ga('send', 'pageview');
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	</script>
-	<!-- Piwik -->
-	<script type="text/javascript">
-	  var _paq = _paq || [];
-	  _paq.push(['trackPageView']);
-	  _paq.push(['enableLinkTracking']);
-	  (function() {
-	    var u="//cellprofiler.piwikpro.com/";
-	    _paq.push(['setTrackerUrl', u+'piwik.php']);
-	    _paq.push(['setSiteId', 1]);
-	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-	  })();
-	</script>
-	<noscript><p><img src="//cellprofiler.piwikpro.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-	<!-- End Piwik Code -->
+        ga('create', 'UA-83178912-1', 'auto');
+        ga('send', 'pageview');
+
+    </script><!-- Piwik -->
+
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//cellprofiler.piwikpro.com/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script><noscript>
+    <p><img alt="" src="//cellprofiler.piwikpro.com/piwik.php?idsite=1" style=
+    "border:0;"></p></noscript><!-- End Piwik Code -->
 </head>
-
-</html>
-
 <body>
-	<!--Google Analytics - PHP tracking-->
-	<?php include_once("analyticstracking.php") ?>
-	<!--End of Google Analytics - PHP tracking-->
-	<div class="top bar"></div>
-	<div class="documentation-container">
-		<div class="row">
-			<div class="column-3 hidden-mobile overview-container">
-				<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-				<section></section>
-				<a href="/"><img src="/images/CPLOGO.png" width="175px" style="margin-left:20px; margin-top:20px"></a>
-				<section class="top"><a href="/releases/">Download</a></section>
-				<section class="top"><a href="#">Help</a>
-					<ul style="list-style-type:none" class="sub">
-						<li><a href="/getting_started/">Getting started</a></li>
-						<li><a href="/examples/">Examples</a></li>
-						<li><a href="/tutorials/">Tutorials</a></li>
-						<li><a href="http://forum.cellprofiler.org/">Forum</a></li>
-						<li><a href="/supportplan/">Custom support</a></li>
-						<li><a href="/outreach/">Educational modules</a></li>
-					</ul>
-				</section>
-				<section><a href="/about/">About</a></section>
-				<section class="top"><a href="/cp-analyst/">CellProfiler Analyst</a></section>
-				<section>
-					<a href="http://www.broadinstitute.org"><img src="/images/broad_logo.png" style="vertical-align: middle;height:50px">
-						<h3 class="hidden-mobile"><a href="http://www.facebook.com/cellprofiler"><img src="/images/facebook.svg" width="35px" style="margin-left:10px; margin-top:21px"></a><a href="http://twitter.com/CellProfiler"><img src="/images/twitter.svg" width="35px" style="margin-left:10px; margin-top:21px"></a><a href="http://www.linkedin.com/groups/4837622"><img src="/images/linkedin.png" width="35px" style="margin-left:10px; margin-top:21px"></a><h4 class="hidden-mobile"></h4></h3></a>
-				</section>
-			</div>
-			<div class="column-3 hidden-mobile empty-container"></div>
-			<div class="column-7 mobile-column-3 details-container">
-				<section>
-					<div class="row">
-						<div class="column-10"></div>
-						<html>
+    <!--Google Analytics - PHP tracking-->
+    <?php include_once("analyticstracking.php") ?>
+    <!--End of Google Analytics - PHP tracking-->
+    <div class="top bar"></div>
+    <div class="documentation-container">
+        <div class="row">
+            <div class="column-3 hidden-mobile overview-container">
+                <script src="http://code.jquery.com/jquery-latest.min.js" type=
+                "text/javascript">
+                </script>
+                <section></section><a href="/"><img src="/images/CPLOGO.png"
+                style="margin-left:20px; margin-top:20px" width="175px"></a>
+                <section class="top">
+                    <a href="/releases/">Download</a>
+                </section>
+                <section class="top">
+                    <a href="/help">Help</a>
+                    <ul class="sub" style="list-style-type:none">
+                        <li>
+                            <a href="/getting_started/">Getting started</a>
+                        </li>
+                        <li>
+                            <a href="/examples">Examples</a>
+                        </li>
+                        <li>
+                            <a href="/tutorials">Tutorials</a>
+                        </li>
+                        <li>
+                            <a href="http://forum.cellprofiler.org/">Forum</a>
+                        </li>
+                        <li>
+                            <a href="/supportplan/">Custom support</a>
+                        </li>
+                        <li>
+                            <a href="/outreach/">Educational modules</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <a href="/about/">About</a>
+                </section>
+                <section class="top">
+                    <a href="/cp-analyst/">CellProfiler Analyst</a>
+                </section>
+                <section>
+                    <a href="http://www.broadinstitute.org"><img src=
+                    "/images/broad_logo.png" style=
+                    "vertical-align: middle;height:50px">
+                    <h3 class="hidden-mobile"></h3></a><a href=
+                    "http://www.facebook.com/cellprofiler"><img src=
+                    "/images/facebook.svg" style=
+                    "margin-left:10px; margin-top:21px" width=
+                    "35px"></a><a href=
+                    "http://twitter.com/CellProfiler"><img src=
+                    "/images/twitter.svg" style=
+                    "margin-left:10px; margin-top:21px" width=
+                    "35px"></a><a href=
+                    "http://www.linkedin.com/groups/4837622"><img src=
+                    "/images/linkedin.png" style=
+                    "margin-left:10px; margin-top:21px" width="35px"></a>
+                    <h4 class="hidden-mobile"></h4>
+                </section>
+            </div>
+            <div class="column-3 hidden-mobile empty-container"></div>
+            <div class="column-7 mobile-column-3 details-container">
+                <section>
+                    <div class="row">
+                        <div class="column-10"></div>
+                    </div>
+                    <ul>
+                        <li class="navsearch">
+                            <form action="http://google.com/search" method=
+                            "get" onsubmit=
+                            "location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                            <input maxlength="255" name="query" size="20"
+                                type="text" value=""> <input type="submit"
+                                value="search">
+                            </form>
+                        </li>
+                        <li style="list-style: none">
+                            <br>
+                            <hr style="clear:left">
+                            <div id="content">
+                                <style>
+                                div.wrapp {
+                                    width: 800px;
+                                }
 
-						</html>
-					</div>
+                                div.roww {
+                                    padding: 25px 0px;
+                                    display: inline-block;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
 
-					<body>
-						<li class="navsearch">
-							<form action="http://google.com/search" method="get" onsubmit="location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
-								<input maxlength="255" name="query" size="20" type="text" value="">
-								<input type="submit" value="search">
-							</form>
-						</li>
-						<br>
-						<hr style="clear:left">
-						<div id="content">
-							<style>
-								div.wrapp {
-									width: 800px;
-								}
+                                div.boxx {
+                                    float: left;
+                                    width: 300px;
+                                }
 
-								div.roww {
-									padding: 25px 0px;
-									display: inline-block;
-									margin-left: auto;
-									margin-right: auto;
-								}
+                                div.picc {
+                                    width: 280px;
+                                    height: 160px;
+                                }
 
-								div.boxx {
-									float: left;
-									width: 300px;
-								}
+                                div.titlee {
+                                    width: 280px;
+                                    font-weight: bold;
+                                    font-size: large;
+                                    padding-top: 15px;
+                                    padding-bottom: 5px;
+                                }
 
-								div.picc {
-									width: 280px;
-									height: 160px;
-								}
+                                div.detailss {
+                                    width: 280px;
+                                    text-align: left;
+                                }
 
-								div.titlee {
-									width: 280px;
-									font-weight: bold;
-									font-size: large;
-									padding-top: 15px;
-									padding-bottom: 5px;
-								}
+                                div.hours {
+                                    width: 600px;
+                                    font-weight: bold;
+                                    font-size: x-large;
+                                    background-color: #FFEF99;
+                                    border: 3px outset #FFF7CC;
+                                    padding: 20px;
+                                }
 
-								div.detailss {
-									width: 280px;
-									text-align: left;
-								}
+                                body {
+                                    margin-top: 0 !important;
+                                    padding-top: 0 !important;
+                                    min-width: 800px !important;
+                                }
+                                </style>
+                                <div id="content">
+                                    <center>
+                                        <div>
+                                            <center>
+                                                <div style="width:800px;">
+                                                <img align="center" alt=
+                                                "CellProfiler Annual Support and Training Plan logo"
+                                                src=
+                                                "http://d1zymp9ayga15t.cloudfront.net/images/cp_icon_gold.png"
+                                                width="400"></div>
+                                                <div style="width:800px;">
+                                                    <i>Gain direct access to
+                                                    the CellProfiler team,
+                                                    while supporting the
+                                                    CellProfiler project!</i>
+                                                    <p></p>
+                                                </div>
+                                            </center>
+                                        </div>
+                                        <div class="wrapp">
+                                            <div class="hours">
+                                                50 hours of
+                                                CellProfiler-related support
+                                                and training<br>
+                                                from the team behind
+                                                CellProfiler
+                                            </div>
+                                        </div>
+                                        <div class="wrapp">
+                                            <div class="roww">
+                                                <div class="boxx">
+                                                    <div class="picc"><img alt=
+                                                    "Anne Carpenter CellProfiler Annual Support and Training Plan"
+                                                    class="pro-pic" src=
+                                                    "http://d1zymp9ayga15t.cloudfront.net/images/AnneTeaching.png"></div>
+                                                    <div class="titlee">
+                                                        Image pipeline
+                                                        development
+                                                    </div>
+                                                    <div class="details">
+                                                        Image analysis pipeline
+                                                        development and
+                                                        optimization, plus
+                                                        expert advice in
+                                                        designing an
+                                                        image-based experiment
+                                                        including sample
+                                                        preparation and image
+                                                        acquisition
+                                                    </div>
+                                                </div>
+                                                <div class="boxx">
+                                                    <div class="picc"><img alt=
+                                                    "David Logan Image Assay Development CellProfiler"
+                                                    class="pro-pic" src=
+                                                    "http://d1zymp9ayga15t.cloudfront.net/images/DavidIAD.jpg"></div>
+                                                    <div class="titlee">
+                                                        Custom software
+                                                        engineering
+                                                    </div>
+                                                    <div class="detailss">
+                                                        Adding features of
+                                                        interest to the
+                                                        open-source
+                                                        CellProfiler project
+                                                        that do not conflict
+                                                        with CellProfiler's
+                                                        roadmap
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roww">
+                                                <div class="boxx">
+                                                    <div class="picc"><img alt=
+                                                    "Mark Bray CellProfiler Tutorial"
+                                                    class="pro-pic" src=
+                                                    "http://d1zymp9ayga15t.cloudfront.net/images/MarkWorkshop.jpg"></div>
+                                                    <div class="titlee">
+                                                        Training
+                                                    </div>
+                                                    <div class="detailss">
+                                                        From basic
+                                                        introductions to the
+                                                        software, to advanced
+                                                        training sessions
+                                                    </div>
+                                                </div>
+                                                <div class="boxx">
+                                                    <div class="picc"><img alt=
+                                                    "CellProfiler consultancy"
+                                                    class="pro-pic" src=
+                                                    "http://d1zymp9ayga15t.cloudfront.net/images/ServerConfig.jpg"></div>
+                                                    <div class="titlee">
+                                                        Configuration
+                                                    </div>
+                                                    <div class="detailss">
+                                                        Assistance in
+                                                        configuring
+                                                        CellProfiler to your
+                                                        local computing
+                                                        environment and
+                                                        infrastructure
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            div.featt {
+                                                display: inline-table;
+                                                max-width: 520px;
+                                                width: 520px;
+                                                height: 83px;
+                                                font-weight: bold;
+                                                font-size: large;
+                                            }
 
-								div.hours {
-									width: 600px;
-									font-weight: bold;
-									font-size: x-large;
-									background-color: #FFEF99;
-									border: 3px outset #FFF7CC;
-									padding: 20px;
-								}
+                                            div.leftt {
+                                                display: table-cell;
+                                                font-size: x-large;
+                                                height: 83px;
+                                                width: 80px;
+                                                line-height: 40px;
+                                                vertical-align: middle;
+                                                padding-left: 10px;
+                                                font-weight: bold;
+                                            }
 
-								body {
-									margin-top: 0 !important;
-									padding-top: 0 !important;
-									min-width: 800px !important;
-								}
-							</style>
+                                            div.rightt {
+                                                display: inline-table;
+                                                width: 520px;
+                                                height: 83px;
+                                                text-align: left;
+                                                padding-left: 20px;
+                                                font-weight: normal;
+                                            }
 
-							<body>
-								<div id="content">
-									<center>
-										<div>
-											<center>
-												<div style="width:800px;"><img align="center" alt="CellProfiler Annual Support and Training Plan logo" src="http://d1zymp9ayga15t.cloudfront.net/images/cp_icon_gold.png" width="400"></div>
-												<div style="width:800px;"><i>Gain direct access to the CellProfiler team, while supporting
-the CellProfiler project!</i>
-													<p></p>
-												</div>
-											</center>
-										</div>
-										<div class="wrapp">
-											<div class="hours">50 hours of CellProfiler-related support and training
-												<br> from the team behind CellProfiler</div>
-										</div>
-										<div class="wrapp">
-											<div class="roww">
-												<div class="boxx">
-													<div class="picc"><img alt="Anne Carpenter CellProfiler Annual Support and Training Plan" src="http://d1zymp9ayga15t.cloudfront.net/images/AnneTeaching.png" class="pro-pic"></div>
-													<div class="titlee">Image pipeline development</div>
-													<div class="details">Image analysis pipeline development and optimization, plus expert advice in designing an image-based experiment including sample preparation and image acquisition</div>
-												</div>
-												<div class="boxx">
-													<div class="picc"><img alt="David Logan Image Assay Development CellProfiler" src="http://d1zymp9ayga15t.cloudfront.net/images/DavidIAD.jpg" class="pro-pic"></div>
-													<div class="titlee">Custom software engineering</div>
-													<div class="detailss">Adding features of interest to the open-source CellProfiler project that do not conflict with CellProfiler's roadmap</div>
-												</div>
-											</div>
-											<div class="roww">
-												<div class="boxx">
-													<div class="picc"><img alt="Mark Bray CellProfiler Tutorial" src="http://d1zymp9ayga15t.cloudfront.net/images/MarkWorkshop.jpg" class="pro-pic"></div>
-													<div class="titlee">Training</div>
-													<div class="detailss">From basic introductions to the software, to advanced training sessions</div>
-												</div>
-												<div class="boxx">
-													<div class="picc"><img alt="CellProfiler consultancy" src="http://d1zymp9ayga15t.cloudfront.net/images/ServerConfig.jpg" class="pro-pic"></div>
-													<div class="titlee">Configuration</div>
-													<div class="detailss">Assistance in configuring CellProfiler to your local computing environment and infrastructure</div>
-												</div>
-											</div>
-										</div>
-										<style>
-											div.featt {
-												display: inline-table;
-												max-width: 520px;
-												width: 520px;
-												height: 83px;
-												font-weight: bold;
-												font-size: large;
-											}
+                                            ul.listt {
+                                                margin: 0px;
+                                                padding-left: 20px;
+                                                line-height: 30px;
+                                            }
+                                        </style>
+                                        <div class="wrapp">
+                                            <hr style="width:600px;">
+                                            <div class="featt">
+                                                <div class="leftt">
+                                                    PLUS
+                                                </div>
+                                                <div class="rightt">
+                                                    <ul class="listt">
+                                                        <li>20% discount on
+                                                        workshops held at your
+                                                        location</li>
+                                                        <li>Easily installable,
+                                                        code-signed packages of
+                                                        unreleased versions of
+                                                        CellProfiler</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr style="width:600px;">
+                                        </div>
+                                        <div class="wrapp">
+                                            <div style="width:580px">
+                                                <div align="left">
+                                                    <h2 align="center">Key
+                                                    information</h2>
+                                                    <p>Support can be offered
+                                                    by email, scheduled phone
+                                                    calls, and in most cases,
+                                                    in-person visits to our
+                                                    laboratory in Cambridge,
+                                                    Massachusetts.</p>
+                                                    <p>Please note that time is
+                                                    available annually and
+                                                    cannot be rolled over from
+                                                    year to year.</p>
+                                                    <h2 align="center">Cost:
+                                                    $10,000/year</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            button.sign-up-button {
+                                                -moz-box-shadow: inset 0px 1px 0px 0px #f9eca0;
+                                                -webkit-box-shadow: inset 0px 1px 0px 0px #f9eca0;
+                                                box-shadow: inset 0px 1px 0px 0px #f9eca0;
+                                                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff099), color-stop(1, #f2ab1e));
+                                                background: -moz-linear-gradient( center top, #fff099 5%, #f2ab1e 100%);
+                                                filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff099', endColorstr='#f2ab1e');
+                                                background-color: #fff099;
+                                                -webkit-border-top-left-radius: 20px;
+                                                -moz-border-radius-topleft: 20px;
+                                                border-top-left-radius: 20px;
+                                                -webkit-border-top-right-radius: 20px;
+                                                -moz-border-radius-topright: 20px;
+                                                border-top-right-radius: 20px;
+                                                -webkit-border-bottom-right-radius: 20px;
+                                                -moz-border-radius-bottomright: 20px;
+                                                border-bottom-right-radius: 20px;
+                                                -webkit-border-bottom-left-radius: 20px;
+                                                -moz-border-radius-bottomleft: 20px;
+                                                border-bottom-left-radius: 20px;
+                                                text-indent: 0;
+                                                border: 1px solid #e6b045;
+                                                display: inline-block;
+                                                color: #000000;
+                                                font-family: Arial;
+                                                font-size: 24px;
+                                                font-weight: bold;
+                                                font-style: normal;
+                                                height: 60px;
+                                                line-height: 60px;
+                                                width: 250px;
+                                                text-decoration: none;
+                                                text-align: center;
+                                                text-shadow: 1px 1px 0px #ded17c;
+                                            }
 
-											div.leftt {
-												display: table-cell;
-												font-size: x-large;
-												height: 83px;
-												width: 80px;
-												line-height: 40px;
-												vertical-align: middle;
-												padding-left: 10px;
-												font-weight: bold;
-											}
+                                            button.sign-up-button:hover {
+                                                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #fff099));
+                                                background: -moz-linear-gradient( center top, #f2ab1e 5%, #fff099 100%);
+                                                filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#fff099');
+                                                background-color: #f2ab1e;
+                                            }
 
-											div.rightt {
-												display: inline-table;
-												width: 520px;
-												height: 83px;
-												text-align: left;
-												padding-left: 20px;
-												font-weight: normal;
-											}
+                                            button.sign-up-button:active {
+                                                position: relative;
+                                                top: 1px;
+                                            }
+                                            /* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
 
-											ul.listt {
-												margin: 0px;
-												padding-left: 20px;
-												line-height: 30px;
-											}
-										</style>
-										<div class="wrapp">
-											<hr style="width:600px;">
-											<div class="featt">
-												<div class="leftt">PLUS</div>
-												<div class="rightt">
-													<ul class="listt">
-														<li>20% discount on workshops held at your location</li>
-														<li>Easily installable, code-signed packages of unreleased versions of CellProfiler</li>
-													</ul>
-												</div>
-											</div>
-											<hr style="width:600px;">
-										</div>
-										<div class="wrapp">
-											<div style="width:580px">
-												<div align="left">
-													<h2 align="center">Key information</h2>
-													<p>Support can be offered by email, scheduled phone calls, and in most cases, in-person visits to our laboratory in Cambridge, Massachusetts.</p>
-													<p>Please note that time is available annually and cannot be rolled over from year to year.</p>
-													<h2 align="center">Cost: $10,000/year</h2></div>
-											</div>
-										</div>
-										<style>
-											button.sign-up-button {
-												-moz-box-shadow: inset 0px 1px 0px 0px #f9eca0;
-												-webkit-box-shadow: inset 0px 1px 0px 0px #f9eca0;
-												box-shadow: inset 0px 1px 0px 0px #f9eca0;
-												background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff099), color-stop(1, #f2ab1e));
-												background: -moz-linear-gradient( center top, #fff099 5%, #f2ab1e 100%);
-												filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff099', endColorstr='#f2ab1e');
-												background-color: #fff099;
-												-webkit-border-top-left-radius: 20px;
-												-moz-border-radius-topleft: 20px;
-												border-top-left-radius: 20px;
-												-webkit-border-top-right-radius: 20px;
-												-moz-border-radius-topright: 20px;
-												border-top-right-radius: 20px;
-												-webkit-border-bottom-right-radius: 20px;
-												-moz-border-radius-bottomright: 20px;
-												border-bottom-right-radius: 20px;
-												-webkit-border-bottom-left-radius: 20px;
-												-moz-border-radius-bottomleft: 20px;
-												border-bottom-left-radius: 20px;
-												text-indent: 0;
-												border: 1px solid #e6b045;
-												display: inline-block;
-												color: #000000;
-												font-family: Arial;
-												font-size: 24px;
-												font-weight: bold;
-												font-style: normal;
-												height: 60px;
-												line-height: 60px;
-												width: 250px;
-												text-decoration: none;
-												text-align: center;
-												text-shadow: 1px 1px 0px #ded17c;
-											}
+                                            button.questions-button {
+                                                -moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+                                                -webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+                                                box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+                                                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+                                                background: -moz-linear-gradient( center top, #79bbff 5%, #378de5 100%);
+                                                filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+                                                background-color: #79bbff;
+                                                -webkit-border-top-left-radius: 20px;
+                                                -moz-border-radius-topleft: 20px;
+                                                border-top-left-radius: 20px;
+                                                -webkit-border-top-right-radius: 20px;
+                                                -moz-border-radius-topright: 20px;
+                                                border-top-right-radius: 20px;
+                                                -webkit-border-bottom-right-radius: 20px;
+                                                -moz-border-radius-bottomright: 20px;
+                                                border-bottom-right-radius: 20px;
+                                                -webkit-border-bottom-left-radius: 20px;
+                                                -moz-border-radius-bottomleft: 20px;
+                                                border-bottom-left-radius: 20px;
+                                                text-indent: 0;
+                                                border: 1px solid #84bbf3;
+                                                display: inline-block;
+                                                color: #000000;
+                                                font-family: Arial;
+                                                font-size: 24px;
+                                                font-weight: bold;
+                                                font-style: normal;
+                                                height: 60px;
+                                                line-height: 60px;
+                                                width: 250px;
+                                                text-decoration: none;
+                                                text-align: center;
+                                                text-shadow: 1px 1px 0px #528ecc;
+                                            }
 
-											button.sign-up-button:hover {
-												background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #fff099));
-												background: -moz-linear-gradient( center top, #f2ab1e 5%, #fff099 100%);
-												filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#fff099');
-												background-color: #f2ab1e;
-											}
+                                            button.questions-button:hover {
+                                                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+                                                background: -moz-linear-gradient( center top, #378de5 5%, #79bbff 100%);
+                                                filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+                                                background-color: #378de5;
+                                            }
 
-											button.sign-up-button:active {
-												position: relative;
-												top: 1px;
-											}
-											/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
-
-											button.questions-button {
-												-moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
-												-webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
-												box-shadow: inset 0px 1px 0px 0px #bbdaf7;
-												background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
-												background: -moz-linear-gradient( center top, #79bbff 5%, #378de5 100%);
-												filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
-												background-color: #79bbff;
-												-webkit-border-top-left-radius: 20px;
-												-moz-border-radius-topleft: 20px;
-												border-top-left-radius: 20px;
-												-webkit-border-top-right-radius: 20px;
-												-moz-border-radius-topright: 20px;
-												border-top-right-radius: 20px;
-												-webkit-border-bottom-right-radius: 20px;
-												-moz-border-radius-bottomright: 20px;
-												border-bottom-right-radius: 20px;
-												-webkit-border-bottom-left-radius: 20px;
-												-moz-border-radius-bottomleft: 20px;
-												border-bottom-left-radius: 20px;
-												text-indent: 0;
-												border: 1px solid #84bbf3;
-												display: inline-block;
-												color: #000000;
-												font-family: Arial;
-												font-size: 24px;
-												font-weight: bold;
-												font-style: normal;
-												height: 60px;
-												line-height: 60px;
-												width: 250px;
-												text-decoration: none;
-												text-align: center;
-												text-shadow: 1px 1px 0px #528ecc;
-											}
-
-											button.questions-button:hover {
-												background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-												background: -moz-linear-gradient( center top, #378de5 5%, #79bbff 100%);
-												filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
-												background-color: #378de5;
-											}
-
-											button.questions-button:active {
-												position: relative;
-												top: 1px;
-											}
-											/* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
-										</style>
-										<div class="wrapp">
-											<div class="roww">
-												<div align="center" class="boxx">
-													<button onclick="window.open(&quot;mailto:imagingadmin@broadinstitute.org?subject=CellProfiler%20Annual%20Support%20and%20Training%20Plan&amp;body=Send%20me%20more%20info%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan.%20Thanks!&quot;)"
-																	type="button" class="sign-up-button">Sign up!</button>
-												</div>
-												<div class="boxx">
-													<button onclick="window.open(&quot;mailto:imagingadmin@broadinstitute.org?subject=Question%28s%29%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan&quot;)" type="button" class="questions-button">Questions?</button>
-												</div>
-											</div>
-											<p style="font-size:small;" class="line-statement">The Broad Institute is a 501(c)(3) nonprofit biomedical research organization and offers this plan to facilitate scientific discovery.
-											</p>
-										</div>
-									</center>
-								</div>
-							</body>
-						</div>
-						<div id="footer">
-							<div>
-								<center><img alt="Banner" src="http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png" style="margin-top:20px" width="100%"></center>
-							</div>
-						</div>
-						<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-						<script>
-							window.jQuery || document.write('<script src="javascripts/libraries/jquery-2.2.0.min.js"><\\/script>')
-						</script>
-					</body>
-				</section>
-			</div>
-		</div>
-	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="/js/app.js"></script>
+                                            button.questions-button:active {
+                                                position: relative;
+                                                top: 1px;
+                                            }
+                                            /* This button was initially generated using CSSButtonGenerator.com and customized by Matthew Veneskey */
+                                        </style>
+                                        <div class="wrapp">
+                                            <div class="roww">
+                                                <div align="center" class=
+                                                "boxx">
+                                                    <button class=
+                                                    "sign-up-button" onclick=
+                                                    "window.open(&quot;mailto:imagingadmin@broadinstitute.org?subject=CellProfiler%20Annual%20Support%20and%20Training%20Plan&amp;body=Send%20me%20more%20info%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan.%20Thanks!&quot;)"
+                                                    type="button">Sign
+                                                    up!</button>
+                                                </div>
+                                                <div class="boxx">
+                                                    <button class=
+                                                    "questions-button" onclick=
+                                                    "window.open(&quot;mailto:imagingadmin@broadinstitute.org?subject=Question%28s%29%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan&quot;)"
+                                                    type=
+                                                    "button">Questions?</button>
+                                                </div>
+                                            </div>
+                                            <p class="line-statement" style=
+                                            "font-size:small;">The Broad
+                                            Institute is a 501(c)(3) nonprofit
+                                            biomedical research organization
+                                            and offers this plan to facilitate
+                                            scientific discovery.</p>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                            <div id="footer">
+                                <div>
+                                    <center>
+                                        <img alt="Banner" src=
+                                        "http://d1zymp9ayga15t.cloudfront.net/images/banner_small.png"
+                                        style="margin-top:20px" width="100%">
+                                    </center>
+                                </div>
+                            </div>
+                            <script src=
+                            "https://code.jquery.com/jquery-2.2.0.min.js">
+                            </script>
+                            <script>
+                            window.jQuery || document.write('<script src="javascripts/libraries/jquery-2.2.0.min.js"><\\/script>')
+                            </script>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script>
+    <script src="/js/app.js">
+    </script>
 </body>
+</html>
