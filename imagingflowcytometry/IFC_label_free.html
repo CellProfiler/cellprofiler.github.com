@@ -249,7 +249,7 @@ redirect_from: "/imagingflowcytometry/index.shtml"
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>CellProfiler ImagingFlowCytometry</title>
+    <title>CellProfiler</title>
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="../apple-touch-icon.png" rel="apple-touch-icon">
@@ -371,31 +371,58 @@ redirect_from: "/imagingflowcytometry/index.shtml"
                             <hr>
                             <h2>Imaging flow cytometry analysis using
                             CellProfiler</h2>
-                          <p>Imaging flow cytometry (IFC) combines
+                            <p>Note: There is a newer protocol available <a href="http://cellprofiler.org/imagingflowcytometry/index.html">here</a>.</p>
+                            <p>Imaging flow cytometry combines
                             the high-throughput capabilities of conventional
                             flow cytometry with single-cell imaging.
                             CellProfiler can be used to analyze the resulting
                             images from imaging flow cytometry, whether
-                            brightfield, darkfield, or fluorescence.</p>
-                            <p>We here provide an open-source IFC protocol described in <a href="http://dx.doi.org/10.1016/j.ymeth.2016.08.018" target="_blank">Hennig et al. (2016)</a>. This protocol aims to enable the scientific community to leverage the full analytical power of IFC-derived data sets. It will help to reveal otherwise unappreciated populations of cells based on features that may be hidden to the human eye. Compensated data files from an imaging flow cytometer (the proprietary .cif file format) can be read and resulting image tiles are generated. The image tiles are imported into the open-source software CellProfiler, where an image processing pipeline identifies cells and subcellular compartments allowing hundreds of morphological features to be measured. This high-dimensional data can then be analyzed using cutting-edge machine learning and clustering approaches using user-friendly platforms such as CellProfiler Analyst or scripting languages such as R or Python. </p>
-                            <p>Note: This is a more user-friendly and streamlined protocol as compared to <a href="http://dx.doi.org/10.1038/ncomms10256" target="_blank">Blasi et al. (2016)</a>, however, the former protocol is still available <a href="http://cellprofiler.org/imagingflowcytometry/IFC_label_free.html">here</a>.<br>
-                            </p>
-                            <p><strong>Paper:</strong> <br>
-                            H. Hennig, P. Rees, T. Blasi, L. Kamentsky, J. Hung, D. Dao, A.E.   Carpenter, and A. Filby. An open-source solution for advanced imaging   flow cytometry data analysis using machine learning. Method, in press (2016)<a href="http://dx.doi.org/10.1016/j.ymeth.2016.08.018" target="_blank"> [link to paper on Methods]<br>
-                            </a>T. Blasi, H. Hennig, H.D. Summers, F.J. Theis, D.  Davies, A. Filby, A.E. Carpenter, P. Rees. Label-free cell cycle  analysis for high-throughput imaging flow cytometry. Nat.  Comm. 7, 10256 (2016). PMID: 26739115 <a href="http://dx.doi.org/10.1038/ncomms10256" target="_blank">[link to paper at Nature Communications]</a></p>
-                            <p><strong>Protocol:</strong><br>
+                            brightfield, darkfield, or fluorescence.<br>
+                            <br>
+                            In some cases, even unlabeled cells can be scored
+                            for particular phenotypes. In the workflow outlined
+                            below, we have demonstrated label-free prediction
+                            of DNA contentand quantification of the mitotic
+                            cell cycle phases by applying supervised machine
+                            learning to morphological features extracted from
+                            brightfield and the typically-ignored darkfield
+                            images of cells from an imaging cytometer. This
+                            method facilitates non-destructive monitoring of
+                            cells avoiding potentially confounding effects of
+                            fluorescent stains while maximizing available
+                            fluorescence channels. Although  Blasi et al. focuses on  a <em>label-free</em> analysis using bright-field and dark-field alone, we emphasize that this protocol can be applied in assays that involve any number of fluorescent channels and is not limited to label-free assays.<br>
+                            <br>
+                            <strong>Paper:<br>
+                            </strong>T. Blasi, H. Hennig, H.D. Summers, F.J. Theis, D.  Davies, A. Filby, A.E. Carpenter, P. Rees. Label-free cell cycle  analysis for high-throughput imaging flow cytometry. Nat.  Comm. 7, 10256 (2016). PMID: 26739115 <a href="http://dx.doi.org/10.1038/ncomms10256" target="_blank">[link to paper at Nature Communications]</a><br>
+                              <br>
+                              <strong>Protocol:</strong> <a href=
+                            "http://d1zymp9ayga15t.cloudfront.net/Protocol/Protocol.pdf">
+                              [Download all protocols]</a><br>
+                              <br>
                             </p>
                             <div style=
-                            "width:1000px;height:140px;-webkit-border-radius:30px;-moz-border-radius:30px; border-radius:30px;border:2px solid #A9A9A9;background-color:#FFFFFF;">
+                            "width:1000;height:140px;-webkit-border-radius:30px;-moz-border-radius:30px; border-radius:30px;border:2px solid #A9A9A9;background-color:#FFFFFF;">
                             <br>
-                                <p><span class="space"></span><big><strong>Preparatory Step:</strong>
-                                Identify cell
-                                populations using gating in IDEAS
-                            software. Export population as cif file<img class="top inthebox" height=
+                                <p><span class="space"></span> <img class=
+                                "top inthebox" height="100" hspace="50" src=
+                                "http://d1zymp9ayga15t.cloudfront.net/images/Step1pic.jpg"
+                                width="120"> <img class="top inthebox" height=
                                 "30" hspace="80" src=
                                 "http://d1zymp9ayga15t.cloudfront.net/images/Ideas.jpg"
-                                width="130"></big></p>
-                            <span class="space"></span></div><br>
+                                width="130"> <big><strong>Step 1:</strong>
+                                Extract single cell images & identify cell
+                                populations with IDEAS
+                                software</big></p><span class="space"></span>
+                                <small><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/Protocol/Step1Protocol.pdf">
+                                [PDF Protocol]</a> <span class=
+                                "ttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/input_step1.zip">
+                                [example input data]</a></span> <span class=
+                                "ttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_3_Step2_input_single_tifs.zip">
+                                [example output data]</a></span></small>
+                            </div><br>
                             <div style=
                             "width:1000px;height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px; border-radius: 30px;border:2px solid #A9A9A9;background-color:#FFFFFF;">
                             <br>
@@ -411,22 +438,26 @@ redirect_from: "/imagingflowcytometry/index.shtml"
                                 "20" src=
                                 "http://d1zymp9ayga15t.cloudfront.net/images/Step1pic.jpg"
                                 style="vertical-align:top" width="80">
-                                <img class="top inthebox" height="58" hspace=
-                                "20" src="python-logo.png"
-                                style="vertical-align:top" width="176">
-                                <big><strong>Step 1:</strong> Automatically generate tiles  of 1000 single cell images per tile, using a python app (alternatively a Matlab script is available). The app reads a cif file and writes  the tiles (which are tif image files) to the output folder.</big></p>
-                                <p><span class=
-                                "space"></span> <small><span class=
+                                <img class="top inthebox" height="60" hspace=
+                                "20" src=
+                                "http://d1zymp9ayga15t.cloudfront.net/images/Step2pic1.jpg"
+                                style="vertical-align:top" width="80">
+                                <big><strong>Step 2:</strong> Preprocess the
+                                single cell images combine them to montages of
+                                images using Matlab</big></p><span class=
+                                "space"></span> <small><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/Protocol/Step2Protocol.pdf">
+                                [PDF Protocol]</a> <span class=
                                 "ttspace"><a href=
-                                "example.cif">[example input cif file]</a></span></small><small><span class=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_3_Step2_input_single_tifs.zip">
+                                [example input data]</a></span> <span class=
                                 "ttspace"><a href=
-                                "https://github.com/CellProfiler/stitching">[python app for tiling]</a></span> <span class=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_1_Step2_make_montages.m">
+                                [source code]</a></span> <span class=
                                 "ttspace"><a href=
-                                "Matlab_GUI_tiling.zip">[Matlab script for tiling]</a></span> <span class=
-                                "ttspace"><a href=
-                                "tiff_montages.zip">[example output data]</a></span></small></p>
-</div>
-                            <br>
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_4_Step2_output_tiled_tifs.zip">
+                                [example output data]</a></span></small>
+                            </div><br>
                             <div style=
                             "width:1000px;height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px; border-radius: 30px;border:2px solid #A9A9A9;background-color:#FFFFFF;">
                             <br>
@@ -442,14 +473,13 @@ redirect_from: "/imagingflowcytometry/index.shtml"
                                 "20" src=
                                 "http://d1zymp9ayga15t.cloudfront.net/images/Step2pic2.jpg"
                                 style="vertical-align:top" width="100">
-                                <img class="top inthebox" height="61" hspace=
+                                <img class="top inthebox" height="50" hspace=
                                 "20" src=
-                                "CellProfiler_logo.jpg"
-                                style="vertical-align:bottom" width="140">
-                                <big><strong>Step 2:</strong> Segment images
-                                and extract features in
-                                CellProfiler</big>. The example CellProfiler pipeline exports the features as csv files. The pipeline also generates a CellProfiler Analyst properties file for the machine learning in step 3.</p>
-                              <span class=
+                                "http://d1zymp9ayga15t.cloudfront.net/images/cplogo.png"
+                                style="vertical-align:bottom" width="110">
+                                <big><strong>Step 3:</strong> Segment images
+                                and extract features using
+                                CellProfiler</big></p><span class=
                                 "space"></span> <small><a href=
                                 "http://d1zymp9ayga15t.cloudfront.net/Protocol/Step3Protocol.pdf">
                                 [PDF Protocol]</a> <span class=
@@ -458,33 +488,89 @@ redirect_from: "/imagingflowcytometry/index.shtml"
                                 [example input data]</a></span> <span class=
                                 "ttspace"><a href=
                                 "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_2_CellProfiler_pipeline.cpproj">
-                                [CellProfiler pipeline]</a></span>
+                                [example CellProfiler pipeline]</a></span>
                                 <span class="ttspace"><a href=
                                 "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_5_Step3_output_features_txt.zip">
-                                [example output data]</a></span></small></div><br>
+                                [example output data]</a></span></small>
+                            </div><br>
                             <div style=
-                            "width:1000px;height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px; border-radius: 30px;border:2px solid #A9A9A9;background-color:#FFFFFF;"><br>
-                              <p><img class="top inthebox" height="110"
+                            "width:1000px;height:140px;-webkit-border-radius: 30px;-moz-border-radius: 30px; border-radius: 30px;border:2px solid #A9A9A9;background-color:#FFFFFF;">
+                            <br>
+                                <p><img class="top inthebox" height="110"
                                 hspace="20" src=
                                 "http://d1zymp9ayga15t.cloudfront.net/images/Step4pic1.jpg"
                                 style="vertical-align:top" width="170">
-                                <span class="space"></span>
-                                <big><strong><small><small><small><small><small><img class=
-                                "top inthebox" height="64" hspace="20" src=
-                                "cpa_logo.jpg"
-                                style="vertical-align:top" width="147"></small></small></small></small></small></strong></big>
-                                <big><strong>Step 3:</strong>                                </big>Use any programming language for supervized or unsupervized machine learning,such as python or R. A  user-friendly option for machine learning is the softwareCellProfiler Analyst. For this, load the properties file in CellProfilerAnalyst.</p>
-                                <span class=
+                                <span class="space"></span> <img class=
+                                "top inthebox" height="80" hspace="20" src=
+                                "http://d1zymp9ayga15t.cloudfront.net/images/Step2pic1.jpg"
+                                style="vertical-align:top" width="100">
+                                <big><strong>Step 4 (optional):</strong>
+                                Machine Learning for label-free prediction of
+                                cell phenotypes</big></p><span class=
                                 "space"></span> <small><span class=
-                                "tttspace"></span><span class=
+                                "tttspace"></span>
+                                <strong>Preprocessing:</strong> <span class=
                                 "tttspace"><a href=
-                                "http://cellprofiler.org/cp-analyst/" target="_blank">[CellProfiler Analyst website]</a></span><br>
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Step4_PreProcess.pdf">
+                                [PDF protocol]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_5_Step3_output_features_txt.zip">
+                                [example input data]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_3_Step4_a_prepare_data.m">
+                                [source code]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/preprocessing_output.zip">
+                                [example output data file]</a></span><br>
                                 <span class="tttspace"></span> <span class=
-                                "space"></span></small></div>
+                                "space"></span>
+                                <strong>Classification:</strong> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/Protocol/Step4_class.pdf">
+                                [PDF protocol]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/input_step4_class.zip">
+                                [example input file]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_5_Step4_RUSboosting.m">
+                                [source code]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_10_Step4_output_estimated_phases.mat.zip">
+                                [example output data file]</a></span><br>
+                                <span class="tttspace"></span> <span class=
+                                "space"></span> <strong>Regression:</strong>
+                                <span class="tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/Protocol/step4_regress.pdf">
+                                [PDF protocol]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/input_step4_regress.zip">
+                                [example input data file]</a></span>
+                                <span class="tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_4_Step4_LSboosting.m">
+                                [source code]</a></span> <span class=
+                                "tttspace"><a href=
+                                "http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_9_Step4_output_estimated_nuclear_content.mat.zip">
+                                [example output data file]</a></span></small>
+                            </div><br>
                             <br>
                             <br>
-                            <br>
-                            <h1>&nbsp;</h1>
+                            <h1>Future developments</h1>
+                            <p>A new protocol for analyzing imaging flow
+                            cytometry data in high-throughput is currently
+                            under development:</p>
+                            <p><img alt="new protocol" height="300" src=
+                            "new_protocol.png" width="707"></p>
+                            <p>&nbsp;</p>
+                            <p>In addition, analyzing imaging flow cytometry
+                            data in high-throughput will also become more
+                            streamlined using any image analysis software via
+                            the following protocol (under development):</p>
+                            <p><img align="left" alt="new protocol" height=
+                            "300" src="new_protocol_python.png" width=
+                            "707"></p>
+                            <script type="text/javascript">
+                                document.getElementById('content').style.display = 'block';
+                            </script>
                         </div>
                     </div>
                 </section>
