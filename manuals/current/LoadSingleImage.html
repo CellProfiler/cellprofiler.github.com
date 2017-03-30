@@ -1,0 +1,106 @@
+<html style=font-family:arial><head><title>LoadSingleImage</title></head><body><h1>Module: LoadSingleImage</h1><div><b>Load Single Image</b> loads a single image for use in all image cycles. <hr> <p>This module tells CellProfiler where to retrieve a single image and gives the image a meaningful name by which the other modules can access it. The module  executes only the first time through the pipeline; thereafter the image is accessible to all subsequent processing cycles. This is particularly useful for loading an image like an illumination correction image for use by the <b>CorrectIlluminationApply</b> module, when that single image will be used to correct all images in the analysis run.</p><p><p><i>Disclaimer:</i> Please note that the Input modues (i.e., <b>Images</b>, <b>Metadata</b>, <b>NamesAndTypes</b> and <b>Groups</b>) largely supercedes this module. However, old pipelines loaded into  CellProfiler that contain this module will provide the option of preserving them;  these pipelines will operate exactly as before.</p><p><h4>Available measurements</h4> <ul> <li><i>Pathname, Filename:</i> The full path and the filename of each image.</li> <li><i>Metadata:</i> The metadata information extracted from the path and/or  filename, if requested.</li> <li><i>Scaling:</i> The maximum possible intensity value for the image format.</li>  <li><i>Height, Width:</i> The height and width of the current image.</li>  </ul><p><h4>Technical notes</h4><p><p>For most purposes, you will probably want to use the <b>LoadImages</b> module, not  <b>LoadSingleImage</b>. The reason is that <b>LoadSingleImage</b> does not actually  create image sets (or even a single image set). Instead, it adds the single image  to every image cycle for an <i>already existing</i> image set. Hence  <b>LoadSingleImage</b> should never be used as the only image-loading module in a  pipeline; attempting to do so will display a warning message in the module settings.  <p>If you have a single file to load in the pipeline (and only that file), you  will want to use <b>LoadImages</b> or <b>LoadData</b> with a single, hardcoded file name. </p><p>See also the <b>Input</b> modules, <b>LoadImages</b>,<b>LoadData</b>.<p></div><div><h2>Settings:</h2><h4>Input image file location</h4><div>
+            Select the folder containing the image(s) to be loaded. Generally, 
+            it is best to store the image you want to load in either the Default Input or 
+            Output Folder, so that the correct image is loaded into the pipeline 
+            and typos are avoided. 
+You can choose among the following options which are common to all file input/output 
+modules:
+<ul>
+<li><i>Default Input Folder</i>: Use the default input folder.</li>
+<li><i>Default Output Folder:</i> Use from the default output folder.</li>
+<li><i>Elsewhere...</i>: Use a particular folder you specify.</li>
+<li><i>Default input directory sub-folder</i>: Enter the name of a subfolder of 
+the default input folder or a path that starts from the default input folder.</li>
+<li><i>Default output directory sub-folder</i>: Enter the name of a subfolder of 
+the default output folder or a path that starts from the default output folder.</li>
+</ul>
+<p><i>Elsewhere</i> and the two sub-folder options all require you to enter an additional 
+path name. You can use an <i>absolute path</i> (such as "C:\imagedir\image.tif" on a PC) or a 
+<i>relative path</i> to specify the file location relative to a directory):
+<ul>
+<li>Use one period to represent the current directory. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "./MyFiles" to look in a 
+folder called "MyFiles" that is contained within the Default Input Folder.</li>
+<li>Use two periods ".." to move up one folder level. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "../MyFolder" to look in a 
+folder called "MyFolder" at the same level as the Default Input Folder.</li>
+</ul></p>
+
+            
+            <p>
+For <i>Elsewhere...</i>, <i>Default Input Folder sub-folder</i> and 
+<i>Default Output Folder sub-folder</i>, if you have metadata associated with your 
+images via <b>Metadata</b> module, you can name the folder using metadata
+tags. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul> For instance, 
+            if you have a "Plate" metadata tag, and your single files are 
+            organized in subfolders named with the "Plate" tag, you can select one of the 
+            subfolder options and then specify a subfolder name of "\g&lt;Plate&gt;" 
+            to get the files from the subfolder associated with that image's plate. The module will 
+            substitute the metadata values for the current image set for any metadata tags in the 
+            folder name. Please see the <b>Metadata</b> module for more details on metadata collection and usage.</p></div><h4>Filename of the image to load (Include the extension, e.g., .tif)</h4><div>
+                    The filename can be constructed in one of two ways:
+                    <ul>
+                    <li>As a fixed filename (e.g., <i>Exp1_D03f00d0.tif</i>). </li>
+                    <li>Using the metadata associated with an image set in 
+                    <b>LoadImages</b> or <b>LoadData</b>. This is especially useful 
+                    if you want your output given a unique label according to the
+                    metadata corresponding to an image group. The name of the metadata 
+                    to substitute is included in a special tag format embedded 
+                    in your file specification. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul>Please see the <b>Metadata</b> module for more details on metadata collection and usage.</li>
+                    </ul>
+                    <p>Keep in mind that in either case, the image file extension, if any, must be included.</div><h4>Load as images or objects?</h4><div>
+                    This setting determines whether you load an image as image data
+                    or as segmentation results (i.e., objects):
+                    <ul>
+                    <li><i>Images:</i> The input image will be given a user-specified name by
+                    which it will be refered downstream. This is the most common usage for this
+                    module.</li>
+                    <li><i>Objects:</i> Use this option if the input image is a label matrix 
+                    and you want to obtain the objects that it defines. A <i>label matrix</i>
+                    is a grayscale or color image in which the connected regions share the
+                    same label, and defines how objects are represented in CellProfiler.
+                    The labels are integer values greater than or equal to 0. 
+                    The elements equal to 0 are the background, whereas the elements equal to 1 
+                    make up one object, the elements equal to 2 make up a second object, and so on.
+                    This option allows you to use the objects without needing to insert an 
+                    <b>Identify</b> module to extract them first. See <b>IdentifyPrimaryObjects</b> 
+                    for more details.</li>
+                    </ul></div><h4>Name the image that will be loaded</h4><div>
+                    <i>(Used only if an image is output)</i><br>
+                    Enter the name of the image that will be loaded. 
+                    You can use this name to select the image in downstream modules.</div><h4>Rescale intensities?</h4><div>
+                    <i>(Used only if an image is output)</i><br>
+                    This option determines whether image metadata should be
+                    used to rescale the image's intensities. Some image formats
+                    save the maximum possible intensity value along with the pixel data.
+                    For instance, a microscope might acquire images using a 12-bit
+                    A/D converter which outputs intensity values between zero and 4095,
+                    but stores the values in a field that can take values up to 65535.
+                    <p>Select <i>Yes</i> to rescale the image intensity so that
+                    saturated values are rescaled to 1.0 by dividing all pixels
+                    in the image by the maximum possible intensity value. </p>
+                    <p>Select <i>No</i> to ignore the image metadata and rescale the image
+                    to 0 &ndash; 1.0 by dividing by 255 or 65535, depending on the number
+                    of bits used to store the image.</p></div><h4>Name this loaded object</h4><div><i>(Used only if objects are output)</i><br>
+                    This is the name for the objects loaded from your image</div><h4>Retain outlines of loaded objects?</h4><div>
+                    <i>(Used only if objects are output)</i><br>
+                    Select <i>Yes</i> if you want to save an image of the outlines
+                    of the loaded objects.</div><h4>Name the outlines</h4><div>
+                    <i>(Used only if objects are output)</i><br>
+                    Enter a name that will allow the outlines to be selected later in the pipeline.</div></div></body></html>

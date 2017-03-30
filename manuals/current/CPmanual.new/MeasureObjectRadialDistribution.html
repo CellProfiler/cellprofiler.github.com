@@ -1,0 +1,43 @@
+<html style=font-family:arial><head><title>MeasureObjectRadialDistribution</title></head><body><h1>Module: MeasureObjectRadialDistribution</h1><div><b>Measure Object Radial Distribution</b> measures the radial distribution  of intensities within each object. <hr> Given an image with objects identified, this module measures the intensity distribution from each object's center to its boundary  within a user-controlled number of bins, i.e. rings.<p><p>The distribution is measured from the center of the object, where  the center is defined as the point farthest from any edge.  The numbering is from 1 (innermost) to <i>N</i> (outermost), where <i>N</i> is the number of bins specified by the user. Alternatively, if primary objects exist within the object of interest (e.g. nuclei within cells), you can choose the center of the primary objects as the center from which to measure the radial distribution. This might be useful in cytoplasm-to-nucleus translocation experiments,  for example.  Note that the ring widths are normalized per-object,  i.e., not necessarily a constant width across objects.</p><p><h4>Available measurements</h4> <ul> <li><i>FracAtD:</i> Fraction of total stain in an object at a given radius.</li> <li><i>MeanFrac:</i> Mean fractional intensity at a given radius; calculated as fraction of total intensity normalized by fraction of pixels at a given radius.</li> <li><i>RadialCV:</i> Coefficient of variation of intensity within a ring, calculated  over 8 slices.</li> </ul><p>See also <b>MeasureObjectIntensity</b>. </div><div><h2>Settings:</h2><h4>Select an image to measure</h4><div>
+                Select the image that you want to measure the intensity from.</div><h4>Select objects to measure</h4><div>
+                Select the objects that you want to measure the intensity from.</div><h4>Object to use as center?</h4><div>
+                There are three ways to specify the center of the radial measurement:
+                <ul>
+                <li><i>These objects:</i> Use the centers of these objects for the 
+                radial measurement.</li> 
+                <li><i>Centers of other objects:</i> Use the centers of other objects
+                for the radial measurement.</li>
+                <li><i>Edges of other objects:</i> Measure distances from the
+                edge of the other object to each pixel outside of the
+                centering object. Do not include pixels within the centering
+                object in the radial measurement calculations.</li>
+                </ul>
+                For example, if measuring the radial distribution in a Cell
+                object, you can use the center of the Cell objects (<i>These objects</i>) 
+                or you can use previously identified Nuclei objects as 
+                the centers (<i>Centers of other objects</i>).</div><h4>Select objects to use as centers</h4><div>
+                <i>(Used only if "Centers of other objects" are selected for centers)</i><br>
+                Select the object to use as the center, or select <i>None</i> to
+                use the input object centers (which is the same as selecting
+                <i>These objects</i> for the object centers).</div><h4>Scale the bins?</h4><div>
+                <p>Select <i>Yes</i> to divide the object radially into the number 
+                of bins that you specify. </p>
+                <p>Select <i>No</i> to create the number of bins you specify based 
+                on distance. For this option, the user will be 
+                asked to specify a maximum distance so that each object will have the 
+                same measurements (which might be zero for small objects) and so that 
+                the measurements can be taken without knowing the maximum object radius 
+                before the run starts.</p></div><h4>Number of bins</h4><div>
+                Specify the number of bins that you want to use to measure 
+                the distribution. Radial distribution is measured with respect to a series
+                of concentric rings starting from the object center (or 
+                more generally, between contours at a normalized distance
+                from the object center). This number
+                specifies the number of rings into which the distribution is to
+                be divided. Additional ring counts can be specified
+                by clicking the <i>Add another set of bins</i> button.</div><h4>Maximum radius</h4><div>
+                Specify the maximum radius for the unscaled bins. The unscaled binning 
+                method creates the number of bins that you
+                specify and creates equally spaced bin boundaries up to the maximum
+                radius. Parts of the object that are beyond this radius will be
+                counted in an overflow bin. The radius is measured in pixels.</div></div></body></html>

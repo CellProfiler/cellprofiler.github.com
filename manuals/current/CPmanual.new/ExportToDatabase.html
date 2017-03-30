@@ -1,0 +1,411 @@
+<html style=font-family:arial><head><title>ExportToDatabase</title></head><body><h1>Module: ExportToDatabase</h1><div><b>Export To Database</b> exports data directly to a database, or in  database readable format, including an imported file with column names and a CellProfiler Analyst properties file, if desired. <hr> This module exports measurements directly to a database or to a SQL-compatible format.  It allows you to create and import MySQL and associated data files into a database and gives you the option of creating a properties file for use with CellProfiler Analyst. Optionally, you can create an SQLite database file if you do not have a server on which to run MySQL itself.<p>This module must be run at the end of a pipeline, or second to last if  you are using the <b>CreateBatchFiles</b> module. If you forget this module, you can also run the <i>ExportDatabase</i> data tool after processing is complete;  its functionality is the same.<p>The database is set up with two primary tables. These tables are the <i>Per_Image</i> table and the <i>Per_Object</i> table (which may have a prefix if you specify): <ul> <li>The Per_Image table consists of all the per-image measurements made during the pipeline, plus per-image population statistics (such as mean, median, and standard deviation) of the object measurements. There is one per_image row for every "cycle" that CellProfiler processes (a cycle is usually a single field of view, and a single cycle  usually contains several image files, each representing a different channel of the same field of view). </li> <li>The Per_Object table contains all the measurements for individual objects. There is one row of object measurements per object identified. The two tables are connected with the primary key column <i>ImageNumber</i>, which indicates the image to which each object belongs. The Per_Object table has another primary key called <i>ObjectNumber</i>, which is unique to each image. </li> </ul><p>Typically, if multiple types of objects are identified and measured in a pipeline,  the numbers of those objects are equal to each other. For example, in most pipelines, each nucleus has exactly one cytoplasm, so the first row  of the Per-Object table contains all of the information about object #1, including both nucleus- and cytoplasm-related measurements. If this  one-to-one correspondence is <i>not</i> the case for all objects in the pipeline (for example, if dozens of speckles are identified and  measured for each nucleus), then you must configure <b>ExportToDatabase</b> to export only objects that maintain the one-to-one correspondence  (for example, export only <i>Nucleus</i> and <i>Cytoplasm</i>, but omit <i>Speckles</i>).<p>If you have extracted "Plate" and "Well" metadata from image filenames or loaded "Plate" and "Well" metadata via <b>LoadData</b>,  you can ask CellProfiler to create a "Per_Well" table, which aggregates object measurements across wells.   This option will output a SQL file (regardless of whether you choose to write directly to the database) that can be used to create the Per_Well table. At the secure shell where you normally log in to MySQL, type the following, replacing the italics with references to your database and files:<p><tt>mysql -h <i>hostname</i> -u <i>username</i> -p <i>databasename</i> &lt <i>pathtohttp://d1zymp9ayga15t.cloudfront.net/images/perwellsetupfile.SQL</i></tt><p>The commands written by CellProfiler to create the Per_Well table will be executed.<p>Oracle is not fully supported at present; you can create your own Oracle DB using the .csv output option and writing a simple script to upload to the database.<p><h4>Available measurements</h4> For details on the nomenclature used by CellProfiler for the exported measurements, see <i>Help > General Help > How Measurements Are Named</i>.<p>See also <b>ExportToSpreadsheet</b>.<p></div><div><h2>Settings:</h2><h4>Database type</h4><div>
+            Specify the type of database you want to use: 
+            <ul>
+            <li><i>MySQL:</i> Writes the data directly to a MySQL 
+            database. MySQL is open-source software; you may require help from 
+            your local Information Technology group to set up a database 
+            server.</li>
+            <li><i>MySQL / CSV:</i> Writes a script file that
+            contains SQL statements for creating a database and uploading the
+            Per_Image and Per_Object tables. This option will write out the Per_Image
+            and Per_Object table data to two CSV files; you can use these files can be
+            used to import the data directly into an application
+            that accepts CSV data.</li>
+            <li><i>SQLite:</i> Writes SQLite files directly. 
+            SQLite is simpler to set up than MySQL and 
+            can more readily be run on your local computer rather than requiring a 
+            database server. More information about SQLite can be found  
+            <a href="http://www.sqlite.org/">here</a>. </li>
+            </ul></div><h4>Experiment name</h4><div>
+            Select a name for the experiment. This name will be
+            registered in the database and linked to the tables that
+            <b>ExportToDatabase</b> creates. You will be able to select the experiment
+            by name in CellProfiler Analyst and will be able to find the
+            experiment's tables through database queries.</div><h4>Database name</h4><div>
+            Select a name for the database you want to use</div><h4>SQL file prefix</h4><div>
+            <i>(Used if MySQL / CSV is selected as the database type)</i><br>
+            Enter the prefix to be used to name the SQL file.</div><h4>Name the SQLite database file</h4><div>
+            <i>(Used if SQLite selected as database type)</i><br>
+            Enter the name of the SQLite database filename to which you want to write.</div><h4>Overwrite without warning?</h4><div>
+            <b>ExportToDatabase</b> creates tables and databases at the start
+            of a run when writing directly to a MySQL or SQLite database. It
+            writes SQL scripts and CSVs when not writing directly. It also
+            can write CellProfiler Analysis property files. In some cases,
+            it is appropriate to run CellProfiler and append to or overwrite
+            the data in existing tables, for instance when running several
+            CellProfiler instances which each process a range of the experiment's
+            image sets. In other cases, such as when the measurements to be written
+            have changed, the data tables must be dropped completely.
+            <br>
+            You can choose fromm three options to conrtol overwriting behavior:
+            <ul><li><i>Never:</i> <b>ExportToDatabase</b> will
+            ask before dropping and recreating tables unless you are running
+            headless. CellProfiler will exit if running headless if the tables
+            exist and this option is chosen.</li>
+            <li><i>Data only:</i> <b>ExportToDatabase</b> will keep
+            the existing tables if present and will overwrite the data. Choose
+            <i>Data only</i> if you are breaking your experiment
+            into ranges of image sets and running each range on a separate
+            instance of CellProfiler.</li>
+            <li><i>Data and schema:</i> <b>ExportToDatabase</b> will
+            drop previous versions of tables at the start of a run. This option
+            is appropriate if you are using the <b>CreateBatchFiles</b> module;
+            your tables will be created by the run that creates the batch
+            data file. The actual analysis runs that utilize the <code>Batch_data</code>
+            file will use the existing tables without trying to recreate them.</li>
+            </ul>
+            </div><h4>Add a prefix to table names?</h4><div>
+            Select whether you want to add a prefix to your table names. The 
+            default table names are <i>Per_Image</i> for the per-image table and 
+            <i>Per_Object</i> for the per-object table. Adding a prefix can be useful
+            for bookkeeping purposes.
+            <ul>
+            <li>Select <i>Yes</i> to add a user-specified prefix to the default table names.
+            If you want to distinguish multiple sets of data written to the same 
+            database, you probably want to use a prefix.</li>
+            <li>Select <i>No</i> to use the default table names. For a one-time export of 
+            data, this option is fine. </li>
+            </ul>
+            Whether you chose to use a prefix or not, CellProfiler will warn 
+            you if your choice entails overwriting an existing table.</div><h4>Table prefix</h4><div>
+            <i>(Used if Add a prefix to table names?</i> is selected)<br>
+            Enter the table prefix you want to use. 
+            <p>MySQL has a 64 character limit on the full name of the table.
+            If the combination of the table name and prefix exceeds this
+            limit, you will receive an error associated with this setting.</p></div><h4>Create a CellProfiler Analyst properties file?</h4><div>
+            Select <i>Yes</i> to generate a template properties file that will allow you to use 
+            your new database with CellProfiler Analyst (a data
+            exploration tool which can also be downloaded from
+            <a href="http://www.cellprofiler.org/">http://www.cellprofiler.org/</a>). 
+            The module will attempt to fill in as many as the entries as possible 
+            based on the pipeline's settings, including the 
+            server name, username and password if MySQL is used.</div><h4>Which objects should be used for locations?</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            CellProfiler Analyst displays cells during classification. This
+            setting determines which object centers will be used as the center
+            of the cells to be displayed. Choose one of the listed objects
+            and CellProfiler will save that object's location columns in
+            the properties file so that CellProfiler Analyst centers cells
+            using that object's center.
+            <p>You can manually change this choice in the properties file by
+            edting the <i>cell_x_loc</i> and <i>cell_y_loc</i> properties.
+            </p>
+            <p>Note that if there are no objects defined in the pipeline (e.g. 
+            if only using MeasureImageQuality and/or Illumination Correction modules), 
+            a warning will diplay until you choose <i>'None'</i> for the subsequent setting:
+            'Export measurements for all objects to the database?'.</p>
+            </div><h4>Enter an image url prepend if you plan to access your files via http</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            The image paths written to the database will be the absolute
+            path the the image files on your computer. If you plan to make these 
+            files accessible via the web, you can enter a url prefix here. Eg: 
+            If an image is loaded from the path "/cellprofilerhttp://d1zymp9ayga15t.cloudfront.net/images/" and you use
+            a url prepend of "http://mysite.com/", CellProfiler Analyst will look
+            for your file at "http://mysite.com/cellprofilerhttp://d1zymp9ayga15t.cloudfront.net/images/" 
+            <p>If you are not using the web to access your files (i.e., they are locally
+            aceesible by your computer), leave this setting blank.</div><h4>Select the plate type</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            If you are using a multi-well plate or microarray, you can select the plate 
+            type here. Supported types in CellProfiler Analyst are 96- and 384-well plates,
+            as well as 5600-spot microarrays. If you are not using a plate or microarray, select
+            <i>None</i>.</div><h4>Select the plate metadata</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            If you are using a multi-well plate or microarray, you can select the metadata corresponding
+            to the plate here. If there is no plate metadata associated with the image set, select
+            <i>None</i>. 
+            <p>Please see the <b>Metadata</b> module for more details on metadata collection and usage.</p></div><h4>Select the well metadata</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            If you are using a multi-well plate or microarray, you can select the metadata corresponding
+            to the well here. If there is no well metadata associated with the image set, select
+            <i>None</i>. 
+            <p>Please see the <b>Metadata</b> module for more details on metadata collection and usage.</p></div><h4>Include information for all images, using default values?</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            Select <i>Yes</i> to include information in the properties file for all images. This
+            option will do the following:
+            <ul>
+            <li>All images loaded using <b>LoadImages</b>, <b>LoadData</b> or saved in <b>SaveImages</b> will be included.</li>
+            <li>The CellProfiler image name will be used for the <i>image_name</i> field.</li>
+            <li>A channel color listed in the <i>image_channel_colors</i> field will be assigned to the image by default order.</li>
+            </ul>
+            <p>Select <i>No</i> to specify which images should be included or to override the automatic values.</p></div><h4>Select an image to include</h4><div>
+                <i>(Used only if creating a properties file and specifiying the image information)</i><br>
+                Choose image name to include it in the properties file of images.
+                <p>The images in the drop-down correspond to images that have been:
+                <ul>
+                <li>Loaded using one of the <b>Load</b> modules.</li>
+                <li>Saved with the <b>SaveImages</b> module, with the corresponding file and path information stored.</li>
+                </ul>
+                If you do not see your desired image listed, check the settings on these modules.</p></div><h4>Use the image name for the display?</h4><div><i>(Used only if creating a properties file and specifiying the image information)</i><br>
+                Select <i>Yes</i> to use the image name as given above for the displayed name. 
+                <p>Select <i>No</i> to name the file yourself.</p></div><h4>Image name</h4><div><i>(Used only if creating a properties file, specifiying the image information and naming the image)</i><br>
+                Enter a name for the specified image</div><h4>Channel color</h4><div>
+                <i>(Used only if creating a properties file and specifiying the image information)</i><br>
+                Enter a color to display this channel.</div><h4>Do you want to add group fields?</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            <b>Please note that "groups" as defined by CellProfiler Analyst has nothing to do with "grouping" as defined by 
+            CellProfiler in the Groups module.</b>
+            <p>Select <i>Yes</i> to define a "group" for your image data (for example, when several images represent the same experimental 
+            sample), by providing column(s) that identify unique images (the <i>image key</i>) to another set of columns 
+            (the <i>group key</i>).</p>
+            <p>The format for a group in CPA is:<br>
+            <code>group_SQL_&lt;XXX&gt; = &lt;MySQL SELECT statement that returns image-key columns followed by group-key columns&gt;</code>
+            For example, if you wanted to be able to group your data by unique plate names, you could define a group called 
+            <i>SQL_Plate</i> as follows:<br>
+            <code>group_SQL_Plate = SELECT ImageNumber, Image_Metadata_Plate FROM Per_Image</code></p>
+            <p>Grouping is useful, for example, when you want to aggregate counts for each class of object and their scores 
+            on a per-group basis (e.g., per-well) instead of on a per-image basis when scoring with Classifier. It will 
+            also provide new options in the Classifier fetch menu so you can fetch objects from images with specific 
+            values for the group columns.</p></div><h4>Enter the name of the group</h4><div>
+            <i>(Used only if creating a properties file and specifiying an image data group)</i><br>
+            Enter a name for the group. Only alphanumeric characters and underscores are permitted.</div><h4>Enter the per-image columns which define the group, separated by commas</h4><div>
+            <i>(Used only if creating a properties file and specifiying an image data group)</i><br>
+            To define a group, enter the image key columns followed by group key columns, each separated by commas.
+            <p>In CellProfiler, the image key column is always given the name as <i>ImageNumber</i>; group keys
+            are typically metadata columns which are always prefixed with <i>Image_Metadata_</i>. For example, if you 
+            wanted to be able to group your data by unique plate and well metadata tags, you could define a 
+            group with the following MySQL statement:<br>
+            <code>group_SQL_Plate = SELECT ImageNumber, Image_Metadata_Plate, Image_Metadata_Well FROM Per_Image</code><br>
+            For this example, the columns to enter in this setting would be:<br>
+            <code>ImageNumber, Image_Metadata_Plate, Image_Metadata_Well</code></p>
+            <p>Groups are specified as MySQL statements in the properties file, but please note that the full SELECT and  
+            FROM clauses will be added automatically, so there is no need to enter them here.</p></div><h4>Do you want to add filter fields?</h4><div><i>(Used only if creating a properties file)</i><br>
+            Select <i>Yes</i> to specify a subset of the images in your experiment by defining a <i>filter</i>. 
+            Filters are useful, for example, for fetching and scoring objects in Classifier or making graphs using the 
+            plotting tools that satisfy a specific metadata contraint. </div><h4>Automatically create a filter for each plate?</h4><div>
+            <i>(Used only if creating a properties file and specifiying an image data filter)</i><br>
+            If you have specified a plate metadata tag, selecting <i>Yes</i> to create a set of filters
+            in the properties file, one for each plate.</div><h4>Enter a phenotype class table name if using the classifier tool</h4><div>
+            <i>(Used only if creating a properties file)</i><br>
+            If you are using the machine-learning tool in CellProfiler Analyst,
+            you can create an additional table in your database  which contains
+            the per-object phenotype labels. This table is produced after scoring
+            all the objects in your data set and will be named with the label given here.<p>
+            You can manually change this choice in the properties file by
+            edting the <i>class_table</i> field. Leave this field blank if you are 
+            not using the classifier or do not need the table written to the database.</div><h4>Output file location</h4><div>
+            <i>(Used only when using a CSV or a SQLite database, and/or creating a properties or workspace file)</i><br>
+            This setting determines where the CSV files or SQLite database is saved if
+            you decide to write measurements to files instead of writing them
+            directly to the database. If you request a CellProfiler Analyst properties file
+            or workspace file, it will also be saved to this location. 
+You can choose among the following options which are common to all file input/output 
+modules:
+<ul>
+<li><i>Default Input Folder</i>: Use the default input folder.</li>
+<li><i>Default Output Folder:</i> Use from the default output folder.</li>
+<li><i>Elsewhere...</i>: Use a particular folder you specify.</li>
+<li><i>Default input directory sub-folder</i>: Enter the name of a subfolder of 
+the default input folder or a path that starts from the default input folder.</li>
+<li><i>Default output directory sub-folder</i>: Enter the name of a subfolder of 
+the default output folder or a path that starts from the default output folder.</li>
+</ul>
+<p><i>Elsewhere</i> and the two sub-folder options all require you to enter an additional 
+path name. You can use an <i>absolute path</i> (such as "C:\imagedir\image.tif" on a PC) or a 
+<i>relative path</i> to specify the file location relative to a directory):
+<ul>
+<li>Use one period to represent the current directory. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "./MyFiles" to look in a 
+folder called "MyFiles" that is contained within the Default Input Folder.</li>
+<li>Use two periods ".." to move up one folder level. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "../MyFolder" to look in a 
+folder called "MyFolder" at the same level as the Default Input Folder.</li>
+</ul></p>
+ 
+            
+            <p>
+For <i>Elsewhere...</i>, <i>Default Input Folder sub-folder</i> and 
+<i>Default Output Folder sub-folder</i>, if you have metadata associated with your 
+images via <b>LoadImages</b> or <b>LoadData</b>, you can name the folder using metadata
+tags. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul><br>
+            For instance, if you have a metadata tag named 
+            "Plate", you can create a per-plate folder by selecting one of the subfolder options
+            and then specifying the subfolder name with the "Plate" metadata tag. 
+            The module will substitute the metadata values for the last image set 
+            processed for any metadata tags in the folder name. Please see the <b>Metadata</b> module for more details on metadata collection and usage.</p></div><h4>Create a CellProfiler Analyst workspace file?</h4><div>
+            Select <i>Yes</i> to generate a workspace file for use with 
+            CellProfiler Analyst, a data exploration tool which can 
+            also be downloaded from <a href="http://www.cellprofiler.org/">
+            http://www.cellprofiler.org/</a>. A workspace file allows you 
+            to open a selected set of measurements with the display tools
+            of your choice. This is useful, for example, if you want examine a standard
+            set of quality control image measurements for outliers.</div><h4>Select the measurement display tool</h4><div>
+            <i>(Used only if creating a workspace file)</i><br>
+            Select what display tool in CPA you want to use to open the 
+            measurements.
+            <ul>
+            <li>ScatterPlot</li>
+            <li>Histogram</li>
+            <li>DensityPlot</li>
+            <li>PlateViewer</li>
+            <li>BoxPlot</li>
+            </ul></div><h4>Type of measurement to plot on the X-axis</h4><div>
+                <i>(Used only if creating a workspace file)</i><br>
+                You can plot two types of measurements:
+                <ul>
+                <li><i>Image:</i> For a per-image measurement, one numerical value is 
+                recorded for each image analyzed.
+                Per-image measurements are produced by
+                many modules. Many have <b>MeasureImage</b> in the name but others do not
+                (e.g., the number of objects in each image is a per-image 
+                measurement made by <b>IdentifyObject</b> 
+                modules).</li>
+                <li><i>Object:</i> For a per-object measurement, each identified 
+                object is measured, so there may be none or many 
+                numerical values recorded for each image analyzed. These are usually produced by
+                modules with <b>MeasureObject</b> in the name.</li>
+                </ul></div><h4>Enter the object name</h4><div><i>(Used only if creating a workspace file)</i><br>
+                Select the object that you want to measure from the list.
+                This should be an object created by a previous module such as
+                <b>IdentifyPrimaryObjects</b>, <b>IdentifySecondaryObjects</b>, or
+                <b>IdentifyTertiaryObjects</b>.</div><h4>Select the X-axis measurement</h4><div><i>(Used only if creating a workspace file)</i><br>
+            Select the measurement to be plotted on the desired axis.</div><h4>Type of measurement to plot on the Y-axis</h4><div>
+                <i>(Used only if creating a workspace file)</i><br>
+                You can plot two types of measurements:
+                <ul>
+                <li><i>Image:</i> For a per-image measurement, one numerical value is 
+                recorded for each image analyzed.
+                Per-image measurements are produced by
+                many modules. Many have <b>MeasureImage</b> in the name but others do not
+                (e.g., the number of objects in each image is a per-image 
+                measurement made by <b>IdentifyObject</b> 
+                modules).</li>
+                <li><i>Object:</i> For a per-object measurement, each identified 
+                object is measured, so there may be none or many 
+                numerical values recorded for each image analyzed. These are usually produced by
+                modules with <b>MeasureObject</b> in the name.</li>
+                </ul></div><h4>Select the Y-axis measurement</h4><div><i>(Used only if creating a workspace file)</i><br>
+            Select the measurement to be plotted on the desired axis.</div><h4>Calculate the per-image mean values of object measurements?</h4><div>
+            Select <i>Yes</i> for <b>ExportToDatabase</b> to calculate population statistics over all the objects in each image
+            and store the results in the database. For instance, if
+            you are measuring the area of the Nuclei objects and you check the box for this option, <b>ExportToDatabase</b> will create a column in the Per_Image
+            table called "Mean_Nuclei_AreaShape_Area".
+            <p>You may not want to use <b>ExportToDatabase</b> to calculate these population statistics if your pipeline generates
+            a large number of per-object measurements; doing so might exceed database
+            column limits. These columns can be created manually for selected measurements directly in MySQL.
+            For instance, the following SQL command creates the Mean_Nuclei_AreaShape_Area column:
+            
+                <p><tt>ALTER TABLE Per_Image ADD (Mean_Nuclei_AreaShape_Area);
+                UPDATE Per_Image SET Mean_Nuclei_AreaShape_Area = 
+                    (SELECT AVG(Nuclei_AreaShape_Area)
+                     FROM Per_Object
+                     WHERE Per_Image.ImageNumber = Per_Object.ImageNumber);</tt></div><h4>Calculate the per-well mean values of object measurements?</h4><div>
+            Select <i>Yes</i> for <b>ExportToDatabase</b> to calculate statistics over all the objects in each well 
+            and store the results as columns in a "per-well" table in the database. For instance, 
+            if you are measuring the area of the Nuclei objects and you check the aggregate
+            mean box in this module, <b>ExportToDatabase</b> will create a table in the database called
+            "Per_Well_avg", with a column called "Mean_Nuclei_AreaShape_Area". Selecting all three 
+            aggregate measurements will create three per-well tables, one for each of the measurements.
+
+            <p>The per-well functionality will create the appropriate lines in a .SQL file, which can be 
+            run on your Per-Image and Per-Object tables to create the desired per-well table. 
+            <p><i>Note:</i> this option is only
+            available if you have extracted plate and well metadata from the filename or via a <b>LoadData</b> module.
+            It will write out a .sql file with the statements necessary to create the Per_Well
+            table, regardless of the option chosen above. Please see the <b>Metadata</b> module for more details on metadata collection and usage</div><h4>Calculate the per-well median values of object measurements?</h4><div>
+            Select <i>Yes</i> for <b>ExportToDatabase</b> to calculate statistics over all the objects in each well 
+            and store the results as columns in a "per-well" table in the database. For instance, 
+            if you are measuring the area of the Nuclei objects and you check the aggregate
+            median box in this module, <b>ExportToDatabase</b> will create a table in the database called
+            "Per_Well_median", with a column called "Median_Nuclei_AreaShape_Area". Selecting all 
+            three aggregate measurements will create three per-well tables, one for each of the measurements.
+
+            <p>The per-well functionality will create the appropriate lines in a .SQL file, which can be run on your 
+            Per-Image and Per-Object tables to create the desired per-well table. 
+            <p><i>Note:</i> this option is only
+            available if you have extracted plate and well metadata from the filename or via a <b>LoadData</b> module.
+            It will write out a .sql file with the statements necessary to create the Per_Well
+            table, regardless of the option chosen above. Please see the <b>Metadata</b> module for more details on metadata collection and usage</div><h4>Calculate the per-well standard deviation values of object measurements?</h4><div>
+            Select <i>Yes</i> for <b>ExportToDatabase</b> to calculate statistics over all the objects in each well 
+            and store the results as columns in a "per-well" table in the database. For instance, 
+            if you are measuring the area of the Nuclei objects and you check the aggregate
+            standard deviation box in this module, <b>ExportToDatabase</b> will create a table in the database called
+            "Per_Well_std", with a column called "Mean_Nuclei_AreaShape_Area".  Selecting all 
+            three aggregate measurements will create three per-well tables, one for each of the measurements.
+            <p>The per-well functionality will create the appropriate lines in a .SQL file, which can be run on your 
+            Per-Image and Per-Object tables to create the desired per-well table. 
+            <p><i>Note:</i> this option is only
+            available if you have extracted plate and well metadata from the filename or via a <b>LoadData</b> module.
+            It will write out a .sql file with the statements necessary to create the Per_Well
+            table, regardless of the option chosen above. Please see the <b>Metadata</b> module for more details on metadata collection and usage</div><h4>Export measurements for all objects to the database?</h4><div>
+            This option lets you choose the objects whose measurements will be saved in the Per_Object and 
+            Per_Well(s) database tables.
+            <ul>
+            <li><i>All:</i> Export measurements from all objects.</li>
+            <li><i>None:</i> Do not export data to a Per_Object table. Save only Per_Image or Per_Well 
+            measurements (which nonetheless include population statistics from objects).</li>
+            <li><i>Select...:</i> Select the objects you want to export from a list.</li>
+            </ul></div><h4>Select the objects</h4><div>
+            <i>(Used only if Select is chosen for adding objects)</i><br>
+            Choose one or more objects from this list (click using shift or command keys to select 
+            multiple objects). The list includes
+            the objects that were created by prior modules. If you choose an
+            object, its measurements will be written out to the Per_Object and/or
+            Per_Well(s) tables, otherwise, the object's measurements will be skipped.</div><h4>Create one table per object, a single object table or a single object view?</h4><div>
+            <b>ExportToDatabase</b> can create either one table
+            for each type of object exported or a single
+            object table.<br><ul>
+            <li><i>One table per object type</i> creates one
+            table for each object type you export. The table name will reflect
+            the name of your objects. The table will have one row for each
+            of your objects. You can write SQL queries that join tables using
+            the "Number_ObjectNumber" columns of parent objects (such as those
+            created by <b>IdentifyPrimaryObjects</b>) with the corresponding
+            "Parent_... column" of the child objects. Choose 
+            <i>One table per object type</i> if parent objects can have more than
+            one child object, if you want a relational representation of
+            your objects in the database,
+            or if you need to split columns among different
+            tables and shorten column names because of database limitations.</li>
+            <li><i>Single object table</i> creates a single
+            database table that records the object measurements. <b>
+            ExportToDatabase</b> will prepend each column name with the
+            name of the object associated with that column's measurement.
+            Each row of the table will have measurements for all objects
+            that have the same image and object number. Choose
+            <i>Single object table</i> if parent objects have a single child,
+            or if you want a simple table structure in your database. You can
+            combine the measurements for all or selected objects in this way.</li>
+            <li><i>Single object view</i> creates a single
+            database view to contain the object measurements. A <i>view</i> is a
+            virtual database table which can be used to package together multiple
+            per-object tables into a single structure that is accessed just like a
+            regular table. Choose <i>Single object view</i> if you want to combine multiple
+            objects but using <i>Single object table</i> would produce a table that hits
+            the database size limitations. <br>
+            An important note is that only objects that are related as primary, secondary
+            or tertiary objects to each other should be combined in a view. This is
+            because the view expects a one-to-one relationship between the combined objects. If
+            you are selecting objects for the view, the module will warn you if they are
+            not related in this way.
+            </li>
+            </ul></div><h4>Maximum # of characters in a column name</h4><div>
+            This setting limits the number of characters that can appear
+            in the name of a field in the database. MySQL has a limit of 64
+            characters per field, but also has an overall limit on the number of characters
+            in all of the columns of a table. <b>ExportToDatabase</b> will
+            shorten all of the column names by removing characters, at the
+            same time guaranteeing that no two columns have the same name.</div><h4>Write image thumbnails directly to the database?</h4><div>
+            <i>(Used only if MySQL or SQLite are selected as database type)</i><br>
+            Select Yes if you'd like to write image thumbnails directly
+            into the database. This will slow down the writing step, but will
+            enable new functionality in CellProfiler Analyst such as quickly
+            viewing images in the Plate Viewer tool by selecting "thumbnail"
+            from the "Well display" dropdown.</div><h4>Select the images for which you want to save thumbnails</h4><div>
+            <i>(Used only if MySQL or SQLite are selected as database type 
+            and writing thumbnails is selected)</i><br>
+            Select the images that you wish to save as thumbnails to 
+            the database. Make multiple selections by using Ctrl-Click (Windows) 
+            or Command-Click (Mac); </div><h4>Auto-scale thumbnail pixel intensities?</h4><div>
+            <i>(Used only if MySQL or SQLite are selected as database type 
+            and writing thumbnails is selected)</i><br>
+            Select <i>Yes</i> if you'd like to automatically rescale 
+            the thumbnail pixel intensities to the range 0-1, where 0 is 
+            black/unsaturated, and 1 is white/saturated.</div></div></body></html>

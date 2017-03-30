@@ -1,0 +1,55 @@
+<html style=font-family:arial><head><title>MakeProjection</title></head><body><h1>Module: MakeProjection</h1><div> <b>Make Projection</b> combines several two-dimensional images of  the same field of view together, either by performing a mathematical operation upon the pixel values at each pixel position. <hr> This module combines a set of images by performing a mathematic operation of your choice at each pixel position; please refer to the settings help for more information on the available operations. The process of averaging or summing a Z-stack (3D image stack) is known as making a projection.<p><p>This module will create a projection of all images specified in the Input modules. For more information on loading image stacks and movies, see <i>Help > Creating a Project > Loading Image Stacks and Movies</i>. To achieve per-folder projections i.e., creating a projection for each set of images in a folder, for all input folders,  make the following setting specifications: <ol> <li>In the <b>Images</b> module, drag-and-drop the parent folder containing the sub-folders.</li> <li>In the <b>Metadata</b> module, enable metadata extraction and extract metadata from the folder name by using a regular expression to capture the subfolder name, e.g., <code>.*[\\/](?P&lt;Subfolder&gt;.*)$</code></li> <li>In the <b>NamesAndTypes</b> module, specify the appropriate names for any desired channels.</li> <li>In the <b>Groups</b> module, enable image grouping, and select the metadata tag representing the sub-folder name as the metadata category.</li> </ol> Keep in mind that the projection image is not immediately available in subsequent modules because the output of this module is not complete until all image processing cycles have completed. Therefore,  the projection should be created with a dedicated pipeline.</p><p>See also the help for the <b>Input</b> modules. </div><div><h2>Settings:</h2><h4>Select the input image</h4><div>
+            Select the image to be made into a projection.</div><h4>Type of projection</h4><div>
+            The final projection image can be created by the following methods:
+            <ul>
+            <li><i>Average:</i> Use the average pixel intensity at each pixel position.</li>
+            <li><i>Maximum:</i> Use the maximum pixel value at each pixel position.</li>
+            <li><i>Minimum:</i> Use the minimum pixel value at each pixel position.</li>
+            <li><i>Sum:</i> Add the pixel values at each pixel position.</li>
+            <li><i>Variance:</i> Compute the variance at each pixel position. <br>
+            The variance  method is described in Selinummi et al (2009).
+            The method is designed to operate on a z-stack of brightfield images taken
+            at different focus planes. Background pixels will have relatively uniform
+            illumination whereas cytoplasm pixels will have higher variance across the
+            z-stack.</li>
+            <li><i>Power:</i> Compute the power at a given frequency at each pixel position.<br>
+            The power method is experimental. The method computes the power at a given
+            frequency through the z-stack. It might be used with a phase contrast image
+            where the signal at a given pixel will vary sinusoidally with depth. The
+            frequency is measured in z-stack steps and pixels that vary with the given
+            frequency will have a higher score than other pixels with similar variance,
+            but different frequencies.</li>
+            <li><i>Brightfield:</i> Perform the brightfield projection at each pixel position.<br>
+            Artifacts such as dust appear as black spots which are most strongly resolved
+            at their focal plane with gradually increasing signals below. The brightfield
+            method scores these as zero since the dark appears in the early z-stacks.
+            These pixels have a high score for the variance method but have a reduced
+            score when using the brightfield method.</li>
+            <li><i>Mask:</i> Compute a binary image of the pixels that are 
+            masked in any of the input images.<br>
+            The mask method operates on any masks that might have been applied to the
+            images in a group. The output is a binary image where the "1" pixels are
+            those that are not masked in all of the images and the "0" pixels are those
+            that are masked in one or more of the images.<br>
+            You can use the output of the mask method to mask or crop all of the
+            images in a group similarly. Use the mask method to combine all of the
+            masks in a group, save the image and then use <b>Crop</b>, <b>MaskImage</b> or 
+            <b>MaskObjects</b> in another pipeline to mask all images or objects in the
+            group similarly.</li>
+            </ul>
+            <p>
+            <b>References</b>
+            <ul>
+            <li>Selinummi J, Ruusuvuori P, Podolsky I, Ozinsky A, Gold E, et al. (2009) 
+            "Bright field microscopy as an alternative to whole cell fluorescence in 
+            automated analysis of macrophage images", PLoS ONE 4(10): e7497 
+            <a href="http://dx.doi.org/10.1371/journal.pone.0007497">(link)</a>.</li>
+            </ul>
+            </p></div><h4>Name the output image</h4><div>
+            Enter the name for the projected image.</div><h4>Frequency</h4><div>
+            <i>(Used only if Power is selected as the projection method)</i><br>
+            This setting controls the frequency at which the power
+            is measured. A frequency of 2 will respond most strongly to
+            pixels that alternate between dark and light in successive
+            z-stack slices. A frequency of N will respond most strongly
+            to pixels whose brightness cycle every N slices.</div></div></body></html>

@@ -1,0 +1,95 @@
+<html style=font-family:arial><head><title>RunImageJ</title></head><body><h1>Module: RunImageJ</h1><div><b>Run ImageJ</b> runs an ImageJ command. <hr> <a href="http://rsbweb.nih.gov/ij/">ImageJ</a> is an image processing and analysis program. It operates by processing commands that operate on one or more images, possibly modifying the images. ImageJ has a macro language which can be used to program its operation and customize its operation, similar to CellProfiler pipelines. ImageJ maintains a current image and most commands operate on this image, but it's possible to load multiple images into ImageJ and operate on them together.<p>The <b>RunImageJ</b> module runs one ImageJ command or macro per cycle. It first loads the images you want to process into ImageJ, then runs the command, and, if desired, retrieves images you want to process further in CellProfiler.<p><h4>Technical notes</h4> <p>ImageJ runs using Java, and as such, relies on proper handling of the Java memory requirements. When ImageJ starts, the Java Virtual Machine (JVM) allocates a portion of memory for its own use from the operating system; this memory is called the <i>java heap memory</i>. If you encounter JVM memory errors, you can tell CellProfiler to increase the size of the Java heap memory  on startup.</p> <p>To do this, run CellProfiler from the command line with the following argument: <code>--jvm-heap-size=JVM_HEAP_SIZE</code><br> where <code>JVM_HEAP_SIZE</code> is the amount of memory to be reserved for the JVM. Example formats for <code>JVM_HEAP_SIZE</code> include <i>512000k</i>, <i>512m</i>, <i>1g</i>, etc. For example, to increase the JVM heap memory to 2GB, use <code>--jvm-heap-size=2g</code></p> </div><div><h2>Settings:</h2><h4>Run an ImageJ command or macro?</h4><div>
+            This setting determines whether <b>RunImageJ</b> runs either a:
+            <ul>
+            <li><i>Command:</i> Select from a list of available ImageJ commands
+            (those items contained in the ImageJ menus); or</li>
+            <li><i>Script:</i> A script written in one of ImageJ 2.0's
+            supported scripting languages.</li>
+            <li><i>Macro:</i> An ImageJ 1.x macro, written in the
+            ImageJ 1.x macro language. <b>Run_ImageJ</b> runs ImageJ in 1.x
+            compatability mode.</li>
+            </ul></div><h4>Command</h4><div>
+            <i>(Used only if running a Command)</i><br>
+            The command to execute when the module runs.</div><h4>Macro</h4><div>
+            <i>(Used only if running a Macro)</i><br>
+            This is the ImageJ macro to be executed. The syntax for ImageJ
+            macros depends on the scripting language engine chosen.
+            We suggest that you use the Beanshell scripting language
+            <a href="http://www.beanshell.org/manual/contents.html">
+            (Beanshell documentation)</a>.</div><h4>Macro language</h4><div>
+            This setting chooses the scripting language used to execute
+            any macros in this module</div><h4>Input the currently active image in ImageJ?</h4><div>
+            Select <i>Yes</i> if you want to set the currently 
+            active ImageJ image using an image from a 
+            prior CellProfiler module.
+            <p>Select <i>No</i> to use the currently 
+            active image in ImageJ. You may want to do this if you
+            have an output image from a prior <b>RunImageJ</b>
+            that you want to perform further operations upon
+            before retrieving the final result back to CellProfiler.</p></div><h4>Select the input image</h4><div>
+            <i>(Used only if setting the currently active image)</i><br>
+            This is the CellProfiler image that will become 
+            ImageJ's currently active image.
+            The ImageJ commands and macros in this module will perform 
+            their operations on this image. You may choose any image produced
+            by a prior CellProfiler module.</div><h4>Retrieve the currently active image from ImageJ?</h4><div>
+            Select <i>Yes</i> if you want to retrieve ImageJ's
+            currently active image after running the command or macro. 
+            <p>Select <i>No</i> if the pipeline does not need to access
+            the current ImageJ image. For example, you might want to run
+            further ImageJ operations with additional <b>RunImageJ</b>
+            upon the current image prior to retrieving the final image 
+            back to CellProfiler.</p></div><h4>Name the current output image</h4><div>
+            <i>(Used only if retrieving the currently active image from ImageJ)</i><br>
+            This is the CellProfiler name for ImageJ's current image after
+            processing by the command or macro. The image will be a
+            snapshot of the current image after the command has run, and
+            will be available for processing by subsequent CellProfiler modules.</div><h4>Wait for ImageJ before continuing?</h4><div>
+            Some ImageJ commands and macros are interactive; you
+            may want to adjust the image in ImageJ before continuing. 
+            Select <i>Yes</i> to stop CellProfiler while you adjust the image in
+            ImageJ. Select <i>No</i> to immediately use the image.
+            <p>This command will not wait if CellProfiler is executed in
+            batch mode. See <i>Help > Other Features > Batch Processing</i> for more
+            details on batch processing.</p></div><h4>Function to run before each group of images?</h4><div>
+            You can run an ImageJ 2.0 script, an ImageJ 1.x macro or a command <i>before</i> each group of
+            images. This can be useful in order to set up ImageJ before
+            processing a stack of images. Choose <i>Nothing</i> if
+            you do not want to run a command or macro, <i>Command</i>
+            to choose a command to run, <i>Script</i> to run an
+            ImageJ 2.0 script or <i>Macro</i> to run an ImageJ 1.x
+            macro in ImageJ 1.x compatibility mode.
+            </div><h4>Command</h4><div>
+            <i>(Used only if running a command before an image group)</i><br>
+            Select the command to execute before processing a group of images.</div><h4>Macro</h4><div>
+            <i>(Used only if running a macro before an image group)</i><br>
+            This is the ImageJ macro to be executed before processing
+            a group of images. For help on writing macros, see 
+            <a href="http://rsb.info.nih.gov/ij/developer/macro/macros.html">here</a>.</div><h4>Function to run after each group of images?</h4><div>
+            You can run an ImageJ 2.0 script, an ImageJ macro or a command <i>after</i> each group of
+            images. This can be used to do some sort of operation on a whole
+            stack of images that have been accumulated by the group operation.
+            Choose <i>Nothing</i> if
+            you do not want to run a command or macro, <i>Command</i>
+            to choose a command to run, <i>Script</i> to run an
+            ImageJ 2.0 script or <i>Macro</i> to run an ImageJ 1.x
+            macro in ImageJ 1.x compatibility mode.
+            </div><h4>Command</h4><div>
+            <i>(Used only if running a command after an image group)</i><br>
+            The command to execute after processing a group of images.</div><h4>Macro</h4><div>
+            <i>(Used only if running a macro after an image group)</i><br>
+            This is the ImageJ macro to be executed after processing
+            a group of images. For help on writing macros, see 
+            <a href="http://rsb.info.nih.gov/ij/developer/macro/macros.html">here</a>.</div><h4>Retrieve the image output by the group operation?</h4><div>
+            You can retrieve the image that is currently active in ImageJ
+            at the end of macro processing and use it later in CellProfiler.
+            The image will only be available during the last cycle of the
+            image group. 
+            <p>Select <i>Yes</i> to retrieve the active image for use in CellProfiler.
+            Select <i>No</i> if you do not want to retrieve the active image.</p>
+            </div><h4>Name the group output image</h4><div>
+            <i>(Used only if retrieving an image after an image group operation)</i><br>
+            This setting names the output image produced by the
+            ImageJ command or macro that CellProfiler runs after processing
+            all images in the group. The image is only available at the
+            last cycle in the group</div></div></body></html>

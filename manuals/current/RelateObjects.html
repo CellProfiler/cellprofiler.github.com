@@ -1,0 +1,42 @@
+<html style=font-family:arial><head><title>RelateObjects</title></head><body><h1>Module: RelateObjects</h1><div><b>Relate Objects</b> assigns relationships; all objects (e.g. speckles) within a parent object (e.g. nucleus) become its children. <hr> This module allows you to associate <i>child</i> objects with <i>parent</i> objects.  This is useful for counting the number of children associated with each parent, and for calculating mean measurement values for all children that are associated with each parent.<p><p>An object will be considered a child even if the edge is the only part touching a parent object. If an child object is touching multiple parent objects, the object will be assigned as a child of all parents that it overlaps with.<p><h4>Available measurements</h4> <b>Parent object measurements:</b> <ul> <li><i>Count:</i> The number of child sub-objects for each parent object.</li> <li><i>Mean measurements:</i> The mean of the child object measurements, calculated for each parent object.</li> <li><i>Distances:</i> The distance of each child object to its respective parent.</li> </ul><p><b>Child object measurements:</b> <ul> <li><i>Parent:</i> The label number of the parent object, as assigned by an <b>Identify</b> module.</li> </ul><p>See also: <b>ReassignObjectNumbers</b>. </div><div><h2>Settings:</h2><h4>Select the input child objects</h4><div>
+            Child objects are defined as those objects contained within the
+            parent object. For example, when relating speckles to the
+            nuclei that contains them, the speckles are the children.</div><h4>Select the input parent objects</h4><div>
+            Parent objects are defined as those objects which encompass the 
+            child object. For example, when relating speckles to the
+            nuclei that contains them, the nuclei are the parents.</div><h4>Calculate child-parent distances?</h4><div>
+            Choose the method to calculate distances of each child to its parent.
+            <ul>
+            <li><i>None:</i> Do not calculate any distances.</li>
+            <li><i>Minimum:</i> The distance from the 
+            centroid of the child object to the closest perimeter point on
+            the parent object.</li>
+            <li><i>Centroid:</i> The distance from the
+            centroid of the child object to the centroid of the parent. </li>
+            <li><i>Both:</i> Calculate both the <i>Minimum</i> and 
+            <i>Centroid</i> distances.</li>
+            </ul></div><h4>Calculate per-parent means for all child measurements?</h4><div>
+            Select <i>Yes</i> to calculate the per-parent mean values of every upstream 
+            measurement made with the children objects and stores them as a
+            measurement for the parent; the nomenclature of this new measurements is 
+            "Mean_&lt;child&gt;_&lt;category&gt;_&lt;feature&gt;". 
+            For this reason, this module should be placed <i>after</i> all <b>Measure</b>
+            modules that make measurements of the children objects.</div><h4>Calculate distances to other parents?</h4><div>
+            <i>(Used only if calculating distances)</i><br>
+            Select <i>Yes</i> to calculate the distances of the child objects to 
+            some other objects. These objects must be either parents or
+            children of your parent object in order for this module to
+            determine the distances. For instance, you might find "Nuclei" using
+            <b>IdentifyPrimaryObjects</b>, find "Cells" using
+            <b>IdentifySecondaryObjects</b> and find "Cytoplasm" using
+            <b>IdentifyTertiaryObjects</b>. You can use <b>Relate</b> to relate
+            speckles to cells and then measure distances to nuclei and
+            cytoplasm. You could not use <b>RelateObjects</b> to relate speckles to
+            cytoplasm and then measure distances to nuclei, because nuclei is
+            neither a direct parent or child of cytoplasm.</div><h4>Parent name</h4><div>
+            <i>(Used only if calculating distances to another parent)</i><br>
+            Choose the name of the other parent. The <b>RelateObjects</b> module will 
+            measure the distance from this parent to the child objects
+            in the same manner as it does to the primary parents.
+            You can only choose the parents or children of
+            the parent object.</div></div></body></html>

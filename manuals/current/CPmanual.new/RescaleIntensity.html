@@ -1,0 +1,91 @@
+<html style=font-family:arial><head><title>RescaleIntensity</title></head><body><h1>Module: RescaleIntensity</h1><div><b>RescaleIntensity</b> changes the intensity range of an image to your  desired specifications. <hr> This module lets you rescale the intensity of the input images by any of several methods. You should use caution when interpreting intensity and texture measurements derived from images that have been rescaled because certain options for this module do not preserve the relative intensities from image to image. </div><div><h2>Settings:</h2><h4>Select the input image</h4><div>Select the image to be rescaled.</div><h4>Name the output image</h4><div>Enter the name of output rescaled image.</div><h4>Rescaling method</h4><div>
+            There are a number of options for rescaling the input image: 
+            <ul>
+            <li><i>Stretch each image to use the full intensity range:</i> Find the minimum and maximum values within the unmasked part of the image 
+            (or the whole image if there is no mask) and rescale every pixel so that 
+            the minimum has an intensity of zero and the maximum has an intensity of one.</li>
+            <li><i>Choose specific values to be reset to the full intensity range:</i> Pixels are
+            scaled from their user-specified original range to the range 0 to 1.
+            Options are available to handle values outside of the original range.<br>
+            To convert 12-bit images saved in 16-bit format to the correct range,
+            use the range 0 to 0.0625. The value 0.0625 is equivalent 
+            to 2<sup>12</sup> divided by 2<sup>16</sup>, so it will convert a 16 bit image containing 
+            only 12 bits of data to the proper range.</li>
+            <li><i>Choose specific values to be reset to a custom range:</i> Pixels are scaled from their original range to
+            the new target range. Options are available to handle values outside
+            of the original range.</li>
+            <li><i>Divide by the image's minimum:</i> Divide the intensity value of each pixel 
+            by the image's minimum intensity value so that all pixel intensities are equal to or 
+            greater than 1. The rescaled image can serve as an illumination correction function in 
+            <b>CorrectIlluminationApply</b>.</li>
+            <li><i>Divide by the image's maximum:</i> Divide the intensity value of each pixel by the 
+            image's maximum intensity value so that all pixel intensities are less than or equal to 1.</li>
+            <li><i>Divide each image by the same value:</i> Divide the intensity value of each pixel by the value entered.</li>
+            <li><i>Divide each image by a previously calculated value:</i> The intensity value of each pixel is divided by some 
+            previously calculated measurement. This measurement can be the output of some other module
+            or can be a value loaded by the <b>Metadata</b> module.</li>
+            <li><i>Match the image's maximum to another image's maximum:</i> Scale an image so that its maximum value is the 
+            same as the maximum value within the reference image.</li>
+            <li><i>Convert to 8 bit:</i> Images in CellProfiler are normally stored as a floating 
+            point number in the range of 0 to 1. This option converts these images to class uint8, 
+            meaning an 8 bit integer in the range of 0 to 255, 
+            reducing the amount of memory required to store the image. <i>Warning:</i> Most
+            CellProfiler modules require the incoming image to be in the standard 0
+            to 1 range, so this conversion may cause downstream modules to behave 
+            in unexpected ways.</li>
+            </ul></div><h4>Method to calculate the minimum intensity</h4><div>
+            <i>(Used only if "Choose specific values to be reset to a custom range" is selected)</i><br>
+            This setting controls how the minimum intensity is determined.
+            <ul>
+            <li><i>Custom:</i> Enter the minimum intensity manually below.</li>
+            <li><i>Minimum for each image</i>: use the lowest intensity in this image
+            as the minimum intensity for rescaling</li>
+            <li><i>Minimum of all images</i>: use the lowest intensity from all images
+            in the image group or the experiment if grouping is not being used.
+            <b>Note:</b> Choosing this option may have undesirable results for
+            a large ungrouped experiment split into a number of batches. Each batch
+            will open all images from the chosen channel at the start of the run.
+            This sort of synchronized action may have a severe impact on your
+            network file system.</li>
+            </ul>
+            </div><h4>Method to calculate the maximum intensity</h4><div>
+            <i>(Used only if "Choose specific values to be reset to a custom range" is selected)</i><br>
+            This setting controls how the maximum intensity is determined.
+            <ul>
+            <li><i>Custom</i>: Enter the maximum intensity manually below.</li>
+            <li><i>Maximum for each image</i>: Use the highest intensity in this image
+            as the maximum intensity for rescaling</li>
+            <li><i>Maximum of all images</i>: Use the highest intensity from all images
+            in the image group or the experiment if grouping is not being used.
+            <b>Note:</b> Choosing this option may have undesirable results for
+            a large ungrouped experiment split into a number of batches. Each batch
+            will open all images from the chosen channel at the start of the run.
+            This sort of synchronized action may have a severe impact on your
+            network file system.</li>
+            </ul>
+            </div><h4>Method to rescale pixels below the lower limit</h4><div>
+            <i>(Used only if "Choose specific values to be reset to a custom range" is selected)</i><br>
+            There are several ways to handle values less than the lower limit of the intensity range:
+            <ul>
+            <li><i>Mask pixels:</i> Creates a mask for the output image. All pixels below
+            the lower limit will be masked out.</li>
+            <li><i>Set to zero:</i> Sets all pixels below the lower limit to zero.</li>
+            <li><i>Set to custom value:</i> Sets all pixels below the lower limit to a custom
+            value.</li>
+            <li><i>Scale similarly to others:</i> Scales pixels with values below the lower limit
+            using the same offset and divisor as other pixels. The results
+            will be less than zero.</li>
+            </ul></div><h4>Custom value for pixels below lower limit</h4><div>
+            <i>(Used only if "Choose specific values to be reset to a custom range" and "Set to custom value are selected)</i><br>
+            enter the custom value to be assigned to pixels with values below the lower limit.</div><h4>Method to rescale pixels above the upper limit</h4><div>
+            <i>(Used only if "Choose specific values to be reset to a custom range" is selected)</i><br>
+            There are several ways to handle values greater than the upper limit of the intensity range; 
+            Options are described in the Help for the equivalent lower limit question.</div><h4>Custom value for pixels above upper limit</h4><div>
+            <i>(Used only if "Choose specific values to be reset to a custom range" and "Set to custom value are selected)</i><br>
+            Enter the custom value to be assigned to pixels with values above the upper limit.</div><h4>Select image to match in maximum intensity</h4><div>
+            <i>(Used only if "Match the image's maximum to another image's maximum" is selected)</i><br>
+            Select the image whose maximum you want the rescaled image to match.</div><h4>Divisor value</h4><div>
+            <i>(Used only if "Divide each image by the same value" is selected)</i><br>
+            Enter the value to use as the divisor for the final image.</div><h4>Divisor measurement</h4><div>
+            <i>(Used only if "Divide each image by a previously calculated value" is selected)</i><br>
+            Select the measurement value to use as the divisor for the final image.</div></div></body></html>

@@ -1,0 +1,39 @@
+<html style=font-family:arial><head><title>FlipAndRotate</title></head><body><h1>Module: FlipAndRotate</h1><div><b>Flip and rotate</b> flips (mirror image) and/or rotates an image <hr> <h4>Available measurements</h4> <ul> <li><i>Rotation:</i> Angle of rotation for the input image.</li> </ul> </div><div><h2>Settings:</h2><h4>Select method to flip image</h4><div>
+            Select how the image is to be flipped.</div><h4>Select method to rotate image</h4><div>
+            <ul>
+            <li><i>Do not rotate:</i> Leave the image unrotated. This should be used
+            if you want to flip the image only.</li>
+            <li><i>Enter angle:</i> Provide the numerical angle by which the 
+            image should be rotated.</li>
+            <li><i>Enter coordinates:</i> Provide the X,Y pixel locations of 
+            two points in the image that should be aligned horizontally or 
+            vertically.</li> 
+            <li><i>Use mouse:</i> CellProfiler will pause so you can select the 
+            rotation interactively. When prompted during the analysis run, grab the image by 
+            clicking the left mouse button, rotate the image by 
+            dragging with the mouse, then release the mouse button. Press the <i>Done</i> button on the image 
+            after rotating the image appropriately.</li>
+            </ul></div><h4>Crop away the rotated edges?</h4><div>
+            <i>(Used only when rotating images)</i> <br> 
+            When an image is rotated, there will be black space at the 
+            corners/edges; select <i>Yes</i> to crop away the incomplete rows 
+            and columns of the image, or select <i>No</i> to leave it as-is.
+            <p>This cropping will produce an image that 
+            is not exactly the same size as the original, which may affect 
+            downstream modules.</p></div><h4>Calculate rotation</h4><div>
+            <i>(Used only when using "Use mouse" to rotate images)</i> <br> 
+            Select the cycle(s) at which the calculation is requested and calculated.
+            <ul>
+            <li><i>Individually:</i> Determine the amount of rotation for each image
+            individually, e.g., for each cycle.</li>
+            <li><i>Only Once:</i> Define the rotation only once (on the first image), then
+            then apply it to all images.</li>
+            </ul></div><h4>Select how the specified points should be aligned</h4><div>
+            <i>(Used only when using "Enter coordinates" to rotate images)</i><br>
+            Specify whether you would like the coordinate points that 
+            you entered to be horizontally or 
+            vertically aligned after the rotation is complete.</div><h4>Enter angle of rotation</h4><div>
+            <i>(Used only when using "Enter angle" to rotate images)</i> <br> 
+            Enter the angle you would like to rotate the image. 
+            This setting is in degrees, with positive angles corresponding 
+            to counterclockwise and negative as clockwise.</div></div></body></html>

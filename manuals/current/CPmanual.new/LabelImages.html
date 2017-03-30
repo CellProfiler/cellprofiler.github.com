@@ -1,0 +1,25 @@
+<html style=font-family:arial><head><title>LabelImages</title></head><body><h1>Module: LabelImages</h1><div><b>LabelImages</b> assigns plate metadata to image sets. <hr> <b>LabelImages</b> assigns a plate number, well and site number to each image set based on the order in which they are processed. You can use <b>Label Images</b> to add plate and well metadata for images loaded using <i>File order</i> in <b>LoadImages</b>. <b>LabelImages</b> assumes the following are true of the image order: <ul> <li>Each well has the same number of images (i.e., sites) per channel.</li> <li>Each plate has the same number of rows and columns, so that the total number of images per plate is the same. </li> </ul><p><h4>Available measurements</h4> <ul> <li><i>Metadata_Plate:</i> The plate number, starting at 1 for the first plate.</li> <li><i>Metadata_Well:</i> The well name, e.g., <i>A01</i>.</li> <li><i>Metadata_Row:</i> The row name, starting with <i>A</i> for the first row.</li> <li><i>Metadata_Column:</i> The column number, starting with 1 for the first column.</li> <li><i>Metadata_Site:</i> The site number within the well, starting at 1 for the first site</li> </ul><p>See also the <b>Metadata</b> module. </div><div><h2>Settings:</h2><h4>Number of image sites per well</h4><div>
+            This setting controls the number of image sets for each well</div><h4>Number of columns per plate</h4><div>
+            Enter the number of columns per plate</div><h4>Number of rows per plate</h4><div>
+            The number of rows per plate</div><h4>Order of image data</h4><div>
+            This setting specifies how the input data is ordered (assuming
+            that sites within a well are ordered consecutively):
+            <ul>
+            <li><i>Row:</i>: The data appears by row and then by column. That is,
+            all columns for a given row (e.g. A01, A02, A03...) appear consecutively, for
+            each row in consecutive order.</li>
+            <li><i>Column:</i> The data appears by column and then by row. That is,
+            all rows for a given column (e.g. A01, B01, C01...) appear consecutively, for
+            each column in consecutive order.</li>
+            </ul>
+            <p>For instance, the SBS Bioimage example (available 
+            <a href="http://www.cellprofiler.org/examples.html#SBS_Bioimage_CNT">here</a>)
+            has files that are named:<br>
+            Channel1-01-A01.tif<br>
+            Channel1-02-A02.tif<br>
+            ...<br>
+            Channel1-12-A12.tif<br>
+            Channel1-13-B01.tif<br>
+            ...<br>
+            You would use "Row" to label these because the ordering
+            is by row and then by column.</p></div></div></body></html>

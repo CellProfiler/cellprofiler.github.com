@@ -1,0 +1,55 @@
+<html style=font-family:arial><head><title>UnmixColors</title></head><body><h1>Module: UnmixColors</h1><div><b>Unmix Colors</b> creates separate images per dye stain for histologically stained images. <hr> This module creates separate grayscale images from a color image stained with light-absorbing dyes. Dyes are assumed to absorb an amount of light in the red, green and blue channels that increases proportionally in each channel with increasing amounts of stain; the hue does not shift with increasing staining.<p>The module separates two or more stains from a background, producing grayscale images. There are several pre-set dye combinations as well as a custom mode that allows a user to calibrate using two images stained with a single dye each.<p>Some commonly known stains must be specified by the individual dye components. For example: <ul> <li>Azan-Mallory: Anilline Blue + Azocarmine + Orange-G</li> <li>Giemsa: Methylene Blue or Eosin</li> <li>Masson Trichrome: Methyl blue + Ponceau-Fuchsin</li> </ul> If there are non-stained cells/components that you also want to separate by color, choose the stain that closest resembles the color you want, or enter a custom value.<p>Please note that if you are looking to simply split a color image into red, green and blue components, use the <b>ColorToGray</b> module rather than <b>UnmixColors</b>.<p><h4>Technical notes</h4> This code is adapted from the ImageJ plugin, <i>Colour_Deconvolution.java</i> (described <a href="http://www.dentistry.bham.ac.uk/landinig/software/cdeconv/cdeconv.html">here</a>) written by A.C. Ruifrok, whose paper forms the basis for this code.<p><h4>References</h4> <ul> <li>Ruifrok AC, Johnston DA. (2001) "Quantification of histochemical staining by color  deconvolution." <i>Analytical & Quantitative Cytology & Histology</i>, 23: 291-299.</li> </ul><p>See also <b>ColorToGray</b>. </div><div><h2>Settings:</h2><h4>Select the input color image</h4><div>
+            Choose the name of the histologically stained color image
+            loaded or created by some prior module.</div><h4>Name the output name</h4><div>
+            Use this setting to name one of the images produced by the
+            module for a particular stain. The image can be used in
+            subsequent modules in the pipeline.</div><h4>Stain</h4><div>
+            Use this setting to choose the absorbance values for a
+            particular stain. The stains are:
+            <br>
+            <table><tr><th>Stain</th><th>Color</th><th>Specific to</th></tr>
+            <tr><td>AEC (3-Amino-9-ethylcarbazole)</td><td bgcolor="#c18181">&nbsp;</td><td>Peroxidase</td></tr>
+            <tr><td>Alican blue</td><td bgcolor="#6aa1d9">&nbsp;</td><td>Mucopolysaccharides</td></tr>
+            <tr><td>Aniline blue</td><td bgcolor="#6c99e3">&nbsp;</td><td>Pollen tubes</td></tr>
+            <tr><td>Azocarmine</td><td bgcolor="#ed5fd1">&nbsp;</td><td>Plasma</td></tr>
+            <tr><td>DAB</td><td bgcolor="#c39075">&nbsp;</td><td>Peroxisomes, mitochondria</td></tr>
+            <tr><td>Eosin</td><td bgcolor="#e862c0">&nbsp;</td><td>Elastic, collagen and reticular fibers</td></tr>
+            <tr><td>Fast red</td><td bgcolor="#cd6c9e">&nbsp;</td><td>Nuclei</td></tr>
+            <tr><td>Fast blue</td><td bgcolor="#788bc3">&nbsp;</td><td>Myelin fibers</td></tr>
+            <tr><td>Feulgen</td><td bgcolor="#a06fbb">&nbsp;</td><td>DNA</td></tr>
+            <tr><td>Hematoxylin</td><td bgcolor="#857cc3">&nbsp;</td><td>Nucleic acids, endoplasmic reticulum</td></tr>
+            <tr><td>Hematoxylin and PAS</td><td bgcolor="#9277b2">&nbsp;</td><td>Nucleus (stained with both Hematoxylin and PAS)</td></tr>
+            <tr><td>Methyl blue</td><td bgcolor="#728de5">&nbsp;</td><td>Collagen</td></tr>
+            <tr><td>Methyl green</td><td bgcolor="#5fdcdf">&nbsp;</td><td>Chromatin</td></tr>
+            <tr><td>Methylene blue</td><td bgcolor="#9277b2">&nbsp;</td><td>Nuclei</td></tr>
+            <tr><td>Orange-G</td><td bgcolor="#e5b065">&nbsp;</td><td>Erythrocytes, pancreas, pituitary</td></tr>
+            <tr><td>PAS</td><td bgcolor="#d660da">&nbsp;</td><td>Glycogen, carbohydrates</td></tr>
+            <tr><td>Ponceau-fuchsin</td><td bgcolor="#e5b065">&nbsp;</td><td>Red counterstain for Masson's trichrome</td></tr>
+            </table>
+            <br>
+            (Information taken from <a href="http://en.wikipedia.org/wiki/Histology#Staining">here</a>,
+            <a href="http://en.wikipedia.org/wiki/Staining">here</a>, and
+            <a href="http://stainsfile.info">here</a>.)
+            <br>
+            You can choose <i>Custom</i> and enter your custom 
+            values for the absorbance (or use the estimator to determine values 
+            from a single-stain image).
+            </div><h4>Red absorbance</h4><div>
+            <i>(Used only if Custom is selected for the stain)</i><br>
+            The red absorbance setting estimates the dye's
+            absorbance of light in the red channel.You should enter a value
+            between 0 and 1 where 0 is no absorbance and 1 is complete
+            absorbance. You can use the estimator to calculate this
+            value automatically.</div><h4>Green absorbance</h4><div>
+            <i>(Used only if Custom is selected for the stain)</i><br>
+            The green absorbance setting estimates the dye's
+            absorbance of light in the green channel. You should enter a value
+            between 0 and 1 where 0 is no absorbance and 1 is complete
+            absorbance. You can use the estimator to calculate this
+            value automatically.</div><h4>Blue absorbance</h4><div>
+            <i>(Used only if Custom is selected for the stain)</i><br>
+            The blue absorbance setting estimates the dye's
+            absorbance of light in the blue channel. You should enter a value
+            between 0 and 1 where 0 is no absorbance and 1 is complete
+            absorbance. You can use the estimator to calculate this
+            value automatically.</div></div></body></html>

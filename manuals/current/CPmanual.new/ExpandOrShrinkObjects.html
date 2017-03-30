@@ -1,0 +1,47 @@
+<html style=font-family:arial><head><title>ExpandOrShrinkObjects</title></head><body><h1>Module: ExpandOrShrinkObjects</h1><div><b>Expand Or Shrink Objects</b> expands or shrinks objects by a defined distance. <hr> The module expands or shrinks objects by adding or removing border pixels. You can specify a certain number of border pixels to be added or removed, expand objects until they are almost touching or shrink objects down to a point. Objects are never lost using this module (shrinking  stops when an object becomes a single pixel). The module can separate touching objects without otherwise shrinking the objects.<p><p><b>ExpandOrShrinkObjects</b> can perform some specialized morphological operations that  remove pixels without completely removing an object. See the Settings help (below) for more detail.</p><p><p><i>Special note on saving images:</i> You can use the settings in this module to pass object outlines along to the module <b>OverlayOutlines</b> and then save them  with the <b>SaveImages</b> module. You can also pass the identified objects themselves along to the object processing module <b>ConvertToImage</b> and then save them with the <b>SaveImages</b> module.</p><p><h4>Available measurements</h4> <b>Image measurements:</b> <ul> <li><i>Count:</i> Number of expanded/shrunken objects in the image.</li> </ul> <b>Object measurements:</b> <ul> <li><i>Location_X, Location_Y:</i> Pixel (<i>X,Y</i>) coordinates of the center of mass of  the expanded/shrunken objects.</li> </ul><p><p>See also <b>Identify</b> modules.</p></div><div><h2>Settings:</h2><h4>Select the input objects</h4><div>
+            Select the objects that you want to expand or shrink.</div><h4>Name the output objects</h4><div>
+            Enter a name for the resulting objects.</div><h4>Select the operation</h4><div>
+            Select the operation that you want to perform:
+            <ul>
+            <li><i>Shrink objects to a point:</i> Remove all pixels but one from filled objects. Thin objects
+            with holes to loops unless the "fill" option is checked.</li>
+            <li><i>Expand objects until touching:</i> Expand objects, assigning every pixel in the image to an
+            object. Background pixels are assigned to the nearest object.</li>
+            <li><i>Add partial dividing lines between objects:</i> Remove pixels from an object that are adjacent to another
+            object's pixels unless doing so would change the object's Euler number
+            (break an object in two, remove the object completely or open a hole in
+            an object).</li>
+            <li><i>Shrink objects by a specified number of pixels:</i> Remove pixels around the perimeter of an object unless doing
+            so would change the object's Euler number (break the object in two, remove the object completely or open
+            a hole in the object). You can specify the number of times 
+            perimeter pixels should be removed. Processing stops automatically when there are no more
+            pixels to remove.</li>
+            <li><i>Expand objects by a specified number of pixels:</i> Expand each object by adding background pixels adjacent to the
+            image. You can choose the number of times to expand. Processing stops
+            automatically if there are no more background pixels.</li>
+            <li><i>Skeletonize each object:</i> Erode each object to its skeleton.</li>
+            <li><i>Remove spurs:</i> Remove or reduce the length of spurs in a skeletonized image.
+            The algorithm reduces spur size by the number of pixels indicated in the
+            setting <i>Number of pixels by which to expand or shrink</i>.</li> 
+            </ul></div><h4>Fill holes in objects so that all objects shrink to a single point?</h4><div>
+            <i>(Used only if one of the "shrink" options selected)</i><br>
+            Select <i>Yes</i> to ensure that each object will shrink
+            to a single point, by filling the holes in each object.
+            <p>Select <i>No</i> to preserve the Euler number. in this case, the 
+            shrink algorithm preserves each object's Euler number,
+            which means that it will erode an object with a hole to a ring in order to
+            keep the hole. An object with two holes will be shrunk to two rings
+            connected by a line in order to keep from breaking up the object or breaking
+            the hole.</p></div><h4>Retain the outlines of the identified objects?</h4><div>
+            Select <i>Yes</i> to retain the outlines of the new objects 
+for later use in the pipeline. For example, a common use is for quality control purposes by 
+overlaying them on your image of choice using the <b>OverlayOutlines</b> module and then saving 
+the overlay image with the <b>SaveImages</b> module.</div><h4>Name the outline image</h4><div>
+            
+<i>(Used only if the outline image is to be retained for later use in the pipeline)</i> <br>
+Enter a name for the outlines of the identified 
+objects. The outlined image can be selected in downstream modules by selecting 
+them from any drop-down image list.</div></div>
+
+<div><p><img src="images\ExpandOrShrinkObjects.png", width="50%"></p></div>
+</body></html>

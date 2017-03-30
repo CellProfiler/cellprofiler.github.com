@@ -1,0 +1,154 @@
+<html style=font-family:arial><head><title>ExportToSpreadsheet</title></head><body><h1>Module: ExportToSpreadsheet</h1><div> <b>Export To Spreadsheet</b> exports measurements into one or more files that can be opened in Excel or other spreadsheet programs. <hr> This module will convert the measurements to a comma-, tab-, or other  character-delimited text format and save them to the hard drive in one or several files, as requested.  <h2>Using metadata tags for output</h2> <b>ExportToSpreadsheet</b> can write out separate files for groups of images based on their metadata tags. This is controlled by the directory and file names that you enter. For instance, you might have applied two treatments to each of your samples and labeled them with the metadata names "Treatment1"  and "Treatment2", and you might want to create separate files for each  combination of treatments, storing all measurements with a given "Treatment1" in separate directories. You can do this by specifying metadata tags for the folder name and file name: <ul> <li>Choose <i>Elsewhere...</i> or <i>Default Input/Output Folder sub-folder</i> for the output file location.</li> <li>Insert the metadata tag of choice into the output path.  You can insert a previously defined metadata tag by either using: <ul><li>The insert key</li> <li>A right mouse button click inside the control</li> <li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul> The inserted metadata tag will appear in green. To change a previously inserted metadata tag,  navigate the cursor to just before the tag and either: <ul><li>Use the up and down arrows to cycle through possible values.</li> <li>Right-click on the tag to display and select the available values.</li></ul> In this instance,  you would select the metadata tag "Treatment1"</li> <li>Uncheck "Export all measurements?"</li> <li>Uncheck <i>Use the object name for the file name?</i>.</li> <li>Using the same approach as above, select the metadata tag "Treatment2", and complete  the filename by appending the text ".csv". </li> </ul> Here's an example table of the files that would be generated:<br><br><tt> <table border="1"><tr><th>Treatment1</th><th>Treatment2</th><th>Path</th></tr><p><tr><td>1M_NaCl</td><td>20uM_DMSO</td><td>1M_NaCl/20uM_DMSO.csv</td></tr> <tr><td>1M_NaCl</td><td>40uM_DMSO</td><td>1M_NaCl/40uM_DMSO.csv</td></tr> <tr><td>2M_NaCl</td><td>20uM_DMSO</td><td>2M_NaCl/20uM_DMSO.csv</td></tr> <tr><td>2M_NaCl</td><td>40uM_DMSO</td><td>2M_NaCl/40uM_DMSO.csv</td></tr></table></tt><p><h4>Available measurements</h4> For details on the nomenclature used by CellProfiler for the exported measurements, see <i>Help > General Help > How Measurements Are Named</i>.<p>See also <b>ExportToDatabase</b>. </div><div><h2>Settings:</h2><h4>Select the column delimiter</h4><div>
+            Select the delimiter to use, i.e., the character that separates columns in a file. The
+            two default choices are tab and comma, but you can type in any single character delimiter 
+            you would prefer. Be sure that the delimiter you choose is not a character that is present 
+            within your data (for example, in file names).</div><h4>Add image metadata columns to your object data file?</h4><div>"
+            Image_Metadata_" columns are normally exported in the Image data file, but if you 
+            select <i>Yes</i>, they will also be exported with the Object data file(s).</div><h4>Limit output to a size that is allowed in Excel?</h4><div>
+            If your output has more than 256 columns, select <i>Yes</i> will open a window 
+            allowing you to select the columns you'd like to export. If your output exceeds
+            65,000 rows, you can still open the CSV in Excel, but not all rows will be visible.</div><h4>Select the measurements to export</h4><div>
+            Select <i>Yes</i> to provide a button that allows you to select which measurements you want to export.
+            This is useful if you know exactly what measurements you want included in the final spreadheet(s). </div><h4>Calculate the per-image mean values for object measurements?</h4><div>
+            Select <i>Yes</i> for <b>ExportToSpreadsheet</b> to calculate population statistics over all the 
+            objects in each image and save that value as an aggregate 
+            measurement in the Image file.  For instance, if you are measuring 
+            the area of the Nuclei objects and you check the box for this option, <b>ExportToSpreadsheet</b> will 
+            create a column in the Image file called "Mean_Nuclei_AreaShape_Area". 
+            <p>You may not want to use <b>ExportToSpreadsheet</b> to calculate these 
+            measurements if your pipeline generates a large number of per-object 
+            measurements; doing so might exceed Excel's limits on the number of columns (256). </div><h4>Output file location</h4><div>
+            This setting lets you choose the folder for the output
+            files. 
+You can choose among the following options which are common to all file input/output 
+modules:
+<ul>
+<li><i>Default Input Folder</i>: Use the default input folder.</li>
+<li><i>Default Output Folder:</i> Use from the default output folder.</li>
+<li><i>Elsewhere...</i>: Use a particular folder you specify.</li>
+<li><i>Default input directory sub-folder</i>: Enter the name of a subfolder of 
+the default input folder or a path that starts from the default input folder.</li>
+<li><i>Default output directory sub-folder</i>: Enter the name of a subfolder of 
+the default output folder or a path that starts from the default output folder.</li>
+</ul>
+<p><i>Elsewhere</i> and the two sub-folder options all require you to enter an additional 
+path name. You can use an <i>absolute path</i> (such as "C:\imagedir\image.tif" on a PC) or a 
+<i>relative path</i> to specify the file location relative to a directory):
+<ul>
+<li>Use one period to represent the current directory. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "./MyFiles" to look in a 
+folder called "MyFiles" that is contained within the Default Input Folder.</li>
+<li>Use two periods ".." to move up one folder level. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "../MyFolder" to look in a 
+folder called "MyFolder" at the same level as the Default Input Folder.</li>
+</ul></p>
+
+            
+            <p>
+For <i>Elsewhere...</i>, <i>Default Input Folder sub-folder</i> and 
+<i>Default Output Folder sub-folder</i>, if you have metadata associated with your 
+images via <b>LoadImages</b> or <b>LoadData</b>, you can name the folder using metadata
+tags. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul><br>
+            For instance, if you have a metadata tag named 
+            "Plate", you can create a per-plate folder by selecting one of the subfolder options
+            and then specifying the subfolder name as "\g&lt;Plate&gt;". The module will 
+            substitute the metadata values for the current image set for any metadata tags in the 
+            folder name. Please see the <b>Metadata</b> module for more details on metadata collection and usage.</p></div><h4>Create a GenePattern GCT file?</h4><div>
+            Select <i>Yes</i> to create a GCT file compatible with 
+            <a href="http://www.broadinstitute.org/cancer/software/genepattern/">GenePattern</a>.
+            The GCT file format is a tab-delimited text file format that describes a gene 
+            expression dataset; the specifics of the format are described 
+            <a href="http://www.broadinstitute.org/cancer/software/genepattern/tutorial/gp_fileformats.html#gct">here</a>.
+            By converting your measurements into a GCT file, you can make 
+            use of GenePattern's data visualization and clustering methods.
+            
+            <p>Each row in the GCT file represents (ordinarily) a gene and 
+            each column represents a sample (in this case, a per-image set
+            of measurements). In addition to any other spreadsheets desired, 
+            checking this box will produce a GCT file with the extension .gct, 
+            prepended with the text selection above. If per-image aggregate 
+            measurements are requested above, those measurements are included 
+            in the GCT file as well.</p></div><h4>Select source of sample row name</h4><div>
+            <i>(Used only if a GenePattern file is requested)</i><br>
+            The first column of the GCT file is the unique identifier for each 
+            sample, which is ordinarily the gene name. This information may be 
+            specified in one of two ways:
+            <ul>
+            <li><i>Metadata:</i> If you used <b>LoadData</b> or <b>LoadImages</b> 
+            to input your images, you may use a per-image data measurement 
+            (such as metadata) that corresponds to the identifier for this column. 
+            Please see the <b>Metadata</b> module for more details on metadata collection and usage.</li>
+            <li><i>Image filename:</i> If the gene name is not available, the image 
+            filename can be used as a surrogate identifier.</li>
+            </ul></div><h4>Select the image to use as the identifier</h4><div>
+            <i>(Used only if a GenePattern file is requested and image filename is used to name each row)</i><br>
+            Select which image whose filename will be used to identify each sample row.</div><h4>Select the metadata to use as the identifier</h4><div>
+            <i>(Used only if a GenePattern file is requested and metadata is used 
+            to name each row)</i><br>
+            Choose the measurement that corresponds to the identifier, such as 
+            metadata from <b>LoadData</b>'s input file. 
+            Please see the <b>Metadata</b> module for more details on metadata collection and usage.</div><h4>Export all measurement types?</h4><div>
+            Select <i>Yes</i> to export every category of measurement.
+            <b>ExportToSpreadsheet</b> will create one data file for each object produced
+            in the pipeline, as well as per-image, per-experiment and object relationships, 
+            if relevant. See <i>Help > Using Your Output > How Measurements are Named</i> for more details on
+            the various measurement types. The module will use the object name as the file name, 
+            optionally prepending the output file name if specified above.
+            <p>Select <i>No</i> if you want to do either (or both) of two things:
+            <ul>
+            <li>Specify which objects should be exported;</li>
+            <li>Override the automatic nomenclature of the exported files.</li>
+            </ul></p></div><h4>Press button to select measurements to export</h4><div>
+            <i>(Used only when selecting the columns of measurements to export)</i><br>
+            This setting controls the columns to be exported. Press
+            the button and check the measurements or categories to export.</div><h4>Representation of Nan/Inf</h4><div>
+            This setting controls the output for numeric fields
+            if the calculated value is infinite (<i>Inf</i>) or undefined (<i>NaN</i>).
+            CellProfiler will produce Inf or NaN values under certain rare
+            circumstances, for instance when calculating the mean intensity
+            of an object within a masked region of an image.
+            <ul>
+            <li><i>Null:</i> Output these values as empty fields.</li>
+            <li><i>NaN:</i> Output them as the strings "NaN", "Inf" or "-Inf".</li>
+            </ul>
+            </div><h4>Data to export</h4><div>
+            <i>(Used only when "Export all measurements?" is set to "No")</i><br>
+            Choose <i>Image</i>, <i>Experiment</i>, <i>Object relationships</i> 
+            or an object name from the list. <b>ExportToSpreadsheet</b> will write out a
+            file of measurements for the given category. See <i>Help > Using Your Output > How Measurements are Named</i>
+            for more details on the various measurement types.</div><h4>Combine these object measurements with those of the previous object?</h4><div>
+            <i>(Used only when "Export all measurements?" is set to "No")</i><br>
+            Select <i>Yes</i> to create a file composed
+            of measurements made on this object and the one directly
+            above it.
+            <p>Select <i>No</i> to create separate
+            files for this and the previous object.</p></div><h4>File name</h4><div>
+            <i>(Used only when "Export all measurements?" is set to "No")</i><br>
+            Enter a file name for the named objects' 
+            measurements. <b>ExportToSpreadsheet</b> will
+            prepend the name of the measurements file to this
+            if you asked to do so above. If you have metadata 
+            associated with your images, this setting will also substitute
+            metadata tags if desired. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul>Please see the <b>Metadata</b> module for more details on metadata collection and usage.</div><h4>Use the object name for the file name?</h4><div>
+            <i>(Used only when "Export all measurements?" is set to "No")</i><br>
+            Select <i>Yes</i> to use the object name as selected above to generate a file
+            name for the spreadsheet. For example, if you selected <i>Image</i>,
+            above and have not checked the <i>Prepend output file name</i> option,
+            your output file will be named "Image.csv". 
+            <p>Select <i>No</i> to name the file yourself.</p></div></div></body></html>

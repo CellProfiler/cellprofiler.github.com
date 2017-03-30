@@ -1,0 +1,210 @@
+<html style=font-family:arial><head><title>UntangleWorms</title></head><body><h1>Module: UntangleWorms</h1><div><b>UntangleWorms</b> untangles overlapping worms. <hr> This module either assembles a training set of sample worms in order to create a worm model, or takes a binary image and the results of worm training and labels the worms in the image, untangling them and associating all of a worm's pieces together.<p>The results of untangling the input image will be an object set that can be used with downstream measurment modules. If using the <i>overlapping</i> style of objects, these can be saved as images using <b>SaveImages</b> to create a multi-page TIF file by  specifying "Objects" as the type of image to save.<p><h4>Available measurements</h4><p><b>Object measurements (for "Untangle" mode only)</b>: <ul> <li><i>Length:</i> The length of the worm skeleton. </li> <li><i>Angle:</i> The angle at each of the control points</li> <li><i>ControlPointX_N, ControlPointY_N:</i> The X,Y coordinate of a control point <i>N</i>. A control point is a sampled location along the worm shape used to construct the model.</li> </ul><p><h4>Technical notes</h4><p><i>Training</i> involves extracting morphological information from the sample objects  provided from the previous steps. Using the default training set weights is recommended. Proper creation of the model is dependent on providing a binary image as input consisting of single, separated objects considered to be worms. You can the <b>Identify</b> modules to find the tentative objects and then filter these objects to get individual worms, whether by using <b>FilterObjects</b>, <b>EditObjectsManually</b> or the size criteria in  <b>IdentifyPrimaryObjects</b>. A binary image can be obtained from an object set by using <b>ConvertObjectsToImage</b>.<p><p>At the end of the training run, a final display window is shown displaying the following statistical data: <ul> <li>A boxplot of the direction angle shape costs. The direction angles (which are between -&pi; and &pi;) are the angles between lines joining consective control points. The angle 0 corresponds to the case when two adjacent line segments are parallel (and thus belong to the same line).</li> <li>A cumulative boxplot of the worm lengths as determined by the model.</li> <li>A cumulative boxplot of the worm angles as determined by the model.</li> <li>A heatmap of the covariance matrix of the feature vectors. For <i>N</i> control points, the feature vector is of length <i>N</i>-1 and contains <i>N</i>-2 elements for each of the  angles between them, plus an element representing the worm length.</li> </ul></p>          <p><i>Untangling</i> involves untangles the worms using a provided worm model, built from a large number of samples of single worms. If the result of the untangling is  not satisfactory (e.g., it is unable to detect long worms or is too stringent about  shape variation) and you do not wish to re-train, you can adjust the provided worm model  manually by opening the .xml file in a text editor  and changing the values for the fields defining worm length, area etc. You may also want to adjust the  "Maximum Complexity" module setting which controls how complex clusters the untangling will handle.  Large clusters (&gt; 6 worms) may be slow to process.</p><p><h4>References</h4> <ul> <li>W&auml;hlby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ,  Sokolnicki KL, Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM, Carpenter AE (2012). "An image analysis toolbox for high-throughput  <i>C. elegans</i> assays." <i>Nature Methods</i> 9(7): 714-716.  <a href="http://dx.doi.org/10.1038/nmeth.1984">(link)</a></li> </ul> </div><div><h2>Settings:</h2><h4>Train or untangle worms?</h4><div>
+            <b>UntangleWorms</b> has two modes: 
+            <ul>
+            <li><i>Train</i> creates one training set per image group,
+            using all of the worms in the training set as examples. It then writes
+            the training file at the end of each image group.</li>
+            <li><i>Untangle</i> uses the training file to untangle images of worms.</li>
+            </ul>
+            Please see the <b>Groups</b> module for more details on the 
+proper use of metadata for grouping</div><h4>Select the input binary image</h4><div>
+            A binary image where the foreground indicates the worm
+            shapes. The binary image can be produced by the <b>ApplyThreshold</b>
+            module.</div><h4>Overlap style</h4><div>
+            This setting determines which style objects are output.
+            If two worms overlap, you have a choice of including the overlapping
+            regions in both worms or excluding the overlapping regions from
+            both worms. 
+            <ul>
+            <li>Choose <i>With overlap</i> to save objects including
+            overlapping regions.</li>
+            <li>Choose <i>Without overlap</i> to save only
+            the portions of objects that do not overlap.</li>
+            <li>Choose <i>Both</i> to save two versions: with and without overlap.</li>
+            </ul></div><h4>Name the output overlapping worm objects</h4><div>
+            <i>(Used only if "Untangle" mode and "Both" or "With overlap" overlap style are selected)</i> <br>
+            This setting names the objects representing the overlapping
+            worms. When worms cross, they overlap and pixels are shared by
+            both of the overlapping worms. The overlapping worm objects share
+            these pixels and measurements of both overlapping worms will include
+            these pixels in the measurements of both worms.</div><h4>Name the output non-overlapping worm objects</h4><div>
+            <i>(Used only if "Untangle" mode and "Both" or "With overlap" overlap style are selected)</i> <br>
+            This setting names the objects representing the worms,
+            excluding those regions where the worms overlap. When worms cross,
+            there are pixels that cannot be unambiguously assigned to one
+            worm or the other. These pixels are excluded from both worms
+            in the non-overlapping objects and will not be a part of the
+            measurements of either worm.</div><h4>Maximum complexity</h4><div>
+            <i>(Used only if "Untangle" mode is selected)</i><br>
+            This setting controls which clusters of worms are rejected as
+            being too time-consuming to process. <b>UntangleWorms</b> judges
+            complexity based on the number of segments in a cluster where
+            a segment is the piece of a worm between crossing points or
+            from the head or tail to the first or last crossing point.
+            The choices are:<br>
+            <ul><li><i>Medium</i>: 200 segments
+            (takes up to several minutes to process)</li>
+            <li><i>High</i>: 600 segments
+            (takes up to a quarter-hour to process)</li>
+            <li><i>Very high</i>: 1000 segments
+            (can take hours to process)</li>
+            <li><i>Custom</i>: allows you to enter a custom number of
+            segments.</li>
+            <li><i>Process all clusters</i>: Process all worms, regardless of complexity</li>
+            </ul></div><h4>Custom complexity</h4><div>
+            <i>(Used only if "Untangle" mode and "Custom" complexity are selected )</i>
+            Enter the maximum number of segments of any cluster that should
+            be processed.</div><h4>Training set file location</h4><div>
+            Select the folder containing the training set to be loaded.
+            
+You can choose among the following options which are common to all file input/output 
+modules:
+<ul>
+<li><i>Default Input Folder</i>: Use the default input folder.</li>
+<li><i>Default Output Folder:</i> Use from the default output folder.</li>
+<li><i>Elsewhere...</i>: Use a particular folder you specify.</li>
+<li><i>Default input directory sub-folder</i>: Enter the name of a subfolder of 
+the default input folder or a path that starts from the default input folder.</li>
+<li><i>Default output directory sub-folder</i>: Enter the name of a subfolder of 
+the default output folder or a path that starts from the default output folder.</li>
+</ul>
+<p><i>Elsewhere</i> and the two sub-folder options all require you to enter an additional 
+path name. You can use an <i>absolute path</i> (such as "C:\imagedir\image.tif" on a PC) or a 
+<i>relative path</i> to specify the file location relative to a directory):
+<ul>
+<li>Use one period to represent the current directory. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "./MyFiles" to look in a 
+folder called "MyFiles" that is contained within the Default Input Folder.</li>
+<li>Use two periods ".." to move up one folder level. For example, if you choose 
+<i>Default Input Folder sub-folder</i>, you can enter "../MyFolder" to look in a 
+folder called "MyFolder" at the same level as the Default Input Folder.</li>
+</ul></p>
+
+            <p>An additional option is the following:
+            <ul>
+            <li><i>URL</i>: Use the path part of a URL. For instance, your
+            training set might be hosted at 
+            <code>http://my_institution.edu/server/my_username/TrainingSet.xml</code>
+            To access this file, you would choose <i>URL</i> and enter
+            <code>http://my_institution.edu/server/my_username/</code>
+            as the path location.</li>
+            </ul></p></div><h4>Training set file name</h4><div>This is the name of the training set file.</div><h4>Use training set weights?</h4><div>
+            Select <i>Yes</i> to use the overlap and leftover
+            weights from the training set. 
+            <p>Select <i>No</i> to override
+            these weights with user-specified values.</p></div><h4>Overlap weight</h4><div>
+            <i>(Used only if not using training set weights)</i> <br>
+            This setting controls how much weight is given to overlaps
+            between worms. <b>UntangleWorms</b> charges a penalty to a
+            particular putative grouping of worms that overlap equal to the
+            length of the overlapping region times the overlap weight. 
+            <ul>
+            <li>Increase
+            the overlap weight to make <b>UntangleWorms</b> avoid overlapping
+            portions of worms.</li>
+            <li>Decrease the overlap weight to make
+            <b>UntangleWorms</b> ignore overlapping portions of worms.</li>
+            </ul></div><h4>Leftover weight</h4><div>
+            <i>(Used only if not using training set weights)</i> <br>
+            This setting controls how much weight is given to 
+            areas not covered by worms.
+            <b>UntangleWorms</b> charges a penalty to a
+            particular putative grouping of worms that fail to cover all
+            of the foreground of a binary image. The penalty is equal to the
+            length of the uncovered region times the leftover weight.
+            <ul>
+            <li> Increase the leftover weight to make <b>UntangleWorms</b> 
+            cover more foreground with worms.</li>
+            <li>Decrease the overlap weight to make <b>UntangleWorms</b> 
+            ignore uncovered foreground.</li>
+            </ul></div><h4>Retain outlines of the overlapping objects?</h4><div>
+            <i>(Used only if "Untangle" mode and "Both" or "With overlap" overlap style are selected)</i> <br>
+            Select <i>Yes</i> to retain the outlines of the new objects 
+for later use in the pipeline. For example, a common use is for quality control purposes by 
+overlaying them on your image of choice using the <b>OverlayOutlines</b> module and then saving 
+the overlay image with the <b>SaveImages</b> module.</div><h4>Outline colormap?</h4><div>
+            <i>(Used only if "Untangle" mode, "Both" or "With overlap" overlap style and retaining outlines are selected )</i> <br>
+            This setting controls the colormap used when drawing
+            outlines. The outlines are drawn in color to highlight the
+            shapes of each worm in a group of overlapping worms</div><h4>Name the overlapped outline image</h4><div>
+            <i>(Used only if "Untangle" mode and "Both" or "With overlap" overlap style are selected)</i> <br>
+            This is the name of the outlines of the overlapped worms.</div><h4>Retain outlines of the non-overlapping worms?</h4><div><i>(Used only if "Untangle" mode and "Both" or "With overlap" overlap style are selected)</i> <br>
+            Select <i>Yes</i> to retain the outlines of the new objects 
+for later use in the pipeline. For example, a common use is for quality control purposes by 
+overlaying them on your image of choice using the <b>OverlayOutlines</b> module and then saving 
+the overlay image with the <b>SaveImages</b> module.</div><h4>Name the non-overlapped outlines image</h4><div>
+            <i>(Used only if "Untangle" mode and "Both" or "With overlap" overlap style are selected)</i> <br>
+            This is the name of the of the outlines of the worms
+            with the overlapping sections removed.</div><h4>Minimum area percentile</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> will discard single worms whose area
+            is less than a certain minimum. It ranks all worms in the training
+            set according to area and then picks the worm at this percentile.
+            It then computes the minimum area allowed as this worm's area
+            times the minimum area factor.</div><h4>Minimum area factor</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            This setting is a multiplier that is applied to the
+            area of the worm, selected as described in the documentation
+            for <i>Minimum area percentile</i>.</div><h4>Maximum area percentile</h4><div>
+            <i>(Used only if "Train" mode is selected)</i><br>
+            <b>UntangleWorms</b> uses a maximum area to distinguish
+            between single worms and clumps of worms. Any blob whose area is
+            less than the maximum area is considered to be a single worm
+            whereas any blob whose area is greater is considered to be two
+            or more worms. <b>UntangleWorms</b> orders all worms in the
+            training set by area and picks the worm at the percentile
+            given by this setting. It then multiplies this worm's area
+            by the <i>Maximum area factor</i> (see below) to get the maximum
+            area</div><h4>Maximum area factor</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            The <i>Maximum area factor</i> setting is used to
+            compute the maximum area as decribed above in <i>Maximum area
+            percentile</i>.</div><h4>Minimum length percentile</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses the minimum length to restrict its
+            search for worms in a clump to worms of at least the minimum length.
+            <b>UntangleWorms</b> sorts all worms by length and picks the worm
+            at the percentile indicated by this setting. It then multiplies the
+            length of this worm by the <i>Mininmum length factor</i> (see below)
+            to get the minimum length.</div><h4>Minimum length factor</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses the <i>Minimum length factor</i>
+            to compute the minimum length from the training set as described
+            in the documentation above for <i>Minimum length percentile</i></div><h4>Maximum length percentile</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses the maximum length to restrict
+            its search for worms in a clump to worms of at least the maximum
+            length. It computes this length by sorting all of the training
+            worms by length. It then selects the worm at the <i>Maximum
+            length percentile</i> and multiplies that worm's length by
+            the <i>Maximum length factor</i> to get the maximum length</div><h4>Maximum length factor</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses this setting to compute the
+            maximum length as described in <i>Maximum length percentile</i>
+            above</div><h4>Maximum cost percentile</h4><div>
+            <i>(Used only if "Train" mode is selected)</i><br>
+            <b>UntangleWorms</b> computes a shape-based cost for
+            each worm it considers. It will restrict the allowed cost to
+            less than the cost threshold. During training, <b>UntangleWorms</b>
+            computes the shape cost of every worm in the training set. It
+            then orders them by cost and uses <i>Maximum cost percentile</i>
+            to pick the worm at the given percentile. It them multiplies
+            this worm's cost by the <i>Maximum cost factor</i> to compute
+            the cost threshold.</div><h4>Maximum cost factor</h4><div>
+            <i>(Used only "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses this setting to compute the
+            cost threshold as described in <i>Maximum cost percentile</i> 
+            above.</div><h4>Number of control points</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            This setting controls the number of control points that
+            will be sampled when constructing a worm shape from its skeleton.</div><h4>Maximum radius percentile</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses the maximum worm radius during
+            worm skeletonization. <b>UntangleWorms</b> sorts the radii of
+            worms in increasing size and selects the worm at this percentile.
+            It then multiplies this worm's radius by the <i>Maximum radius
+            factor</i> (see below) to compute the maximum radius.</div><h4>Maximum radius factor</h4><div>
+            <i>(Used only if "Train" mode is selected)</i> <br>
+            <b>UntangleWorms</b> uses this setting to compute the
+            maximum radius as described in <i>Maximum radius percentile</i>
+            above.</div></div></body></html>

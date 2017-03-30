@@ -1,0 +1,48 @@
+<html style=font-family:arial><head><title>EnhanceEdges</title></head><body><h1>Module: EnhanceEdges</h1><div><b>Enhance Edges</b> enhances or identifies edges in an image, which can improve object identification or other downstream image processing. <hr> This module enhances the edges (gradients) in a grayscale image. All methods other than Canny produce a grayscale image that can be used in an  <b>Identify</b> module or thresholded using the <b>ApplyThreshold</b> module  to produce a binary (black/white) mask of edges. The Canny algorithm produces a binary (black/white) mask image consisting of the edge pixels.<p></div><div><h2>Settings:</h2><h4>Select the input image</h4><div>
+            What did you call the image in which you want to enhance the edges?</div><h4>Name the output image</h4><div>
+            What do you want to call the image with edges enhanced?</div><h4>Automatically calculate the threshold?</h4><div>
+            <i>(Used only with the Canny option and automatic thresholding)</i> <br> 
+            Select <i>Yes</i> to automatically calculate the threshold using a three-category
+            Otsu algorithm performed on the Sobel transform of the image.
+            <p>Select <i>No</i> to manually enter the threshold value.</p></div><h4>Absolute threshold</h4><div>
+            <i>(Used only with the Canny option and manual thresholding)</i><br>
+            The upper cutoff for Canny edges. All Sobel-transformed 
+            pixels with this value or higher will be marked as an edge.
+            You can enter a threshold between 0 and 1.</div><h4>Threshold adjustment factor</h4><div>
+            <i>(Used only with the Canny option and automatic thresholding)</i><br>
+            This threshold adjustment factor is a multiplier that is applied to
+            both the lower and upper Canny thresholds if they are calculated
+            automatically. An adjustment factor of 1 indicates no adjustment.
+            The adjustment factor has no effect on any threshhold entered manually entered.</div><h4>Select an edge-finding method</h4><div>
+            There are several methods that can be used to enhance edges:
+            <ul>
+            <li><i>Sobel:</i> Finds edges using the Sobel approximation to the derivative. 
+            The Sobel method derives a horizontal and vertical gradient measure and returns the 
+            square-root of the sum of the two squared signals.</li>
+            <li><i>Prewitt:</i> Finds edges using the Prewitt approximation to the derivative.
+            It returns edges at those points where the gradient of the image is maximum.</li>
+            <li><i>Roberts:</i> Finds edges using the Roberts approximation to the derivative. 
+            The Roberts method looks for gradients in the diagonal and anti-diagonal directions 
+            and returns the square-root of the sum of the two squared signals. This method is fast,
+            but it creates diagonal artifacts that may need to be removed by smoothing.</li> 
+            <li><i>LoG:</i> Applies a Laplacian of Gaussian filter to the image 
+            and finds zero crossings. </li>
+            <li><i>Canny:</i> Finds edges by looking for local maxima 
+            of the gradient of the image. The gradient is calculated using the derivative
+            of a Gaussian filter. The method uses two thresholds to detect strong and weak 
+            edges, and includes the weak edges in the output only if they are connected to 
+            strong edges. This method is therefore less likely than the others to be fooled 
+            by noise, and more likely to detect true weak edges.</li>
+            </ul></div><h4>Select edge direction to enhance</h4><div>
+            <i>(Used only with Prewitt and Sobel methods)</i> <br> 
+            The direction of the edges
+            are you are identifying in the image (predominantly horizontal, predominantly vertical,
+            or both).</div><h4>Calculate value for low threshold automatically?</h4><div>
+            <i>(Used only with the Canny option and automatic thresholding)</i> <br>
+            Select <i>Yes</i> to automatically calculate the low / soft threshold cutoff for
+            the Canny method.
+            <p>Select <i>No</i> to manually enter the low threshold value.</p></div><h4>Low threshold value</h4><div>
+            <i>(Used only with the Canny option and manual thresholding)</i><br> 
+            Enter the soft threshold cutoff for the Canny method.
+            The Canny method will mark all Sobel-transformed pixels with values
+            below this threshold as not being edges.</div></div></body></html>

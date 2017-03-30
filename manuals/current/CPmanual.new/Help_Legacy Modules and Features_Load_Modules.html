@@ -1,0 +1,103 @@
+<html style=font-family:arial><head><title>Load Modules</title></head>
+<body><h1>Load Modules</h1>
+<div>
+
+<p>Historically, two modules served the same functionality as the current project structure: 
+<b>LoadImages</b> and <b>LoadData</b>.
+While the approach described above supercedes these modules in part, old pipelines
+loaded into CellProfiler that contain these modules will provide the option of preserving them;
+these pipelines will operate exactly as before.</p>
+<p>Alternately, the user can choose to convert these 
+modules into the project equivalent as closely as possible. Both modules remain accesible
+via the "Add module" and <img src="images\module_add.png">&nbsp;
+button at the bottom of the pipeline panel. The section details
+information relevant for users who would like to continue using these modules. Please note,
+however, that these modules are deprcated and may be removed in the future.</p>
+
+<h3>Associating metadata with images</h3>
+<p>Metadata (i.e., additional data about image data) is sometimes available for input images.
+This information can be:
+<ol>
+<li>Used by CellProfiler to group images with common metadata identifiers (or "tags") 
+together for particular steps in a pipeline;</li>
+<li>Stored in the output file along with CellProfiler-measured features for
+annotation or sample-tracking purposes;
+<li>Used to name additional input/output files.</li>
+</ol></p>
+
+<p>Two sources of metadata are:
+<ul>
+<li><i>Metadata provided in the image filename or location (pathname).</i> For example, images produced by an automated
+microscope can be given names similar to "Experiment1_A01_w1_s1.tif" in which the metadata about the
+plate ("Experiment1"), the well ("A01"), the wavelength number ("w1") and the imaging site ("s1") are encapsulated. The
+name of the folder in which the images are saved may be meaningful and may also be considered metadata as well.
+If this is the case for your data, use <b>LoadImages</b> to extract this information for
+use in the pipeline and storage in the output file.</li>
+<li><i>Metadata provided as a table of information</i>. Often, information associated with each image (such as
+treatment, plate, well, etc) is available as a separate spreadsheet. If this is the case for your data, use 
+<b>LoadData</b> to load this information.</li>
+</ul>
+Details for the metadata-specific help is given next to the appropriate settings in 
+<b>LoadImages</b> and <b>LoadData</b>, as well the specific settings in other modules which
+can make use of metadata. However, here is an overview of how metadata is obtained and used.</p>
+
+<p>In <b>LoadImages</b>, metadata can be extracted from the filename and/or folder 
+location using regular expression, a specialized syntax used for text pattern-matching.
+These regular expressions can be used to identify different parts of the filename / folder. 
+The syntax <i>(?P&lt;fieldname&gt;expr)</i> will extract whatever matches <i>expr</i> and 
+assign it to the image's <i>fieldname</i> measurement. A regular expression tool is available 
+which will allow you to check the accuracy of your regular expression.</p>
+
+<p>For instance, say a researcher has folder names with the date and subfolders containing the
+images with the run ID (e.g., <i>./2009_10_02/1234/</i>). 
+The following regular expression will capture the plate, well and site in the fields 
+<i>Date</i> and <i>Run</i>:<br>
+<table border = "1">
+<tr><td colspan = "2">.*[\\/](?P&lt;Date&gt;.*)[\\/](?P&lt;Run&gt;.*)$ </td></tr>
+<tr><td>.*[\\/]</td><td>Skip characters at the beginning of the pathname until either a slash (/) or
+backslash (\) is encountered (depending on the OS). The extra slash for the backslash is used as
+an escape sequence.</td></tr>
+<tr><td>(?P&lt;Date&gt;</td><td>Name the captured field <i>Date</i></td></tr>
+<tr><td>.*</td><td>Capture as many characters that follow</td></tr>
+<tr><td>[\\/]</td><td>Discard the slash/backslash character</td></tr>
+<tr><td>(?P&lt;Run&gt;</td><td>Name the captured field <i>Run</i></td></tr>
+<tr><td>.*</td><td>Capture as many characters as follow</td></tr>
+<tr><td>$</td><td>The <i>Run</i> field must be at the end of the path string, i.e. the
+last folder on the path. This also means that the <i>Date</i> field contains the parent
+folder of the <i>Date</i> folder.</td></tr>
+</table>
+
+<p>In <b>LoadData</b>, metadata is extracted from a CSV (comma-separated) file 
+(a spreadsheet). Columns whose name begins with "Metadata" can be used to group 
+files loaded by <b>LoadData</b> that are associated with a common metadata value.
+The files thus grouped together are then processed as a distinct image set.</p>
+
+<p>For instance, an experiment might require that images created on the same day 
+use an illumination correction function calculated from all images from that day, 
+and furthermore, that the date be captured in the file names for the individual image 
+sets and in a CSV file specifying the illumination correction functions. </p>
+
+<p>In this case, if the illumination correction images are loaded with the 
+<b>LoadData</b> module, the file should have a "Metadata_Date" 
+column which contains the date metadata tags. Similarly, if the individual images 
+are loaded using the <b>LoadImages</b> module, <b>LoadImages</b> should be set to extract the 
+<Date> metadata tag from the file names. The pipeline will then match the individual 
+images with their corresponding illumination correction functions based on matching 
+"Metadata_Date" fields.</p>
+
+<h3>Using image grouping</h3>
+<p>To use grouping, you must define the relevant metadata for each image. This can be done using regular
+expressions in <b>LoadImages</b> or having them pre-defined in a CSV file for use in <b>LoadData</b>.</p>
+
+<p>To use image grouping in <b>LoadImages</b>, please note the following:
+<ul>
+<li><i>Metadata tags must be specified for all images listed.</i> You cannot use
+grouping unless an appropriate regular expression is defined for all the images listed
+in the module.</li>
+<li><i>Shared metadata tags must be specified with the same name for each image listed.</i> For example, if you 
+are grouping on the basis of a metadata tag "Plate" in one image channel, you
+must also specify the "Plate" metadata tag in the regular expression for the other channels that you 
+want grouped together.</li>
+</ul>
+</p>
+</div></body>

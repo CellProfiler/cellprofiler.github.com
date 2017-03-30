@@ -1,0 +1,51 @@
+<html style=font-family:arial><head><title>Setting the Output Filename</title></head>
+<body><h1>Setting the Output Filename</h1>
+<div>
+
+<p>Please note that the output file will be deprecated in the future. This setting
+is temporarily present for those needing HDF5 or MATLAB formats, and will be moved to 
+Export modules in future versions of CellProfiler.</p>
+
+<p>The <i>output file</i> is a file where all information about the analysis as well 
+as any measurements will be stored to the hard drive. <b>Important note:</b> This file 
+does <i>not</i> provide the same functionality as the Export modules. If you want to 
+produce a spreadsheet of measurements easily readable by Excel or a database viewer 
+(or similar programs), please refer to the <b>ExportToSpreadsheet</b> or 
+<b>ExportToDatabase</b> modules and the associated help.</p>
+
+<p>The options associated with the output file are accessible by pressing the 
+"View output settings" button at the bottom of the pipeline panel. In the 
+settings panel to the left, in the <i>Output Filename</i> box, you can specify the 
+name of the output file.</p>
+
+<p>The output file can be written in one of two formats:
+<ul>
+<li>A <i>.mat file</i> which is readable by CellProfiler and by 
+<a href="http://www.mathworks.com/products/matlab/">MATLAB</a> (Mathworks). </li>
+<li>An <i>.h5 file</i> which is readable by CellProfiler, MATLAB and any other program
+capable of reading the HDF5 data format. Documentation on
+how measurements are stored and handled in CellProfiler using this format can be found 
+<a href="https://github.com/CellProfiler/CellProfiler/wiki/Module-Structure-and-Data-Storage-Retrieval#hdf5-measurement-and-workspace-format">here</a>.</li>
+</li>
+</ul>
+Results in the output file can also be accessed or exported
+using <b>Data Tools</b> from the main menu of CellProfiler.
+The pipeline with its settings can be be loaded from an output file using 
+<i>File > Load Pipeline...</i></p>
+
+<p>The output file will be saved in the Default Output Folder unless you type a 
+full path and file name into the file name box. The path must not have 
+spaces or characters disallowed by your computer's platform.</p>
+                                                                           
+<p>If the output filename ends in <i>OUT.mat</i> (the typical text appended to 
+an output filename), CellProfiler will prevent you from overwriting this file 
+on a subsequent run by generating a new file name and asking if you want to 
+use it instead. You can override this behavior by checking the <i>Allow 
+overwrite?</i> box to the right.</p>
+
+<p>For analysis runs that generate a large number of measurements, you may notice
+that even though the analysis completes, CellProfiler continues to use 
+an inordinate amount of your CPU and RAM. This is because the output file is written
+after the analysis is completed and can take a very long time for a lot of measurements.
+If you do not need this file and/or notice this behavior, select "<i>Do not write measurements</i>" 
+from the "Measurements file format" drop-down box.</p></div></body>

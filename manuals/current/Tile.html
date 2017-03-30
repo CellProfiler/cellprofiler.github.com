@@ -1,0 +1,71 @@
+<html style=font-family:arial><head><title>Tile</title></head><body><h1>Module: Tile</h1><div><b>Tile</b> tiles images together to form large montage images. <hr> This module allows more than one image to be placed next to each other in a grid layout you specify. It might be helpful, for example, to place images adjacent to  each other when multiple fields of view have been imaged for the same sample. Images can be tiled either across cycles (multiple fields of view, for example)  or within a cycle (multiple channels of the same field of view, for example). <p> Tiling images to create a montage with this module generates an image that is roughly the size of all the images' sizes added together.  For large numbers of images, this may cause memory errors, which might be avoided by the following suggestions: <ul> <li>Resize the images to a fraction of their original size, using the <b>Resize</b>  module prior to this module in the pipeline.</li> <li>Rescale the images to 8-bit using the <b>RescaleIntensity</b> module, which  diminished image quality by decreasing the number of graylevels in the image (that is, bit depth) but also decreases the size of the image. </li> <li> Use the <b>ConserveMemory</b> module just before this module to clear out  images created previously in the pipeline that are stored in memory but no  longer needed.  Place this module prior to the <b>Tile</b> module (and maybe also afterwards) and  set it to retain only those images that are needed for downstream modules. </li> </ul><p><p>Please also note that this module does not perform <i>image stitching</i>  (i.e., intelligent adjustment of the alignment between adjacent images). For  image stitching, you may find the following list of software packages useful: <ul> <li><a href="http://graphicssoft.about.com/cs/photoshop/qt/csphotomerge.htm">Photomerge Feature in Photoshop CS</a></li> <li><a href="http://www.ptgui.com/">PTGui</a></li> <li><a href="http://cvlab.epfl.ch/~brown/autostitch/autostitch.html">Autostitch</a></li> <li><a href="http://bigwww.epfl.ch/thevenaz/mosaicj/">ImageJ with the MosaicJ plugin</a></li> </ul> Other packages are referenced <a href="http://graphicssoft.about.com/od/panorama/Panorama_Creation_and_Stitching_Tools.htm">here</a></p> </div><div><h2>Settings:</h2><h4>Select an input image</h4><div>
+            Select the image to be tiled. Additional images within the cycle can be added 
+            later by choosing the "<i>Across cycles</i>"option below.</div><h4>Name the output image</h4><div>
+            Enter a name for the final tiled image.</div><h4>Tile assembly method</h4><div>
+            This setting controls the method by which the final tiled image is asembled:
+            <ul>
+            <li><i>Within cycles:</i> If you have loaded more than one image for each cycle
+            using modules upstream in the pipeline, 
+            the images can be tiled. For example, you may tile three different channels
+            (OrigRed, OrigBlue, and OrigGreen), and a new tiled image will 
+            be created for every image cycle.  </li>
+            <li><i>Across cycles:</i> If you want to tile images from multiple 
+            cycles together, select this option. For example, you may tile all the 
+            images of the same type (e.g., OrigBlue) across all fields of view in your  
+            experiment, which will result in one final tiled image 
+            when processing is complete.</li>
+            </ul></div><h4>Final number of rows</h4><div>
+            Specify the number of rows would you like to have in the tiled image.
+            For example, if you want to show your images in a 96-well format, 
+            enter 8. 
+            <p><i>Special cases:</i> Let <i>M</i> be the total number of slots for images
+            (i.e, number of rows x number of columns) and <i>N</i> be the number 
+            of actual images. 
+            <ul>
+            <li>If <i>M</i> &gt; <i>N</i>, blanks will be used for the 
+            empty slots.</li>
+            <li>If the <i>M</i> &lt; <i>N</i>, an error will occur since there are
+            not enough image slots. Check "Automatically calculate number of rows?"
+            to avoid this error.</li>
+            </ul></p></div><h4>Final number of columns</h4><div>
+            Specify the number of columns you like to have in the tiled image.
+            For example, if you want to show your images in a 96-well format, 
+            enter 12.
+            <p><i>Special cases:</i> Let <i>M</i> be the total number of slots for images
+            (i.e, number of rows x number of columns) and <i>N</i> be the number 
+            of actual images. 
+            <ul>
+            <li>If <i>M</i> &gt; <i>N</i>, blanks will be used for the 
+            empty slots.</li>
+            <li>If the <i>M</i> &lt; <i>N</i>, an error will occur since there are
+            not enough image slots. Check "Automatically calculate number of columns?"
+            to avoid this error.</li>
+            </ul></p></div><h4>Image corner to begin tiling</h4><div>
+            Where do you want the first image to be placed?  Begin in the upper left-hand corner
+            for a typical multi-well plate format where the first image is A01.</div><h4>Direction to begin tiling</h4><div>
+            This setting specifies the order that the images are to be arranged.
+            If your images are named A01, A02, etc, 
+            enter <i>row</i>".</div><h4>Use meander mode?</h4><div>
+            Select <i>Yes</i> to tile adjacent images in one direction, 
+            then the next row/column is tiled in the opposite direction.  
+            Some microscopes capture images
+            in this fashion. The default mode is "comb", or "typewriter"
+            mode; in this mode, when one row is completely tiled in one direction,
+            the next row starts near where the first row started and tiles 
+            again in the same direction.</div><h4>Automatically calculate number of rows?</h4><div>
+            <b>Tile</b> can automatically calculate the number of rows
+            in the grid based on the number of image cycles that will be processed.
+            Select <i>Yes</i> to create a grid that has the number of columns
+            that you entered and enough rows to display all of your images. 
+            Select <i>No</i> to specify the number of rows.
+            <p>If you check both automatic rows and automatic columns, <b>Tile</b>
+            will create a grid that has roughly the same number of rows
+            and columns.</p></div><h4>Automatically calculate number of columns?</h4><div>
+            <b>Tile</b> can automatically calculate the number of columns
+            in the grid from the number of image cycles that will be processed.
+            Select <i>Yes</i> to create a grid that has the number of rows
+            that you entered and enough columns to display all of your images.
+            Select <i>No</i> to specify the number of rows.
+            <p>If you check both automatic rows and automatic columns, <b>Tile</b>
+            will create a grid that has roughly the same number of rows
+            and columns.</p></div></div></body></html>

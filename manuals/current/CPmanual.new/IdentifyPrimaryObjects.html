@@ -1,0 +1,642 @@
+<html style=font-family:arial><head><title>IdentifyPrimaryObjects</title></head><body><h1>Module: IdentifyPrimaryObjects</h1><div> <b>Identify Primary Objects</b> identifies biological components of interest in grayscale images containing bright objects on a dark background. <hr> <h4>What is a primary object?</h4> In CellProfiler, we use the term <i>object</i> as a generic term to refer to an identifed feature in an image, usually a cellular subcompartment of some kind (for example, nuclei, cells, colonies, worms).  We define an object as <i>primary</i> when it can be found in an image without needing  the assistance of another cellular feature as a reference. For example: <ul> <li>The nuclei of cells are usually more easily identifiable due to their more uniform  morphology, high contrast relative to the background when stained, and good separation between adjacent nuclei. These qualities typically make them appropriate candidates for primary object  identification.</li> <li>In contrast, cells often have irregular intensity patterns and are lower-contrast with more diffuse  staining, making them more challenging to identify than nuclei. In addition, cells often  touch their neighbors making it harder to delineate the cell borders. For these reasons,  cell bodies are better suited for <i>secondary object</i> identification, since they are  best identified by using a previously-identified primary object (i.e, the nuclei) as  a reference. See the <b>IdentifySecondaryObjects</b> module for details on how to  do this.</li> </ul><p><h4>What do I need as input?</h4> To use this module, you will need to make sure that your input image has the following qualities: <ul> <li>The image should be grayscale.</li> <li>The foreground (i.e, regions of interest) are lighter than the background.</li> </ul> If this is not the case, other modules can be used to pre-process the images to ensure they are in  the proper form: <ul> <li>If the objects in your images are dark on a light background, you  should invert the images using the Invert operation in the <b>ImageMath</b> module.</li> <li>If you are working with color images, they must first be converted to grayscale using the <b>ColorToGray</b> module.</li> </ul> <p>If you have images in which the foreground and background cannot be distinguished by intensity alone (e.g, brightfield or DIC images), you can use the <a href="http://www.ilastik.org/">ilastik</a> package bundled with CellProfiler to perform pixel-based classification (Windows only). You first train a classifier  by identifying areas of images that fall into one of several classes, such as cell body, nucleus,  background, etc. Then, the <b>ClassifyPixels</b> module takes the classifier and applies it to each image  to identify areas that correspond to the trained classes. The result of <b>ClassifyPixels</b> is  an image in which the region that falls into the class of interest is light on a dark background. Since  this new image satisfies the constraints above, it can be used as input in <b>IdentifyPrimaryObjects</b>.  See the <b>ClassifyPixels</b> module for more information.</p><p><h4>What do the settings mean?</h4> See below for help on the individual settings. The following icons are used to call attention to key items: <ul> <li><img src="images\thumb-up.png">&nbsp;Our recommendation or example use case for which a particular setting is best used.</li> <li><img src="images\thumb-down.png">&nbsp;Indicates a condition under which  a particular setting may not work well.</li> <li><img src="images\gear.png">&nbsp;Technical note. Provides more detailed information on the setting.</li> </ul><p><h4>What do I get as output?</h4> A set of primary objects are produced by this module, which can be used in downstream modules for measurement purposes or other operations.  See the section <a href="#Available_measurements">"Available measurements"</a> below for  the measurements that are produced by this module.<p>Once the module has finished processing, the module display window  will show the following panels: <ul> <li><i>Upper left:</i> The raw, original image.</li> <li><i>Upper right:</i> The identified objects shown as a color image where connected pixels that belong to the same object are assigned the same color (<i>label image</i>). It is important to note that assigned colors are  arbitrary; they are used simply to help you distingush the various objects. </li> <li><i>Lower left:</i> The raw image overlaid with the colored outlines of the  identified objects. Each object is assigned one of three (default) colors: <ul> <li>Green: Acceptable; passed all criteria</li> <li>Magenta: Discarded based on size</li> <li>Yellow: Discarded due to touching the border</li> </ul> If you need to change the color defaults, you can  make adjustments in <i>File > Preferences</i>.</li> <li><i>Lower right:</i> A table showing some of the settings selected by the user, as well as those calculated by the module in order to produce the objects shown.</li> </ul><p><a name="Available_measurements"> <h4>Available measurements</h4> <b>Image measurements:</b> <ul> <li><i>Count:</i> The number of primary objects identified.</li> <li><i>OriginalThreshold:</i> The global threshold for the image.</li> <li><i>FinalThreshold:</i> For the global threshold methods, this value is the same as <i>OriginalThreshold</i>. For the adaptive or per-object methods, this value is the mean of the local thresholds.</li> <li><i>WeightedVariance:</i> The sum of the log-transformed variances of the  foreground and background pixels, weighted by the number of pixels in  each distribution.</li> <li><i>SumOfEntropies:</i> The sum of entropies computed from the foreground and background distributions.</li> </ul><p><b>Object measurements:</b> <ul> <li><i>Location_X, Location_Y:</i> The pixel (X,Y) coordinates of the primary  object centroids. The centroid is calculated as the center of mass of the binary  representation of the object.</li> </ul><p><h4>Technical notes</h4><p><p>CellProfiler contains a modular three-step strategy to identify objects even if they touch each other. It is based on previously published algorithms (<i>Malpica et al., 1997; Meyer and Beucher, 1990; Ortiz de Solorzano et al., 1999; Wahlby, 2003; Wahlby et al., 2004</i>). Choosing different options for each of these three steps allows CellProfiler to flexibly analyze a variety of different types of objects. The module has many options, which vary in terms of speed and sophistication. More detail can be found in the Settings section below. Here are the three steps, using an example  where nuclei are the primary objects: <ol> <li>CellProfiler determines whether a foreground region is an individual nucleus or two or more clumped nuclei.</li> <li>The edges of nuclei are identified, using thresholding if the object  is a single, isolated nucleus, and using more advanced options if the  object is actually two or more nuclei that touch each other. </li> <li>Some identified objects are discarded or merged together if they fail to meet certain your specified criteria. For example, partial objects at the border of the image can be discarded, and small objects can be discarded or merged with nearby larger  ones. A separate module, <b>FilterObjects</b>, can further refine the identified nuclei, if desired, by excluding objects that are a particular size, shape, intensity, or texture. </li> </ol><p><h4>References</h4> <ul> <li>Malpica N, de Solorzano CO, Vaquero JJ, Santos, A, Vallcorba I,  Garcia-Sagredo JM, del Pozo F (1997) "Applying watershed algorithms to the segmentation of clustered nuclei." <i> Cytometry</i> 28, 289-297. (<a href="http://dx.doi.org/10.1002/(SICI)1097-0320(19970801)28:4<289::AID-CYTO3>3.0.CO;2-7">link</a>)</li> <li>Meyer F, Beucher S (1990) "Morphological segmentation." <i>J Visual Communication and Image Representation</i> 1, 21-46. (<a href="http://dx.doi.org/10.1016/1047-3203(90)90014-M">link</a>)</li> <li>Ortiz de Solorzano C, Rodriguez EG, Jones A, Pinkel D, Gray JW,  Sudar D, Lockett SJ. (1999) "Segmentation of confocal microscope images of cell nuclei in thick tissue sections." <i>Journal of Microscopy-Oxford</i> 193, 212-226. (<a href="http://dx.doi.org/10.1046/j.1365-2818.1999.00463.x">link</a>)</li> <li>W&auml;hlby C (2003) <i>Algorithms for applied digital image cytometry</i>, Ph.D., Uppsala University, Uppsala.</li> <li>W&auml;hlby C, Sintorn IM, Erlandsson F, Borgefors G, Bengtsson E. (2004)  "Combining intensity, edge and shape information for 2D and 3D segmentation of cell nuclei in tissue sections." <i>J Microsc</i> 215, 67-76. (<a href="http://dx.doi.org/10.1111/j.0022-2720.2004.01338.x">link</a>)</li> </ul><p><p>See also <b>IdentifySecondaryObjects</b>, <b>IdentifyTertiaryObjects</b>,  <b>IdentifyObjectsManually</b> and <b>ClassifyPixels</b> </p> </div><div><h2>Settings:</h2><h4>Select the input image</h4><div>
+            Select the image that you want to use to identify objects.</div><h4>Name the primary objects to be identified</h4><div>
+            Enter the name that you want to call the objects identified by this module.</div><h4>Typical diameter of objects, in pixel units (Min,Max)</h4><div>
+            This setting allows the user to make a distinction on the basis of size, which can
+            be used in conjunction with the <i>Discard objects outside the diameter range?</i> setting
+            below to remove objects that fail this criteria.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            The units used here are pixels so that it is easy to zoom in on objects and determine
+            typical diameters. To measure distances in an open image, use the "Measure
+length" tool under <i>Tools</i> in the display window menu bar. If you click on an image 
+and drag, a line will appear between the two endpoints, and the distance between them shown at the right-most
+portion of the bottom panel.</dd>
+            </dl>
+            <p>A few important notes:
+            <ul>
+            <li>Several other settings make use of the minimum object size entered here, 
+            whether the <i>Discard objects outside the diameter range?</i> setting is used or not: 
+            <ul>
+            <li><i>Automatically calculate size of smoothing filter for declumping?</i></li>
+            <li><i>Automatically calculate minimum allowed distance between local maxima?</i></li>
+            <li><i>Automatically calculate the size of objects for the Laplacian of Gaussian filter?</i> (shown only if Laplacian of 
+            Gaussian is selected as the declumping method)</li>
+            </ul>
+            </li>
+            <li>For non-round objects, the diameter here is actually the "equivalent diameter", i.e.,
+            the diameter of a circle with the same area as the object.</li>
+            </ul>
+            </p></div><h4>Discard objects outside the diameter range?</h4><div>
+            Select <i>Yes</i> to discard objects outside the range you specified in the
+            <i>Typical diameter of objects, in pixel units (Min,Max)</i> setting. Select <i>No</i> to ignore this
+            criterion.
+            <p>Objects discarded 
+            based on size are outlined in magenta in the module's display. See also the
+            <b>FilterObjects</b> module to further discard objects based on some
+            other measurement.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            Checking this box allows you to exclude small objects (e.g., dust, noise,
+            and debris) or large objects (e.g., large clumps) if desired. </dd>
+            </dl>
+            </div><h4>Try to merge too small objects with nearby larger objects?</h4><div>
+            Select <i>Yes</i> to cause objects that are
+            smaller than the specified minimum diameter to be merged, if possible, with
+            other surrounding objects. 
+            <p>This is helpful in cases when an object was
+            incorrectly split into two objects, one of which is actually just a tiny
+            piece of the larger object. However, this could be problematic if the other
+            settings in the module are set poorly, producing many tiny objects; the module
+            will take a very long time trying to merge the tiny objects back together again; you may
+            not notice that this is the case, since it may successfully piece together the
+            objects again. It is therefore a good idea to run the
+            module first without merging objects to make sure the settings are
+            reasonably effective.</p></div><h4>Discard objects touching the border of the image?</h4><div>
+            Select <i>Yes</i> to discard objects that touch the border of the image. 
+            Select <i>No</i> to ignore this criterion.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            Removing objects that touch the image border is useful when you do 
+            not want to make downstream measurements of objects that are not fully within the 
+            field of view. For example, morphological measurements obtained from
+            a portion of an object would not be accurate.</dd>
+            </dl>
+            <p>Objects discarded due to border touching are outlined in yellow in the module's display.
+            Note that if a per-object thresholding method is used or if the image has been
+            previously cropped or masked, objects that touch the 
+            border of the cropped or masked region may also discarded.</p></div><h4>Threshold strategy</h4><div>
+            The thresholding strategy determines the type of input that is used
+            to calculate the threshold. The image thresholds can be based on:
+            <ul>
+            <li>The pixel intensities of the input image (this is the most common).</li>
+            <li>A single value manually provided by the user.</li>
+            <li>A single value produced by a prior module measurement.</li>
+            <li>A binary image (called a <i>mask</i>) where some of the pixel intensity 
+            values are set to 0, and others are set to 1.</li>
+            </ul>
+            These options allow you to calculate a threshold based on the whole 
+            image or based on image sub-regions such as user-defined masks or
+            objects supplied by a prior module.
+            <br>
+            The choices for the threshold strategy are:
+            <br><ul>
+            <li><i>Automatic:</i> Use the default settings for
+            thresholding. This strategy calculates the threshold using the MCT method
+            on the whole image (see below for details on this method) and applies the 
+            threshold to the image, smoothed with a Gaussian with sigma of 1.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This approach is fairly robust, but does not allow you to select the threshold
+            algorithm and does not allow you to apply additional corrections to the
+            threshold.</dd>
+            </dl></li>
+            
+            <li><i>Global:</i> Calculate a single threshold value based on
+            the unmasked pixels of the input image and use that value
+            to classify pixels above the threshold as foreground and below
+            as background.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This strategy is fast and robust, especially if
+            the background is uniformly illuminated.</dd>
+            </dl></li>
+            
+            <li><i>Adaptive:</i> Partition the input image into tiles
+            and calculate thresholds for each tile. For each tile, the calculated
+            threshold is applied only to the pixels within that tile. <br>
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This method is slower but can produce better results for non-uniform backgrounds.
+            However, for signifcant illumination variation, using the <b>CorrectIllumination</b>
+            modules is preferable.</dd>
+            </dl></li>
+            
+            <li><i>Per object:</i> Use objects from a prior module
+            such as <b>IdentifyPrimaryObjects</b> to define the region of interest
+            to be thresholded. Calculate a separate threshold for each object and 
+            then apply that threshold to pixels within the object. The pixels outside 
+            the objects are classified as background.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This method can be useful for identifying sub-cellular particles or 
+            single-molecule probes if the background intensity varies from cell to cell
+            (e.g., autofluorescence or other mechanisms).</dd>
+            </dl></li>
+            
+            <li><i>Manual:</i> Enter a single value between zero and
+            one that applies to all cycles and is independent of the input
+            image.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This approach is useful if the input image has a stable or
+            negligible background, or if the input image is the probability
+            map output of the <b>ClassifyPixels</b> module (in which case, a value
+            of 0.5 should be chosen). If the input image is already binary (i.e.,
+            where the foreground is 1 and the background is 0), a manual value 
+            of 0.5 will identify the objects.</dd>
+            </dl></li>
+            
+            <li><i>Binary image:</i> Use a binary image to classify
+            pixels as foreground or background. Pixel values other than zero
+            will be foreground and pixel values that are zero will be
+            background. This method can be used to import a ground-truth segmentation created 
+            by CellProfiler or another program. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            The most typical approach to produce a 
+            binary image is to use the <b>ApplyThreshold</b> module (image as input, 
+            image as output) or the <b>ConvertObjectsToImage</b> module (objects as input, 
+            image as output); both have options to produce a binary image. It can also be 
+            used to create objects from an image mask produced by other CellProfiler 
+            modules, such as <b>Morph</b>. Note that even though no algorithm is actually 
+            used to find the threshold in this case, the final threshold value is reported 
+            as the <i>Otsu</i> threshold calculated for the foreground region.</dd>
+            </dl></li>
+            
+            <li><i>Measurement:</i> Use a prior image measurement as the
+            threshold. The measurement should have values between zero and one.
+            This strategy can be used to apply a pre-calculated threshold imported 
+            as per-image metadata via the <b>Metadata</b> module.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            Like manual thresholding, this approach can be useful when you are certain what 
+            the cutoff should be. The difference in this case is that the desired threshold does 
+            vary from image to image in the experiment but can be measured using another module,
+            such as one of the <b>Measure</b> modules, <b>ApplyThreshold</b> or
+            an <b>Identify</b> module.</dd>
+            </dl></li>
+            </ul>
+	    </div><h4>Thresholding method</h4><div>
+            The intensity threshold affects the decision of whether each pixel
+            will be considered foreground (region(s) of interest) or background.
+            A higher threshold value will result in only the brightest regions being identified, 
+            whereas a lower threshold value will include dim regions. You can have the threshold 
+            automatically calculated from a choice of several methods, 
+            or you can enter a number manually between 0 and 1 for the threshold.
+            
+            <p>Both the automatic and manual options have advantages and disadvantages. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            An automatically-calculated threshold adapts to changes in
+            lighting/staining conditions between images and is usually more
+            robust/accurate. In the vast majority of cases, an automatic method
+            is sufficient to achieve the desired thresholding, once the proper
+            method is selected.</dd>
+            <dd>In contrast, an advantage of a manually-entered number is that it treats every image identically,
+            so use this option when you have a good sense for what the threshold should be
+            across all images. To help determine the choice of threshold manually, you
+            can inspect the pixel intensities in an image of your choice. 
+            To view pixel intensities in an open image, use the 
+pixel intensity tool which is available in any open display window. When you move 
+your mouse over the image, the pixel intensities will appear in the bottom bar of the display window.. </dd>
+            <dd><img src="images\thumb-down.png">&nbsp;
+            The manual method is not robust with regard to slight changes in lighting/staining 
+            conditions between images. </dd>
+            <dd>The automatic methods may ocasionally produce a poor 
+            threshold for unusual or artifactual images. It also takes a small amount of time to
+            calculate, which can add to processing time for analysis runs on a large
+            number of images.</dd>
+            </dl></p>
+            
+            <p>The threshold that is used for each image is recorded as a per-image 
+            measurement, so if you are surprised by unusual measurements from
+            one of your images, you might check whether the automatically calculated
+            threshold was unusually high or low compared to the other images. See the
+            <b>FlagImage</b> module if you would like to flag an image based on the threshold
+            value.</p>
+            
+            <p>There are a number of methods for finding thresholds automatically:
+            <ul>
+            <li><i>Otsu:</i> This approach calculates the threshold separating the
+            two classes of pixels (foreground and background) by minimizing the variance within the 
+            each class.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This method is a good initial approach if you do not know much about
+            the image characteristics of all the images in your experiment, 
+            especially if the percentage of the image covered by foreground varies 
+            substantially from image to image. </dd>
+            </dl>
+            <dl>
+            <dd><img src="images\gear.png">&nbsp;
+            Our implementation of Otsu's method allows for assigning the threhsold value based on
+            splitting the image into either two classes (foreground and background) or three classes 
+            (foreground, mid-level, and background). See the help below for more details.</dd>
+            </dl>
+            </li>
+            
+            <li><i>Mixture of Gaussian (MoG):</i>This function assumes that the 
+            pixels in the image belong to either a background class or a foreground
+            class, using an initial guess of the fraction of the image that is 
+            covered by foreground. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            If you know that the percentage of each image that is foreground does not 
+            vary much from image to image, the MoG method can be better, especially if the 
+            foreground percentage is not near 50%.</dd>
+            </dl>
+            <dl>
+            <dd><img src="images\gear.png">&nbsp;
+            This method is our own version of a Mixture of Gaussians
+            algorithm (<i>O. Friman, unpublished</i>). Essentially, there are two steps:
+            <ol><li>First, a number of Gaussian distributions are estimated to 
+            match the distribution of pixel intensities in the image. Currently 
+            three Gaussian distributions are fitted, one corresponding to a 
+            background class, one corresponding to a foreground class, and one 
+            distribution for an intermediate class. The distributions are fitted
+            using the Expectation-Maximization algorithm, a procedure referred 
+            to as Mixture of Gaussians modeling. </li>
+            <li>When the three Gaussian distributions have been fitted, a decision 
+            is made whether the intermediate class more closely models the background pixels 
+            or foreground pixels, based on the estimated fraction provided by the user.</li></ol></dd>
+            </dl>
+            </li>
+            
+            <li><i>Background:</i> This method simply finds the mode of the 
+            histogram of the image, which is assumed to be the background of the 
+            image, and chooses a threshold at twice that value (which you can 
+            adjust with a Threshold Correction Factor; see below).  The calculation 
+	    includes those pixels between 2% and 98% of the intensity range. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This thresholding method is appropriate for images in which most of the image is background. 
+	    It can also be helpful if your images vary in overall brightness, but the objects of 
+            interest are consistently <i>N</i> times brighter than the background level of the image.</dd>
+            </dl></li>
+            
+            <li><i>RobustBackground:</i> Much like the Background: method, this method is 
+	    also simple and assumes that the background distribution
+	    approximates a Gaussian by trimming the brightest and dimmest 5% of pixel 
+	    intensities. It then calculates the mean and standard deviation of the 
+            remaining pixels and calculates the threshold as the mean + 2 times 
+            the standard deviation. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This thresholding method can be helpful if the majority
+	    of the image is background, and the results are often comparable or better than the
+	    <i>Background</i> method.</dd></dl></li>
+            
+            <li><i>RidlerCalvard:</i> This method is simple and its results are
+            often very similar to <i>Otsu</i>. 
+            <i>RidlerCalvard</i> chooses an initial threshold and then iteratively 
+            calculates the next one by taking the mean of the average intensities of 
+            the background and foreground pixels determined by the first threshold. 
+            The algorithm then repeats this process until the threshold converges to a single value.
+            <dl>
+            <dd></dd>
+            <dd><img src="images\gear.png">&nbsp;
+            This is an implementation of the method described in Ridler and Calvard, 1978. 
+            According to Sezgin and Sankur 2004, Otsu's 
+            overall quality on testing 40 nondestructive testing images is slightly 
+            better than Ridler's (average error: Otsu, 0.318; Ridler, 0.401).</dd>
+            </dl>
+            </li>
+            
+            <li><i>Kapur:</i> This method computes the threshold of an image by 
+            searching for the threshold that maximizes the sum of entropies of the foreground 
+            and background pixel values, when treated as separate distributions.
+            <dl>
+            <dd><img src="images\gear.png">&nbsp;
+            This is an implementation of the method described in Kapur <i>et al</i>, 1985.</dd>
+            </dl></li>
+            
+            <li><i>Maximum correlation thresholding (MCT):</i> This method computes 
+            the maximum correlation between the binary mask created by thresholding and
+            the thresholded image and is somewhat similar mathematically to <i>Otsu</i>. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            The authors of this method claim superior results when thresholding images
+            of neurites and other images that have sparse foreground densities.</dd>
+            </dl>
+            <dl>
+            <dd><img src="images\gear.png">&nbsp;
+            This is an implementation of the method described in Padmanabhan <i>et al</i>, 2010.</dd>
+            </dl></li>
+            </ul>
+            
+            <p><b>References</b>
+            <ul>
+            <li>Sezgin M, Sankur B (2004) "Survey over image thresholding techniques and quantitative 
+            performance evaluation." <i>Journal of Electronic Imaging</i>, 13(1), 146-165.
+            (<a href="http://dx.doi.org/10.1117/1.1631315">link</a>)</li>
+            <li>Padmanabhan K, Eddy WF, Crowley JC (2010) "A novel algorithm for
+            optimal image thresholding of biological data" <i>Journal of 
+            Neuroscience Methods</i> 193, 380-384.
+            (<a href="http://dx.doi.org/10.1016/j.jneumeth.2010.08.031">link</a>)</li>
+            <li>Ridler T, Calvard S (1978) "Picture thresholding using an iterative selection method",
+            <i>IEEE Transactions on Systems, Man and Cybernetics</i>, 8(8), 630-632.</li>
+            <li>Kapur JN, Sahoo PK, Wong AKC (1985) "A new method of gray level picture thresholding 
+            using the entropy of the histogram." <i>Computer Vision, Graphics and Image Processing</i>, 
+            29, 273-285.</li>
+            </ul></p>
+            </div><h4>Select binary image</h4><div>
+            <i>(Used only if Binary image selected for thresholding method)</i><br>
+            Select the binary image to be used for thresholding.</div><h4>Manual threshold</h4><div>
+            <i>(Used only if Manual selected for thresholding method)</i><br>
+            Enter the value that will act as an absolute threshold for the images, a value from 0 to 1.</div><h4>Select the measurement to threshold with</h4><div>
+            <i>(Used only if Measurement is selected for thresholding method)</i><br>
+            Choose the image measurement that will act as an absolute threshold for the images.</div><h4>Two-class or three-class thresholding?</h4><div>
+            <i>(Used only for the Otsu thresholding method)</i> <br>
+            <ul>
+            <li><i>Two classes:</i> Select this option if the grayscale levels are readily 
+            distinguishable into only two classes: foreground (i.e., regions of interest) 
+            and background.</li>
+            <li><i>Three classes</i>: Choose this option if the grayscale 
+            levels fall instead into three classes: foreground, background and a middle intensity
+            between the two. You will then be asked whether 
+            the middle intensity class should be added to the foreground or background 
+            class in order to generate the final two-class output. </li>
+            </ul>
+            Note that whether 
+            two- or three-class thresholding is chosen, the image pixels are always 
+            finally assigned two classes: foreground and background.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            Three-class thresholding may be useful for images in which you have nuclear staining along with 
+            low-intensity non-specific cell staining. Where two-class thresholding
+            might incorrectly assign this intermediate staining to the nuclei 
+            objects for some cells, three-class thresholding allows you to assign it to the 
+            foreground or background as desired. </dd>
+            </dl>
+            <dl>
+            <dd><img src="images\thumb-down.png">&nbsp;
+            However, in extreme cases where either 
+            there are almost no objects or the entire field of view is covered with 
+            objects, three-class thresholding may perform worse than two-class.</dd>
+            </dl></div><h4>Assign pixels in the middle intensity class to the foreground or the background?</h4><div>
+            <i>(Used only for three-class thresholding)</i><br>
+            Choose whether you want the pixels with middle grayscale intensities to be assigned 
+            to the foreground class or the background class.</div><h4>Approximate fraction of image covered by objects?</h4><div>
+            <i>(Used only when applying the MoG thresholding method)</i><br>
+            Enter an estimate of how much of the image is covered with objects, which
+            is used to estimate the distribution of pixel intensities.</div><h4>Method to calculate adaptive window size</h4><div>
+            <i>(Used only if an adaptive thresholding method is used)</i><br>
+            The adaptive method breaks the image into blocks, computing the threshold 
+            for each block. There are two ways to compute the block size:
+            <ul>
+            <li><i>Image size:</i> The block size is one-tenth of the image dimensions,
+            or 50 &times; 50 pixels, whichever is bigger.</li>
+            <li><i>Custom:</i> The block size is specified by the user.</li>
+            </ul></div><h4>Size of adaptive window</h4><div>
+            <i>(Used only if an adaptive thresholding method with a Custom window size 
+            are selected)</i><br>
+            Enter the window for the adaptive method. For example,
+            you may want to use a multiple of the largest expected object size.</div><h4>Threshold correction factor</h4><div>
+            This setting allows you to adjust the threshold as calculated by the
+            above method. The value entered here adjusts the threshold either 
+            upwards or downwards, by multiplying it by this value. 
+            A value of 1 means no adjustment, 0 to 1 makes the threshold more 
+            lenient and &gt; 1 makes the threshold more stringent. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            When the threshold is calculated automatically, you may find that 
+            the value is consistently too stringent or too lenient across all
+            images. This setting
+            is helpful for adjusting the threshold to a value that you empirically 
+            determine is more suitable. For example, the
+            Otsu automatic thresholding inherently assumes that 50% of the image is
+            covered by objects. If a larger percentage of the image is covered, the
+            Otsu method will give a slightly biased threshold that may have to be
+            corrected using this setting.</dd>
+            </dl></div><h4>Lower and upper bounds on threshold</h4><div>
+            Enter the minimum and maximum allowable threshold, a value from 0 to 1.  
+            This is helpful as a safety precaution when the threshold is calculated
+            automatically, by overriding the automatic threshold.
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            For example, if there are no objects in the field of view,
+            the automatic threshold might be calculated as unreasonably low; the algorithm will
+            still attempt to divide the foreground from background (even though there is no
+            foreground), and you may end up with spurious false positive foreground regions.
+            In such cases, you can estimate the background pixel intensity and set the lower
+            bound according to this empirically-determined value. </dd>
+            <dd>To view pixel intensities in an open image, use the 
+pixel intensity tool which is available in any open display window. When you move 
+your mouse over the image, the pixel intensities will appear in the bottom bar of the display window.</dd>
+            </dl></div><h4>Select the smoothing method for thresholding</h4><div>
+            <i>(Only used for strategies other than Automatic and
+            Binary image)</i><br>
+            The input image can be optionally smoothed before being thresholded.
+            Smoothing can improve the uniformity of the resulting objects, by 
+            removing holes and jagged edges caused by noise in the acquired image. 
+            Smoothing is most likely <i>not</i> appropriate if the input image is 
+            binary, if it has already been smoothed or if it is an output of the
+            <i>ClassifyPixels</i> module.<br>
+            The choices are:
+            <ul>
+            <li><i>Automatic</i>: Smooth the image with a Gaussian
+            with a sigma of one pixel before thresholding. This is suitable
+            for most analysis applications.</li>
+            <li><i>Manual</i>: Smooth the image with a Gaussian with
+            user-controlled scale.</li>
+            <li><i>No smoothing</i>: Do not apply any smoothing prior to 
+            thresholding.</li>
+            </ul></div><h4>Threshold smoothing scale</h4><div>
+            <i>(Only used if smoothing for threshold is Manual)</i><br>
+            This setting controls the scale used to smooth the input image
+            before the threshold is applied. The scale should be approximately
+            the size of the artifacts to be eliminated by smoothing. A Gaussian
+            is used with a sigma adjusted so that 1/2 of the Gaussian's
+            distribution falls within the diameter given by the scale
+            (sigma = scale / 0.674)</div><h4>Automatically calculate the size of objects for the Laplacian of Gaussian filter?</h4><div>
+            <i>(Used only when applying the LoG thresholding method)</i><br>
+            <p>Select <i>Yes</i> to use the filtering diameter range above 
+            when constructing the LoG filter. </p>
+            <p>Select <i>No</i> in order to manually specify the size. 
+            You may want to specify a custom size if you want to filter 
+            using loose criteria, but have objects that are generally of 
+            similar sizes.</p></div><h4>Enter LoG filter diameter</h4><div>
+            <i>(Used only when applying the LoG thresholding method)</i><br>
+            The size to use when calculating the LoG filter. The filter enhances 
+            the local maxima of objects whose diameters are roughly the entered 
+            number or smaller.</div><h4>Method to distinguish clumped objects</h4><div>
+            This setting allows you to choose the method that is used to segment
+            objects, i.e., "declump" a large, merged object into individual objects of interest. 
+            To decide between these methods, you can run Test mode to see the results of each.
+            <ul>
+            <li>
+            <table cellpadding="0"><tr><td>
+            <i>Intensity:</i> For objects that tend to have only a single peak of brightness
+            (e.g. objects that are brighter towards their interiors and 
+            dimmer towards their edges), this option counts each intensity peak as a separate object. 
+            The objects can
+            be any shape, so they need not be round and uniform in size as would be
+            required for the <i>Shape</i> option. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This choice is more successful when
+            the objects have a smooth texture. By default, the image is automatically
+            blurred to attempt to achieve appropriate smoothness (see <i>Smoothing filter</i> options),
+            but overriding the default value can improve the outcome on
+            lumpy-textured objects.</dd>
+            </dl></td>
+            <td><img src="images\IdentifyPrimaryObjects_IntensityDeclumping.png"></td>
+            </tr></table>
+            <dl>
+            <dd><img src="images\gear.png">&nbsp;
+            The object centers are defined as local intensity maxima in the smoothed image.</dd></dl></li>
+            
+            <li>
+            <table cellpadding="0"><tr><td>
+            <i>Shape:</i> For cases when there are definite indentations separating
+            objects. The image is converted to
+            black and white (binary) and the shape determines whether clumped
+            objects will be distinguished. The
+            declumping results of this method are affected by the thresholding
+            method you choose. 
+            <dl>
+            <dd><img src="images\thumb-up.png">&nbsp;
+            This choice works best for objects that are round. In this case, the intensity
+            patterns in the original image are largely irrelevant. Therefore, the cells need not be brighter
+            towards the interior as is required for the <i>Intensity</i> option.</dd>
+            </dl></td>
+            <td><img src="images\IdentifyPrimaryObjects_ShapeDeclumping.png"></td>
+            </tr></table>
+            <dl>
+            <dd><img src="images\gear.png">&nbsp;
+            The binary thresholded image is
+            distance-transformed and object centers are defined as peaks in this
+            image. A distance-transform gives each pixel a value equal to the distance 
+            to the nearest pixel below a certain threshold, so it indicates the <i>Shape</i> 
+            of the object.</dd>
+            </dl></li>
+            <li><i>Laplacian of Gaussian:</i> For objects that have an increasing intensity
+            gradient toward their center, this option performs a Laplacian of Gaussian (or Mexican hat)
+            transform on the image, which accentuates pixels that are local maxima of a desired size. It
+            thresholds the result and finds pixels that are both local maxima and above
+            threshold. These pixels are used as the seeds for objects in the watershed.</li>
+            <li><i>None:</i> If objects are well separated and bright relative to the
+            background, it may be unnecessary to attempt to separate clumped objects.
+            Using the very fast <i>None</i> option, a simple threshold will be used to identify
+            objects. This will override any declumping method chosen in the settings below.</li>
+            </ul></div><h4>Method to draw dividing lines between clumped objects</h4><div>
+            This setting allows you to choose the method that is used to draw the line
+            bewteen segmented objects, provided that you have chosen to declump the objects.
+            To decide between these methods, you can run Test mode to see the results of each.
+            <ul>
+            <li><i>Intensity:</i> Works best where the dividing lines between clumped
+            objects are dimmer than the remainder of the objects. 
+            <p><b>Technical description:</b>
+            Using the previously identified local maxima as seeds, this method is a
+            watershed (<i>Vincent and Soille, 1991</i>) on the intensity image.</p></li>
+            <li><i>Shape:</i> Dividing lines between clumped objects are based on the
+            shape of the clump. For example, when a clump contains two objects, the
+            dividing line will be placed where indentations occur between the two
+            objects. The intensity patterns in the original image are largely irrelevant: the
+            cells need not be dimmer along the lines between clumped objects.
+            Technical description: Using the previously identified local maxima as seeds, 
+            this method is a
+            watershed on the distance-transformed thresholded image.</li>
+            <li><i>Propagate:</i> This method uses a propagation algorithm
+            instead of a watershed. The image is ignored and the pixels are
+            assigned to the objects by repeatedly adding unassigned pixels to
+            the objects that are immediately adjacent to them. This method
+            is suited in cases such as objects with branching extensions,
+            for instance neurites, where the goal is to trace outward from
+            the cell body along the branch, assigning pixels in the branch
+            along the way. See the help for the <b>IdentifySecondary</b> module for more
+            details on this method.</li>
+            <li><i>None</i>: If objects are well separated and bright relative to the
+            background, it may be unnecessary to attempt to separate clumped objects.
+            Using the very fast <i>None</i> option, a simple threshold will be used to identify
+            objects. This will override any declumping method chosen in the previous
+            question.</li>
+            </ul></div><h4>Automatically calculate size of smoothing filter for declumping?</h4><div>
+            <i>(Used only when distinguishing between clumped objects)</i><br>
+            Select <i>Yes</i> to automatically calculate the amount of smoothing 
+            applied to the image to assist in declumping. Select <i>No</i> to
+            manually enter the smoothing filter size.
+            
+            <p>This setting, along with the <i>Minimum allowed distance between local maxima</i> 
+            setting, affects whether objects
+            close to each other are considered a single object or multiple objects.
+            It does not affect the dividing lines between an object and the
+            background.</p>
+            
+            <p>Please note that this smoothing setting is applied after thresholding,
+            and is therefore distinct from the threshold smoothing method setting above, 
+            which is applied <i>before</i> thresholding.</p>
+            
+            <p>The size of the smoothing filter is automatically 
+            calculated based on the <i>Typical diameter of objects, in pixel units (Min,Max)</i> setting above. 
+            If you see too many objects merged that ought to be separate
+            or too many objects split up that
+            ought to be merged, you may want to override the automatically
+            calculated value.</p></div><h4>Size of smoothing filter</h4><div>
+            <i>(Used only when distinguishing between clumped objects)</i> <br>
+            If you see too many objects merged that ought to be separated
+            (under-segmentation), this value 
+            should be lower. If you see too many 
+            objects split up that ought to be merged (over-segmentation), the 
+            value should be higher. Enter 0 to prevent any image smoothing in certain 
+            cases; for example, for low resolution images with small objects 
+            ( &lt; ~5 pixels in diameter).
+
+            <p>Reducing the texture of objects by increasing the
+            smoothing increases the chance that each real, distinct object has only
+            one peak of intensity but also increases the chance that two distinct
+            objects will be recognized as only one object. Note that increasing the
+            size of the smoothing filter increases the processing time exponentially.</p></div><h4>Automatically calculate minimum allowed distance between local maxima?</h4><div>
+            <i>(Used only when distinguishing between clumped objects)</i><br>
+            Select <i>Yes</i> to automatically calculate the distance between
+            intensity maxima to assist in declumping. Select <i>No</i> to
+            manually enter the permissible maxima distance.
+            
+            <p>This setting, along with the <i>Size of smoothing filter</i> setting,
+            affects whether objects close to each other are considered a single object
+            or multiple objects. It does not affect the dividing lines between an object and the
+            background. Local maxima that are closer together than the minimum 
+            allowed distance will be suppressed (the local intensity histogram is smoothed to 
+            remove the peaks within that distance). The distance can be automatically 
+            calculated based on the minimum entered for the 
+            <i>Typical diameter of objects, in pixel units (Min,Max)</i> setting above,
+            but if you see too many objects merged that ought to be separate, or
+            too many objects split up that ought to be merged, you may want to override the
+            automatically calculated value.</div><h4>Suppress local maxima that are closer than this minimum allowed distance</h4><div>
+            <i>(Used only when distinguishing between clumped objects)</i><br>
+            Enter a positive integer, in pixel units. If you see too many objects 
+            merged that ought to be separated (under-segmentation), the value 
+            should be lower. If you see too many objects split up that ought to 
+            be merged (over-segmentation), the value should be higher.
+            <p>The maxima suppression distance
+            should be set to be roughly equivalent to the minimum radius of a real
+            object of interest. Any distinct "objects" which are found but
+            are within two times this distance from each other will be assumed to be
+            actually two lumpy parts of the same object, and they will be merged.</p></div><h4>Speed up by using lower-resolution image to find local maxima?</h4><div>
+            <i>(Used only when distinguishing between clumped objects)</i><br> 
+            Select <i>Yes</i> to down-sample the image for declumping. This can be
+            helpful for saving processing time on large images.
+            <p>Note that if you have entered a minimum object diameter of 10 or less, checking
+            this box will have no effect.</p></div><h4>Retain outlines of the identified objects?</h4><div>
+            Select <i>Yes</i> to retain the outlines of the new objects 
+for later use in the pipeline. For example, a common use is for quality control purposes by 
+overlaying them on your image of choice using the <b>OverlayOutlines</b> module and then saving 
+the overlay image with the <b>SaveImages</b> module.</div><h4>Name the outline image</h4><div>
+            
+<i>(Used only if the outline image is to be retained for later use in the pipeline)</i> <br>
+Enter a name for the outlines of the identified 
+objects. The outlined image can be selected in downstream modules by selecting 
+them from any drop-down image list.</div><h4>Fill holes in identified objects?</h4><div>
+            Checking this box will cause holes interior to identified objects
+            to be filled.</div><h4>Handling of objects if excessive number of objects identified</h4><div>
+            This setting deals with images that are segmented
+            into an unreasonable number of objects. This might happen if
+            the module calculates a low threshold or if the image has
+            unusual artifacts. <b>IdentifyPrimaryObjects</b> can handle
+            this condition in one of three ways:
+            <ul>
+            <li><i>Continue</i>: Don't check for large numbers
+            of objects.</li>
+            <li><i>Truncate</i>: Limit the number of objects.
+            Arbitrarily erase objects to limit the number to the maximum
+            allowed.</li>
+            <li><i>Erase</i>: Erase all objects if the number of
+            objects exceeds the maximum. This results in an image with
+            no primary objects. This option is a good choice if a large
+            number of objects indicates that the image should not be
+            processed.</li>
+            </ul></div><h4>Maximum number of objects</h4><div>
+            <i>(Used only when handling images with large numbers of objects by truncating)</i> <br>
+            This setting limits the number of objects in the
+            image. See the documentation for the previous setting 
+            for details.</div></div></body></html>

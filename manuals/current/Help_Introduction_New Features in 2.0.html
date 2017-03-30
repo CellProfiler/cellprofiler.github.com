@@ -1,0 +1,82 @@
+<html style=font-family:arial><head><title>New Features in 2.0</title></head>
+<body><h1>New Features in 2.0</h1>
+<div>
+ 
+A number of new features have been incorporated into this re-engineered Python 
+version of CellProfiler:
+<h3>Interface</h3>
+<ul>
+<li><i>Resizable user interface: </i>The main CellProfiler interface can now be resized
+by dragging the window corner.</li>
+<li><i>Help for individual module settings:</i> Every setting in every module now has 
+a help button that you can click to display information and advice for that setting.</li>
+<li><i>Settings verification:</i> CellProfiler constantly checks for setting values  
+that are not allowed, and immediately flags them for you.</li>
+<li><i>Context-dependent module settings</i>: Prior versions of CellProfiler 
+displayed all settings for each module, whether or not the values were necessary, 
+given existing choices for other settings. Now, only those settings 
+you require are displayed, simplifying the interface.</li>
+<li><i>Test mode for assay development:</i> This feature allows you to 
+preview the effect of a module setting on your data. You can step backward or forward 
+in the pipeline as you modify settings, optimizing your results prior to running an
+actual analysis.</li>
+<li><i>Unlimited number of http://d1zymp9ayga15t.cloudfront.net/images/objects as module input:</i> Some modules can accept an arbitrary number 
+of images or objects as input, and you can dynamically add or remove any of these inputs as needed.
+For example, you can specify any number of single images in LoadSingleImage; previously,
+the module could accept only three input images at a time. For example, in OverlayOutlines, you can specify that any number of outlines be  
+overlaid on an image; previously, you would have had to string multiple OverlayOutline modules
+together.</li>
+<li><i>Image grouping:</i> Images which share common metadata tags, whether 
+provided in the filename or in an accompanying text data file, can be processed together.
+This is useful for any situation in which the images are organized
+in groups  and each group needs to be analyzed as an individual set, such as 
+illumination correction for multiple plates.</li>
+<li><i>Module drag and drop:</i> You can drag and drop selected modules  
+within a pipeline or into another instance of CellProfiler, keeping their associated 
+settings intact.</li>
+<li><i>Listing of recent pipelines:</i> A selectable list of recently used pipelines
+is available from the menu bar, for easy access.</li>
+<li><i>Figure display choice:</i> Easier access to which module figure display windows are shown.
+This functionality is now controlled within the pipeline, and is saved as part of the pipeline.
+<li><i>Context menus:</i>  The pipeline panel responds to right-clicks, providing 
+easy access to module manipulation or help.</li>
+<li><i>Error handling:</i> This feature sends bug reports (stack traces) to our developers.
+<li><i>Better access for developers:</i> We are providing a developer's guide 
+as a practical introduction for programming in the CellProfiler environment, an 
+email list, and wiki, in addition to the available user forum.
+</ul>
+
+<h3>Module improvements</h3>
+<ul>
+<li><i>Improved Otsu thresholding:</i> Choose two- or three-class thresholding to handle
+images where there might be an intermediate intensity level between foreground and 
+background.</li>
+<li>Secondary object identification now permits discarding of objects touching 
+the image border, along with the associated primary objects.</li>
+<li>Filtering objects by measurements now permits a set of objects to be filtered
+with any number of measurements. </li>
+<li><i>Masking of http://d1zymp9ayga15t.cloudfront.net/images/objects:</i> You can create masks for use with both
+images and objects such that image/object measurements will include only those
+regions within the masked area.</li>
+<li><i>Improved loading of text information:</i> Previously, you could load only a
+limited amount of annotation relevant to your images, via a text file. Now you can use  
+comma-delimited files to load tables of metadata, in addition to file lists of input 
+images for analysis.</li>
+<li><i>Convex hull</i> has been included as an image morphological operation.</li>
+<li>A new module, MeasureNeurons, has been added, which measures the number 
+of trunks and branches for each neuron in an image.</li>
+<li><i>Detection of new features:</i> Neurites can be extracted from images of neurons.
+Branching points of line segments can be found as an image morphological operation.
+Also, "dark holes" (dark spots surrounded bright rings) can be detected. </li>
+<li><i>Improvements to object tracking:</i> A new tracking algorithm has been added
+to the TrackObjects module which is capable of bridging temporal gaps in trajectories
+and accounting for splitting/merging events.</li>
+<li><i>Per-object data exporting:<i> Object data can be exported to a database as a single table containing
+all user-defined object measurements, or as separate tables, one for each object.
+<li><i>SQLite support:</i> Data can be exported in SQLite, a 
+self-contained database format. Users can create their own local databases and 
+no longer need access to a separate database server. Because CellProfiler 
+Analyst also supports SQLite, any user can access CellProfiler Analyst's
+suite of data exploration and machine-leaning tools without installing a complicated database server.</li>
+</ul>
+</div></body>

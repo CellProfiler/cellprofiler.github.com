@@ -1,0 +1,29 @@
+<html style=font-family:arial><head><title>Setting The Default Input Folder</title></head>
+<body><h1>Setting The Default Input Folder</h1>
+<div>
+
+<p>In the Folder panel, the <i>Default Input Folder</i> contains the input image or data files
+that you want to analyze. Several File Processing modules (e.g., 
+<b>LoadImages</b> or <b>LoadData</b>) provide the option of retrieving images 
+from this folder on a default basis unless you specify, within the module, an alternate, 
+specific folder on your computer. Within modules, we recommend selecting the 
+Default Input Folder as much as possible, so that your pipeline will 
+work even if you transfer your images and pipeline to a different 
+computer. If, instead, you type specific folder path names into a module's settings, 
+your pipeline will not work on someone else's computer until you adjust those
+pathnames within each module.</p>
+
+<p>Use the <i>Browse</i> button <img src="images\folder_browse.png"></img> to specify 
+the folder you would like to use as the Default Input Folder, or 
+type the full folder path in the edit box. If you type a folder path that  
+cannot be found, the message box below will indicate this fact until you correct the problem. 
+If you want to specify a folder that does not yet exist, type the desired name and 
+click on the <i>New folder</i> button <img src="images\folder_create.png"></img>.
+The folder will be created according to the pathname you have typed.</p>
+
+<p>The contents of the Default Input Folder are shown in the file panel to the left.
+Double-clicking image file names in this panel opens them in a figure window.             
+If you double-click on .mat pipeline or output files (CellProfiler 1.0) or .cp 
+pipeline files (CellProfiler 2.0), you will be asked if you want to load a       
+pipeline from the file. To refresh the contents of this panel, click the <i>Refresh</i>
+button <img src="images\folder_refresh.png"></img>.</p></div></body>

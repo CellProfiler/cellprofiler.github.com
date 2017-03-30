@@ -1,0 +1,63 @@
+<html style=font-family:arial><head><title>MeasureNeurons</title></head><body><h1>Module: MeasureNeurons</h1><div><b>Measure Neurons</b> measures branching information for neurons or any skeleton objects with seed points. <hr> <p>This module measures the number of trunks and branches for each neuron in an image. The module takes a skeletonized image of the neuron plus previously  identified seed objects (for instance, the neuron soma) and finds the number of  axon or dendrite trunks that emerge from the soma and the number of branches along the axons and dendrites. Note that the seed objects must be both smaller than, and touching  the skeleton in order to be counted.</p><p><p>The typical approach for this module is the following: <ul> <li>Identify a seed object. This object is typically a nucleus, identified with a  module such as <b>IdentifyPrimaryObjects</b>. </li> <li>Identify a larger object that touches or encloses this seed object.  For example, the neuron cell can be grown outwards from the initial seed nuclei  using <b>IdentifySecondaryObjects</b>. </li> <li>Use the <b>Morph</b> module to skeletonize the secondary objects.</li> <li>Finally, the primary objects and the skeleton objects are used as inputs to <b>MeasureNeurons</b>.</li> </ul> </p><p><p>The module determines distances from the seed objects along the axons and dendrites  and assigns branchpoints based on distance to the closest seed object when two seed objects appear to be attached to the same dendrite or axon.</p><p><h4>Available measurements</h4> <ul> <li><i>NumberTrunks:</i> The number of trunks. Trunks are branchpoints that lie  within the seed objects</li> <li><i>NumberNonTrunkBranches:</i> The number of non-trunk branches. Branches are  the branchpoints that lie outside the seed objects.</li> <li><i>NumberBranchEnds</i>: The number of branch end-points, i.e, termini.</li> </ul> </div><div><h2>Settings:</h2><h4>Select the seed objects</h4><div>
+            Select the previously identified objects that you want to use as the
+            seeds for measuring branches and distances. Branches and trunks are assigned
+            per seed object. Seed objects are typically not single points/pixels but 
+            instead are usually objects of varying sizes.</div><h4>Select the skeletonized image</h4><div>
+            Select the skeletonized image of the dendrites
+            and/or axons as produced by the <b>Morph</b> module's
+            <i>Skel</i> operation.</div><h4>Retain the branchpoint image?</h4><div>
+            Select <i>Yes</i> if you want to save the color image of
+            branchpoints and trunks. This is the image that is displayed
+            in the output window for this module.</div><h4>Name the branchpoint image</h4><div>
+            <i>(Used only if a branchpoint image is to be retained)</i><br>
+            Enter a name for the branchpoint image here. You can then 
+            use this image in a later module, such as <b>SaveImages</b>.</div><h4>Maximum hole size:</h4><div>
+            <i>(Used only when filling small holes)</i><br>
+            This is the area of the largest hole to fill, measured
+            in pixels. The algorithm will fill in any hole whose area is
+            this size or smaller.</div><h4>Export the neuron graph relationships?</h4><div>
+            Select <i>Yes</i> to produce an edge file and a vertex
+            file that give the relationships between trunks, branchpoints
+            and vertices.</div><h4>Intensity image</h4><div>
+            Select the image to be used to calculate
+            the total intensity along the edges between the vertices.</div><h4>Vertex file name</h4><div>
+            Enter the name of the file that will hold the edge information.
+            You can use metadata tags in the file name. 
+            <p>Each line of the file
+            is a row of comma-separated values. The first row is the header;
+            this names the file's columns. Each subsequent row represents
+            a vertex in the neuron skeleton graph: either a trunk, 
+            a branchpoint or an endpoint.
+            The file has the following columns:
+            <br><ul>
+            <li><i>image_number:</i> The image number of the associated image</li>
+            <li><i>vertex_number:</i> The number of the vertex within the image</li>
+            <li><i>i:</i> The I coordinate of the vertex.</li>
+            <li><i>j:</i> The J coordinate of the vertex.</li>
+            <li><i>label:</i> The label of the seed object associated with
+            the vertex.</li>
+            <li><i>kind:</i> The vertex type, with the following choices:
+            <ul><li><b>T:</b> Trunk</li>
+            <li><b>B:</b> Branchpoint</li>
+            <li><b>E:</b> Endpoint</li></ul></li></ul>
+            </p></div><h4>Edge file name</h4><div>
+            Enter the name of the file that will hold the edge information.
+            You can use metadata tags in the file name. Each line of the file
+            is a row of comma-separated values. The first row is the header;
+            this names the file's columns. Each subsequent row represents
+            an edge or connection between two vertices (including between
+            a vertex and itself for certain loops).
+            
+            <p>The file has the following columns:
+            <br><ul>
+            <li><i>image_number:</i> The image number of the associated image</li>
+            <li><i>v1:</i> The zero-based index into the vertex
+            table of the first vertex in the edge.</li>
+            <li><i>v2:</i> The zero-based index into the vertex table of the
+            second vertex in the edge.</li>
+            <li><i>length:</i> The number of pixels in the path connecting the
+            two vertices, including both vertex pixels.</li>
+            <li><i>total_intensity:</i> The sum of the intensities of the
+            pixels in the edge, including both vertex pixel intensities.</li>
+            </ul>
+            </p></div></div></body></html>

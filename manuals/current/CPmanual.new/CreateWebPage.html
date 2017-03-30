@@ -1,0 +1,78 @@
+<html style=font-family:arial><head><title>CreateWebPage</title></head><body><h1>Module: CreateWebPage</h1><div><b>Create Web Page</b> creates the html file for a webpage to display images  (or their thumbnails, if desired). <hr> This module creates an html file that displays the specified images, and optionally a link to a compressed ZIP file of all of the images shown. </div><div><h2>Settings:</h2><h4>Select the input images</h4><div>
+            Select the images to display on the web page.</div><h4>Use thumbnail images?</h4><div>
+            Select <i>Yes</i> to display thumbnail images (small versions of the 
+            images) on the web page that link to the full images. <br>
+            Select <i>No</i> to display the full image directly on the web page.
+            <p>If you are going to use thumbnails, you will need to load
+            them using <b>LoadImages</b> or <b>LoadData</b>; you can run a separate 
+            pipeline prior to this one to create thumbnails from your originals  
+            using the <b>Resize</b> and <b>SaveImages</b> modules. For some high-content
+            screening systems, thumbnail files are automatically created and have
+            the text "thumb" in the name.</p></div><h4>Select the thumbnail images</h4><div>
+            <i>(Used only if using thumbnails)</i><br>
+            Select the name of the images to use for thumbnails.</div><h4>Webpage file name</h4><div>
+            Enter the desired file name for the web page. <b>CreateWebPage</b>
+            will add the .html extension if no extension is specified.
+            If you have metadata associated with your images, you can name the 
+            file using metadata tags. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul><br>
+            For instance, if you have metadata tags named "Plate" and 
+            "Well", you can create separate per-plate, per-well web pages based on
+            your metadata by inserting the tags "Plate_Well" to specify the 
+            name. Please see the <b>Metadata</b> module for more details on metadata collection and usage.</div><h4>Select the folder for the .html file</h4><div>
+            This setting determines how <b>CreateWebPage</b> selects the 
+            folder for the .html file(s) it creates. 
+            <ul>
+            <li><i>Same as the images</i>: Place the .html file(s) in the same folder as 
+            the files.</li>
+            <li><i>One level over the images</i>: Place the .html file(s) in the
+            image files' parent folder.</li>
+            </ul></div><h4>Webpage title</h4><div>
+            This is the title that appears at the top of the browser
+            window. If you have metadata associated with your images, you can name the 
+            file using metadata tags. 
+You can insert a previously defined metadata tag by either using:
+<ul><li>The insert key</li>
+<li>A right mouse button click inside the control</li>
+<li>In Windows, the Context menu key, which is between the Windows key and Ctrl key </li></ul>
+The inserted metadata tag will appear in green. To change a previously inserted metadata tag, 
+navigate the cursor to just before the tag and either:
+<ul><li>Use the up and down arrows to cycle through possible values.</li>
+<li>Right-click on the tag to display and select the available values.</li></ul>For instance, if you 
+            have a metadata tag named "Plate", you can type "Plate: " and then insert 
+            the metadata tag "Plate" to display the plate metadata item. Please see the <b>Metadata</b> module for more details on metadata collection and usage.</div><h4>Webpage background color</h4><div>
+            This setting controls the background color for the web page.</div><h4>Number of columns</h4><div>
+            This setting determines how many images are displayed
+            in each row.</div><h4>Table border width</h4><div>
+            The table border width determines the width of the border
+            around the entire grid of displayed images (i.e., the "table" of images) 
+            and is measured in pixels. This value can be 
+            set to zero, in which case you will not see the table border.</div><h4>Image spacing</h4><div>
+            The spacing between images ("table cells"), in pixels.</div><h4>Image border width</h4><div>
+            The image border width determines the width of
+            the border around each image and is measured in pixels.
+            This value can be set to zero, in which case you will not see the 
+            image border.</div><h4>Open new window when viewing full image?</h4><div>
+            This controls the behavior of the thumbnail links. 
+            <ul>
+            <li><i>Once only:</i> Your browser will open a new window
+            when you click on the first thumbnail and will display subsequent
+            images in the newly opened window. </li>
+            <li><i>For each image:</i> The browser will open a new window each time
+            you click on a link.</li>
+            <li><i>No:</i> The browser will reuse the current window
+            to display the image</li>
+            </ul></div><h4>Make a ZIP file containing the full-size images?</h4><div>
+            ZIP files are a common archive and data compression file format, making 
+            it convenient to download all of the images represented on the web page with a single click.
+            Select <i>Yes</i> to create a ZIP file that contains all your images, 
+            compressed to reduce file size.</div><h4>Enter the ZIP file name</h4><div>
+            <i>(Used only if creating a ZIP file)</i><br>
+            Specify the name for the ZIP file.</div></div></body></html>

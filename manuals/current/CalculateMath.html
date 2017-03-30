@@ -1,0 +1,29 @@
+<html style=font-family:arial><head><title>CalculateMath</title></head><body><h1>Module: CalculateMath</h1><div><b>Calculate Math</b> takes measurements produced by previous modules and performs basic arithmetic operations. <hr> The arithmetic operations available in this module include addition, subtraction, multiplication, and division. The result can be log-transformed or raised to a power and can be used in further calculations if another <b>CalculateMath</b> module is added to the pipeline. <p><p>The module can make its calculations on a per-image basis (for example, multiplying the area occupied by a stain in the image by the total intensity in the image) or on an object-by-object basis (for example, dividing the intensity in the nucleus by the intensity in the cytoplasm for each cell).<p><h4>Available measurements</h4> <ul> <li><b>Image measurements:</b> If both input measurements are whole-image measurements, then the result will also be a whole-image measurement. </li> <li><b>Object measurements:</b> Object measurements can be produced in two ways:  <ul> <li>If both input measurements are individual object measurements, then the  result will also be an object measurement. In these cases, the measurement will  be associated with <i>both</i> objects that were involved in the measurement.</li> <li>If one measure is object-based and one image-based, then the result will be  an object measurement.</li> </ul> </li> </ul> The result of these calculations is a new measurement in the "Math" category. <p>See also all <b>Measure</b> modules. </div><div><h2>Settings:</h2><h4>Name the output measurement</h4><div>
+            Enter a name for the measurement calculated by this module.</div><h4>Operation</h4><div>
+            Choose the arithmetic operation would you like to perform. <i>None</i> is useful if 
+            you simply want to select some of the later options in the module, such as multiplying
+            or exponentiating your image by a constant.</div><h4>Select the first operand measurement type</h4><div>
+                    Indicate whether the operand is an image or object measurement.</div><h4>Select the first operand objects</h4><div>
+                    Choose the objects you want to measure for this operation.</div><h4>Select the first operand measurement</h4><div>
+                    Enter the category that was used to create the measurement. You
+                    will be prompted to add additional information depending on 
+                    the type of measurement that is requested.</div><h4>Multiply the above operand by</h4><div>
+                    Enter the number by which you would like to multiply the above operand.</div><h4>Raise the power of above operand by</h4><div>
+                    Enter the power by which you would like to raise the above operand.</div><h4>Select the second operand measurement type</h4><div>
+                    Indicate whether the operand is an image or object measurement.</div><h4>Select the second operand objects</h4><div>
+                    Choose the objects you want to measure for this operation.</div><h4>Select the second operand measurement</h4><div>
+                    Enter the category that was used to create the measurement. You
+                    will be prompted to add additional information depending on 
+                    the type of measurement that is requested.</div><h4>Take log10 of result?</h4><div>
+            Select <i>Yes</i> if you want the log (base 10) of the result.</div><h4>Multiply the result by</h4><div>
+            <i>(Used only for operations other than None)</i><br>
+            Enter the number by which you would like to multiply the result.</div><h4>Raise the power of result by</h4><div>
+            <i>(Used only for operations other than None)</i><br>
+            Enter the power by which you would like to raise the result.</div><h4>Add to the result</h4><div>
+            Enter the number you like to add to the result.</div><h4>Constrain the result to a lower bound?</h4><div>
+            Select <i>Yes</i> if you want the result to be 
+            constrained to a lower bound.</div><h4>Enter the lower bound</h4><div>
+            Enter the lower bound of the result here.</div><h4>Constrain the result to an upper bound?</h4><div>
+            Select <i>Yes</i> if you want the result to be 
+            constrained to an upper bound.</div><h4>Enter the upper bound</h4><div>
+            Enter the upper bound of the result here.</div></div></body></html>
