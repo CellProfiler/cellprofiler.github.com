@@ -249,6 +249,14 @@ img.scale-with-grid {
     height: auto;
 }
 
+td img.exampleImage {
+    max-width: 50%;
+    float: left;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+
 /* #Buttons
 ================================================== */
 /* #Forms
