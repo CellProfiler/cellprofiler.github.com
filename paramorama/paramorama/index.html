@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>Paramorama</title>
+    <link rel="stylesheet" href="paramorama.css">
+  </head>
+
+  <body>
+  	<div id="wrap">
+  	<h1 class="topspace">
+  	  Paramorama<br>
+  	  Parameter visualization for biomedical image analysis
+  	</h1>
+
+    <p>
+      <!--[<a href="http://software.engineering.leeds.ac.uk/software/viewsw/id/95/s_id/95">Download Paramorama</a>]-->
+      [<a href="downloads/ParamoramaWin.jar">Download Paramorama (PC)</a>]
+      [<a href="downloads/ParamoramaMac.jar">Download Paramorama (Mac)</a>]
+      [<a href="downloads/4x4x4x4x4.zip">Sample data</a>]
+      [<a href="http://www.broadinstitute.org/bbbc/human_ht29_colon_cancer_1.html">About sample data</a>]
+    </p>
+
+	<p>
+      <img src="figures/paramorama-mac.png">
+    </p>
+
+    <h2 class="topspace">Motivation</h2>
+    <p>
+      Image analysis algorithms are often highly parameterized and typically require significant human input to
+      optimize input parameter settings. This can take up to several days. We propose a different approach based
+      on parameter sampling and interactive visual exploration.
+    </p>
+
+    <h2>Sampling</h2>
+    <p>
+      We have developed a custom plug-in for <a href="http://www.cellprofiler.org">CellProfiler</a> � a
+      popular image analysis framework developed and maintained by the
+      <a href="http://www.broadinstitute.org/science/platforms/imaging/imaging-platform">Imaging Platform</a>
+      at the Broad Institute. After users have specified which parameters to sample and how, the plug-in
+      automatically samples input parameters, computes and saves results to disk. Our plug-in
+      ships with the <a href="http://www.cellprofiler.org/developers.shtml">developer's version</a> of
+      CellProfiler.
+    </p>
+    <p>
+      <img src="figures/cp_sampling.gif">
+    </p>
+
+    <h2>Visual analysis</h2>
+    <p>
+      Our main focus has been to develop a visualization technique for analyzing and exploring relationships
+      between sampled input parameters and corresponding output images. Our prototype called Paramorama
+      facilitates this.
+    <p>
+
+    <p>
+      [<a href="http://software.engineering.leeds.ac.uk/software/viewsw/id/95/s_id/95">Download Paramorama</a>]
+      <!-- [<a href="downloads/ParamoramaWin.jar">Download Paramorama (PC)</a>] -->
+      <!-- [<a href="downloads/ParamoramaMac.jar">Download Paramorama (Mac)</a>] -->
+      [<a href="downloads/4x4x4x4x4.zip">Sample data</a>]
+      [<a href="http://www.broadinstitute.org/bbbc/human_ht29_colon_cancer_1.html">About sample data</a>]
+    </p>
+
+    </p>
+      <img src="figures/paramorama-win.png">
+    </p>
+    <p>
+      Paramorama has four coordinated views:
+      <ol>
+        <li>
+          Metric view. Histograms of derived metrics, such as object count.
+        </li>
+        <li>
+          Parameter space view. Structured outline of parameters and their sampled values.
+        </li>
+        <li>
+          Preview area. Structured presentation of selected regions in parameter space as thumbnails.
+        </li>
+        <li>
+          Reference image. Moving the mouse cursor over imaged-based output overlays it on a
+          reference image. Multiple data sets and corresponding reference images can be loaded
+          simultaneously.
+        </li>
+      </ol>
+    </p>
+
+
+    <h2>Related publications</h2>
+    <p class="publication">
+      <a href="../../publications/pretorius_2011_parameter_visualization.pdf">
+        Visualization of parameter space for image analysis
+      </a><br>
+      A.J. Pretorius, M.-A.P. Bray, A.E. Carpenter and R.A. Ruddle<br>
+      <i>IEEE Transactions on Visualization and Computer Graphics,</i> vol. 17, no. 12, pp. 2402-2411, 2011.
+    </p>
+    <p class="publication">
+      <span class="emphasis">
+        Visual analytics interface design for parameter optimization
+      </span><br>
+      A.J. Pretorius and R.A. Ruddle<br>
+      <i>Proceedings of the International UKVAC Workshop on Visual Analytics</i>, 2011.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Paramorama is developed and maintained by Hannes Pretorius. Please feel free to
+      <a href="http://www.comp.leeds.ac.uk/scsajp/">contact</a> him for any questions, suggestions or feedback.
+    </p>
+
+    <h2>Acknowledgements</h2>
+    <p>
+       Hannes Pretorius and Roy Ruddle are funded through WELMEC, a Centre of Excellence in Medical
+       Engineering funded by the Wellcome Trust and EPSRC, under grant number WT088908/Z/09/Z. Mark
+       Bray and Anne Carpenter are funded by the National Institutes of Health under grant number R01 GM089652.
+    </p>
+
+    <p class="small">
+       Copyright 2011. A.J. Pretorius. All rights reserved.
+    </p>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6858650;
+var sc_invisible=1;
+var sc_security="dcc71cc3";
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="counter on tumblr"
+href="http://statcounter.com/tumblr/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/6858650/0/dcc71cc3/1/"
+alt="counter on tumblr" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+	</div>
+ </body>
+</html>

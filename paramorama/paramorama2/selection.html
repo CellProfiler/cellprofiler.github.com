@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Paramorama 2 - Selection</title>
+		<link rel="stylesheet" href="paramorama2.css">
+	</head>
+	<body>
+
+		<p class="header">
+			<a href="index.html">Introduction</a> | 
+			<a href="getting-started.html">Getting started</a> |
+			<a href="sorting.html">Sorting</a> |
+			<a href="filtering.html">Filtering</a> |
+			Selection |
+			<a href="download.html">Download</a> |
+			<a href="contact.html">Contact</a>
+		</p>
+		
+		<h1>Paramorama 2 - Selection</h1>
+		
+		<p>(See <a href="#video">video</a>)</p>
+
+		<h2>Preview</h2>
+
+		<p>In the <a href="filtering.html">previous section</a> we narrowed down the visible data to a subset of the original data set. You are probably itching to see what the actual image-based output looks like.</p>
+		
+		<p>To see a preview of a single row, hold down the SHIFT key. The images corresponding to that row will be displayed toward the right of UI as long as SHIFT is held down. For example:</p>
+		
+		<p><img src="Images/paramorama-preview.png" alt="" title="Selection with Paramorama2" /></p>
+		
+		<h2>Selection and review</h2>
+		
+		<p>You can also select multiple rows and load the corresponding images into the right-hand view. Move you mouse cursor over the data items in the column-based visualization (without holding down SHIFT). You will notice that the rows that are highlighted depend on two things: (1) the row under the mouse cursor, and (2) the column under the mouse cursor. Paramorama 2 will automatically highlight all adjacent rows that have the same value for the column under the cursor. (To highlight single rows, hold down the <em>shift</em> key.)</p>
+		
+		<p>Move your mouse over the first "step" of the "Typical diameter of objects, in pixel units (Min, Max)". Apart from highlighting half the rows currently displayed, the number of highlighted rows (54, in this case) is also shown in blue at the bottom of the UI. Now click with your mouse to select these data items. You should see:</p>
+		
+		<p><img src="Images/paramorama-selection1.png" alt="" title="Selection with Paramorama2" /></p>
+		
+		<p>Next, click on the button labeled "Show" at the bottom right of the UI. This will show the actual segmentation results at the right of the UI:</p>
+		
+		<p><img src="Images/paramorama-selection2.png" alt="" title="Paramorama 2 showing the image-based output associated with the selected data items." /></p>
+		
+		<p>The segmentation results are outlines of the cells that had been detected in the original input images. The images are shown in columns corresponding to the two input images (which are shown at the top above the output images and labeled "reference images"). The top-to-bottom order of these images match the order of the selected data items. The output images are displayed by laying them over the original input images. There are a few more things you can adjust to suit your analysis needs:</p>
+		
+		<ul>
+			<li>You can adjust the "transparency" of the output images by dragging the slider labeled "Blend";
+			<li>You can adjust the size at which the images are shown by dragging the slider labeled "Scale"; and
+			<li>You can select a particular region to display by interacting with the reference images themselves. You do this by dragging the borders of the reference images to selecte a smaller region to display. For example, by changing the selection in the first reference image, you can get the following:
+		</ul>
+		
+		<p><img src="Images/paramorama-selection3.png" alt="" title="Paramorama 2 lets you select regions of the output images to display." /></p>
+		
+		<p>The above functionality allows you to investigate the quality of the sementation results. For example, by scrolling through the list of images can can determine that most cells are accurately segmented. Based on such a finding, we can draw conclusions in terms of the best (or optimal) input parameters to use for our image analysis algorithms.</p>
+		
+		<p>Finally, at the bottom right of the UI is a visual summary of the parameter and output measure domains that the selected images correspond to. In the example above, we can see that for the currently selected output, "Threshold correction factor" takes on all its sampled values (first line of the visualization) while for "Typical diameter of objects, in pixel units (Min, Max)" only a subset of the sample values are assumed (second line). When you move the mouse cursor over an image, the values that image corresponds to are highlighted in this visualization.</p>
+		
+		<a id="video"></a>
+		<h2>Video summary</h2>
+		<p>This video shows what selection looks like in Paramorama2. For full details, please see the description above.</p>
+		<iframe width="420" height="315" src="//www.youtube.com/embed/zkCEPDcu2ww" frameborder="0" allowfullscreen></iframe>
+		
+		<p class="footer">
+			&lt <a href="filtering.html">Prev</a> |
+			<a href="download.html">Next</a> &gt
+		</p>
+		
+		<p class="copyright">(c) Copyright 2012, A.J. Pretorius. All rights reserved.</p>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8373764; 
+var sc_invisible=1; 
+var sc_security="10c55aa9"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+	</body>
+</html>
+
+

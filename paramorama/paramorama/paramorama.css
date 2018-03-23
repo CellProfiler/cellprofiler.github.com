@@ -1,0 +1,20 @@
+a               { font-weight: bold; text-decoration: none; color: #000099; }
+a:hover	        { text-decoration: underline }
+body            { font-family: Verdana; background-color: #FFFFFF }
+h1              { font-weight: normal; font-size: 18pt; color: #D60027; text-align: left; }
+h2              { font-weight: normal; font-size: 11pt; color: #D60027; font-style: italic; }
+h3              { font-weight: normal; font-size: 10pt; color: #B51B1B }
+li              { font-size: 9pt; }
+p               { font-size: 9pt; color: #333333; width: 850px}
+table           { vertical-align: top; font-size: 9pt}
+td              { padding: 4px; vertical-align:top; padding-bottom: 11pt; }
+
+#wrap 			{ width: 900px; margin: 0 auto; }
+
+.border         { border-style: solid; border-color: #666666; border-width: 1px; }
+.current        { font-size: 11pt; font-weight: normal; text-decoration: none; color: #D60027; }
+.emphasis       { font-weight: bold; color: #666666; }
+.indent			{ margin-left: 30pt }
+.navigation		{ font-size: 11pt; font-weight: normal; }
+.small          { font-size: 7pt; color: #666666; align: right }
+.topspace       { padding-top: 22pt }

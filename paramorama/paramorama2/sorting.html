@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>Paramorama 2 - Sorting</title>
+		<link rel="stylesheet" href="paramorama2.css">
+	</head>
+	<body>
+
+		<p class="header">
+			<a href="index.html">Introduction</a> | 
+			<a href="getting-started.html">Getting started</a> |
+			Sorting |
+			<a href="filtering.html">Filtering</a> |
+			<a href="selection.html">Selection</a> |
+			<a href="download.html">Download</a> |
+			<a href="contact.html">Contact</a>
+		</p>
+		
+		<h1>Paramorama 2 - Sorting</h1>
+		
+		<p>(See <a href="#video">video</a>)</p>
+
+		<p>For instructions on how to obtain the sample data set, please see "<a href="getting-started.html">getting started</a>". Make sure you have the correct workspace and session loaded by completing the following steps. From the menu bar select</p>
+		
+		<pre><code>
+File &gt; Load workspace
+		</code></pre>
+
+		<p>Navigate to "workspace.xml" and open it. Next, select
+		
+		<pre><code>
+File &gt; Load session
+		</code></pre>
+
+		<p>from the menu bar. Navigate to and select "session2.xml". You should see something like the following screen capture:</p>
+		
+		<p><img src="Images/paramorama-row.png" alt="" title="In Paramorama 2, data items are represented by rows that span accross parameter and output measure columns." /></p>
+		
+		<p>Remember that every execution of the image analysis algorithm (image segmentation of osteosarcoma cells in this case) is represented by a row in the <a href="index.html">data file</a>. In Paramorama 2 each of these rows, or data items, is visualized as a row that spans across several columns. Every column represents either an input parameter (toward the left) or an output measure (toward the right). Where the row intersects each column, the value that it assumes for the corresponding parameter or output measure is encoded by the length of a bar (measured from the left). Low values are visualized by short bars, high values are visualized by long bars.</p>
+		
+		<h2>Manual sorting</h2>
+		
+		<p>Paramorama 2 lets you to sort data items (the rows, corresponding to exections of the image analysis algorithm) by the values assumed for each column. For example, click on the button labeled "Threshold correction factor" at the top left of the UI (the label may be clipped to something like "Thre..ctor"). You should see the following:</p>
+		
+		<p><img src="Images/paramorama-sorting1.png" alt="" title="Paramorama 2 lets you to sort data items based on the values assumed for parameters or output measures." /></p>
+		
+		<p>Notice the step pattern in the first column. All data items have been sorted based on the three values assumed for the parameter "Threshold correction factor". It is possible to undo this sorting (clicking on the button labeled "Threshold correction factor again) or to continue sorting the data. Click on the button labeled "Lower and upper bounds on threshold" (it may be clipped to "Lowe..hold"). This should give you the following:</p>
+		
+		<p><img src="Images/paramorama-sorting2.png" alt="" title="You can sort on any combination of columns." /></p>
+		
+		<p>The initial sorting on "Threshold correction factor" has been maintained, but within each region where "Threshold correction factor" assumes a unique value, the data has been further sorted on "Lower and upper bounds on threshold". This gives three step-like patterns within each of the "steps" we obtained previously. Also notice that a pattern has emerged in the two columns toward the right (the output measures). This suggests a <strong>correlation</strong> between the output measures and the two input parameters that we have sorted on. These are the types patterns we are typically interested in finding with Paramorama 2.</p>
+		
+		<p>Note that you can also sort on output measures, for example, to identify parameter combinations that produce very low or very high values for a measure of interest.</p>
+		
+		<p>Two shortcuts are provided for sorting the data according to all the parameter columns (from left to the right), or according to all output measure columns (from left to rigth). To achieve this simply click on the buttons labeled "Sort by parameters" or "Sort by measures" at the bottom left of the interface. To change the order of the columns select</p>
+		
+		<pre><code>
+Columns &gt; Reorder columns
+		</code></pre>
+
+		<p>from the menu bar. A dialog window will appear with a list of the columns in their current order. You can change this order by moving the column labels into the preferred order (either using the arrow buttons or by dragging and dropping).</p>
+		
+		<h2>"Smart" sorting</h2>
+		
+		<p>You can also let Paramorama 2 identify the parameter column that is most closely correlated to the output measure columns. To do this, simply click on the button labeled "Smart sort" at the bottom left of the UI. You should see the following:</p>
+		
+		<p><img src="Images/paramorama-smart-sort.png" alt="" title="Smart sorting lets Paramorama automatically detect and sort on the parameter that most closely correlates with the output measures." /></p>
+		
+		<p>Can you see the striking correlation between those data items for which "Lower and upper bounds on threshold" (fourth column from left) takes its highest value and the two output measures toward the right?</p>
+		
+		<p>Smart sorting only considers those data items (rows) that have not been filtered out (we will discuss filtering in the next section). This means that you can apply smart sorting, filter the data based on your insights and reapply smart sorting to reveal other parameters that have an important impact on the output measures.</p>
+		
+		<a id="video"></a>
+		<h2>Video summary</h2>
+		<p>This video shows what sorting looks like in Paramorama2. For full details, please see the description above.</p>
+		<iframe width="420" height="315" src="//www.youtube.com/embed/2m8r-4zAGMI" frameborder="0" allowfullscreen></iframe>
+
+		<p class="footer">
+			&lt <a href="getting-started.html">Prev</a> |
+			<a href="filtering.html">Next</a>  &gt
+		</p>
+		
+		<p class="copyright">(c) Copyright 2012, A.J. Pretorius. All rights reserved.</p>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8373764; 
+var sc_invisible=1; 
+var sc_security="10c55aa9"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+	</body>
+</html>
+
+

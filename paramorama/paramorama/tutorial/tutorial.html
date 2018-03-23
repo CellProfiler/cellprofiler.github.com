@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Paramorama - Getting Started</title>
+    <link rel="stylesheet" href="paramorama.css">
+  </head>
+  
+  <body>
+    
+    <h1 class="topspace">Paramorama - Getting Started</h1>
+    
+    <h2>Input data</h2>
+    <p>Paramorama reads input in plain text <a href="http://en.wikipedia.org/wiki/Tab-separated_values">tab separated value</a> files (TSV). For our purposes, each column in a TSV file represents a different parameter. Each row represents a record/tuple consisting of a value for each parameter. The image(s) associated with each record/tuple are referenced in one or more columns that include paths to where the images are stored on disk. For example:</p>
+    
+    <table border="0">
+      <tr>
+        <td class="emphasis">First parameter</td>
+        <td class="emphasis">Second parameter</td>
+        <td class="emphasis">Output image</td>
+      </tr>
+      <tr>
+        <td>0.1</td>
+        <td>0.2</td>
+        <td>C:\IMages\output1.jpg</td>
+      </tr>
+      <tr>
+        <td>0.1</td>
+        <td>0.2</td>
+        <td>C:\IMages\output2.jpg</td>
+      </tr>
+    </table>
+
+    <p>There are a few things to note. Paramorama automatically identifies those columns of which the values vary, so even if it turns out that a certain parameter stays constant it is not necessary to intercept this and prevent it from printing to file. Paramorama automatically detects columns of which the entries end with the extension ".jpg/.jpeg", so you do not have to encode anything special in the column headers to flag images. Paramorama currently reads jpeg images - due to good support in Java and various libraries I use - so it may be necessary to convert to this format at some point. There is an assumption that all images are the same size. I have not actually tested what happens when this is not the case, but I do not expect this to be an issue. The prefixes "tag_", is currently reserved for encoding user-specific tagging information and is best avoided for column headers.</p>
+
+    <p>I have implemented a sampling plug-in for CellProfiler to generate data for Paramorama. It currently ships with the <a href="http://www.cellprofiler.org/developers.shtml">developer's version</a> of CellProfiler.</p>
+    
+
+    <h2>Using Paramorama</h2>
+
+    <ol>
+      <li>To load data, select <span class="emphasis">File > Open data file</span> from the the menu bar.</p>
+    </ol>
+
+    <p class="small">
+       Copyright 2011. A.J. Pretorius. All rights reserved.
+    </p>
+
+ </body>
+</html>

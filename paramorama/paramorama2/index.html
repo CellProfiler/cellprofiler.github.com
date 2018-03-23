@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>Paramorama 2 - Introduction</title>
+		<link rel="stylesheet" href="paramorama2.css">
+	</head>
+
+	<body>
+
+		<p class="header">
+			Introduction |
+			<a href="getting-started.html">Getting started</a> |
+			<a href="sorting.html">Sorting</a> |
+			<a href="filtering.html">Filtering</a> |
+			<a href="selection.html">Selection</a> |
+			<a href="download.html">Download</a> |
+			<a href="contact.html">Contact</a>
+		</p>
+
+		<h1>Paramorama 2 - Introduction</h1>
+
+		<p><img src="Images/paramorama-ui.png" alt="" title="Paramorama2 user interface after loading a workspace and applying a saved session." /></p>
+
+		<p>Thank you for your interest in <strong>Paramorama 2</strong>, an interactive visualization prototype for exploring the parameter space of image analysis algorithms. This tutorial will guide you through the features that Paramorama 2 offers. To work through it yourself, you will need:</p>
+
+		<ul>
+			<li>A copy of <strong>Paramorama 2</strong>; and
+			<li>A <strong>sample data set</strong>.
+		</ul>
+
+		<p>Both are available <a href="download.html">here</a>.</p>
+		
+		<p>Alternatively, by simply reading through the these pages you should get a good idea of how Paramorama 2 can help you.</p>
+
+		<h2>Preliminaries</h2>
+
+		<p>The approach we have taken with Paramorama 2 assumes that the algorithm under study takes a number of real-valued parameter values (and an image to operate on) as input and generates one or more measures and an image as output. For example, a simple hypothetical segmentation algorithm might have two input parameters, <em>smoothing</em> (how much noise reduction to apply) and <em>thresholding</em> (the pixel intensity at which to differentiate foreground and background). When the algorithm executes, it computes the number of objects that have been segmented (the number of contiguous regions detected in the "foreground") and also generates an image containing the outlines of these regions.</p>
+
+		<p>Paramorama 2 was developed to visually analyze the relationships between the input parameters and the output measures and images. In particular, it provides visual support to investigate and compare the results of running an image analysis algorithm with several different combinations of input parameter values. For this to work, it is assumed that:</p>
+
+		<ul>
+			<li>For each (real-valued) input parameter, a closed interval has been sampled;</li>
+			<li>The algorithm has been executed for every unique combination of the different input parameter values obtained in this way; and</li>
+			<li>The input parameter values, the resulting output measures, and the output images have been saved to disk.</li>
+		</ul>
+
+		<p>To return to our example, suppose that <em>smoothing</em> and <em>thresholding</em> have been uniformly sampled three times each on the interval [0.0, 0.25]. This yields three values each for a total of nine unique combinations. Each combination of input parameter values will give rise to a particular number of segments being identified (<em>object count</em>) and will produce a corresponding <em>output image</em>. These results can be tabulated as shown below:</p>
+
+		<pre><code>
+Smoothing   Thresholding    Object count    Output image
+0.0         0.0             0               segmentation01.jpg
+0.0         0.125           0               segmentation02.jpg
+0.0         0.25            2               segmentation03.jpg
+0.125       0.0             2               segmentation04.jpg
+0.125       0.125           2               segmentation05.jpg
+0.125       0.25            3               segmentation06.jpg
+0.25        0.0             3               segmentation07.jpg
+0.25        0.125           3               segmentation08.jpg
+0.25        0.25            4               segmentation09.jpg
+		</code></pre>
+
+		<h2>Data format</h2>
+
+		<p>Paramorama 2 reads tables saved as flat text files in <strong>tab-separated values</strong> format, saved with a ".tsv" extension. Every column represents either an input parameter, an output measure, or the path to an output image. The first row provides the names of the columns (the column headers). Each subsequent row captures the relationship between a unique combination of input parameters, the corresponding output measures, and the corresponding output image. For example, the tabular results discussed in the previous section will be saved as follows:</p>
+
+		<pre><code>
+Smoothing&lt;tab&gt;  Thresholding&lt;tab&gt;   _Object count&lt;tab&gt;  Output image&lt;linebreak&gt;
+0.0&lt;tab&gt;        0.0&lt;tab&gt;            0&lt;tab&gt;              segmentation01.jpg&lt;linebreak&gt;
+0.0&lt;tab&gt;        0.125&lt;tab&gt;          0&lt;tab&gt;              segmentation02.jpg&lt;linebreak&gt;
+0.0&lt;tab&gt;        0.25&lt;tab&gt;           2&lt;tab&gt;              segmentation03.jpg&lt;linebreak&gt;
+0.125&lt;tab&gt;      0.0&lt;tab&gt;            2&lt;tab&gt;              segmentation04.jpg&lt;linebreak&gt;
+0.125&lt;tab&gt;      0.125&lt;tab&gt;          2&lt;tab&gt;              segmentation05.jpg&lt;linebreak&gt;
+0.125&lt;tab&gt;      0.25&lt;tab&gt;           3&lt;tab&gt;              segmentation06.jpg&lt;linebreak&gt;
+0.25&lt;tab&gt;       0.0&lt;tab&gt;            3&lt;tab&gt;              segmentation07.jpg&lt;linebreak&gt;
+0.25&lt;tab&gt;       0.125&lt;tab&gt;          3&lt;tab&gt;              segmentation08.jpg&lt;linebreak&gt;
+0.25&lt;tab&gt;       0.25&lt;tab&gt;           4&lt;tab&gt;              segmentation09.jpg&lt;linebreak&gt;
+		</code></pre>
+
+		<p>For parameters and measures, please note:</p>
+		<ul>
+			<li>Column entries should be separated with a <strong>tab character</strong> and rows should be terminated with a <strong>line break</strong>;</li>
+			<li>An arbitray number of parameters and output measures can be encoded by including appropriate columns;</li>
+			<li>Columns that contain input parameters should start with a regular <strong>alphabetic</strong> character, for example, "Smoothing";</li>
+			<li>Columns that containin output measures should start with an <strong>underscore</strong> character, for example, "_Object count";</li>
+			<li>There can be <strong>no duplicate</strong> combinations of parameter values. For instance, if the above table contained two rows where smoothing = 0.125 and thresholding = 0.125, this would result in an error when reading the file;</li>
+			<li>Duplicate values are allowed for output measures.</li>
+		</ul>
+
+		<p>For images, please note:</p>
+		<ul>
+			<li>It is possible to associate several output images with each row by including appropriate columns (although each row must have the same number of images); and</li>
+			<li>Columns containing image paths do not require a special character, but the image names associated with each row should be unique and end with ".jpg". This implies that the corresponding images should be saved in <strong>jpeg</strong> format with the extension ".jpg".</li>
+		</ul>
+
+		<p>Historic quirks:</p>
+		<ul>
+			<li>For historic reasons, input parameter columns that contain pairs of values enclosed with parentheses will be identified when the data is read and will be "split" into two columns, the second with suffix "-1" added to the original column name. So, if a data file contains a parameter column called "My parameter" containing pairs of values, such as "(0, 1)", it will be split into two parameters called "My parameter" and "My parameter-1". "My parameter" will contain the first values of the original pairs and "My parameter-1" will contain the second values. New users can safely ignore this and simply use single values for each parameter column.</li>
+			<li>Parameter columns where every row contains the same value, that is, values do not change, are considered as a constants and will not be displayed in Paramorama 2. New users can safely ignore this by only including parameters where values change in their data files.</li>
+		</ul>
+
+		<h2>CellProfiler plugin</h2>
+
+		<p>It should be reasonably straightforward to customize your own proprietary image analysis software to generate output as described above. Indeed, we have worked with researchers who were able to do this without much trouble.</p>
+
+		<p>However, we have also developed a custom plug-in for <a href="http://www.cellprofiler.org">CellProfiler</a>, a popular image analysis framework developed and maintained by the Imaging Platform at the Broad Institute of MIT and Harvard. After specifying which algorithm to use (CellProfiler has many), which input parameters to sample and how, the plugin automatically computes all unique combinations of the sampled values. It then executes the algorithm in question for each unique combination of parameter values and saves the results to disk in the format described in the previous section. The plugin currently ships with the <a href="http://www.cellprofiler.org/developers.shtml">developer's version</a> of CellProfiler.</p>
+
+		<p class="footer"><a href="getting-started.html">Next</a> &gt</p>
+
+		<p class="copyright">(c) Copyright 2012, A.J. Pretorius. All rights reserved.</p>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8373764;
+var sc_invisible=1;
+var sc_security="10c55aa9";
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+	</body>
+</html>

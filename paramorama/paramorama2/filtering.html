@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>Paramorama 2 - Filtering</title>
+		<link rel="stylesheet" href="paramorama2.css">
+	</head>
+	<body>
+
+		<p class="header">
+			<a href="index.html">Introduction</a> | 
+			<a href="getting-started.html">Getting started</a> |
+			<a href="sorting.html">Sorting</a> |
+			Filtering |
+			<a href="selection.html">Selection</a> |
+			<a href="download.html">Download</a> |
+			<a href="contact.html">Contact</a>
+		</p>
+		
+		<h1>Paramorama 2 - Filtering</h1>
+		
+		<p>(See <a href="#video">video</a>)</p>
+
+		<p>Suppose we decide that the output measures (object counts for the two different input images) are too low when "Lower and upper bounds on threshold" takes its highest value (see <a href="sorting.html">previous step</a>). Paramorama 2 lets you hide all those data items, thereby <strong>narrowing down</strong> your analysis to a smaller data set. To achieve this, click on the button labeled "Filter", below the "Lower and upper bounds on threshold" column. A dialog with a list of the values that "Lower and upper bounds on threshold" can take will be shown. Deselect "0.25" (the highest value). You should see:</p>
+		
+		<p><img src="Images/paramorama-filtering1.png" alt="" title="You can filter out data based on the values assumed for input parameters or output measures." /></p>
+		
+		<p>All data where "Lower and upper bounds on threshold" assumes the value "0.25" have now been hidden. The visual cue next to the "Filter" button shows you which parts of the domain are shown, and which parts are hidden.
+		
+		<p>Now, apply smart sorting again by clicking on the button labeled "Smart sort". Notice that the data has now been sorted by another parameter "Typical diameter of objects, in pixel units (Min, Max)" (possibly clipped to "Typi..Max)"). This should give you:</p>
+		
+		<p><img src="Images/paramorama-filtering2.png" alt="" title="Applying smart sorting after filtering sorts on a different parameter." /></p>
+		
+		<p>Suppose we decide that the values for the output measures are too high when this parameter takes its lowest value. We can filter out these data items by clicking on "Filter" below this column and deselecting "6" in the dialog. This gives the following:</p>
+		
+		<p><img src="Images/paramorama-filtering3.png" alt="" title="Filtering on the second input parameter." /></p>
+		
+		<p>Before we move on to selection, note that it is also possible to filter data based on the values of output measures. Click on the button labeled "Filter" underneath the column labeled "_Count" or "_Count-1". You can narrow down the region of interest in the distribution plot that is shown (though, to follow the tutorial it is recommended to leave these regions as they are).</p> 
+		
+		<p>The dialog for filtering by measure looks like this:</p>
+		
+		<p><img src="Images/paramorama-filtering-measures1.png" alt="" title="You can filter out data based on the values assumed for output measures." style="width:350px;" /></p>
+		
+		<p>A distribution plot is shown with the values of the measure mapped to the x-axis, and the number of rows containing each value mapped to the y-axis. Underneath the x-axis is a range slider; moving its ends filters out data. Interacting with the range slider should give you something like this:</p>
+		
+		<p><img src="Images/paramorama-filtering-measures2.png" alt="" title="You can filter out data based on the values assumed for output measures." style="width:350px;"/></p>
+		
+		<p>All values that have been filtered out are displayed in grey and the tabular visualisation is also updated (just as explained above). Clicking on the button with a tilde ("~"), resets the filtering.</p>
+		
+		
+		<a id="video"></a>
+		<h2>Video summary</h2>
+		<p>This video shows what filtering looks like in Paramorama2. For full details, please see the description above.</p>
+		<iframe width="420" height="315" src="//www.youtube.com/embed/aHS6pLoQavM" frameborder="0" allowfullscreen></iframe>
+		
+		<p class="footer">
+			&lt <a href="sorting.html">Prev</a> |
+			<a href="selection.html">Next</a> &gt
+		</p>
+		
+		<p class="copyright">(c) Copyright 2012, A.J. Pretorius. All rights reserved.</p>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8373764; 
+var sc_invisible=1; 
+var sc_security="10c55aa9"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+	</body>
+</html>
+
+
