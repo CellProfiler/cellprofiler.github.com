@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<title>Paramorama 2 - Getting started</title>
+		<link rel="stylesheet" href="paramorama2.css">
+	</head>
+	<body>
+
+		<p class="header">
+			<a href="index.html">Introduction</a> | 
+			Getting started |
+			<a href="sorting.html">Sorting</a> |
+			<a href="filtering.html">Filtering</a> |
+			<a href="selection.html">Selection</a> |
+			<a href="download.html">Download</a> |
+			<a href="contact.html">Contact</a>
+		</p>
+		
+		<h1>Paramorama 2 - Getting started</h1>
+
+		<p>After you have extracted the sample data set (available <a href="ExampleHumanImages.zip">here</a>) in a target directory, you should have the following directory structure:</p>
+
+		<pre><code>
+ExampleHumanImages [directory]
+  3x3x3x3x3_1+count [directory]
+    3x3x3x3x3_1.tsv
+    NucOutlines_0.jpg
+    ...
+  3x3x3x3x3_2+count [directory]
+    3x3x3x3x3_2.tsv
+    NucOutlines_0.jpg
+    ...
+  session.xml
+  session2.xml
+  workspace.xml
+		</code></pre>
+		
+		<p>This data set represents the results of an image segmentation algorithm applied to two different input images (photomicrographs of human osteosarcoma cells, courtesy of the Imaging Platform, Broad Institute of MIT and Harvard). The objective here was for the algorithm to accurately detect all cells that do not touch the boundaries of the original input images.</p>
+
+		<h2>Loading data</h2>
+
+		<p>To load a data file, select</p>
+
+		<pre><code>
+File &gt; Open data file
+		</code></pre>
+
+		<p>from the menu bar. Navigate to "3x3x3x3x3_1.tsv" and open it. You should see something resembling the following image (the details will be explained shortly):</p>
+
+		<p><img src="Images/paramorama-data.png" alt="" title="Paramorama2 user interface after loading a data set." /></p>
+
+		<p>In Paramorama 2, every row in the data file is represented by a row that spans across several columns (see the <a href="index.html">previous part</a> of this tutorial for more on data files). The columns at the left of the interface represent parameters, the columns at the right represent output measures. For each row in the data file, the values that it takes for parameters and output measures is encoded by the length of a bar where it intersects the corresponding column (measured from the left). As you will see shortly, this visual encoding allows us to identify correlations between parameters and output measures.</p>
+		
+		<p>It is possible to open several data sets in Paramorama 2. This is useful when you are interested in the results of the same algorithm on different input images. However, for this to work the file to be added must have <strong>identical combinations</strong> of sampled input parameter values to the first data file. You can add an arbitrary number of additional data files (as long as their parameter values match). To add another data file, select</p>
+
+		<pre><code>
+File &gt; Add data file
+		</code></pre>
+
+		<p>from the menu bar. Navigate to and select "3x3x3x3x3_2.tsv". The user interface (UI) should resemble the following image:</p>
+
+		<p><img src="Images/paramorama-workspace.png" alt="" title="Paramorama 2 user interface after loading an additional data set." /></p>
+	
+		<p>Note that:</p>
+		
+		<ol>
+			<li>No additional parameter columns were added (remember, both files have identical parameter combinations);</li>
+			<li>An additional output measure column was added (the newly added file contains one output measure, which is displayed next to the output measure of the data file that was added first); and</li>
+			<li>A second "placeholder" for a reference image was added (one column of output images was detected in the newly added file; more on this below).</li>
+	</ol>
+
+		<h2>Workspaces</h2>
+
+		<p>Once you have loaded a number of data files, your <strong>workspace</strong> can be saved by selecting</p>
+
+		<pre><code>
+File &gt; Save workspace
+		</code></pre>
+
+		<p>from the menu bar. A workspace keeps references to multiple individual data files (and assumes they are in the location they were originally opened from). In the future you can simply load this workspace instead of opening each data file separately. This can be achieved by selecting</p>
+
+		<pre><code>
+File &gt; Load workspace
+		</code></pre>
+
+		<p>from the menu bar. To see how this works, navigate to and open "workspace.xml". You should see exactly what you had before: this workspace file loaded both "3x3x3x3x3_1.tsv" and "3x3x3x3x3_2.tsv" in one step.</p>
+
+		<h2>Sessions</h2>
+
+		<p>Finally, it is also possible to load and save <strong>sessions</strong>. A session stores the state of the analysis interface, including filters applied, selections made, and much more. To save the current state as a session, select</p>
+
+		<pre><code>
+File &gt; Save session
+		</code></pre>
+
+		<p>and to load a session, select</p>
+
+		<pre><code>
+File &gt; Load session
+		</code></pre>
+
+		<p>from the menu bar. Navigate to and select "session.xml". You should see a dramatic change to the UI, which should now resemble the following screen capture:</p>
+
+		<p><img src="Images/paramorama-session.png" alt="" title="Paramorama 2 user interface after loading a workspace and applying a saved session." /></p>
+
+		<p>Note that a session is associated with a particular workspace. Attempting to load a session that does not match the current workspace will generate an error message.</p>
+
+		<h2>Reference images</h2>
+
+		<p>As will become clear, it is useful to compare the output images generated by an image analysis algorithm to the original input images. The session that was just loaded has two reference images associated with the data (top right of UI). Here, the first corresponds to the first data set, "3x3x3x3x3_1.tsv", and the second refers to the second data set, "3x3x3x3x3_2.tsv". (These images were originally added by clicking on the "Set image" buttons directly below them.)</p>
+		
+		<p class="footer">
+			&lt <a href="index.html">Prev</a> |
+			<a href="sorting.html">Next</a> &gt
+		</p>
+		
+		<p class="copyright">(c) Copyright 2012, A.J. Pretorius. All rights reserved.</p>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8373764; 
+var sc_invisible=1; 
+var sc_security="10c55aa9"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+	</body>
+</html>
+
+
