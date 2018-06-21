@@ -1,0 +1,193 @@
+---
+layout: default
+---
+<section>
+    <div class="row">
+        <div class="column-12">
+            <ul>
+                <li class="navsearch">
+                    <form action="http://google.com/search"
+                        method="get" onsubmit=
+                        "location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                        <input maxlength="255" name="query"
+                        size="20" type="text" value="">
+                        <input type="submit" value="search">
+                    </form>
+                </li>
+                <li style="list-style: none; display: inline">
+                    <div class=
+                        "column-3 hidden-mobile empty-container">
+                    </div>
+                    <div class=
+                        "column-7 mobile-column-3 details-container">
+                        <section>
+                            <div class="row">
+                                <div class="column-12">
+                                    <div class="row header">
+                                        <div class=
+                                            "column-6 mobile-column-1">
+                                            <img src=
+                                            "/images/logo_cpa.png"
+                                            style=
+                                            "vertical-align: middle;"
+                                            width="50px">
+                                            <h1 class=
+                                            "hidden-mobile"
+                                            style=
+                                            "font-size: font-family: 'AvenirNext'; color: #013F80; display:inline-block; padding-left: 30px; vertical-align: middle; margin-top: 0px">
+                                            CellProfiler
+                                            Analyst</h1>
+                                            <h3 class=
+                                            "hidden-mobile">
+                                            <a href=
+                                                "http://www.facebook.com/cellprofiler">
+                                                <img src=
+                                                "/images/facebook.svg"
+                                                style=
+                                                "margin-left:30px; margin-top:21px"
+                                                width=
+                                            "20px"></a><a href=
+                                            "http://twitter.com/CellProfiler"><img src="/images/twitter.svg"
+                                            style=
+                                            "margin-left:20px; margin-top:21px"
+                                            width=
+                                        "20px"></a><a href=
+                                        "https://github.com/CellProfiler/CellProfiler-Analyst"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"
+                                        style=
+                                        "margin-left:20px; margin-top:21px"
+                                        width=
+                                    "20px"></a></h3>
+                                    <h4 class=
+                                    "hidden-mobile">
+                                    Interactive data
+                                    exploration,
+                                    analysis, and
+                                    classification of
+                                    large biological
+                                    image sets</h4>
+                                </div>
+                                <p class="section">
+                                    <img src=
+                                    "/images/introduction/gallery.png"
+                                    style=
+                                "margin-top:30px"></p>
+                                <div class="row" style=
+                                    "margin-top:4%">
+                                    <h3>CellProfiler
+                                    Analyst in a
+                                    nutshell</h3>
+                                    <p>CellProfiler
+                                        Analyst (CPA)
+                                        allows interactive
+                                        exploration and
+                                        analysis of data,
+                                        particularly from
+                                        high-throughput,
+                                        image-based
+                                        experiments.
+                                        Included is a
+                                        supervised machine
+                                        learning system
+                                        which can be
+                                        trained to
+                                        recognize
+                                        complicated and
+                                        subtle phenotypes,
+                                        for automatic
+                                        scoring of millions
+                                        of cells. CPA
+                                        provides tools for
+                                        exploring and
+                                        analyzing
+                                        multidimensional
+                                        data, particularly
+                                        data from
+                                        high-throughput,
+                                        image-based
+                                        experiments
+                                        analyzed by its
+                                        companion image
+                                        analysis software,
+                                    CellProfiler.</p>
+                                    <p>Please contact
+                                        us to discuss
+                                        contributing to
+                                        CPA, or notify us
+                                        of papers
+                                        referencing CPA so
+                                        that we can provide
+                                        the link to the
+                                        paper and its
+                                    results.</p>
+                                    <p>The CellProfiler
+                                        project is based at
+                                        the <a href=
+                                            "http://broadinstitute.org/~anne">
+                                            Broad Institute
+                                            Imaging
+                                        Platform</a>. It
+                                        was started by Anne
+                                        E. Carpenter and
+                                        Thouis (Ray) Jones
+                                        in the laboratories
+                                        of David M.
+                                        Sabatini and Polina
+                                        Golland at the
+                                        Whitehead Institute
+                                        for Biomedical
+                                        Research and MIT's
+                                    CSAIL.</p>
+                                    <p>CellProfiler
+                                        Analyst is
+                                        distributed under
+                                        the BSD
+                                    License.</p>
+                                    <p>CPA is described
+                                        in the following
+                                        publications:<br>
+                                        <br>
+                                        <b>CellProfiler
+                                        Analyst:
+                                        interactive data
+                                        exploration,
+                                        analysis, and
+                                        classification of
+                                        large biological
+                                        image sets</b><br>
+                                        by David Dao, Adam
+                                        N. Fraser, Jane
+                                        Hung, Vebjorn
+                                        Ljosa, Shantanu
+                                        Singh and Anne E.
+                                        Carpenter,
+                                        Bioinformatics,
+                                        DOI:
+                                        10.1093/bioinformatics/btw390<br>
+                                        <br>
+                                        <b>CellProfiler
+                                        Analyst: data
+                                        exploration and
+                                        analysis software
+                                        for complex
+                                        image-based
+                                        screens</b><br>
+                                        by Thouis R Jones,
+                                        In Han Kang,
+                                        Douglas B Wheeler,
+                                        Robert A Lindquist,
+                                        Adam Papallo, David
+                                        M Sabatini, Polina
+                                        Golland and Anne E
+                                        Carpenter, BMC
+                                        Bioinformatics
+                                        20089:482, DOI:
+                                    10.1186/1471-2105-9-482</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </li>
+    </ul>
+</div>

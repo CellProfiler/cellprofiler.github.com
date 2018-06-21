@@ -1,0 +1,165 @@
+---
+redirect_from:
+- "/download.html"
+- "/download.shtml"
+---
+<section>
+    <div class="row">
+        <div class="column-12">
+            <ul>
+                <li class="navsearch">
+                    <form action="http://google.com/search"
+                        method="get" onsubmit=
+                        "location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                        <input maxlength="255" name="query"
+                        size="20" type="text" value="">
+                        <input type="submit" value="search">
+                    </form>
+                </li>
+                <li style=
+                    "list-style: none; display: inline">
+                    <hr>
+                    <a id="download2" name="download2"></a>
+                    <div style=
+                        "width: 46em; margin: 0px auto;">
+                        <h2 align="center" id=
+                        "header_download">Download
+                        CellProfiler 2.1.1 (revision
+                        6c2d896)</h2>
+                        <div id="Win64Preferred">
+                            <center>
+                            If you are using a 64-bit
+                            Windows OS, this is the
+                            best option:<br>
+                            <br>
+                            <div style=
+                                "display:inline-block;">
+                                <div class=
+                                    "boxed_column">
+                                    <p style=
+                                        "margin-top:0px;margin-bottom:0px;">
+                                        <a href=
+                                            "http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win64_r20140723174500.exe">
+                                            Windows
+                                        64-bit</a></p>
+                                        <p style=
+                                            "font-size:9px">
+                                            <a class="download"
+                                                id=
+                                                "Win64PreferredAnchor"
+                                                onclick=
+                                                "javascript: _gaq.push(['_trackPageview', '/download/win64']);">
+                                                <img align="middle"
+                                                src=
+                                                "http://d1zymp9ayga15t.cloudfront.net/winCombo.gif"
+                                                style=
+                                                "margin-bottom:0.5em"><br>
+                                            </a> Run the EXE
+                                            and follow the
+                                            prompts. Windows
+                                        Vista or later.</p>
+                                    </div>
+                                </div>
+                                </center>
+                            </div>
+                        </div>
+                        <div id="Win32Preferred">
+                            <center>
+                            If you are using a 32-bit
+                            Windows OS, this is the best
+                            option:<br>
+                            <br>
+                            <div style=
+                                "display:inline-block;">
+                                <div class="boxed_column">
+                                    <p style=
+                                        "margin-top:0px;margin-bottom:0px;">
+                                        <a href=
+                                            "http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win32_r20140723174513.exe">
+                                        Windows 32-bit</a></p>
+                                        <p style=
+                                            "font-size:9px">
+                                            <a class="download" id=
+                                                "Win32PreferredAnchor"
+                                                onclick=
+                                                "javascript: _gaq.push(['_trackPageview', '/download/win32']);">
+                                                <img align="middle"
+                                                src="http://d1zymp9ayga15t.cloudfront.net/winCombo.gif"
+                                                style=
+                                                "margin-bottom:0.5em"><br>
+                                            </a> Run the EXE and
+                                            follow the prompts.
+                                            Windows Vista or
+                                        later.</p>
+                                    </div>
+                                </div>
+                                </center>
+                            </div>
+                            <div id="MacPreferred">
+                                <center>
+                                If you are using OS X, this is
+                                the best download option:<br>
+                                <br>
+                                <div style=
+                                    "display:inline-block;">
+                                    <div class="boxed_column">
+                                        <p style=
+                                            "margin-top:0px;margin-bottom:0px;">
+                                            <a href=
+                                                "http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler-release_2.1.1-6c2d896.pkg">
+                                            Mac OS X</a></p>
+                                            <p style=
+                                                "font-size:9px">
+                                                <a class="download" id=
+                                                    "MacPreferredAnchor"
+                                                    onclick=
+                                                    "javascript: _gaq.push(['_trackPageview', '/download/mac']);">
+                                                    <img align="middle"
+                                                    src="http://d1zymp9ayga15t.cloudfront.net/maccombo.gif"
+                                                    style=
+                                                    "margin-bottom:0em"><br>
+                                                </a> Install the PKG
+                                                and follow the prompts.
+                                                OS X 10.6 or later.<br>
+                                                NOTE: This will
+                                                OVERWRITE the currently
+                                                installed
+                                                CellProfiler.app in
+                                                your /Applications
+                                                folder. If you want to
+                                                keep the older version,
+                                                please rename it
+                                            first.</p>
+                                        </div>
+                                    </div>
+                                    </center>
+                                </div>
+                                <div style=
+                                "clear:both; padding-top:0.5em"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style=
+                        "margin-top:2em; font-size:11px; text-align: center;">
+                        CellProfiler v2.1.1 Manual <a href=
+                            "http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp2.1.1_manual_6c2d896.pdf"
+                            onclick=
+                            "javascript: _gaq.push(['_trackPageview', '/download/manualPDF']);">
+                            <img alt="PDF icon" src=
+                            "http://d1zymp9ayga15t.cloudfront.net/pdficon_small.gif">
+                        </a> <a href=
+                        "http://d1zymp9ayga15t.cloudfront.net/CellProfilerManual.pdf"
+                        onclick=
+                        "javascript: _gaq.push(['_trackPageview', '/download/manualHTML']);">
+                        <img alt="HTML icon" src=
+                        "http://d1zymp9ayga15t.cloudfront.net/htmlicon_small.gif">
+                    </a> &nbsp;&nbsp;<a href=
+                "/previousReleases/">Previous releases</a>
+                &nbsp;&nbsp;<a href=
+                    "http://d1zymp9ayga15t.cloudfront.net/cgi-bin/trunk_build.cgi">Bleeding-edge
+                versions</a> &nbsp;&nbsp;<a href=
+                "https://github.com/CellProfiler/CellProfiler/tree/release_2.1.1">Source
+            code</a>
+        </div>
+    </div>
+</section>

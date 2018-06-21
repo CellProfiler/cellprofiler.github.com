@@ -1,4 +1,5 @@
 ---
+layout: default
 redirect_from:
     - "/previousReleasesCPA.html"
     - "/previousReleasesCPA.shtml"

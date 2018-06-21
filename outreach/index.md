@@ -1,0 +1,74 @@
+---
+layout: default
+redirect_from:
+- "/outreach.html"
+- "/outreach.shtml"
+---
+<section>
+    <div class="row">
+        <div class="column-12">
+            <ul>
+                <li class="navsearch">
+                    <form action="http://google.com/search" method="get" onsubmit="location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                        <input maxlength="255" name="query" size="20" type="text" value=""> <input type="submit" value="search">
+                    </form>
+                </li>
+                <li style="list-style: none; display: inline">
+                    <hr>
+                    <a href="#outreach" id="Outreach" name="Outreach">
+                        <h1>Educational Modules</h1>
+                        <p>The CellProfiler team has developed several educational resources to introduce people to the joy of answering important biomedical research questions using software. Biological image analysis is interdisciplinary - it concretely demonstrates mathematics and computer science to students in the context of high-impact biomedical research.</p>
+                        <ul id="modules">
+                            <li>
+                                <a href="#Blossom">BLOSSOMS video/activity lesson</a>
+                            </li>
+                            <li>
+                                <a href="#Robot">Robots vs Disease activity lesson</a>
+                            </li>
+                            <li>
+                                <a href="#elegan">C. elegans image analysis written exercise</a>
+                            </li>
+                            <li>
+                                <a href="#transloc">Image-based screening for quantifying a translocation assay written exercise</a>
+                            </li>
+                            <li>
+                                <a href="#drug">Using cellular co-culture platforms as a tool for drug discovery written exercise</a>
+                            </li>
+                        </ul>
+                        <p></p>
+                        <h1>In-person workshops</h1>
+                        <p><a href="https://groups.google.com/forum/#!forum/cellprofiler-tutorials/join">Join</a> our Google group mailing list to receive notifications of workshops open to the public.</p>
+                        <h1 id="Blossom">BLOSSOMS video/activity lesson</h1>
+                        <p>BLOSSOMS (Blended Learning Science or Math Studies) is a large, free repository of video modules for high school math and science classes created by "star" teachers from around the world. Each video is designed for viewing in brief segments, allowing the in-class teacher between segments to engage the class in an active, goal-oriented exercise. The goal is not just to learn about an exciting area of science but also to develop deeper and richer thinking skills.</p>
+                        <p><strong>Video lesson:</strong> Discovering Medicines, Using Robots and Computers&nbsp;[<a href="http://blossoms.mit.edu/video/carpenter.html">link</a>]</p>
+                        <p><strong>Listing in CPALMS:&nbsp;</strong>[<a href="http://www.cpalms.org/Public/PreviewResourceUrl/Preview/18770">link</a>]</p>
+                        <h1 id="Robot">Robots vs Disease activity lesson</h1>
+                        <p>This activity teaches students about a new technology used to identify genes involved in human disease. The activity uses a specific example of how to discover genes that promote metastasis, which is the process of cancer cells spreading throughout the body from the site of the original tumor. This activity teaches students how new software works that "looks" at images and learns from the biologist what types of cells to look for. This hands-on activity models how the computer learns to recognize cells of interest, and stars the students as “the computer."</p>
+                        <p><strong>Activity description:&nbsp;</strong> <a href="http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/RobotsVsDiseaseActivity.doc"></a>Robots vs Disease: Modeling Biomedical Research in your Classroom&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/RobotsVsDiseaseActivity.doc">.doc</a>]</p>
+                        <p><strong>Materials:&nbsp;</strong> Pictures of Cells:&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/CellPictures.zip">.zip</a>]</p>
+                        <p><strong>Presentation Slides:&nbsp;</strong>[<a href="http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/2008_03_31_MuseumScience.pdf">PDF</a>] [&nbsp;<a href="http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/2008_03_31_MuseumScience_PPT.zip">PPT.zip</a>]</p>
+                        <h1 id="elegan">C. elegans image analysis written exercise</h1>
+                        <p>This exercise will allow students to learn about how image analysis can be applied to screening chemicals for antibiotic drugs. The data is from a published study in which the nematode</p><i>C. elegans was used as an animal model to find small molecules that cure infection by the</i><i>E.faecalis pathogen. In this exercise, you will have access to the following materials:</i><br>
+                        <ul>
+                            <li>Background information on bacterial resistance, antibiotic discovery and C. elegans as a model organism for antibiotic research.</li>
+                            <li>Images from an actual screen in which several compounds and extracts were found to rescue the worms from infection but had not previously been reported to have antimicrobial properties.</li>
+                        </ul>
+                        <p>The exercise is written as a set of modules, such that the activities can be done up until any point. Modules can be combined to create a lesson plan appropriate for students ranging from high-school up to upper-level college biology students.</p>
+                        <p><strong>Activity overview and description:&nbsp;</strong> Searching for new antibiotics using digital images of infected worms&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/content/C_elegansActivity/Overview_Description.pdf">.pdf</a>]</p>
+                        <p><strong>Materials:&nbsp;</strong> Images of C. elegans worms&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/content/C_elegansActivity/Images.zip">.tif</a>], &nbsp;Pipelines&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/content/C_elegansActivity/Pipelines.zip">.zip</a>]</p>
+                        <p><strong>Written exercise:&nbsp;</strong>[<a href="http://d1zymp9ayga15t.cloudfront.net/content/C_elegansActivity/C_elegans_CellProfiler_EducationalExercise.pdf">.pdf</a>]</p>
+                        <h1 id="transloc">Image-based screening for quantifying a translocation assay written exercise</h1>
+                        <p>This exercise will demonstrate how image analysis can be used for novel drug discovery. Students will use CellProfiler identify and delineate cells and cellular sub-compartments, and collect and store measurements from each cell. Afterwards, they will use CellProfiler Analyst to visualize their data, and use its machine learning tool to train the computer to distinguish between treated and untreated cells</p>
+                        <p><strong>Activity overview and written exercise:&nbsp;</strong> Image-based screening using subcellular localization of FOXO1A in osteosarcoma cells&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/TranslocationActivity/TranslocationTutorial_v2.pdf">.pdf</a>]</p>
+                        <p><strong>Materials:&nbsp;</strong> Images and text file of experimental parameters&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/TranslocationActivity/TranslocationData.zip">.zip</a>]</p>
+                        <h1 id="drug">Using cellular co-culture platforms as a tool for drug discovery written exercise</h1>
+                        <p>This exercise will introduce students to the image-analysis challenges in using co-culture systems as part of a novel<i>in vitro</i></p>
+                        <p>liver model. Students will use CellProfiler to generate a suite of cellular measurements, followed by training the supervised learning tool in CellProfiler Analyst to discriminate between hepatocytes and fibroblasts. The student will then learn how including additional tailored image features can improve classification.</p>
+                        <p><strong>Activity overview and written exercise&nbsp;</strong> Discovering drugs by using mixed cell cultures&nbsp;[<a href="http://d1zymp9ayga15t.cloudfront.net/content/HepatocyteCocxActivity/exercise.pdf">.pdf</a>]</p>
+                        <p><strong>Materials:&nbsp;</strong> Images, pipeline and text file of experimental parameters [<a href="http://d1zymp9ayga15t.cloudfront.net/content/HepatocyteCocxActivity/input_data.zip">.zip</a>]</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
