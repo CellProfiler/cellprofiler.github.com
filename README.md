@@ -6,11 +6,6 @@
     brew install ruby
     ```
 
-1. Ensure you have `bundler` installed:
-    ```sh
-    gem install bundler
-    ```
-
 1. Install project dependencies:
     ```sh
     bundle install
