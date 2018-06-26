@@ -15,7 +15,7 @@ redirect_from:
 
     ### How to cite CellProfiler in publications
     #### (the project's survival depends on it!)
-    
+
     -   __CellProfiler for cells:__
 
     -   Carpenter AE, Jones TR, Lamprecht MR, Clarke C, Kang IH, Friman O, Guertin DA, Chang JH, Lindquist RA, Moffat J, Golland P, Sabatini DM (2006) CellProfiler: image analysis software for identifying and quantifying cell phenotypes. Genome Biology 7:R100. PMID: 17076895 [ [link to paper at Genome Biology](http://genomebiology.com/2006/7/10/R100 "Genome biology image analysis paper")]
