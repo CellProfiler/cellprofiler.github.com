@@ -51,7 +51,9 @@ Human HT29 cells are fairly smooth and elliptical. This pipeline demonstrates ho
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleHuman.zip) (0.4 MB)
 
-<img src="http://d1zymp9ayga15t.cloudfront.net/images/HumanNuclei.jpg" alt="" width="100" height="100"> <img src="http://d1zymp9ayga15t.cloudfront.net/images/HumanColorNucleism.jpg" alt="" width="100" height="100">
+![Basic CellProfiler pipeline Human HT29 Cell example - segmented](http://d1zymp9ayga15t.cloudfront.net/images/HumanNuclei.jpg)
+
+![Basic CellProfiler pipeline Human HT29 Cell example](http://d1zymp9ayga15t.cloudfront.net/images/HumanColorNucleism.jpg)
 
 #### Fruit fly cells
 
@@ -59,9 +61,8 @@ In contrast to the HT29 cells, Drosophila Kc167 cells are a highly textured and 
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleFly.zip) (4 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Basic CellProfiler pipeline Fruit Fly Drosophilia Kc167 Cells example](http://d1zymp9ayga15t.cloudfront.net/images/FruitflyImg.jpg)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Basic CellProfiler pipeline Fruit Fly Drosophilia Kc167 Cells example - segmented](http://d1zymp9ayga15t.cloudfront.net/images/Fruitfly-coded.jpg)
 
 #### Tumors
@@ -70,9 +71,8 @@ A simple pipeline that identifies and counts tumors in a mouse lung, and then me
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleTumor.zip) (0.9 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Basic Cellprofiler pipeline mouse lung Tumor Cell Example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorImg.png)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Basic Cellprofiler pipeline mouse lung Tumor Cell Example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorID.png)
 
 #### Comet assay
@@ -81,9 +81,8 @@ This is a simple example of a DNA damage assay using single cell gel electrophor
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleCometAssay.zip) (0.4 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Basic CellProfiler pipeline Comet tail DNA damage assay example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometImg.png)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Basic CellProfiler pipeline Comet tail DNA damage assay example - ID](http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometID.png)
 
 Specialized pipelines
@@ -97,9 +96,8 @@ CellProfiler is commonly used to count cells or other objects as well as percent
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExamplePercentPositive.zip) (0.2 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Specialized CellProfiler pipeline Percent Positive count per-cell stain intensity example](http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosImg.png)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Specialized CellProfiler pipeline Percent Positive count per-cell stain intensity example - segmented](http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosID.png)
 
 #### Yeast colony classification
@@ -110,9 +108,8 @@ This pipeline demonstrates how to classify and count objects on the basis of the
 
 [[Tutorial]](http://d1zymp9ayga15t.cloudfront.net/papers/85-Bray_CurrentProtocols_2015.pdf)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Specialized CellProfiler pipeline identify Yeast Colony Classification example](http://d1zymp9ayga15t.cloudfront.net/images/YeastCrop.jpg)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Specialized CellProfiler pipeline identify Yeast Colony Classification example - segmented](http://d1zymp9ayga15t.cloudfront.net/images/YeastCropID.jpg)
 
 #### Yeast patch identification
@@ -121,9 +118,8 @@ This pipeline identifies patches of yeast growing in a 96 well plate, serving as
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleYeastPatches.zip) (0.5 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Specialized CellProfiler pipeline identify Yeast Patch example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatch.png)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Specialized CellProfiler pipeline identify Yeast Patch example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatchID.png)
 
 #### Tissue Neighbors
@@ -142,9 +138,8 @@ In this example, cells are grown as a tissue monolayer. Rather than identifying 
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleWoundHealing.zip) (1.2 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Specialized Cellprofiler pipeline quantify area Tissue Monolayer example](http://d1zymp9ayga15t.cloudfront.net/images/WOUND-IMG.gif)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Specialized Cellprofiler pipeline quantify area Tissue Monolayer example](http://d1zymp9ayga15t.cloudfront.net/images/WOUND-ANALYSIS.gif)
 
 #### Illumination Correction
@@ -167,9 +162,8 @@ Measuring the colocalization between fluorescently labeled molecules is a widely
 
 [[Tutorial]](http://d1zymp9ayga15t.cloudfront.net/content/ExampleColocalization_Tutorial.pdf)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Specialized CellProfiler Colocalization Spation Coincidence Subcellular example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Orig.png)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Specialized CellProfiler Colocalization Spation Coincidence Subcellular example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Masked.png)
 
 ### Imaging Flow Cytometry
@@ -185,9 +179,9 @@ Worm Toolbox
 
 These pipelines have been developed for high-throughput screens on *C. elegans* and extract measurements on a per-worm basis.
 
-The [Worm Toolbox](/wormtoolbox) page has further details on this workflow, as well as video tutorials, pipelines and image data in addition to those described below. (from C Wählby*et al.*Methods, 2014)
+The [Worm Toolbox](/wormtoolbox) page has further details on this workflow, as well as video tutorials, pipelines and image data in addition to those described below. (from C Wählby *et al.* Methods, 2014)
 
-The [BBBC](http://www.broadinstitute.org/bbbc) also has*C. elegans* sample images and information, as well as assay "ground truth" of various kinds.
+The [BBBC](http://www.broadinstitute.org/bbbc) also has *C. elegans* sample images and information, as well as assay "ground truth" of various kinds.
 
 #### Untangle worms
 
@@ -195,9 +189,8 @@ In this pipeline, we identify individual worms and extract shape and intensity m
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleUntangleWorms.zip) (1.4 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Worm Toolbox CellProfiler Shape Intensity Untangle Worms CellProfiler](http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleInput.gif)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Worm Toolbox CellProfiler Shape Intensity Untangle Worms CellProfiler](http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleOutput.gif)
 
 #### Straighten worms and extract intensity measurements using a low-resolution atlas
@@ -206,9 +199,8 @@ Once worms are untangled, this pipeline shows how they can be straightened and a
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleStraightenWorms.zip) (1 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Worm Toolbox CellProfiler Straighten Worms example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenInput.gif)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Worm Toolbox CellProfiler Straighten Worms example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenOutput.gif)
 
 #### Untangle worms and make measurements bright-field staining pattern phenotype
@@ -217,9 +209,8 @@ This pipeline detects individual worms by worm untangling and finds sub-objects 
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleUntangleWormsBrightField.zip) (1.7 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Worm Toolbox CellProfiler Untangle Sub-Object Worm example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROinput.gif)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Worm Toolbox CellProfiler Untangle Sub-Object Worm example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROoutput.gif)
 
 More Advanced Pipelines
@@ -233,9 +224,8 @@ In this human cytoplasm-nucleus translocation assay, learn how to load a previou
 
 [[Download]](http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleVitraImages.zip) (4.4 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraImg.png)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraID.png)
 
 #### Speckle Counting
@@ -244,9 +234,8 @@ This pipeline shows how to identify smaller objects (foci) within larger objects
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleSpeckles.zip) (2.7 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Advanced Pipeline CellProfiler Speckle Counting example](http://d1zymp9ayga15t.cloudfront.net/images/SpecklesAB.gif)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Advanced Pipeline CellProfiler Speckle Counting example](http://d1zymp9ayga15t.cloudfront.net/images/SpecklesCD.gif)
 
 #### Object Tracking and Metadata Management
@@ -255,9 +244,8 @@ This example shows an example of object tracking. This pipeline analyzes a time-
 
 [[Download]](http://cellprofiler-examples.s3.amazonaws.com/ExampleTrackObjects.zip) (10 MB)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![Advanced Pipeline CellProfiler Object Tracking Metadata Management example](http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleImg.gif)
-<img src="url" alt="" width="whatever" height="whatever">
+
 ![Advanced Pipeline CellProfiler Object Tracking Metadata Management example](http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleID.gif)
 
 Published Pipelines
@@ -274,7 +262,6 @@ Moffat J et al., A lentiviral RNAi library for human and mouse genes applied to 
 
 [[Download]](http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/cpa_2.0_example.zip) (203MB zipped)
 
-<img src="url" alt="" width="whatever" height="whatever">
 ![CellProfiler Analyst logo](http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png)
 
 #### Previous Examples

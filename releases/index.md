@@ -26,7 +26,7 @@ Linux
 
 Java installation is __required__ prior to installing CellProfiler.
 
-### Java Development Kit (JDK)
+#### Java Development Kit (JDK)
 
 [Linux, macOS, Windows](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
