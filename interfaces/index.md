@@ -87,7 +87,7 @@ redirect_from:
 
     KNIME (University of Konstanz) is an open source modular data exploration platform that enables the user to visually create data flows, selectively execute some or all analysis steps, and later investigate the results through interactive views on data and models.
 
-    KNIME includes a Database Reader node that can access CellProfiler-produced data. [ [more](https://github.com/CellProfiler/CellProfiler/wiki/Interfacing-with-other-software)]
+    KNIME includes a Database Reader node that can access CellProfiler-produced data. [[more](https://github.com/CellProfiler/CellProfiler/wiki/Interfacing-with-other-software)]
 
     [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_matlab.png)
      **MATLAB**](http://www.mathworks.com/products/matlab/)

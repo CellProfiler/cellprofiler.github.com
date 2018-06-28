@@ -40,7 +40,7 @@ This activity teaches students about a new technology used to identify genes inv
 
 **Materials:** Pictures of Cells: [[.zip](http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/CellPictures.zip)]
 
-**Presentation Slides:** [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/2008_03_31_MuseumScience.pdf)] [ [PPT.zip](http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/2008_03_31_MuseumScience_PPT.zip)]
+**Presentation Slides:** [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/2008_03_31_MuseumScience.pdf)] [[PPT.zip](http://d1zymp9ayga15t.cloudfront.net/content/MuseumOfSciencePresentation/2008_03_31_MuseumScience_PPT.zip)]
 
 C. elegans image analysis written exercise
 ==========================================
