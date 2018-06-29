@@ -36,6 +36,8 @@ Note that CellProfiler 2.1 should be used.
 Video tutorials
 ---------------
 
+<iframe allowfullscreen="" src="//www.youtube.com/embed/J0JPUrDNHJ0"></iframe>
+
 **Pipeline 1: Identify and collect measurements from individual worms and sub-regions**
 
 CellProfiler 2.1 pipeline: [Pipeline1\_UntangleWormsExtractMeasurements.cppipe](http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline1_UntangleWormsExtractMeasurements.cppipe)
@@ -56,6 +58,8 @@ Steps of the pipeline:
 - Identify sub-regions (fat) and extract measurements.
 - Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.
 
+<iframe allowfullscreen="" src="//www.youtube.com/embed/o8JetgOnj5M"></iframe>
+
 **Pipeline 2: Find, select, and save individual worms**
 
 CellProfiler 2.1 pipeline: [Pipeline2\_SelectSingleWorms.cppipe](http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline2_SelectSingleWorms.cppipe)
@@ -74,6 +78,8 @@ Steps of the pipeline:
 
 NOTE: The video incorrectly states that WormObjects should be used as input for the ConvertObjectsToImage module. The correct input for that module is SelectedSingleWorms.
 
+<iframe allowfullscreen="" src="//www.youtube.com/embed/2LBfR9H9bKs"></iframe>
+
 **Pipeline 3: Create a new worm model from individual worms**
 
 CellProfiler 2.1 pipeline: [Pipeline3\_TrainModel.cppipe](http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline3_TrainModel.cppipe)
@@ -84,6 +90,8 @@ This module takes the manually selected training worms from Pipeline 2 as input.
 
 - Load data (output from Pipeline 2).
 - Train and save model.
+
+<iframe allowfullscreen="" src="//www.youtube.com/embed/aMwSAxWKZRk"></iframe>
 
 **Pipeline 4: Untangle, correct, and straighten worm clusters**
 
