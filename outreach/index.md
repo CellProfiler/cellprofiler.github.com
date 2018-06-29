@@ -49,9 +49,9 @@ This exercise will allow students to learn about how image analysis can be appli
 
 C. elegans was used as an animal model to find small molecules that cure infection by theE.faecalis pathogen. In this exercise, you will have access to the following materials:
 
-1. Background information on bacterial resistance, antibiotic discovery and C. elegans as a model organism for antibiotic research.
+Background information on bacterial resistance, antibiotic discovery and C. elegans as a model organism for antibiotic research.
 
-1. Images from an actual screen in which several compounds and extracts were found to rescue the worms from infection but had not previously been reported to have antimicrobial properties.
+Images from an actual screen in which several compounds and extracts were found to rescue the worms from infection but had not previously been reported to have antimicrobial properties.
 
 The exercise is written as a set of modules, such that the activities can be done up until any point. Modules can be combined to create a lesson plan appropriate for students ranging from high-school up to upper-level college biology students.
 

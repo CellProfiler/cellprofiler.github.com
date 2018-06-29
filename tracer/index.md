@@ -16,24 +16,25 @@ The [Imaging Platform](http://www.broadinstitute.org/~anne/) at the [Broad Insti
 [![](http://d1zymp9ayga15t.cloudfront.net/images/download_button.png)](http://d1zymp9ayga15t.cloudfront.net/files/software/CellProfiler-Analyst.exe)
 (Windows 64-bit)
 
- Source code available [below](#tech_notes).
+Source code available [below](#tech_notes).
 
 - **Important installation notes:**
 
-    -   Tracer is a modification of the CellProfiler Analyst package. If you already have CellProfiler Analyst installed on your system, it is recommended to install the Tracer version to a different folder.
-    -   The Java Development Environment (JDK) is required for Tracer to run; download from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Make sure to install the 64-bit Windows version, and then add the JDK *bin* location to your PATH environment variable ([instructions](https://java.com/en/download/help/path.xml)).
+Tracer is a modification of the CellProfiler Analyst package. If you already have CellProfiler Analyst installed on your system, it is recommended to install the Tracer version to a different folder.
+
+The Java Development Environment (JDK) is required for Tracer to run; download from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Make sure to install the 64-bit Windows version, and then add the JDK *bin* location to your PATH environment variable ([instructions](https://java.com/en/download/help/path.xml)).
 
 **Questions?** Please direct them to our online [forum](http://forum.cellprofiler.org/c/cpa-dev) dedicated to CellProfiler Analyst.
 
 #### Quick links
 
 -   [Tutorial](#tutorial)
-    -   [Data display](#data_display)
-    -   [Control panel components](#control_panel)
-    -   [Trajectory context menu](#context_menu)
-    -   [Quality assessment metrics](#quality_assessment)
--   [Files needed for the tutorials](#files_needed)
--   [Technical and developer notes](#tech_notes)
+-   [Data display](#data-display)
+-   [Control panel components](#control-panel-components)
+-   [Trajectory context menu items](#trajectory-context-menu-items)
+-   [Quality assessment metrics](#quality-assessment-metrics)
+-   [Files needed for the tutorials](#files-needed-for-the-tutorials)
+-   [Technical and developer notes](#technical-and-developer-notes)
 
 ![](http://d1zymp9ayga15t.cloudfront.net/images/xyt_screenshot.png)
 
@@ -57,67 +58,67 @@ When starting Tracer, this tracking data is read in order to construct a network
 
 ![](http://d1zymp9ayga15t.cloudfront.net/images/tracer.png)
 
-- The panel on the left is an **XYT plot** which shows the evolution of the individual cells across time; the spatial axes are the horizontal plane with the vertical axes representing time.
+The panel on the left is an **XYT plot** which shows the evolution of the individual cells across time; the spatial axes are the horizontal plane with the vertical axes representing time.
 
-- The panel on the right is a **lineage plot** which shows the same graph as on the left, but without the spatial information so that the ancestor/descendant relationships can be seen in more detail.
+The panel on the right is a **lineage plot** which shows the same graph as on the left, but without the spatial information so that the ancestor/descendant relationships can be seen in more detail.
 
-- Below both is a **control panel** with various operations that can be used to re-display or interrogate the data.
+Below both is a **control panel** with various operations that can be used to re-display or interrogate the data.
 
 ### Control panel components
 
-- A number of functions are available from the control panel:
+A number of functions are available from the control panel:
 
-    -   *Data Source:* If multiple movies were analyzed in the course of a single pipeline, they can be selected by index here.
-    -   *Data Tracks:* The original, unedited tracks are the default for this drop-down. Edits made to the trajectories may saved under a new identifier and are then also listed here.
-    -   *Select Tracks to Visualize...:* This button will bring up a listbox allowing selection of any individual trajectory to better assess its behavior. Multiple trajectories can be selected.
-    -   *Show LAP Diagnostic Graphs:* (This button only appears if the LAP method was used in the object tracking in CellProfiler) Pressing this button will bring up a new window displaying histograms of two linear-assignment problem (LAP)-related metrics (described in Jaqaman and Danuser, 2009):
-        -   The frame-to-frame displacement histogram is useful for determining the appropriate search radius to find an object from one frame to the next. The histogram is typically unimodal and decays with higher linking distances. A decay towards zero indicates that the given maximum search radius is sufficiently large; if the distribution decay is truncated, then the specified maximum search radius is too small. The tool will report the abscissa at 95% of the maximum count as the recommended search radius.
-        -   The gap length histogram can be used for finding the optimal time window for reconnecting trajectory gaps resulting from the temporary disappearance of an object. A distribution which plateaus towards longer gap lengths indicates that the chosen time window is too large, and gaps are probably being closed incorrectly. A distribution with no plateau indicates a proper time window length.
-    -   *Data Measurements:* Any of the cellular measurements generated during the analysis run may be selected here. Selecting "Other derived metrics…" from the drop-down enables additional tools in the control panel, described below.
-    -   *Colormap:* The color scheme to apply to both panels may be selected here.
-    -   *Update Display:* Press this button whenever a change is made to the data source, measurement, tracks and colormap drop-downs.
-    -   *? (question mark):* Click this button and then click on an interface element to bring up help for that element.
-    -   *Derived Metrics:* This drop-down is activated when "Derived metrics" is selected from "Data Measurements". It lists the various quality control metrics that are generated from the graph topology of the tracked data. The metrics are listed below.
+-   *Data Source:* If multiple movies were analyzed in the course of a single pipeline, they can be selected by index here.
+-   *Data Tracks:* The original, unedited tracks are the default for this drop-down. Edits made to the trajectories may saved under a new identifier and are then also listed here.
+-   *Select Tracks to Visualize...:* This button will bring up a listbox allowing selection of any individual trajectory to better assess its behavior. Multiple trajectories can be selected.
+-   *Show LAP Diagnostic Graphs:* (This button only appears if the LAP method was used in the object tracking in CellProfiler) Pressing this button will bring up a new window displaying histograms of two linear-assignment problem (LAP)-related metrics (described in Jaqaman and Danuser, 2009):
+-   The frame-to-frame displacement histogram is useful for determining the appropriate search radius to find an object from one frame to the next. The histogram is typically unimodal and decays with higher linking distances. A decay towards zero indicates that the given maximum search radius is sufficiently large; if the distribution decay is truncated, then the specified maximum search radius is too small. The tool will report the abscissa at 95% of the maximum count as the recommended search radius.
+-   The gap length histogram can be used for finding the optimal time window for reconnecting trajectory gaps resulting from the temporary disappearance of an object. A distribution which plateaus towards longer gap lengths indicates that the chosen time window is too large, and gaps are probably being closed incorrectly. A distribution with no plateau indicates a proper time window length.
+-   *Data Measurements:* Any of the cellular measurements generated during the analysis run may be selected here. Selecting "Other derived metrics…" from the drop-down enables additional tools in the control panel, described below.
+-   *Colormap:* The color scheme to apply to both panels may be selected here.
+-   *Update Display:* Press this button whenever a change is made to the data source, measurement, tracks and colormap drop-downs.
+-   *? (question mark):* Click this button and then click on an interface element to bring up help for that element.
+-   *Derived Metrics:* This drop-down is activated when "Derived metrics" is selected from "Data Measurements". It lists the various quality control metrics that are generated from the graph topology of the tracked data. The metrics are listed below.
 
 ### Trajectory context menu items
 
--   Right-clicking on either panel brings up a number of options:
+Right-clicking on either panel brings up a number of options:
 
-    -   *Select cell using object ID:* The image and object index can entered in order to select a cell in the panels. This can be used in place of finding and clicking on a individual cell.
-    -   *Make all trajectories visible:* Restores the visibility of all trajectories in the panels.
-    -   *Display measurement heatmap...:* Displays a heatmap of measurements averaged across all trajectroies for each timepoint. You can select which measurements to display. The display is shown using the current colormap.
+-   *Select cell using object ID:* The image and object index can entered in order to select a cell in the panels. This can be used in place of finding and clicking on a individual cell.
+-   *Make all trajectories visible:* Restores the visibility of all trajectories in the panels.
+-   *Display measurement heatmap...:* Displays a heatmap of measurements averaged across all trajectroies for each timepoint. You can select which measurements to display. The display is shown using the current colormap.
 
 -   If a cell is selected in the panels, the context menu shows the selected trajectory number plus the image number/object number index of the selected cell. Additional context menu options are also shown:
 
-    -   *Show selected cell as...:* This gives additional options of showing the selected cell in the following ways:
-        -   *Image tile:* Shows a square "window" displaying an individual cell. The size of the tile is set with the `image_tile_size` field in the properties file.
-        -   *Full image:* Shows the full image, with the selected cell highlighted with a small square dot.
-        -   *Data table from select trajectory:* Provides tabular data of measurement values along the trajectory containing the selected cell. A data table is displayed with each row representing the frame index and the column values corresponding that of the currently selected measurement in the control panel.
-    -   *Define trajectory segment as...:* A contiguous sub-section of the trajectory (the trajectory segment) containing the selected object can be defined with this option. A trajectory segment can be defined in the following ways:
-        -   *Endpoint #1:* Use the selected point to define the first endpoint of a segment.
-        -   *Endpoint #2:* Use the selected point to define the second endpoint of a segment.
-        -   *N frames before/after:* Enter the number of frames upstream and downstream of the selected cell in order to define the segment. If there are branchpoints upstream/downstream of the cell, the longer branch will be used.
-    -   *Display trajectory segment as...:* The trajectory segment can be displayed in the following ways:
-        -   *Synchrogram (Image montage):* Display an image montage (synchrogram) of the selected cell as a series of image tiles, with the selected cell centered in the middle of the tile.
-        -   *Plot of currently selected measurement:* Display a graph of the currently selected measurement along the points specified by the trajectory segment.
+-   *Show selected cell as...:* This gives additional options of showing the selected cell in the following ways:
+-   *Image tile:* Shows a square "window" displaying an individual cell. The size of the tile is set with the `image_tile_size` field in the properties file.
+-   *Full image:* Shows the full image, with the selected cell highlighted with a small square dot.
+-   *Data table from select trajectory:* Provides tabular data of measurement values along the trajectory containing the selected cell. A data table is displayed with each row representing the frame index and the column values corresponding that of the currently selected measurement in the control panel.
+-   *Define trajectory segment as...:* A contiguous sub-section of the trajectory (the trajectory segment) containing the selected object can be defined with this option. A trajectory segment can be defined in the following ways:
+-   *Endpoint #1:* Use the selected point to define the first endpoint of a segment.
+-   *Endpoint #2:* Use the selected point to define the second endpoint of a segment.
+-   *N frames before/after:* Enter the number of frames upstream and downstream of the selected cell in order to define the segment. If there are branchpoints upstream/downstream of the cell, the longer branch will be used.
+-   *Display trajectory segment as...:* The trajectory segment can be displayed in the following ways:
+-   *Synchrogram (Image montage):* Display an image montage (synchrogram) of the selected cell as a series of image tiles, with the selected cell centered in the middle of the tile.
+-   *Plot of currently selected measurement:* Display a graph of the currently selected measurement along the points specified by the trajectory segment.
 
 ### Quality assessment metrics
 
--   The trajectories in both panels can be color-coded according to network graph topological metrics; it is these metrics which allow for assessment of tracking quality.
+The trajectories in both panels can be color-coded according to network graph topological metrics; it is these metrics which allow for assessment of tracking quality.
 
-    -   *Singletons:* Trajectories of very short length are highlighted. Problems in image foreground identification may produce objects that appear transiently and then disappear.
-    -   *Crossings:* In biology, cells typically do not merge, so a merge event followed quickly by a split is more likely the result of two neighboring cells getting erroneously combined for a few frames. This would be indicated in a graph as an node with an in-degree \> 1 and an out-degree \> 1.
-    -   *Loops:* Transient errors in segmentation in which a single cell is erroneously divided into multiple pieces tend to occur as a brief temporal split and merge of a single object. In graph terminology, this is characterized as a simple cycle, an element readily identifiable in a graph as a closed loop.
-    -   *BetweennessCentrality:* Another more flexible approach to the above is to examine the betweenness centrality of the nodes downstream from a branchpoint. The betweenness centrality of a node is the sum of the number of paths that traverse that node. A downstream node located on a short branch would have a lower betweenness centrality than nodes on a longer branch.
-    -   *NodesWithinDistanceCutoff:* An alternate version of the above is one where the new object terminates at t = 1 rather than being registered as a merge with the original object. In this case, the graph appears as a branchpoint in which one branch is much shorter than the other. Such terminal nodes can be detected as those (a) within a certain node distance from the branchpoint and (b) an out-degree of 0. This is most likely due to a mis-segmentation in which one piece was subsequently lost.
+-   *Singletons:* Trajectories of very short length are highlighted. Problems in image foreground identification may produce objects that appear transiently and then disappear.
+-   *Crossings:* In biology, cells typically do not merge, so a merge event followed quickly by a split is more likely the result of two neighboring cells getting erroneously combined for a few frames. This would be indicated in a graph as an node with an in-degree \> 1 and an out-degree \> 1.
+-   *Loops:* Transient errors in segmentation in which a single cell is erroneously divided into multiple pieces tend to occur as a brief temporal split and merge of a single object. In graph terminology, this is characterized as a simple cycle, an element readily identifiable in a graph as a closed loop.
+-   *BetweennessCentrality:* Another more flexible approach to the above is to examine the betweenness centrality of the nodes downstream from a branchpoint. The betweenness centrality of a node is the sum of the number of paths that traverse that node. A downstream node located on a short branch would have a lower betweenness centrality than nodes on a longer branch.
+-   *NodesWithinDistanceCutoff:* An alternate version of the above is one where the new object terminates at t = 1 rather than being registered as a merge with the original object. In this case, the graph appears as a branchpoint in which one branch is much shorter than the other. Such terminal nodes can be detected as those (a) within a certain node distance from the branchpoint and (b) an out-degree of 0. This is most likely due to a mis-segmentation in which one piece was subsequently lost.
 
-    For the "Singletons" and "Nodes within Distance Cutoff" metrics, the user can enter the number of nodes defining a singleton or a terminal branch, respectively. For the "Singletons" metric, a button is available which presents the user with a histogram of the track lengths along with some basic statistics, e.g., total number of tracks, number of singletons, etc.
+For the "Singletons" and "Nodes within Distance Cutoff" metrics, the user can enter the number of nodes defining a singleton or a terminal branch, respectively. For the "Singletons" metric, a button is available which presents the user with a histogram of the track lengths along with some basic statistics, e.g., total number of tracks, number of singletons, etc.
 
-    Upon selecting a metric, pressing the "Update Plot" button will re-draw the trajectories with the flagged nodes highlighted in red for ease of viewing. At this point, the user has several buttons for how to treat these nodes:
+Upon selecting a metric, pressing the "Update Plot" button will re-draw the trajectories with the flagged nodes highlighted in red for ease of viewing. At this point, the user has several buttons for how to treat these nodes:
 
-    -   *Preview Pruned Edges:* Toggling this button will re-draw the graphs with the linking edges of the flagged nodes removed.
-    -   *Add Pruning To Edits:* Add the pruning selection to a list of graph edits. This allows the user build an edited version of the original graph based on the cumulative results of several metrics.
-    -   *Save Edited Tracks...:* Create a new graph based on the final list of graph edits. This graph will be assigned a name provided by the user, and will then be added to the "Data Tracks" drop-down. The derived metrics will be re-calculated for this graph, so further edits can be made with updated information. Additionally, the new graph will be added to the adjacency table in the database so it can retrieved across Tracer sessions.
+-   *Preview Pruned Edges:* Toggling this button will re-draw the graphs with the linking edges of the flagged nodes removed.
+-   *Add Pruning To Edits:* Add the pruning selection to a list of graph edits. This allows the user build an edited version of the original graph based on the cumulative results of several metrics.
+-   *Save Edited Tracks...:* Create a new graph based on the final list of graph edits. This graph will be assigned a name provided by the user, and will then be added to the "Data Tracks" drop-down. The derived metrics will be re-calculated for this graph, so further edits can be made with updated information. Additionally, the new graph will be added to the adjacency table in the database so it can retrieved across Tracer sessions.
 
 * * * * *
 
@@ -153,11 +154,11 @@ Currently, compiled versions are available for Windows 64-bit only. Producing a 
 
 ### Data schema
 
--   Tracer is designed to process and explore any MySQL- or SQLite-based database of image-based screening data structure according to the following simple scheme:
+Tracer is designed to process and explore any MySQL- or SQLite-based database of image-based screening data structure according to the following simple scheme:
 
-    -   An *image table* with the rows corresponding to channel data from single field of view at a single timepoint and the columns containing the image data (e.g., the name of the treatment condition, the path to and filename of the original image, etc.). A requirement for this table is an image index, a column of integers referencing each site acquired.
-    -   At least *one object table* with rows corresponding to a given object (e.g., cells) from a single image table row and the columns containing the object data (e.g., area of the cell, intensity of DNA stain in the nucleus, location of the cell in the original image). Required for this table is an image index as described above, as well as an object index, a column of integers reference each object identified in an image.
-    -   In addition, an *object relationship table* is also required. Each row corresponds to the image and object index for a given object and that of its “parent”, i.e, tracked predecessor.
+-   An *image table* with the rows corresponding to channel data from single field of view at a single timepoint and the columns containing the image data (e.g., the name of the treatment condition, the path to and filename of the original image, etc.). A requirement for this table is an image index, a column of integers referencing each site acquired.
+-   At least *one object table* with rows corresponding to a given object (e.g., cells) from a single image table row and the columns containing the object data (e.g., area of the cell, intensity of DNA stain in the nucleus, location of the cell in the original image). Required for this table is an image index as described above, as well as an object index, a column of integers reference each object identified in an image.
+-   In addition, an *object relationship table* is also required. Each row corresponds to the image and object index for a given object and that of its “parent”, i.e, tracked predecessor.
 
 For large image-based screens (\>10,000 images), the typical workflow is to store the data set remotely on an MySQL database due to the prohibitive storage requirements for the collected measurements. However, using SQLite for local storage provides the same functionality and is more suitable for small or intermediate-level screens.
 

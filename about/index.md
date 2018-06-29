@@ -1,6 +1,6 @@
 ---
 layout: default
-redirect_from: 
+redirect_from:
 - "/about.html"
 - "/about.shtml"
 ---

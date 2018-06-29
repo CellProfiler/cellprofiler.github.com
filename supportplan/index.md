@@ -37,8 +37,9 @@ Assistance in configuring CellProfiler to your local computing environment and i
 
 ## PLUS
 
-  - 20% discount on workshops held at your location
-  - Easily installable, code-signed packages of unreleased versions of CellProfiler
+20% discount on workshops held at your location
+
+Easily installable, code-signed packages of unreleased versions of CellProfiler
 
 ## Key information
 
@@ -52,6 +53,8 @@ Please note that time is available annually and cannot be rolled over from year 
 
 ### For-profits: $12,000/year
 
-<button class= "sign-up-button" onclick= "window.open(&quot;mailto:imagingadmin@broadinstitute.org?subject=CellProfiler%20Annual%20Support%20and%20Training%20Plan&amp;body=Send%20me%20more%20info%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan.%20Thanks!&quot;)"type="button">Sign up!</button>
+[<span class="method-item">Sign up!</span>][]
+[<span class="method-item">Questions?</span>][]
 
-<button class= "questions-button" onclick= "window.open(&quot;mailto:imagingadmin@broadinstitute.org?subject=Question%28s%29%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan&quot;)"type= "button">Questions?</button>
+[<span class="method-item">Sign up!</span>]: mailto:imagingadmin@broadinstitute.org?subject=CellProfiler%20Annual%20Support%20and%20Training%20Plan&amp;body=Send%20me%20more%20info%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan.%20Thanks!&quot
+[<span class="method-item">Questions?</span>]: mailto:imagingadmin@broadinstitute.org?subject=Question%28s%29%20about%20the%20CellProfiler%20Annual%20Support%20and%20Training%20Plan&quot

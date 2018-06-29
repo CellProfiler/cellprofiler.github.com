@@ -17,19 +17,19 @@ Tutorials overview
 
 ![](http://d1zymp9ayga15t.cloudfront.net/images/WTB_diagram.png)
 
-- The main analysis pipeline, Pipeline 1, shown in blue, is fully automated, and consists of the following steps:
+The main analysis pipeline, Pipeline 1, shown in blue, is fully automated, and consists of the following steps:
 
-    - Load input images from QORO assay. Pre-process to detect artifacts such as bubbles and well edges.
-    - Detect worms and clusters of worms. Individual worms/worm clusters are randomly colored.
-    - Delineate individual worms by model-based worm untangling. Now, each individual detected worm has a unique color.
-    - Digitally straighten worms and align them to a simple worm atlas for measurement of stain distribution.
-    - Detect fatty regions within worms. Once worms and fatty regions are identified, a large number of intensity, shape and texture measurements are extracted.
+- Load input images from QORO assay. Pre-process to detect artifacts such as bubbles and well edges.
+- Detect worms and clusters of worms. Individual worms/worm clusters are randomly colored.
+- Delineate individual worms by model-based worm untangling. Now, each individual detected worm has a unique color.
+- Digitally straighten worms and align them to a simple worm atlas for measurement of stain distribution.
+- Detect fatty regions within worms. Once worms and fatty regions are identified, a large number of intensity, shape and texture measurements are extracted.
 
-- If the provided default worm model does not fit the input data (e.g. due to a different image resolution or different worm strain), a new worm model can be created using Pipeline 2 (pink) to (g) manually select non-touching worms making up a training set for a new model built by Pipeline 3.
+If the provided default worm model does not fit the input data (e.g. due to a different image resolution or different worm strain), a new worm model can be created using Pipeline 2 (pink) to (g) manually select non-touching worms making up a training set for a new model built by Pipeline 3.
 
-- For low-throughput experiments, it is possible to manually curate faulty segmentation results using Pipeline 4 (orange) by (h) manual editing of the output from step d of pipeline 1, and (i) manual flipping of digitally straightened worms so that they all align in with heads or tails up. Measurements, such as intensity of stain, fat stain distribution, fat region size, worm width etc. may also be extracted from individual worms after manual correction. All measurements are exported to a database for further exploration and phenotyping.
+For low-throughput experiments, it is possible to manually curate faulty segmentation results using Pipeline 4 (orange) by (h) manual editing of the output from step d of pipeline 1, and (i) manual flipping of digitally straightened worms so that they all align in with heads or tails up. Measurements, such as intensity of stain, fat stain distribution, fat region size, worm width etc. may also be extracted from individual worms after manual correction. All measurements are exported to a database for further exploration and phenotyping.
 
-- Note that CellProfiler 2.1 should be used.
+Note that CellProfiler 2.1 should be used.
 
 * * * * *
 
@@ -48,13 +48,13 @@ This is the main pipeline for delineating worms (also those in clusters) and ext
 
 Steps of the pipeline:
 
-1.  Load data.
-2.  Pre-process data by removing artifacts such as well edges and bubbles.
-3.  Separate worms and worm clusters the from image background by foreground/background image segmentation.
-4.  Identify individual worms by worm untangling and extract measurements.
-5.  Straighten worms and extract measurements.
-6.  Identify sub-regions (fat) and extract measurements.
-7.  Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.
+- Load data.
+- Pre-process data by removing artifacts such as well edges and bubbles.
+- Separate worms and worm clusters the from image background by foreground/background image segmentation.
+- Identify individual worms by worm untangling and extract measurements.
+- Straighten worms and extract measurements.
+- Identify sub-regions (fat) and extract measurements.
+- Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.
 
 **Pipeline 2: Find, select, and save individual worms**
 
@@ -66,11 +66,11 @@ This pipeline may be omitted if a previously created model (e.g. DefaultWormMode
 
 Steps of the pipeline:
 
-1.  Load data.
-2.  Pre-process data by compensating for non-uniform illumination and removing artifacts such as well edges and bubbles.
-3.  Separate worms and worm clusters the from image background by foreground/background image segmentation.
-4.  Manually select single worms for worm modeling. Approximately 50 worms representing the variability in the dataset is usually sufficient.
-5.  Make sure that the selected single worms are saved as training worms.
+- Load data.
+- Pre-process data by compensating for non-uniform illumination and removing artifacts such as well edges and bubbles.
+- Separate worms and worm clusters the from image background by foreground/background image segmentation.
+- Manually select single worms for worm modeling. Approximately 50 worms representing the variability in the dataset is usually sufficient.
+- Make sure that the selected single worms are saved as training worms.
 
 NOTE: The video incorrectly states that WormObjects should be used as input for the ConvertObjectsToImage module. The correct input for that module is SelectedSingleWorms.
 
@@ -82,8 +82,8 @@ Download this video: [Pipeline3.mp4](http://d1zymp9ayga15t.cloudfront.net/worm_f
 
 This module takes the manually selected training worms from Pipeline 2 as input. It is recommended to visually browse through the binary input images before running this pipeline to make sure that they represent single worms. The pipeline is fully automated, and the resulting model will be called MyWormModel.xml.
 
-1.  Load data (output from Pipeline 2).
-2.  Train and save model.
+- Load data (output from Pipeline 2).
+- Train and save model.
 
 **Pipeline 4: Untangle, correct, and straighten worm clusters**
 
@@ -95,10 +95,10 @@ Download this video: [Pipeline4.mp4](http://d1zymp9ayga15t.cloudfront.net/worm_f
 
 This pipeline loads the untangling results from Pipeline 1 and allows the user to edit any errors in the untangling prior to straightening the worms for visualization and extraction of measurements. A worm model (DefaultWormModel.xml or a new model created by Pipelines 2 and 3) is needed as input for the straightening step.
 
-1.  Load data (output from Pipeline 1).
-2.  Manually correct segmentation errors.
-3.  Digitally align worms, select orientation (heads or tails up).
-4.  Save result.
+- Load data (output from Pipeline 1).
+- Manually correct segmentation errors.
+- Digitally align worms, select orientation (heads or tails up).
+- Save result.
 
 * * * * *
 
@@ -118,9 +118,9 @@ Video tutorials on how to use CellProfiler Analyst
 - Example pipelines
 -----------------
 
-    - Previously published example pipelines using the WormToolbox
+- Previously published example pipelines using the WormToolbox
 
-    - *As presented in Wählby et al. 2012, these additional pipelines include illumination correction and feature extraction from fluorescence microscopy data.*
+- *As presented in Wählby et al. 2012, these additional pipelines include illumination correction and feature extraction from fluorescence microscopy data.*
 
 -   [Untangle worms](http://cellprofiler.org/examples.html#UntangleWorms)
 -   [Straighten worms and extract intensity measurements using a low-resolution atlas](http://cellprofiler.org/examples.html#StraightenWorms)
@@ -144,7 +144,7 @@ Teaching materials
 Publications
 ------------
 
-1.  Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM and Carpenter AE (2012) An image analysis toolbox for high-throughput *C. elegans* assays. *Nature Methods* 9(7):714-U273. doi: 10.1038/nmeth.1984 PMID: 22522656. PMCID: PMC3433711. Available at <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/>
-2.  Riklin-Raviv T, Ljosa V, Conery AL, Ausubel FM, Carpenter AE, Golland P and Wählby C (2010) Morphology-guided graph search for untangling objects: *C elegans* analysis. In *Medical Image Computing and Computer Assisted Intervention* (MICCAI) 2010; 13(3):634-641. PMID: 20879454. PMCID: PMC3050593. Available at <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050593/>
-3.  Wählby C, Riklin-Raviv T, Ljosa V, Conery AL, Golland P, Ausubel FM and Carpenter AE (2010) Resolving clustered worms via probabilistic shape models. In *ISBI 2010 (Proceedings of the IEEE International Symposium on Biomedical Imaging: From Nano to Macro)*, 552-555. doi: 10.1109/ISBI.2010.5490286 PMID: 21383863. PMCID: PMC3048333. Available at <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048333/>
-4.  Wählby C, Lee Conery A, Bray MA, Kamentsky L, Larkins-Ford J, Sokolnicki KL, Veneskey M, Michaels K, Carpenter AE and O'Rourke EJ (2014). High- and low-throughput scoring of fat mass and body fat distribution in *C. elegans* *Methods* 68(3):492-499. doi: 10.1016/j.ymeth.2014.04.017 PMID: 24784529 PMCID: 4112171. Available at <http://www.ncbi.nlm.nih.gov/pubmed/24784529>
+- Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM and Carpenter AE (2012) An image analysis toolbox for high-throughput *C. elegans* assays. *Nature Methods* 9(7):714-U273. doi: 10.1038/nmeth.1984 PMID: 22522656. PMCID: PMC3433711. Available at <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433711/>
+- Riklin-Raviv T, Ljosa V, Conery AL, Ausubel FM, Carpenter AE, Golland P and Wählby C (2010) Morphology-guided graph search for untangling objects: *C elegans* analysis. In *Medical Image Computing and Computer Assisted Intervention* (MICCAI) 2010; 13(3):634-641. PMID: 20879454. PMCID: PMC3050593. Available at <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3050593/>
+- Wählby C, Riklin-Raviv T, Ljosa V, Conery AL, Golland P, Ausubel FM and Carpenter AE (2010) Resolving clustered worms via probabilistic shape models. In *ISBI 2010 (Proceedings of the IEEE International Symposium on Biomedical Imaging: From Nano to Macro)*, 552-555. doi: 10.1109/ISBI.2010.5490286 PMID: 21383863. PMCID: PMC3048333. Available at <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048333/>
+- Wählby C, Lee Conery A, Bray MA, Kamentsky L, Larkins-Ford J, Sokolnicki KL, Veneskey M, Michaels K, Carpenter AE and O'Rourke EJ (2014). High- and low-throughput scoring of fat mass and body fat distribution in *C. elegans* *Methods* 68(3):492-499. doi: 10.1016/j.ymeth.2014.04.017 PMID: 24784529 PMCID: 4112171. Available at <http://www.ncbi.nlm.nih.gov/pubmed/24784529>

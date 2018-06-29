@@ -4,161 +4,161 @@ redirect_from:
 - "/interfaces.html"
 - "/interfaces.shtml"
 ---
--   -   
-    Software Interfaces
-    ===================
 
-    -   [Software for analyzing CellProfiler-produced data](#datatools)
-    -   [Software partnerships](#partners)
+Software Interfaces
+===================
 
-    Software for analyzing CellProfiler-produced data
-    -------------------------------------------------
+-   [Software for analyzing CellProfiler-produced data](#datatools)
+-   [Software partnerships](#partners)
 
-    **Software**
+Software for analyzing CellProfiler-produced data
+-------------------------------------------------
 
-    **Description**
+**Software**
 
-    **Interface**
+**Description**
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/cp_128.png)
-     **CellProfiler**](/releases)
+**Interface**
 
-    In addition to performing image analysis to generate measurements, CellProfiler has built-in tools in the *Data Tools* menu to generate a few types of plots.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/cp_128.png)
+ **CellProfiler**](/releases)
 
-    CellProfiler output files in MATLAB (.mat) and HDF5 (.h5) can be opened by CellProfiler's data tools.
+In addition to performing image analysis to generate measurements, CellProfiler has built-in tools in the *Data Tools* menu to generate a few types of plots.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png)
-     **CellProfiler Analyst**](http://cellprofiler.org/releases/)
+CellProfiler output files in MATLAB (.mat) and HDF5 (.h5) can be opened by CellProfiler's data tools.
 
-    CellProfiler Analyst allows analysis, exploration and machine-learning for high-dimensional image-based data.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png)
+ **CellProfiler Analyst**](http://cellprofiler.org/releases/)
 
-    CellProfiler Analyst can be used with data that follows a simple format: One image table with rows of databases produced in CellProfiler using the [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) module or data tool.
+CellProfiler Analyst allows analysis, exploration and machine-learning for high-dimensional image-based data.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_accelrys.png)
-     **Accelrys**](http://accelrys.com/platform/enterprise-platform.html)
+CellProfiler Analyst can be used with data that follows a simple format: One image table with rows of databases produced in CellProfiler using the [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) module or data tool.
 
-    The Component Collections of the Accelrys Enterprise Platform (AEP) allows researchers to build, deploy, analyze and report on complex scientific data types within the Accelrys applications framework and other third-party applications.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_accelrys.png)
+ **Accelrys**](http://accelrys.com/platform/enterprise-platform.html)
 
-    The Pipeline Pilot [Imaging Component Collection](http://accelrys.com/products/pipeline-pilot/component-collections/imaging.html) provides a component, 'CellProfiler (on Server)', for integration with CellProfiler. The user can run a protocol and send images to be analyzed into CellProfiler as input, and allows for images and analysis data to be retrieved from CellProfiler for downstream data workflows enabled by AEP. Some details on using the component are provided [here](http://d1zymp9ayga15t.cloudfront.net/content/Accelyrs_AEP_CellProfilerOnServer_Usage_tips.pdf).
+The Component Collections of the Accelrys Enterprise Platform (AEP) allows researchers to build, deploy, analyze and report on complex scientific data types within the Accelrys applications framework and other third-party applications.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_columbus.png)
-    **Columbus**](http://www.perkinelmer.com/pages/020/cellularimaging/products/columbus.xhtml)
+The Pipeline Pilot [Imaging Component Collection](http://accelrys.com/products/pipeline-pilot/component-collections/imaging.html) provides a component, 'CellProfiler (on Server)', for integration with CellProfiler. The user can run a protocol and send images to be analyzed into CellProfiler as input, and allows for images and analysis data to be retrieved from CellProfiler for downstream data workflows enabled by AEP. Some details on using the component are provided [here](http://d1zymp9ayga15t.cloudfront.net/content/Accelyrs_AEP_CellProfilerOnServer_Usage_tips.pdf).
 
-    The Columbus system (Perkin Elmer) is a universal high-volume image data storage and analysis system that brings access to images from a wide range of sources including all major high content screening instruments via the Internet.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_columbus.png)
+**Columbus**](http://www.perkinelmer.com/pages/020/cellularimaging/products/columbus.xhtml)
 
-    Using the final building block (Define Results) of a Columbus analysis routine, data can be exported in a format that CellProfiler Analyst can read. Instructions [here](http://d1zymp9ayga15t.cloudfront.net/Exporting_images_data_from_Columbus_to_CellProfiler_Analyst.pdf).
+The Columbus system (Perkin Elmer) is a universal high-volume image data storage and analysis system that brings access to images from a wide range of sources including all major high content screening instruments via the Internet.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_excel.png)
-     **Excel**](http://office.microsoft.com/en-us/excel/)
+Using the final building block (Define Results) of a Columbus analysis routine, data can be exported in a format that CellProfiler Analyst can read. Instructions [here](http://d1zymp9ayga15t.cloudfront.net/Exporting_images_data_from_Columbus_to_CellProfiler_Analyst.pdf).
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_openofficecalc.png)
-     **Calc**](https://www.libreoffice.org/discover/calc/)
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_excel.png)
+ **Excel**](http://office.microsoft.com/en-us/excel/)
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_graphpadprism.png)
-     **Prism**](http://www.graphpad.com/scientific-software/prism/)
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_openofficecalc.png)
+ **Calc**](https://www.libreoffice.org/discover/calc/)
 
-    Spreadsheet programs like these are useful for plotting small amounts of data. Excel (Microsoft) is a general business comercial package, whereas Prism (Graphpad) is a commercial program tailored towards research scientists for statistical analyses. Calc (LibreOffice) is open-source software and freely-available.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_graphpadprism.png)
+ **Prism**](http://www.graphpad.com/scientific-software/prism/)
 
-    These tools can read comma- or tab-delimited files generated by the CellProfiler [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) module or data tool.
+Spreadsheet programs like these are useful for plotting small amounts of data. Excel (Microsoft) is a general business comercial package, whereas Prism (Graphpad) is a commercial program tailored towards research scientists for statistical analyses. Calc (LibreOffice) is open-source software and freely-available.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_fcs_express.jpg)
-     **FCS Express Image Cytometry**](http://www.denovosoftware.com/)
+These tools can read comma- or tab-delimited files generated by the CellProfiler [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) module or data tool.
 
-    FCS Express 4 Image Cytometry (De Novo Software) provides population based analytical tools common in flow cytometry. The image cytometry version allows the user to review and analyze multi-parametric data sets and relate results back to the original images.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_fcs_express.jpg)
+ **FCS Express Image Cytometry**](http://www.denovosoftware.com/)
 
-    FCS Express 4 software can [import](http://www.denovosoftware.com/site/manual/index.html?cell_profiler_export.htm) comma-delimited files produced by the CellProfiler [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) module or data tool.
+FCS Express 4 Image Cytometry (De Novo Software) provides population based analytical tools common in flow cytometry. The image cytometry version allows the user to review and analyze multi-parametric data sets and relate results back to the original images.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_genepattern.jpg)
-     **GenePattern**](http://www.broadinstitute.org/cancer/software/genepattern/)
+FCS Express 4 software can [import](http://www.denovosoftware.com/site/manual/index.html?cell_profiler_export.htm) comma-delimited files produced by the CellProfiler [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) module or data tool.
 
-    GenePattern (Broad Institute) is open source software that gives a broad audience access to a growing repository of sophisticated analytic tools for genomic data, while an API supports computational biologists.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_genepattern.jpg)
+ **GenePattern**](http://www.broadinstitute.org/cancer/software/genepattern/)
 
-    CellProfiler can format and export image-based data as a GenePattern GCT file (.gct) through the [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) module or data tool.
+GenePattern (Broad Institute) is open source software that gives a broad audience access to a growing repository of sophisticated analytic tools for genomic data, while an API supports computational biologists.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/GE_logo.png)
-     **IN Cell Analyzer**](http://www.gelifesciences.com/webapp/wcs/stores/servlet/CategoryDisplay?categoryId=1309574&catalogId=78149&productId=⊤=Y&storeId=11787&langId=-1)
+CellProfiler can format and export image-based data as a GenePattern GCT file (.gct) through the [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) module or data tool.
 
-    IN Cell Analyzer automated cell imaging systems yield morphological and molecular data via high content imaging and analysis.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/GE_logo.png)
+ **IN Cell Analyzer**](http://www.gelifesciences.com/webapp/wcs/stores/servlet/CategoryDisplay?categoryId=1309574&catalogId=78149&productId=⊤=Y&storeId=11787&langId=-1)
 
-    The IN Cell Analyzer acquisition software from GE Healthcare generates customizable CSV reports in a format that allows CellProfiler to import images and metadata via the LoadData module.
+IN Cell Analyzer automated cell imaging systems yield morphological and molecular data via high content imaging and analysis.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_knime.jpg)
-     **KNIME**](http://www.knime.org/)
+The IN Cell Analyzer acquisition software from GE Healthcare generates customizable CSV reports in a format that allows CellProfiler to import images and metadata via the LoadData module.
 
-    KNIME (University of Konstanz) is an open source modular data exploration platform that enables the user to visually create data flows, selectively execute some or all analysis steps, and later investigate the results through interactive views on data and models.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_knime.jpg)
+ **KNIME**](http://www.knime.org/)
 
-    KNIME includes a Database Reader node that can access CellProfiler-produced data. [[more](https://github.com/CellProfiler/CellProfiler/wiki/Interfacing-with-other-software)]
+KNIME (University of Konstanz) is an open source modular data exploration platform that enables the user to visually create data flows, selectively execute some or all analysis steps, and later investigate the results through interactive views on data and models.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_matlab.png)
-     **MATLAB**](http://www.mathworks.com/products/matlab/)
+KNIME includes a Database Reader node that can access CellProfiler-produced data. [[more](https://github.com/CellProfiler/CellProfiler/wiki/Interfacing-with-other-software)]
 
-    MATLAB (Mathworks) is a high-level language and interactive environment for data analysis and visualization.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_matlab.png)
+ **MATLAB**](http://www.mathworks.com/products/matlab/)
 
-    CellProfiler can produce MATLAB (.mat) output files.
+MATLAB (Mathworks) is a high-level language and interactive environment for data analysis and visualization.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/orbit_client_transparen_blue.png)
-     **Orbit**](http://www.orbit.bio/)
+CellProfiler can produce MATLAB (.mat) output files.
 
-    Orbit Image Analysis is open source software for quantifying large-format images such as whole slide scans of tissue. It can load images from local disk or connect to an Omero image server and can process images on a local computer or on a cluster using Spark.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/orbit_client_transparen_blue.png)
+ **Orbit**](http://www.orbit.bio/)
 
-    Orbit can be used to specify a region of interest in a very large image (e.g. a whole-slide scan), and can then send tiled sub-regions to CellProfiler for high-throughput processing of individual cells in each tile. All tiles in the valid ROI are processed via CellProfiler, the results are read back into Orbit and can be visualized.
+Orbit Image Analysis is open source software for quantifying large-format images such as whole slide scans of tissue. It can load images from local disk or connect to an Omero image server and can process images on a local computer or on a cluster using Spark.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_r.png)
-     **R**](http://www.r-project.org/)
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_python.png)
-     **Python**](http://www.python.org/)
+Orbit can be used to specify a region of interest in a very large image (e.g. a whole-slide scan), and can then send tiled sub-regions to CellProfiler for high-throughput processing of individual cells in each tile. All tiles in the valid ROI are processed via CellProfiler, the results are read back into Orbit and can be visualized.
 
-    Any analysis or visualization tools that can query a database (such as R or python+pylab) can be used to analyze data that has been deposited into a MySQL database.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_r.png)
+ **R**](http://www.r-project.org/)
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_python.png)
+ **Python**](http://www.python.org/)
 
-    Databases containing image and/or object data can be produced using the CellProfiler [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) module or data tool. [CellProfile-R](http://code.google.com/p/cellprofile-r/), an R package for CellProfiler database access and analysis, is available. Users can write their own CellProfiler modules in Python by following the instructions [here](https://github.com/CellProfiler/CellProfiler/wiki#wiki-What_if_I_want_to_contribute_to_CellProfiler).
+Any analysis or visualization tools that can query a database (such as R or python+pylab) can be used to analyze data that has been deposited into a MySQL database.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_spotfire1.png)
-     **Spotfire**](http://www.cambridgesoft.com/ensemble/spotfire/)
+Databases containing image and/or object data can be produced using the CellProfiler [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) module or data tool. [CellProfile-R](http://code.google.com/p/cellprofile-r/), an R package for CellProfiler database access and analysis, is available. Users can write their own CellProfiler modules in Python by following the instructions [here](https://github.com/CellProfiler/CellProfiler/wiki#wiki-What_if_I_want_to_contribute_to_CellProfiler).
 
-    Spotfire provides a dynamic, collaborative interface that assimilates data from multiple sources— chemical structures, text, numbers, images, chemical properties, biological assays, and more—and empowers you to perform complex analyses and create easy-to-use visual dashboards.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_spotfire1.png)
+ **Spotfire**](http://www.cambridgesoft.com/ensemble/spotfire/)
 
-    Spotfire is able to import data generated by the CellProfiler [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) (for small data sets; see [tutorial](http://d1zymp9ayga15t.cloudfront.net/tutorials/CellProfiler_Spotfire_Integration.pdf)) or [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) modules or data tools (for large data sets).
+Spotfire provides a dynamic, collaborative interface that assimilates data from multiple sources— chemical structures, text, numbers, images, chemical properties, biological assays, and more—and empowers you to perform complex analyses and create easy-to-use visual dashboards.
 
-    Software Partnerships
-    ---------------------
+Spotfire is able to import data generated by the CellProfiler [ExportToSpreadsheet](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToSpreadsheet.html) (for small data sets; see [tutorial](http://d1zymp9ayga15t.cloudfront.net/tutorials/CellProfiler_Spotfire_Integration.pdf)) or [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) modules or data tools (for large data sets).
 
-    CellProfiler has partnered with academic and commercial groups to create a variety of software interfaces. These efforts not only expand the functionality of CellProfiler and CellProfiler Analyst but also leverage the strengths of other packages.
+Software Partnerships
+---------------------
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/bioformat.png)
-     **BioFormats**](http://www.openmicroscopy.org/site/support/bio-formats/users/cellprofiler/)
+CellProfiler has partnered with academic and commercial groups to create a variety of software interfaces. These efforts not only expand the functionality of CellProfiler and CellProfiler Analyst but also leverage the strengths of other packages.
 
-    Bio-Formats is an open source Java library for reading and writing microscopy file formats. It facilitates the exchange of microscopy data by converting proprietary microscopy data into the OME data model standard.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/bioformat.png)
+ **BioFormats**](http://www.openmicroscopy.org/site/support/bio-formats/users/cellprofiler/)
 
-    CellProfiler is packaged with Bio-Formats and uses it to read/write images from disk, as well as write movies. [[more](http://loci.wisc.edu/bio-formats/cellprofiler)]
+Bio-Formats is an open source Java library for reading and writing microscopy file formats. It facilitates the exchange of microscopy data by converting proprietary microscopy data into the OME data model standard.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_ilastik.png)
-     **Ilastik**](http://www.ilastik.org/)
+CellProfiler is packaged with Bio-Formats and uses it to read/write images from disk, as well as write movies. [[more](http://loci.wisc.edu/bio-formats/cellprofiler)]
 
-    Ilastik is an open source tool for pixel-based classification of 2,3 and 4D images. The user first trains a classifier by identifying areas of images that fall into one of several classes, such as cell body, nucleus, background or membrane. The classifier can then be applied to those and similar images to identify areas in those images that correspond to the trained classes.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_ilastik.png)
+ **Ilastik**](http://www.ilastik.org/)
 
-    CellProfiler can read a classifier file from Ilastik and apply its classifiers to an image using the [ClassifyPixels](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ClassifyPixels.html) module to produce a probability map: an image whose intensity is higher for parts of images that are likely to be the chosen class. More [[here](http://old.ilastik.org/index.php?cat=20_Documentation&amp;page=03_Cellprofiler)] and [[here](https://github.com/CellProfiler/CellProfiler/wiki/How-to-use-Pixel-Classification-in-CellProfiler)].
+Ilastik is an open source tool for pixel-based classification of 2,3 and 4D images. The user first trains a classifier by identifying areas of images that fall into one of several classes, such as cell body, nucleus, background or membrane. The classifier can then be applied to those and similar images to identify areas in those images that correspond to the trained classes.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_imagej.png)
-     **ImageJ**](http://imagej.nih.gov/ij/)
+CellProfiler can read a classifier file from Ilastik and apply its classifiers to an image using the [ClassifyPixels](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ClassifyPixels.html) module to produce a probability map: an image whose intensity is higher for parts of images that are likely to be the chosen class. More [[here](http://old.ilastik.org/index.php?cat=20_Documentation&amp;page=03_Cellprofiler)] and [[here](https://github.com/CellProfiler/CellProfiler/wiki/How-to-use-Pixel-Classification-in-CellProfiler)].
 
-    ImageJ is an open source image processing program providing extensibility via Java plugins and recordable macros. Custom acquisition, analysis and processing plugins can be developed using a built-in editor and a Java compiler.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_imagej.png)
+ **ImageJ**](http://imagej.nih.gov/ij/)
 
-    Via the RunImageJ module, CellProfiler can load images, run an ImageJ macro or plugin on them, and retrieve the results for downstream analysis via the [RunImageJ](http://d1zymp9ayga15t.cloudfront.net/CPmanual/RunImageJ.html)
-    module.
+ImageJ is an open source image processing program providing extensibility via Java plugins and recordable macros. Custom acquisition, analysis and processing plugins can be developed using a built-in editor and a Java compiler.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/ome-logo-800.png)
-     **Open Microscopy Environment (OME)**](http://www.openmicroscopy.org/site)
+Via the RunImageJ module, CellProfiler can load images, run an ImageJ macro or plugin on them, and retrieve the results for downstream analysis via the [RunImageJ](http://d1zymp9ayga15t.cloudfront.net/CPmanual/RunImageJ.html)
+module.
 
-    OMERO is an open source application for visualization, management, and analysis of biological image data. It allows the scientists to remotely manage, view, annotate and measure multi-dimensional images from anywhere.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/ome-logo-800.png)
+ **Open Microscopy Environment (OME)**](http://www.openmicroscopy.org/site)
 
-    The 2.1.0 release of CellProfiler has first-class support for loading images from OMERO. Details can be found by following [this link](https://github.com/CellProfiler/CellProfiler/wiki/OMERO:-Accessing-images-from-CellProfiler)
+OMERO is an open source application for visualization, management, and analysis of biological image data. It allows the scientists to remotely manage, view, annotate and measure multi-dimensional images from anywhere.
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_ibrain.png)
-     **iBrain**](http://www.imls.uzh.ch/research/pelkmans/softwareprojects/iBRAIN.html)
+The 2.1.0 release of CellProfiler has first-class support for loading images from OMERO. Details can be found by following [this link](https://github.com/CellProfiler/CellProfiler/wiki/OMERO:-Accessing-images-from-CellProfiler)
 
-    [![](http://d1zymp9ayga15t.cloudfront.net/images/logo_openbis.png)
-     **openBIS**](http://www.cisd.ethz.ch/software/openBIS)
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_ibrain.png)
+ **iBrain**](http://www.imls.uzh.ch/research/pelkmans/softwareprojects/iBRAIN.html)
 
-    OpenBIS is a data management framework to track and annotate raw data for screening, proteomics, FACS and deep sequencing data. iBRAIN is a platform for performing image analysis on large datasets automatically.
+[![](http://d1zymp9ayga15t.cloudfront.net/images/logo_openbis.png)
+ **openBIS**](http://www.cisd.ethz.ch/software/openBIS)
 
-    The SyBIT project, part of [SystemsX](http://www.SystemsX.ch), delivers integrated analysis pipelines that use CellProfiler as a building block. SyBIT has developed automated workflows for data exchange and analysis based on the openBIS database, CellProfiler, and iBRAIN, using cluster infrastructures for data processing. The project continues to tailor these workflows to suit the research needs of several systems biology projects.
+OpenBIS is a data management framework to track and annotate raw data for screening, proteomics, FACS and deep sequencing data. iBRAIN is a platform for performing image analysis on large datasets automatically.
+
+The SyBIT project, part of [SystemsX](http://www.SystemsX.ch), delivers integrated analysis pipelines that use CellProfiler as a building block. SyBIT has developed automated workflows for data exchange and analysis based on the openBIS database, CellProfiler, and iBRAIN, using cluster infrastructures for data processing. The project continues to tailor these workflows to suit the research needs of several systems biology projects.
