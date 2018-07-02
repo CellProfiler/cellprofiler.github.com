@@ -19,67 +19,67 @@ Our CellProfiler software has yielded discoveries in several translational proje
 Publications, videos, articles, and other press
 -----------------------------------------------
 
-- ![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) Our own descriptions of our work
-- ![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) Others' descriptions of our work
+- ![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) Our own descriptions of our work
+- ![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) Others' descriptions of our work
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2017: Anne Carpenter's keynote speech on morphological profiling at the European Molecular Biology Laboratory (EMBL) Symposium [[Link to YouTube](https://www.youtube.com/watch?v=dKAJoxMoZz0)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2017: Anne Carpenter's keynote speech on morphological profiling at the European Molecular Biology Laboratory (EMBL) Symposium [[Link to YouTube](https://www.youtube.com/watch?v=dKAJoxMoZz0)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2016: Science talks to Anne Carpenter about cell painting and the cytomining hackathon [[Link to Science magazine article](http://science.sciencemag.org/content/352/6288/877.full)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2016: Science talks to Anne Carpenter about cell painting and the cytomining hackathon [[Link to Science magazine article](http://science.sciencemag.org/content/352/6288/877.full)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2015: Anne Carpenter's keynote speech on high content morphology profiling at King's College of London in September 2015 [[Link to YouTube](https://www.youtube.com/watch?v=y3Zwj8LtRHU)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2015: Anne Carpenter's keynote speech on high content morphology profiling at King's College of London in September 2015 [[Link to YouTube](https://www.youtube.com/watch?v=y3Zwj8LtRHU)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: "Ask the Expert" article featuring Anne Carpenter in Lab Manager [[Link to Lab Manager article](http://www.labmanager.com/ask-the-expert/2015/02/trends-in-image-analysis-software?fw1pk=2#.VO9yhrOS0VM)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: "Ask the Expert" article featuring Anne Carpenter in Lab Manager [[Link to Lab Manager article](http://www.labmanager.com/ask-the-expert/2015/02/trends-in-image-analysis-software?fw1pk=2#.VO9yhrOS0VM)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: CellProfiler profiled in "Imaging software targets scientific applications" by VisionSystems Design [[Link to VisionSystems Design article](http://www.vision-systems.com/articles/print/volume-19/issue-5/features/imaging-software-targets-scientific-applications.html)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: CellProfiler profiled in "Imaging software targets scientific applications" by VisionSystems Design [[Link to VisionSystems Design article](http://www.vision-systems.com/articles/print/volume-19/issue-5/features/imaging-software-targets-scientific-applications.html)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: CellProfiler ranks as the top fluorescence cell image analysis tool by Journal of Microscopy [[Link to JMicrscopy article](http://onlinelibrary.wiley.com/doi/10.1111/jmi.12184/abstract#.VSgYoxr_HCk.twitter)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: CellProfiler ranks as the top fluorescence cell image analysis tool by Journal of Microscopy [[Link to JMicrscopy article](http://onlinelibrary.wiley.com/doi/10.1111/jmi.12184/abstract#.VSgYoxr_HCk.twitter)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: StressMarq Biosciences lists CellProfiler as one of "5 Free Images Analysis Software Tools for Microscopy" [[StressMarq link](http://www.stressmarq.com/Blog/Stress-Reducers/Top-5-Free-Image-Analysis-Software-Tools-for-Micro.aspx#utm_sguid=148771,38f89dea-cb8c-2013-a4f4-35656c43a946)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: StressMarq Biosciences lists CellProfiler as one of "5 Free Images Analysis Software Tools for Microscopy" [[StressMarq link](http://www.stressmarq.com/Blog/Stress-Reducers/Top-5-Free-Image-Analysis-Software-Tools-for-Micro.aspx#utm_sguid=148771,38f89dea-cb8c-2013-a4f4-35656c43a946)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: Article about CellProfiler and interview with Anne Carpenter in GEN magazine [[Link to GEN magazine article](http://www.genengnews.com/gen-articles/high-content-s-bolder-palette/5408/?page=2)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: Article about CellProfiler and interview with Anne Carpenter in GEN magazine [[Link to GEN magazine article](http://www.genengnews.com/gen-articles/high-content-s-bolder-palette/5408/?page=2)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2013: Blog post about CellProfiler's identifying features [[Link to Broad Institute blog](http://www.broadinstitute.org/blog/cellprofiler%E2%80%99s-identifying-features)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2013: Blog post about CellProfiler's identifying features [[Link to Broad Institute blog](http://www.broadinstitute.org/blog/cellprofiler%E2%80%99s-identifying-features)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2013: Slides from Anne's presentation at the Chicago Drug Discovery Consortium Symposium [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/CDDC2013slides.pdf)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2013: Slides from Anne's presentation at the Chicago Drug Discovery Consortium Symposium [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/CDDC2013slides.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2013: Article mentioning CellProfiler in The Scientist magazine [[The Scientist article link](http://www.the-scientist.com/?articles.view/articleNo/35281/title/Down-for-the-Count/)] [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/ADance_TheScientist-2013.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2013: Article mentioning CellProfiler in The Scientist magazine [[The Scientist article link](http://www.the-scientist.com/?articles.view/articleNo/35281/title/Down-for-the-Count/)] [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/ADance_TheScientist-2013.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2013: CellProfiler exhibit at SLAS 2013 2nd Annual Conference & Exhibition [[PDF of poster](http://d1zymp9ayga15t.cloudfront.net/content/2013_01_10_CellProfiler_SLAS_Poster_final.pdf)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2013: CellProfiler exhibit at SLAS 2013 2nd Annual Conference & Exhibition [[PDF of poster](http://d1zymp9ayga15t.cloudfront.net/content/2013_01_10_CellProfiler_SLAS_Poster_final.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2012: Boston Globe article on the best places to work in Boston, featuring Mark-Anthony Bray [[Boston Globe link](http://www.bostonglobe.com/business/specials/top-places-to-work/2012/11/04/why-these-employees-love-their-jobs/WwvApbX5r5HwgD4eSPYOcJ/story.html)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2012: Boston Globe article on the best places to work in Boston, featuring Mark-Anthony Bray [[Boston Globe link](http://www.bostonglobe.com/business/specials/top-places-to-work/2012/11/04/why-these-employees-love-their-jobs/WwvApbX5r5HwgD4eSPYOcJ/story.html)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2012: Vimeo video of an interview with Lee Kamentsky, lead CellProfiler developer (Videography credit: Sam Smiley) [[Vimeo link](http://vimeo.com/43085639)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2012: Vimeo video of an interview with Lee Kamentsky, lead CellProfiler developer (Videography credit: Sam Smiley) [[Vimeo link](http://vimeo.com/43085639)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2012: YouTube video of Mark-Anthony Bray describing what it is like to work at the Imaging Platform, including work on CellProfiler [[YouTube link](http://www.youtube.com/watch?v=ilS8TB5KfVk)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2012: YouTube video of Mark-Anthony Bray describing what it is like to work at the Imaging Platform, including work on CellProfiler [[YouTube link](http://www.youtube.com/watch?v=ilS8TB5KfVk)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2012: CellProfiler and WormToolbox [[Link to Broad Institute news](http://www.broadinstitute.org/news/4138)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2012: CellProfiler and WormToolbox [[Link to Broad Institute news](http://www.broadinstitute.org/news/4138)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2011: Article mentioning CellProfiler in Bioscience Technology [[Bioscience Technology link](http://www.biosciencetechnology.com/articles/2011/07/simplifying-image-analysis-software)] [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/MMay_BioscienceTechnology_2011.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2011: Article mentioning CellProfiler in Bioscience Technology [[Bioscience Technology link](http://www.biosciencetechnology.com/articles/2011/07/simplifying-image-analysis-software)] [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/MMay_BioscienceTechnology_2011.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2011: Article describing CellProfiler Analyst [[Link to Broad Institute blog](http://www.broadinstitute.org/blog/i%E2%80%99ll-take-machine-learning-1000-alex)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2011: Article describing CellProfiler Analyst [[Link to Broad Institute blog](http://www.broadinstitute.org/blog/i%E2%80%99ll-take-machine-learning-1000-alex)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2010: CellProfiler and *C. elegans* [[Link to Broad Institute blog](http://www.broadinstitute.org/blog/carolina-wahlby-helps-roundworms-take-center-stage)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2010: CellProfiler and *C. elegans* [[Link to Broad Institute blog](http://www.broadinstitute.org/blog/carolina-wahlby-helps-roundworms-take-center-stage)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2010: Anne Carpenter's talk on the challenges of visualizing high-throughput cell image data, at the EMBO Workshop of Visualizing Biological Data [[Link to video of presentation](http://vimeo.com/11396552)] [[PDF](http://vizbi.org/2010/Presentations/Anne_Carpenter.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2010: Anne Carpenter's talk on the challenges of visualizing high-throughput cell image data, at the EMBO Workshop of Visualizing Biological Data [[Link to video of presentation](http://vimeo.com/11396552)] [[PDF](http://vizbi.org/2010/Presentations/Anne_Carpenter.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2009: Overview of the CellProfiler project upon receiving Bio-IT 2009 "Best Practices" award [[Bio-IT World news article link](http://www.bio-itworld.com/news/2009/07/21/BP-Carpenter.html)] [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/CPhandout.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2009: Overview of the CellProfiler project upon receiving Bio-IT 2009 "Best Practices" award [[Bio-IT World news article link](http://www.bio-itworld.com/news/2009/07/21/BP-Carpenter.html)] [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/CPhandout.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2008: Anne Carpenter's talk as part of a series that overviews Broad Institute research in non-technical terms, "Broad 101" [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/Broad101-AnneCarpenter.mov)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2008: Anne Carpenter's talk as part of a series that overviews Broad Institute research in non-technical terms, "Broad 101" [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/Broad101-AnneCarpenter.mov)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2008: Public television special featuring Anne Carpenter and the CellProfiler team: Bold Visions: Women in Science and Technology [[YouTube link (abridged version)](http://www.youtube.com/watch?v=Hw7_Fxvktf0)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2008: Public television special featuring Anne Carpenter and the CellProfiler team: Bold Visions: Women in Science and Technology [[YouTube link (abridged version)](http://www.youtube.com/watch?v=Hw7_Fxvktf0)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2007: Article mentioning CellProfiler in The Scientist, "Lab Tools: Seeing Faster, Seeing Smarter" [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/ECallaway_LabTools_TheScientist-2007.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2007: Article mentioning CellProfiler in The Scientist, "Lab Tools: Seeing Faster, Seeing Smarter" [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/ECallaway_LabTools_TheScientist-2007.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2007: Anne Carpenter's talk to girls at the Museum of Science Women in Research day [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/WomenInResearch.mov)] [[RealPlayer](http://d1zymp9ayga15t.cloudfront.net/content/movies/WomenInResearchVideo.rm)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2007: Anne Carpenter's talk to girls at the Museum of Science Women in Research day [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/WomenInResearch.mov)] [[RealPlayer](http://d1zymp9ayga15t.cloudfront.net/content/movies/WomenInResearchVideo.rm)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2007: Profile of the CellProfiler project team in Biotechniques [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/26.5-BiotechAboutAuthors.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2007: Profile of the CellProfiler project team in Biotechniques [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/26.5-BiotechAboutAuthors.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2006: Article about CellProfiler project co-founder, Anne Carpenter in Genome Technology: "Imaging Breakthrough by Necessity" [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/25.5GenomeTech.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2006: Article about CellProfiler project co-founder, Anne Carpenter in Genome Technology: "Imaging Breakthrough by Necessity" [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/25.5GenomeTech.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2006: Slides from Anne Carpenter's presentation about CellProfiler [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/CellProfilerHCAPresentation.pdf)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2006: Slides from Anne Carpenter's presentation about CellProfiler [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/CellProfilerHCAPresentation.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2005: Article about launch of CellProfiler in BioInform [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/BioInformInterview.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2005: Article about launch of CellProfiler in BioInform [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/BioInformInterview.pdf)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2004: Anne Carpenter's talk at Society for Biomolecular Screening conference in Orlando [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/2006-SBS-Conference-Anne.mov)[](http://d1zymp9ayga15t.cloudfront.net/content/movies/2006-SBS-Conference-Anne.mov)]
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2004: Anne Carpenter's talk at Society for Biomolecular Screening conference in Orlando [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/2006-SBS-Conference-Anne.mov)[](http://d1zymp9ayga15t.cloudfront.net/content/movies/2006-SBS-Conference-Anne.mov)]
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2004: Interview of Anne Carpenter on high-content screening in Inside BioAssays [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/InsideBioassaysInterview.pdf)]
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2004: Interview of Anne Carpenter on high-content screening in Inside BioAssays [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/InsideBioassaysInterview.pdf)]

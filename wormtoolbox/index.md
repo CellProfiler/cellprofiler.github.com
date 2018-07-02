@@ -15,7 +15,7 @@ The WormToolbox is a toolbox for high-throughput screening of image-based *Caeno
 Tutorials overview
 ------------------
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/WTB_diagram.png)
+![Worm Toolbox diagram](http://d1zymp9ayga15t.cloudfront.net/images/WTB_diagram.png)
 
 The main analysis pipeline, Pipeline 1, shown in blue, is fully automated, and consists of the following steps:
 

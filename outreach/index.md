@@ -4,18 +4,16 @@ redirect_from:
 - "/outreach.html"
 - "/outreach.shtml"
 ---
-[](#outreach)
-
 Educational Modules
 ===================
 
 The CellProfiler team has developed several educational resources to introduce people to the joy of answering important biomedical research questions using software. Biological image analysis is interdisciplinary - it concretely demonstrates mathematics and computer science to students in the context of high-impact biomedical research.
 
--   [BLOSSOMS video/activity lesson](#Blossom)
--   [Robots vs Disease activity lesson](#Robot)
--   [C. elegans image analysis written exercise](#elegan)
--   [Image-based screening for quantifying a translocation assay written exercise](#transloc)
--   [Using cellular co-culture platforms as a tool for drug discovery written exercise](#drug)
+-   [BLOSSOMS video/activity lesson](#blossoms-videoactivity-lesson)
+-   [Robots vs Disease activity lesson](#robots-vs-disease-activity-lesson)
+-   [C. elegans image analysis written exercise](#c-elegans-image-analysis-written-exercise)
+-   [Image-based screening for quantifying a translocation assay written exercise](#image-based-screening-for-quantifying-a-translocation-assay-written-exercise)
+-   [Using cellular co-culture platforms as a tool for drug discovery written exercise](#using-cellular-co-culture-platforms-as-a-tool-for-drug-discovery-written-exercise)
 
 In-person workshops
 ===================

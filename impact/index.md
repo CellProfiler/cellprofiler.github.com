@@ -4,8 +4,6 @@ redirect_from:
 - "/impact.html"
 - "/impact.shtml"
 ---
-[](#impact)
-
 Impact on Human Health
 ----------------------
 

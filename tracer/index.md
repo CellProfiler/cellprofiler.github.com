@@ -13,10 +13,10 @@ In the world of cellular image analysis, time-lapse assays remain one of the mor
 
 The [Imaging Platform](http://www.broadinstitute.org/~anne/) at the [Broad Institute](http://www.broadinstitute.org/) specializes in producing the rich set of measurements characteristic of these screening efforts. In addition, we have included object tracking functionality in our CellProfiler open-source software. Lastly, we have developed CellProfiler Analyst for the purpose of data exploration. We have leveraged all of these capabilities into a new package, CellProfiler Tracer.
 
-[![](http://d1zymp9ayga15t.cloudfront.net/images/download_button.png)](http://d1zymp9ayga15t.cloudfront.net/files/software/CellProfiler-Analyst.exe)
+[![CellProfiler Tracer (.exe) image](http://d1zymp9ayga15t.cloudfront.net/images/download_button.png)](http://d1zymp9ayga15t.cloudfront.net/files/software/CellProfiler-Analyst.exe)
 (Windows 64-bit)
 
-Source code available [below](#tech_notes).
+Source code available [below](#technical-and-developer-notes).
 
 - **Important installation notes:**
 
@@ -36,7 +36,7 @@ The Java Development Environment (JDK) is required for Tracer to run; download f
 -   [Files needed for the tutorials](#files-needed-for-the-tutorials)
 -   [Technical and developer notes](#technical-and-developer-notes)
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/xyt_screenshot.png)
+![XYT plot screenshot](http://d1zymp9ayga15t.cloudfront.net/images/xyt_screenshot.png)
 
 
 * * * * *
@@ -50,13 +50,13 @@ To start a Tracer session, start the Tracer version of the CellProfiler Analyst 
 
 [here](http://d1zymp9ayga15t.cloudfront.net/files/software/CellProfiler-Analyst.exe)), which will request a properties file. The *properties file* is a human-readable configuration file which provides the configuration details for the collected data. If CellProfiler is used to produce the data to be analyzed in Tracer, the [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) module can be used to automatically generate a properties file. Otherwise, one can be created manually; please refer to the [Examples](http://cellprofiler.org/examples.shtml#cpa_examples) page or the "Files needed" section below for an template properties file. Once this file is loaded, the main CellProfiler Analyst user interface is displayed and Tracer is selected from the row of icons presented
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/cpa_screenshot.png)
+![CPA screenshot](http://d1zymp9ayga15t.cloudfront.net/images/cpa_screenshot.png)
 
-The data set used in this example consists of dividing cells in a Drosophila embryo ([download](#dataset2)), in which the genes were modified to make the DNA fluorescent. CellProfiler was used to analyze this movie using the [TrackObjects](http://d1zymp9ayga15t.cloudfront.net/CPmanual/TrackObjects.html) module to track the individual cells across time, and collect measurements such as intensity, morphology and texture; the pipeline is available here ([download](#dataset2)).
+The data set used in this example consists of dividing cells in a Drosophila embryo ([download](#files-needed-for-the-tutorials)), in which the genes were modified to make the DNA fluorescent. CellProfiler was used to analyze this movie using the [TrackObjects](http://d1zymp9ayga15t.cloudfront.net/CPmanual/TrackObjects.html) module to track the individual cells across time, and collect measurements such as intensity, morphology and texture; the pipeline is available here ([download](#files-needed-for-the-tutorials)).
 
 When starting Tracer, this tracking data is read in order to construct a network graph that is displayed in two complementary formats:
 
-![](http://d1zymp9ayga15t.cloudfront.net/images/tracer.png)
+![Tracer screenshot](http://d1zymp9ayga15t.cloudfront.net/images/tracer.png)
 
 The panel on the left is an **XYT plot** which shows the evolution of the individual cells across time; the spatial axes are the horizontal plane with the vertical axes representing time.
 
@@ -131,11 +131,11 @@ Note that CellProfiler 2.1 or greater should be used to run the pipelines ([down
 
 [Two image sequences of MCF-7 cells labeled with NLS-mCerulean fusion protein, plus analysis pipeline](http://d1zymp9ayga15t.cloudfront.net/tracer/files/dataset1.zip) (ZIP, 54MB). Contributed by Albert Yeh ([Ramaswamy lab](http://www.massgeneral.org/cancer/research/researchlab.aspx?id=1188)).
 
-![](http://d1zymp9ayga15t.cloudfront.net/files/videos/1.gif) ![](http://d1zymp9ayga15t.cloudfront.net/files/videos/5.gif)
+![MCF-7 cells labeled with NLS-mCerulean fusion protein](http://d1zymp9ayga15t.cloudfront.net/files/videos/1.gif) ![MCF-7 cells labeled with NLS-mCerulean fusion protein](http://d1zymp9ayga15t.cloudfront.net/files/videos/5.gif)
 
 [An image sequence of a *Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA, plus analysis pipeline](http://d1zymp9ayga15t.cloudfront.net/files/dataset2.zip) (ZIP, 25MB). Contributed by Victoria Foe ([Foe lab](http://celldynamics.org/celldynamics/people/foe/)).
 
-![](http://d1zymp9ayga15t.cloudfront.net/files/videos/cropped.gif)
+![*Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA](http://d1zymp9ayga15t.cloudfront.net/files/videos/cropped.gif)
 
 Note that when using the properties files associated with these datasets, the *images* and *output* subfolders must stay in the same location relative to the properties files and the SQLite database (.db) file.
 

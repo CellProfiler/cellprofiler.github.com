@@ -14,7 +14,7 @@ redirect_from:
 
 Source code available on [Github](https://github.com/CellProfiler/CellProfiler).
 
-__Stable (3.0.0)__
+**Stable (3.0.0)**
 
 [macOS](https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.0.0.dmg)
 
@@ -22,7 +22,7 @@ __Stable (3.0.0)__
 
 [Manual](http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.0.0/index.html)
 
-Java installation is __required__ prior to installing CellProfiler.
+Java installation is **required** prior to installing CellProfiler.
 
 #### Java Development Kit (JDK)
 
@@ -34,7 +34,7 @@ Java installation is __required__ prior to installing CellProfiler.
 
 Source code available on [Github](https://github.com/CellProfiler/CellProfiler-Analyst).
 
-__Stable (2.2.1)__
+**Stable (2.2.1)**
 
 [macOS](http://d1zymp9ayga15t.cloudfront.net/CellProfiler-Analyst-stable.dmg)
 

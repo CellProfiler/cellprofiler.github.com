@@ -249,7 +249,7 @@ These pipelines are more complex in terms in image processing, feature identific
 
 In this human cytoplasm-nucleus translocation assay, learn how to load a previously calculated illumination correction function for two separate channels, measure protein content in the nucleus and cytoplasm, and calculate the ratio as a measure of translocation. This is a clumpy cell type, so studying the settings in primary object identification may be helpful for users interested in the more advanced options that module offers. More about these images can be found at the [BBBC](http://www.broadinstitute.org/bbbc/BBBC014)
 
-[[Download](http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleVitraImages.html)] (13 MB)
+[[Download](http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleVitraImages.zip)] (13 MB)
 
 ![Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay example](http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraImg.png)
 
@@ -333,7 +333,7 @@ Loads image and saves them in a different file format.
 
 ### Published Pipelines
 
-Pipelines which have appeared in published papers are provided [here](published_pipelines). Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.
+Pipelines which have appeared in published papers are provided [here](/published_pipelines). Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.
 
 CellProfiler Analyst Example Data and Properties File
 -----------------------------------------------------
