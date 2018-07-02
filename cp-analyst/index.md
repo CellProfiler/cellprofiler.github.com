@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-![](/images/logo_cpa.png)
+![CPA logo](/images/logo_cpa.png)
 
 ### CellProfiler Analyst
 
-[![](/images/facebook.svg)](http://www.facebook.com/cellprofiler)
-[![](/images/twitter.svg)](http://twitter.com/CellProfiler)
-[![](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png)](https://github.com/CellProfiler/CellProfiler-Analyst)
+[![Facebook logo](/images/facebook.svg)](http://www.facebook.com/cellprofiler)
+[![Twitter logo](/images/twitter.svg)](http://twitter.com/CellProfiler)
+[![Github logo](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png)](https://github.com/CellProfiler/CellProfiler-Analyst)
 
 #### Interactive data exploration, analysis, and classification of large biological image sets
 
-![](/images/introduction/gallery.png)
+![CPA image gallery example](/images/introduction/gallery.png)
 
 ### CellProfiler Analyst in a nutshell
 

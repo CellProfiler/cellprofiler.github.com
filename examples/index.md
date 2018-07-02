@@ -251,7 +251,7 @@ This example shows an example of object tracking. This pipeline analyzes a time-
 Published Pipelines
 -------------------
 
-Pipelines which have appeared in published papers are provided [here](published_pipelines). Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.
+Pipelines which have appeared in published papers are provided [here](/examples/published_pipelines). Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.
 
 CellProfiler Analyst Example Data and Properties File
 -----------------------------------------------------

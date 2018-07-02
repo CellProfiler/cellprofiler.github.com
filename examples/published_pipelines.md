@@ -8,7 +8,7 @@ redirect_from:
 -   Published pipelines
 ===================
 
-CellProfiler enables reproducible research because a saved pipeline includes all the modules and settings. Here, we provide links to pipelines used in some published studies, as well as the version of CellProfiler used to create them. You can instead download the most [current version](../releases) of CellProfiler; older pipelines should automatically update to the current version when loaded.
+CellProfiler enables reproducible research because a saved pipeline includes all the modules and settings. Here, we provide links to pipelines used in some published studies, as well as the version of CellProfiler used to create them. You can instead download the most [current version](/releases) of CellProfiler; older pipelines should automatically update to the current version when loaded.
 
 If you used CellProfiler in a publication and would like to post your pipelines here, please [contact us](mailto:imagingadmin@broadinstitute.org); we would be happy to host them. Please remember to give CellProfiler the proper [citation](/citations) in your paper.
 
@@ -23,7 +23,7 @@ List of publications
 -   Jones, TR, Carpenter AE, Lamprecht MR, Moffat J, Silver SJ, Grenier JK, Castoreno AB, Eggert US, Root DE, Golland P, Sabatini DM (2008). Scoring diverse cellular morphologies in image-based screens with iterative feedback and machine learning. PNAS 106(6):1826–1831 / [doi](https://doi.org/10.1073/pnas.0808843106). PMID: 19188593. PMCID: PMC2634799
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/Jones_PNAS_2009_training_sets.zip)]
 -   Logan DJ, Carpenter AE (2010). Screening cellular feature measurements for image-based assay development. J Biomol Screen 15(7): 840–846 / [doi](https://doi.org/10.1177/1087057110370895). PMID: 20516293
--   [[Broad Bioimage Benchmark Collection entry]](http://www.broadinstitute.org/bbbc/BBBC013/) (CellProfiler version [2.0.10997](/previous_releases#v10997))
+-   [[Broad Bioimage Benchmark Collection entry](http://www.broadinstitute.org/bbbc/BBBC013/)] (CellProfiler version [2.0.10997](/previous_releases#v10997))
 -   Cataldo, Anne M; McPhie, Donna L; Lange, Nicholas T; Punzell, Steven; Elmiligy, Sarah; Ye, Nancy Z; Froimowitz, Michael P; Hassinger, Linda C; Menesale, Emily B; Sargent, Laura W; Logan, David J; Carpenter, Anne E; Cohen, Bruce M (2010). Abnormalities in Mitochondrial Structure in Cells from Patients with Bipolar Disorder. Am. J. Pathol. 177(2): 575–585 / [doi](https://doi.org/10.2353/ajpath.2010.081068). PMID: 20566748 PMCID: PMC2913344
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/small_files/Cataldo_2010.cp.zip)] (CellProfiler version [2.0.11710](/previous_releases#v11710))
 -   Elkabets M, Gifford AM, Scheel C, Nilsson B, Reinhardt F, Bray MA, Carpenter AE, Jirström K, Magnuson K, Ebert BL, Ponten F, Weinberg RA, McAllister SS (2011). Human tumors instigate granulin-expressing hematopoietic cells that promote malignancy by activating stromal fibroblasts in mice. J Clin Invest 121(2):784-99 / [doi](https://doi.org/10.1172/JCI43757). PMID: 21266779 PMCID: PMC3026724
@@ -33,7 +33,7 @@ List of publications
 -   González JE, Barquinero JF, Lee M, García O, Casacó A (2012). Radiosensitization induced by the anti-epidermal growth factor receptor monoclonal antibodies cetuximab and nimotuzumab in A431 cells. *Cancer Biol Ther* 13(2):1-6 / [doi](https://doi.org/10.4161/cbt.13.2.18439). PMID: 22231391
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/CancerBiolTher_Gonzalez_2012.zip)] (CellProfiler version [2.0.10997](/previous_releases#v10997))
 -   Kitami T, Logan DJ, Negri J, Hasaka T, Tolliday NJ, Carpenter AE, Spiegelman BM, Mootha VK (2012). A chemical screen probing the relationship between mitochondrial content and cell size. PLoS ONE 7(3):e33755 / [doi](https://doi.org/10.1371/journal.pone.0033755). PMID: 22479437
--   [[Download]](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/PIPE_main_batch_InformerBigRun_Threshold_CP10997.cp) (CellProfiler version [2.0.10997](/previous_releases#v10997))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/PIPE_main_batch_InformerBigRun_Threshold_CP10997.cp)] (CellProfiler version [2.0.10997](/previous_releases#v10997))
 -   González JE, Romero I, Barquinero JF, Garcia O. (2012). Automatic analysis of silver-stained comets by CellProfiler software. Mutation Research 748(1-2):60-4 / [doi](https://doi.org/10.1016/j.mrgentox.2012.06.007). PMID: 22771502
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/MutationResearch_Gonzalez_2012.zip)] (CellProfiler version [2.0.10997](/previous_releases#v10997))
 -   Hartwell KA, Miller PG, Mukherjee S, Kahn AR, Stewart AL, Logan DJ, Negri JM, Duvet M, Järås M, Puram R, Dancik V, Al-Shahrour F, Kindler T, Tothova Z, Chattopadhyay S, Hasaka T, Narayan R, Dai M, Huang C, Shterental S, Chu LP, Haydu JE, Shieh JH, Steensma DP, Munoz B, Bittker JA, Shamji AF, Clemons PA, Tolliday NJ, Carpenter AE, Gilliland DG, Stern AM, Moore MA, Scadden DT, Schreiber SL, Ebert BL, Golub TR (2013). Niche-based screening identifies small-molecule inhibitors of leukemia stem cells. Nat Chem Biol 9(12):840-8 / [doi](https://doi.org/10.1038/nchembio.1367). PMID: 24161946
@@ -55,7 +55,7 @@ List of publications
 -   Leavesley SJ, Nakhmani A, Gao Y, Rich TC (2015). Automated Image Analysis of FRET Signals for Subcellular cAMP Quantification. Methods in Molecular Biology 1294:59-70 / [doi](https://doi.org/10.1007/978-1-4939-2537-7_5). PMID: 25783877
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Leavesley_2015.zip)] (CellProfiler version [2.1.1](../previous_releases#2.1.1))
 -   Logan DJ, Shan J, Bhatia SN, Carpenter AE (2015). Quantifying co-cultured cell phenotypes in high-throughput using pixel-based classification. Methods 96:6-11 / [doi](https://doi.org/10.1016/j.ymeth.2015.12.002). PMID: 26687239. PMCID: PMC4766037.
--   [[Broad Bioimage Benchmark Collection entry]](http://www.broadinstitute.org/bbbc/BBBC026/)
+-   [[Broad Bioimage Benchmark Collection entry](http://www.broadinstitute.org/bbbc/BBBC026/)]
 -   Jolly AL, Luan CH, Dusel BE, Dunne SF, Winding MJ, Dixit VJ, Robins C, Saluk JL, Logan DJ, Carpenter AE, Cohen, AR, Gelfand VI (2015). A Genome-wide RNAi screen for microtubule network formation and lysosome motility regulation in Drosophila S2 cells. Cell Reports 14(3):611-20 / [doi](https://doi.org/10.1016/j.celrep.2015.12.051). PMID: 26774481.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Jolly_Lysomsome_Motility_2015.zip)] (CellProfiler version [2.0.10997](/previous_releases#v10997))
 -   Ricci F, Subramanian A, Wade M (2015). Open access to high-content clonogenic analysis. Journal of Biomolecular Screening 20(3): 391-401 / [doi](http://www.dx.doi.org/10.1177/1087057114557775). PMID: 25381257.
@@ -71,7 +71,7 @@ List of publications
 -   Zimmermann-Meisse G, Prévost G, Jover E (2017). Above and beyond C5a Receptor Targeting by Staphylococcal Leucotoxins: Retrograde Transport of Panton-Valentine Leucocidin and γ-Hemolysin. Toxins / [doi](https://doi.org/10.3390/toxins9010041).
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Zimmermann_Meisse_2016.zip)]
 -   Bray MA, Gustafsdottir SM, Ljosa V, Singh S, Sokolnicki KL, Bittker JA, Bodycombe NE, Dancík V, Hasaka TP, Hon CS, Kemp MM, Li K, Walpita D, Wawer MJ, Golub TR, Schreiber SL, Clemons PA, Shamji AF, Carpenter AE (2017). A dataset of images and morphological profiles of 30,000 small-molecule treatments using the Cell Painting assay. Gigascience / [doi](https://doi.org/10.1093/gigascience/giw014).
--   [[Github repository]](https://github.com/gigascience/paper-bray2017) (CellProfiler version [2.1.1](http://cellprofiler.org/previous_releases#2.1.1))
+-   [[Github repository](https://github.com/gigascience/paper-bray2017)] (CellProfiler version [2.1.1](http://cellprofiler.org/previous_releases#2.1.1))
 -   Barczak A, Avraham R, Singh S, Luo SS, Zhang WR, Bray MA, Hinman AE, Thompson M, Nietupski RM, Golas A, Montgomery P, Fitzgerald M, Smith RS, White DW, Tischler AD, Carpenter AE, and Hung DT (2017). Systematic, multiparametric analysis of Mycobacterium tuberculosis intracellular infection offers insight into coordinated virulence. PLoS ONE .
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Barczak_PLoSONE_2017.zip)]
 -   Sucic L, Galati-Fournier V, Kym U, Pfeifle V, Gros S, Schäfer KH, Holland-Cunz S, Keck S (2017). Increased regulatory T cells in pediatric acute appendicitis. Pediatr Allergy Immunol. [doi](https://doi.org/10.1111/pai.12797). PMID: 28881058.
@@ -83,7 +83,7 @@ List of publications
 -   Zhang H, Ericsson M, Virtanen M, Weström S, Wählby C, Vahlquist A, Törmä H (2018). Quantitative image analysis of protein expression and colocalisation in skin sections. Exp Dermatol. / [doi](https://doi.org/10.1111/exd.13457). PMID: 29094393.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Zhang_2018.zip)] (CellProfiler version [2.2.0](http://cellprofiler.org/previous_releases#2.2.0))
 -   Bouçanova F, Maia AF, Cruz A, Millar V, Mendes Pinto I, Relvas JB, Domingues HS (2018). Collar occupancy: A new quantitative imaging tool for morphometric analysis of oligodendrocytes. J Neurosci Methods 294:122–135 / [doi](https://doi.org/10.1016/j.jneumeth.2017.11.014). PMID: 29174019.
--   [[Github repository]](https://github.com/andrefilipemaia/Collar-occupancy) (CellProfiler version [2.2.0]())
+-   [[Github repository](https://github.com/andrefilipemaia/Collar-occupancy)] (CellProfiler version [2.2.0]())
 -   Salzmann M, Hoesel B, Haase M, Mussbacher M, Schrottmaier WC, Kral-Pointner JB, Finsterbusch M, Mazharian A, Assinger A, Schmid JA (2018). A novel method for automated assessment of megakaryocyte differentiation and proplatelet formation. Platelets :1–8 / [doi](https://doi.org/10.1080/09537104.2018.1430359). PMID: 29461915.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Salzmann_2018.zip)] (CellProfiler version [3.0.0](/releases))
 -   Van Tol N, Rolloos M, van Loon P, van der Zaal B. J. (2018). MeioSeed: a CellProfiler-based program to count fluorescent seeds for crossover frequency analysis in Arabidopsis thaliana. Plant Methods, 14: 32. / [doi](https://dx.doi.org/10.1186%2Fs13007-018-0298-3). PMCID: PMC5905130.
