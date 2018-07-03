@@ -24,7 +24,7 @@ Tracer is a modification of the CellProfiler Analyst package. If you already hav
 
 The Java Development Environment (JDK) is required for Tracer to run; download from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Make sure to install the 64-bit Windows version, and then add the JDK *bin* location to your PATH environment variable ([instructions](https://java.com/en/download/help/path.xml)).
 
-**Questions?** Please direct them to our online [forum](http://forum.cellprofiler.org/c/cpa-dev) dedicated to CellProfiler Analyst.
+**Questions?** Please direct them to our online [forum](http://forum.cellprofiler.org/c/cellprofiler-analyst) dedicated to CellProfiler Analyst.
 
 #### Quick links
 
@@ -133,7 +133,7 @@ Note that CellProfiler 2.1 or greater should be used to run the pipelines ([down
 
 ![MCF-7 cells labeled with NLS-mCerulean fusion protein](http://d1zymp9ayga15t.cloudfront.net/files/videos/1.gif) ![MCF-7 cells labeled with NLS-mCerulean fusion protein](http://d1zymp9ayga15t.cloudfront.net/files/videos/5.gif)
 
-[An image sequence of a *Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA, plus analysis pipeline](http://d1zymp9ayga15t.cloudfront.net/files/dataset2.zip) (ZIP, 25MB). Contributed by Victoria Foe ([Foe lab](http://celldynamics.org/celldynamics/people/foe/)).
+[An image sequence of a *Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA, plus analysis pipeline](http://d1zymp9ayga15t.cloudfront.net/files/dataset2.zip) (ZIP, 25MB). Contributed by Victoria Foe ([Foe lab](http://rusty.fhl.washington.edu/celldynamics/people/foe/index.html)).
 
 ![*Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA](http://d1zymp9ayga15t.cloudfront.net/files/videos/cropped.gif)
 

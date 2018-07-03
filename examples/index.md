@@ -38,7 +38,7 @@ redirect_from:
 
 #### Published Pipelines
 
--   [Published Pipelines](#published-pipelines)
+-   [Published Pipelines](#published_pipelines)
 
 Basic Pipelines
 ---------------
@@ -248,7 +248,7 @@ This example shows an example of object tracking. This pipeline analyzes a time-
 
 ![Advanced Pipeline CellProfiler Object Tracking Metadata Management example](http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleID.gif)
 
-Published Pipelines
+<span id="published_pipelines">Published Pipelines</span>
 -------------------
 
 Pipelines which have appeared in published papers are provided [here](/examples/published_pipelines). Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.
