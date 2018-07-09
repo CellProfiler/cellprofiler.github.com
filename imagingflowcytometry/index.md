@@ -27,6 +27,6 @@ H. Hennig, P. Rees, T. Blasi, L. Kamentsky, J. Hung, D. Dao, A.E. Carpenter, and
 
 [[PDF Protocol](http://d1zymp9ayga15t.cloudfront.net/Protocol/Step3Protocol.pdf)] [[example input data](http://cellprofiler-org.s3.amazonaws.com/ifc/Step2_input_tiled_tifs.zip)] [[CellProfiler pipeline](http://cellprofiler-org.s3.amazonaws.com/ifc/Step2_CellProfiler.cpproj)] [[example output data](http://cellprofiler-org.s3.amazonaws.com/ifc/Step2_CP_output.zip)]
 
-![Step4pic1](http://d1zymp9ayga15t.cloudfront.net/images/Step4pic1.jpg) ![CPA logo](http://cellprofiler-org.s3.amazonaws.com/ifc/cpa_logo.jpg) **Step 3:** Use any programming language for supervized or unsupervized machine learning,such as python or R. A user-friendly option for machine learning is the softwareCellProfiler Analyst. For this, load the properties file in CellProfilerAnalyst.
+![Step4pic1](http://d1zymp9ayga15t.cloudfront.net/images/Step4pic1.jpg) ![CPA logo](http://cellprofiler-org.s3.amazonaws.com/ifc/cpa_logo.jpg) **Step 3:** Use any programming language for supervised or unsupervised machine learning, such as python or R. A user-friendly option for machine learning is the softwareCellProfiler Analyst. For this, load the properties file in CellProfilerAnalyst.
 
 [[CellProfiler Analyst website](http://cellprofiler.org/cp-analyst/)]

@@ -4,17 +4,9 @@ redirect_from:
 - "/citations.html"
 - "/citations.shtml"
 ---
-### CellProfiler's impact
-
-
-Impact on human health [[details here](/impact/)]
-
-Citations (5,470 as of January 31, 2018) [[list](https://scholar.google.com/scholar?q=%22www+cellprofiler+org%22+OR+CellProfiler+OR+%22cellprofiler%22&hl=en&as_sdt=0,22)]
-
-![CellProfiler citation publication](http://d1zymp9ayga15t.cloudfront.net/images/CP_cite_chart26.png)
-
-### How to cite CellProfiler in publications
-#### (the project's survival depends on it!)
+How to cite CellProfiler in publications
+----------------------------------------
+### (the project's survival depends on it!)
 
 __CellProfiler for cells:__
 
@@ -43,3 +35,11 @@ Jones TR, Carpenter AE, Lamprecht MR, Moffat J, Silver S, Grenier J, Root D, Gol
 _It's also nice if you cite the website ([www.cellprofiler.org](http://www.cellprofiler.org "CellProfiler free image analysis software")) and [email us](mailto:imagingadmin@broadinstitute.org) so that we are aware of your publication, but this is much less critical than citing the publications._
 
 _If you used CellProfiler in a publication and would like to include your pipelines as online supplemental information, we are willing to host the pipelines [here](/examples/published_pipelines). Please [contact us](mailto:imagingadmin@broadinstitute.org) for more information._
+
+### CellProfiler's impact
+
+Impact on human health [[details here](/impact/)]
+
+Citations (5,470 as of January 31, 2018) [[list](https://scholar.google.com/scholar?q=%22www+cellprofiler+org%22+OR+CellProfiler+OR+%22cellprofiler%22&hl=en&as_sdt=0,22)]
+
+![CellProfiler citation publication](http://d1zymp9ayga15t.cloudfront.net/images/CP_cite_chart26.png)

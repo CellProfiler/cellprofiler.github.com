@@ -5,6 +5,6 @@ title: CellProfiler | Free open-source software for measuring and analyzing cell
 
 ## Help
 
-### [Annual support and training plan](/supportplan/)
+[Annual support and training plan](/supportplan/)
 
-### [Forum](http://forum.cellprofiler.org/)
+[Forum](http://forum.cellprofiler.org/)
