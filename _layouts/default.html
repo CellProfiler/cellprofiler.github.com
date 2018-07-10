@@ -10,105 +10,101 @@
     <meta name="description" content= "CellProfiler is a free open-source software for measuring and analyzing cell images">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css"/>
   </head>
 
   <body>
-    <div class="top bar"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+        <a href="/"><img src="/images/cp_logo.png" alt="CellProfiler logo"style="margin-left:20px; margin-top:20px" width="175px"></a>
 
-    <div class="documentation-container">
-        <div class="row">
-            <div class="column-3 hidden-mobile overview-container">
-                <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <section class="top">
+        <a href="/releases/">Download</a>
+        </section>
 
-                <a href="/"><img src="/images/cp_logo.png" alt="CellProfiler logo"style="margin-left:20px; margin-top:20px" width="175px"></a>
-
-                <section class="top">
-                    <a href="/releases/">Download</a>
-                </section>
-
-                <section class="top">
-                    <a href="/help">Help</a>
-                    <ul class="sub" style="list-style-type:none">
-                        <li>
-                            <a href="/getting_started/">Getting started</a>
-                        </li>
-                        <li>
-                            <a href="/examples">Examples</a>
-                        </li>
-                        <li>
-                            <a href="/tutorials">Tutorials</a>
-                        </li>
-                        <li>
-                            <a href="http://forum.cellprofiler.org/">Forum</a>
-                        </li>
-                        <li>
-                            <a href="http://blog.cellprofiler.org/">Blog</a>
-                        </li>
-                        <li>
-                            <a href="/supportplan/">Custom support</a>
-                        </li>
-                        <li>
-                            <a href="/outreach/">Educational modules</a>
-                        </li>
-                        <li>
-                            <a href="/citations/">Cite us</a>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <a href="/about/">About</a>
-                </section>
-                <section class="top">
-                    <a href="/cp-analyst/">CellProfiler Analyst</a>
-                </section>
-                <section>
-                    <a href="http://www.broadinstitute.org">
-                        <img src="/images/broad_logo.png" alt="Broad logo"style="vertical-align: middle;height:50px">
-                        <h3 class="hidden-mobile"></h3>
-                    </a>
-                    <a href="http://www.facebook.com/cellprofiler">
-                        <img src="/images/facebook.svg" alt="Facebook logo"style="margin-left:10px; margin-top:21px" width="35px">
-                    </a>
-                    <a href="http://twitter.com/CellProfiler">
-                        <img src="/images/twitter.svg" alt="Twitter logo"style="margin-left:10px; margin-top:21px" width="35px">
-                    </a>
-                    <a href="https://blog.cellprofiler.org/">
-                        <img src="/images/wordpress_logo.png" alt="Wordpress logo"style="margin-left:10px; margin-top:21px" width="35px">
-                    </a>
-                    <h4 class="hidden-mobile"></h4>
-                </section>
-            </div>
-
-            <div class="column-3 hidden-mobile empty-container"></div>
-
-            <div class="column-7 mobile-column-3 details-container">
-                <section>
-                    <div class="row">
-                        <div class="column-12">
-                            <div class="navsearch">
-                                <form action="http://google.com/search" method="get" onsubmit="location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
-                                    <input maxlength="255" name="query" size="20" type="text" value=""> <input type="submit" value="search">
-                                </form>
-                            </div>
-
-                            <hr/>
-
-                            {{ content }}
-                        </div>
-                    </div>
-                </section>
-            </div>
+        <section class="top">
+        <a href="/help">Help</a>
+        <ul class="sub" style="list-style-type:none">
+        <li>
+        <a href="/getting_started/">Getting started</a>
+        </li>
+        <li>
+        <a href="/examples">Examples</a>
+        </li>
+        <li>
+        <a href="/tutorials">Tutorials</a>
+        </li>
+        <li>
+        <a href="http://forum.cellprofiler.org/">Forum</a>
+        </li>
+        <li>
+        <a href="http://blog.cellprofiler.org/">Blog</a>
+        </li>
+        <li>
+        <a href="/supportplan/">Custom support</a>
+        </li>
+        <li>
+        <a href="/outreach/">Educational modules</a>
+        </li>
+        <li>
+        <a href="/citations/">Cite us</a>
+        </li>
+        </ul>
+        </section>
+        <section>
+        <a href="/about/">About</a>
+        </section>
+        <section class="top">
+        <a href="/cp-analyst/">CellProfiler Analyst</a>
+        </section>
+        <section>
+        <a href="http://www.broadinstitute.org">
+        <img src="/images/broad_logo.png" alt="Broad logo"style="vertical-align: middle;height:50px">
+        <h3 class="hidden-mobile"></h3>
+        </a>
+        <a href="http://www.facebook.com/cellprofiler">
+        <img src="/images/facebook.svg" alt="Facebook logo"style="margin-left:10px; margin-top:21px" width="35px">
+        </a>
+        <a href="http://twitter.com/CellProfiler">
+        <img src="/images/twitter.svg" alt="Twitter logo"style="margin-left:10px; margin-top:21px" width="35px">
+        </a>
+        <a href="https://blog.cellprofiler.org/">
+        <img src="/images/wordpress_logo.png" alt="Wordpress logo"style="margin-left:10px; margin-top:21px" width="35px">
+        </a>
+        <h4 class="hidden-mobile"></h4>
+        </section>
         </div>
+
+        <div class="col-8">
+          <section>
+          <div class="row">
+            <div class="col-12">
+              <form action="http://google.com/search" method="get" onsubmit="location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
+                <input maxlength="255" name="query" size="20" type="text" value=""> <input type="submit" value="search">
+              </form>
+            </div>
+          </div>
+
+          <hr/>
+
+          {{ content }}
+        </div>
+      </div>
     </div>
 
-    <div class="bottom bar visible-mobile"></div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
 
     <script>
       window.jQuery || document.write('<script src="js/lib/jquery-3.3.1.min.js"><\/script>')
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
 
     <script src="/js/app.js">
