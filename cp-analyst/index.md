@@ -1,17 +1,7 @@
 ---
 layout: default
 ---
-![CPA logo](/images/logo_cpa.png)
-
-### CellProfiler Analyst
-
-[![Facebook logo](/images/facebook.svg)](http://www.facebook.com/cellprofiler)
-[![Twitter logo](/images/twitter.svg)](http://twitter.com/CellProfiler)
-[![Github logo](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png)](https://github.com/CellProfiler/CellProfiler-Analyst)
-
-#### Interactive data exploration, analysis, and classification of large biological image sets
-
-![CPA image gallery example](/images/introduction/gallery.png)
+{% include cp-analyst.html %}
 
 ### CellProfiler Analyst in a nutshell
 
@@ -30,3 +20,5 @@ by David Dao, Adam N. Fraser, Jane Hung, Vebjorn Ljosa, Shantanu Singh and Anne 
 
 **CellProfiler Analyst: data exploration and analysis software for complex image-based screens**
 by Thouis R Jones, In Han Kang, Douglas B Wheeler, Robert A Lindquist, Adam Papallo, David M Sabatini, Polina Golland and Anne E Carpenter, BMC Bioinformatics 20089:482, DOI: 10.1186/1471-2105-9-482
+
+<div class="bottom-margin"></div>

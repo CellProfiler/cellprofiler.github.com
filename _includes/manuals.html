@@ -1,0 +1,23 @@
+{% for manual in site.data.manuals %}
+  <div class="row">
+    <div class="col-4 col-md-3">
+      {{manual.program}}
+    </div>
+
+    <div class="col-4 col-md-3">
+      {{manual.version_title}}
+      {{manual.version_1}}<br>
+      {{manual.version_2}}<br>
+      {{manual.version_3}}<br>
+      {{manual.version_4}}
+    </div>
+
+    <div class="col-4 col-md-3">
+      {{manual.manual_title}}
+      {{manual.manual_1}}<br>
+      {{manual.manual_2}}<br>
+      {{manual.manual_3}}<br>
+      {{manual.manual_4}}
+    </div>
+  </div>
+{% endfor %}

@@ -7,7 +7,7 @@ title: CellProfiler | Free open-source software for measuring and analyzing cell
 ---
 
 Getting Started
----------------
+===============
 
 **CellProfiler** is free, open-source software for quantitative analysis of biological images. No prior experience in programming or computer vision is required – this page is intended to help you get up and running. If you find these tools helpful, please remember to [cite our work] to help keep the project funded.
 

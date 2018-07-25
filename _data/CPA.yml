@@ -1,0 +1,43 @@
+
+- version: Release Version
+  mac_href: Platform
+
+- version: 2.0, r11710
+  linux_href:
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710.dmg">Mac</a>
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710_setup.exe">Windows</a>
+
+- version: 2.0, r11306
+  linux_href:
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11306/CPAnalyst_r11306.dmg">Mac</a>
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/11306/CPAnalyst_2.0_r11306_setup.exe">Windows</a>
+
+- version: 2.0, r10530
+  linux_href:
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10530/CPAnalyst_2.0_r10530_mac.dmg">Mac</a>
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/10530/CPAnalyst_2.0_r10530_win.exe">Windows</a>
+
+- version: 2.0, r9128
+  linux_href:
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst_2.0_r9128_mac.dmg">Mac</a>
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst_2.0_r9128_win.zip">WindowsXP</a>
+
+- version: 2.0, r8634
+  linux_href:
+  mac_href:
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst_2.0_r8634_win.zip">WindowsXP</a>
+
+- version: 2.0, r8582
+  linux_href:
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst_2.0_r8582_mac.dmg">Mac</a>
+  windows_href: 
+
+- version: "1.1"
+  linux_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst.zip">Linux</a>
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst.zip">Mac</a>
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalyst.zip">WindowsXP</a>
+
+- version: "1.0"
+  linux_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalystOLD.zip">Linux</a>
+  mac_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalystOLD.zip">Mac</a>
+  windows_href: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CPAnalystOLD.zip">WindowsXP</a>

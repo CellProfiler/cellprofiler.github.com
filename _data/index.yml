@@ -1,0 +1,13 @@
+
+- image_href: /images/placeholder.png
+  image_alt: Welcome to CellProfiler
+  title: CellProfiler
+  second_title: Designed for biologists!
+  list_item_1: <b>Load</b> an example CellProfiler pipeline, a series of image-processing modules
+  list_item_2: <b>Adjust</b> the settings to measure the phenotypes of interest in your images
+  list_item_3: <b>Process</b> images automatically - even millions
+  list_item_4: <b>Export</b> your data to a spreadsheet or database
+  list_item_5: <b>Explore</b> your data and classify complex or subtle phenotypes using machine learning in
+  item_5_href: /cp-analyst/
+  item_5_tag: CellProfiler Analyst
+  download_href: /releases

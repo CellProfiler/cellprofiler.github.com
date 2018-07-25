@@ -83,3 +83,5 @@ Publications, videos, articles, and other press
 ![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2004: Anne Carpenter's talk at Society for Biomolecular Screening conference in Orlando [[.MOV](http://d1zymp9ayga15t.cloudfront.net/content/movies/2006-SBS-Conference-Anne.mov)[](http://d1zymp9ayga15t.cloudfront.net/content/movies/2006-SBS-Conference-Anne.mov)]
 
 ![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2004: Interview of Anne Carpenter on high-content screening in Inside BioAssays [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/InsideBioassaysInterview.pdf)]
+
+<div class="bottom-margin"></div>

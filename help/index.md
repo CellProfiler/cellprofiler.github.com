@@ -3,7 +3,7 @@ layout: default
 title: CellProfiler | Free open-source software for measuring and analyzing cell images
 ---
 
-## Help
+# Help
 
 [Annual support and training plan](/supportplan/)
 

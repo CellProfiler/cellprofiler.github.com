@@ -1,0 +1,23 @@
+{% for release in site.data.releases %}
+  <div class="row" style="margin-left: 0px;">
+    <h3>{{release.header}}</h3>
+
+    <p>{{release.description}}</p>
+
+    <div class="releases-link">
+      <h5>{{release.title}}</h5>
+    </div>
+
+    <div class="col-auto">
+      <a href="{{release.first_href}}">{{release.first_tag}}</a>
+    </div>
+
+    <div class="col-auto">
+      <a href="{{release.second_href}}">{{release.second_tag}}</a>
+    </div>
+
+    <div class="col-auto">
+      <a href="{{release.third_href}}">{{release.third_tag}}</a>
+    </div>
+  </div>
+{% endfor %}

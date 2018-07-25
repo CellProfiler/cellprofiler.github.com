@@ -1,0 +1,27 @@
+
+- program: <br><br>CellProfiler
+  version_title: Version<br>
+  manual_title: Manual<br>
+  version_1: <br> 3.0
+  version_2: "2.1 and 2.2"
+  version_3: "2.0"
+  version_4: "1.0"
+  manual_1: >
+    <br>[<a href="http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.0.0/index.html">HTML</a>]
+  manual_2: >
+    [<a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp2.1_2.2manual/index.html">HTML</a>]
+  manual_3: >
+    [<a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp2_manual_9978.pdf">PDF</a>]
+  manual_4: >
+    [<a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp1_manual_9717.pdf">PDF</a>]
+
+- program: <br>CellProfiler Analyst
+  version_1: <br> 2.2.1
+  version_2: "2.0"
+  version_3: "1.0"
+  manual_1: >
+    <br>[<a href="http://cellprofiler.org/cpa/">HTML</a>]
+  manual_2: >
+    [<a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa2_manual.pdf">PDF</a>]
+  manual_3: >
+    [<a href="http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa1_manual.pdf">PDF</a>]

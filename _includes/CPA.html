@@ -1,0 +1,20 @@
+{% for release in site.data.CPA %}
+  <div class="row">
+    <div class="col-3">
+      {{release.version}}
+    </div>
+
+    <div class="col-1">
+      {{release.linux_href}}
+    </div>
+
+    <div class="col-1">
+      {{release.mac_href}}
+    </div>
+
+    <div class="col-1">
+      {{release.windows_href}}
+    </div>
+  </div>
+  <div style="margin-bottom: 15px;"></div>
+{% endfor %}

@@ -5,7 +5,7 @@ redirect_from:
 - "/published_pipelines.shtml"
 ---
 
--   Published pipelines
+Published pipelines
 ===================
 
 CellProfiler enables reproducible research because a saved pipeline includes all the modules and settings. Here, we provide links to pipelines used in some published studies, as well as the version of CellProfiler used to create them. You can instead download the most [current version](/releases) of CellProfiler; older pipelines should automatically update to the current version when loaded.
@@ -61,9 +61,9 @@ List of publications
 -   Ricci F, Subramanian A, Wade M (2015). Open access to high-content clonogenic analysis. Journal of Biomolecular Screening 20(3): 391-401 / [doi](http://www.dx.doi.org/10.1177/1087057114557775). PMID: 25381257.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Ricci_2015.zip)] (CellProfiler version [version 2.1.1 (revision 6c2d896; for Windows 64-bit).](http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win64_r20140723174500.exe))
 -   Grenfell A, Strzelecka M, Crowder ME, Helmke KJ, Schlaitz AL, Heald R (2016). A versatile multivariate image analysis pipeline reveals features of Xenopus extract spindles. Journal of Cell Biology 213(1): 127-136 / [doi](http://www.dx.doi.org/10.1083/jcb.201509079). PMID: 27044897.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Grenfell_2016.zip)] (CellProfiler version [2.1.1](../previous_releases#2.1.1))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Grenfell_2016.zip)] (CellProfiler version [2.1.1](/previous_releases#2.1.1))
 -   Dordea AC, Bray MA, Allen K, Fei F, Gregory M, Carpenter AE, Buys ES (2016). An open-source computational tool to automatically quantify immunolabeled retinal ganglion cells. Experimental Eye Research / [doi](https://doi.org/10.1016/j.exer.2016.04.012). PMID: 27119563. PMCID: PMC4903927.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Buys_2015.zip)] (CellProfiler version [2.1.1](../previous_releases#2.1.1))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Buys_2015.zip)] (CellProfiler version [2.1.1](/previous_releases#2.1.1))
 -   Shan J, Logan DJ, Root DE, Carpenter AE, and Bhatia SN (2016). High-throughput platform for the identification of molecular factors involved in phenotypic stabilization of primary human hepatocytes in vitro. Journal of Biomolecular Screening. 21(9):897-911 / [doi](https://doi.org/10.1177/1087057116660277) . PMID: 27650791. PMCID: in process.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Shan_et_al_2016.zip)]
 -   Melo-Filho CC, Dantas RF, Braga RC, Neves BJ, Senger MR, Valente WCG, Rezende-Neto JM, Chaves WT, Muratov EN, Paveley RA, Furnham N, Kamentsky L, Carpenter AE, Silva-Junior FP, Andrade CH (2016). QSAR-Driven Discovery of Novel Chemical Scaffolds Active against *Schistosoma mansoni*. Journal of Chemical Information and Modeling / [doi](https://doi.org/10.1021/acs.jcim.6b00055).
@@ -71,20 +71,22 @@ List of publications
 -   Zimmermann-Meisse G, Prévost G, Jover E (2017). Above and beyond C5a Receptor Targeting by Staphylococcal Leucotoxins: Retrograde Transport of Panton-Valentine Leucocidin and γ-Hemolysin. Toxins / [doi](https://doi.org/10.3390/toxins9010041).
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Zimmermann_Meisse_2016.zip)]
 -   Bray MA, Gustafsdottir SM, Ljosa V, Singh S, Sokolnicki KL, Bittker JA, Bodycombe NE, Dancík V, Hasaka TP, Hon CS, Kemp MM, Li K, Walpita D, Wawer MJ, Golub TR, Schreiber SL, Clemons PA, Shamji AF, Carpenter AE (2017). A dataset of images and morphological profiles of 30,000 small-molecule treatments using the Cell Painting assay. Gigascience / [doi](https://doi.org/10.1093/gigascience/giw014).
--   [[Github repository](https://github.com/gigascience/paper-bray2017)] (CellProfiler version [2.1.1](http://cellprofiler.org/previous_releases#2.1.1))
+-   [[Github repository](https://github.com/gigascience/paper-bray2017)] (CellProfiler version [2.1.1](/previous_releases#2.1.1))
 -   Barczak A, Avraham R, Singh S, Luo SS, Zhang WR, Bray MA, Hinman AE, Thompson M, Nietupski RM, Golas A, Montgomery P, Fitzgerald M, Smith RS, White DW, Tischler AD, Carpenter AE, and Hung DT (2017). Systematic, multiparametric analysis of Mycobacterium tuberculosis intracellular infection offers insight into coordinated virulence. PLoS ONE .
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Barczak_PLoSONE_2017.zip)]
 -   Sucic L, Galati-Fournier V, Kym U, Pfeifle V, Gros S, Schäfer KH, Holland-Cunz S, Keck S (2017). Increased regulatory T cells in pediatric acute appendicitis. Pediatr Allergy Immunol. [doi](https://doi.org/10.1111/pai.12797). PMID: 28881058.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Sucic_2017.zip)] (CellProfiler version [2.2.0](http://cellprofiler.org/previous_releases#2.2.0))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Sucic_2017.zip)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 -   Erben L, He M-X, Laeremans A, Park E, Buonanno A (2017). QA Novel Ultrasensitive In Situ Hybridization Approach to Detect Short Sequences and Splice Variants with Cellular Resolution. Mol Neurobiol. / [doi](https://doi.org/10.1007/s12035-017-0834-6). PMID: 29264769.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Erben_2017.zip)] (CellProfiler version [2.2.0](http://cellprofiler.org/previous_releases#2.2.0))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Erben_2017.zip)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 -   Bray MA, Carpenter AE (2018). Quality Control for High-Throughput Imaging Experiments Using Machine Learning in Cellprofiler. Methods Mol. Biol. / [doi](https://doi.org/10.1007/978-1-4939-7357-6_7). PMID: 29082489.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Bray_MIMB_2018.zip)] (CellProfiler version [2.2.0](http://cellprofiler.org/previous_releases#2.2.0))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Bray_MIMB_2018.zip)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 -   Zhang H, Ericsson M, Virtanen M, Weström S, Wählby C, Vahlquist A, Törmä H (2018). Quantitative image analysis of protein expression and colocalisation in skin sections. Exp Dermatol. / [doi](https://doi.org/10.1111/exd.13457). PMID: 29094393.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Zhang_2018.zip)] (CellProfiler version [2.2.0](http://cellprofiler.org/previous_releases#2.2.0))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Zhang_2018.zip)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 -   Bouçanova F, Maia AF, Cruz A, Millar V, Mendes Pinto I, Relvas JB, Domingues HS (2018). Collar occupancy: A new quantitative imaging tool for morphometric analysis of oligodendrocytes. J Neurosci Methods 294:122–135 / [doi](https://doi.org/10.1016/j.jneumeth.2017.11.014). PMID: 29174019.
--   [[Github repository](https://github.com/andrefilipemaia/Collar-occupancy)] (CellProfiler version [2.2.0](http://cellprofiler.org/previous_releases#2.2.0))
+-   [[Github repository](https://github.com/andrefilipemaia/Collar-occupancy)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 -   Salzmann M, Hoesel B, Haase M, Mussbacher M, Schrottmaier WC, Kral-Pointner JB, Finsterbusch M, Mazharian A, Assinger A, Schmid JA (2018). A novel method for automated assessment of megakaryocyte differentiation and proplatelet formation. Platelets :1–8 / [doi](https://doi.org/10.1080/09537104.2018.1430359). PMID: 29461915.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Salzmann_2018.zip)] (CellProfiler version [3.0.0](/releases))
 -   Van Tol N, Rolloos M, van Loon P, van der Zaal B. J. (2018). MeioSeed: a CellProfiler-based program to count fluorescent seeds for crossover frequency analysis in Arabidopsis thaliana. Plant Methods, 14: 32. / [doi](https://dx.doi.org/10.1186%2Fs13007-018-0298-3). PMCID: PMC5905130.
--   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Niels_2018.zip)] (includes pipeline and classifier files) (CellProfiler version [2.1.1](/releases))
+-   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Niels_2018.zip)] (includes pipeline and classifier files) (CellProfiler version [2.1.1](/previous_releases#2.1.1))
+
+<div class="bottom-margin"></div>

@@ -1,0 +1,17 @@
+
+- version: "Stable 2.2.0:"
+  date: January 21, 2016
+  osx_href: https://drive.google.com/file/d/0B_Rfj3esFDX8XzBGbE1uV2NXTjg/view?usp=sharing
+  windows_href: https://drive.google.com/a/broadinstitute.com/file/d/0B2aYwrhHkhm4ejJyeXotZ25LLW8/view?usp=sharing
+  source_href: https://github.com/CellProfiler/CellProfiler-Analyst/archive/2.2.0.zip
+  source: Source
+
+- version: "Nightly (2.2.1):"
+  osx_href: https://drive.google.com/file/d/0B_Rfj3esFDX8XzBGbE1uV2NXTjg/view?usp=sharing
+  windows_href: https://drive.google.com/a/broadinstitute.com/file/d/0B2aYwrhHkhm4ejJyeXotZ25LLW8/view?usp=sharing
+  source_href: https://github.com/CellProfiler/CellProfiler-Analyst/archive/2.2.0.zip
+  source: Source
+
+- version: "Legacy (2.0.0):"
+  osx_href: http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710.dmg
+  windows_href: http://d1zymp9ayga15t.cloudfront.net/releases/11710/CPAnalyst_2.0_r11710_setup.exe

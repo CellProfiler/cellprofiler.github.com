@@ -78,3 +78,5 @@ liver model. Students will use CellProfiler to generate a suite of cellular meas
 **Activity overview and written exercise:** Discovering drugs by using mixed cell cultures [[.pdf](http://d1zymp9ayga15t.cloudfront.net/content/HepatocyteCocxActivity/exercise.pdf)]
 
 **Materials:** Images, pipeline and text file of experimental parameters [[.zip](http://d1zymp9ayga15t.cloudfront.net/content/HepatocyteCocxActivity/input_data.zip)]
+
+<div class="bottom-margin"></div>

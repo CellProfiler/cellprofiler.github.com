@@ -1,0 +1,9 @@
+<table class="table table-striped">
+  <tbody>
+    {% for release in site.data.previous_releases_1 %}
+      <tr>
+        {{release.version}}
+        {{release.mac}}
+        {{release.win_32}}
+        {{release.win_64}}
+    {% endfor %}

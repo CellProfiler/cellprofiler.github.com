@@ -4,10 +4,8 @@ redirect_from:
 - "/tutorials.html"
 - "/tutorials.shtml"
 ---
-[](#tutorials)
-
 Tutorials
----------
+=========
 
 Documents are in PDF and PPS (self-starting Powerpoint slide) format.
 
@@ -20,7 +18,7 @@ The NIH has published a introductory [chapter](http://www.ncbi.nlm.nih.gov/book
 ### CellProfiler Video Tutorials
 
 **CellProfiler: Getting Started**. Demonstrates some of CellProfiler's features.
-<iframe allowfullscreen src="https://www.youtube.com/embed/OEHYXdOINg0"></iframe>
+<iframe allowfullscreen src="https://www.youtube.com/embed/OEHYXdOINg0" class="video"></iframe>
 
 For an introductory tutorial to construct pipelines, visit [[YouTube](https://youtu.be/PEaiGs18AF0?list=PL7CC87670239B4D10)]. CellProfiler: Constructing pipelines. [[PDF](http://d1zymp9ayga15t.cloudfront.net/Constructing_Pipelines.pdf)]
 
@@ -31,7 +29,7 @@ Introductory video tutorials developed by a CellProfiler user can be found on hi
 For the Imaging Cytometry Flow tutorial, click [here](/imagingflowcytometry/)
 
 **Worm Toolbox**. Find individual worms using the Worm Toolbox
-<iframe allowfullscreen src="https://www.youtube.com/embed/J0JPUrDNHJ0"></iframe>
+<iframe allowfullscreen src="https://www.youtube.com/embed/J0JPUrDNHJ0" class="video"></iframe>
 
 Pipeline example to find individual worms. [[PDF](http://d1zymp9ayga15t.cloudfront.net/Pipeline1.pdf)]
 
@@ -63,12 +61,13 @@ Simple nuclei identification tutorial[[PDF](http://d1zymp9ayga15t.cloudfront.net
 We also post guided exercises as part of our educational outreach effort [here](/outreach).
 
 ### CellProfiler Analyst Video Tutorials
-<iframe allowfullscreen src="https://www.youtube.com/embed/g7rMdA44fZ0?list=PL7CC87670239B4D10"></iframe>
+<iframe allowfullscreen src="https://www.youtube.com/embed/g7rMdA44fZ0?list=PL7CC87670239B4D10" class="video"></iframe>
 
-- Demonstrates some of CellProfiler Analyst's data exploration features. [[PDF](http://d1zymp9ayga15t.cloudfront.net/Exploring_Image_Data.pdf)]
-<iframe allowfullscreen src="https://www.youtube.com/embed/9mKrR9J3n2w?list=PL7CC87670239B4D10"></iframe>
+Demonstrates some of CellProfiler Analyst's data exploration features. [[PDF](http://d1zymp9ayga15t.cloudfront.net/Exploring_Image_Data.pdf)]
+<iframe allowfullscreen src="https://www.youtube.com/embed/9mKrR9J3n2w?list=PL7CC87670239B4D10" class="video"></iframe>
 
-- Provides an example of selecting phenotypes using gating.
-- For applying the machine learning tool to identify a phenotype of interest, watch this tutorial [[youtube](https://youtu.be/XMKgiRGb4IY?list=PL7CC87670239B4D10)].
-- Classifying cells with machine learning [[PDF](https://d1zymp9ayga15t.cloudfront.net/Classifying_Cells.pdf)]
-- For all CellProfiler tutorials, visit our [YouTube channel](https://www.youtube.com/user/broadinstitute/search?query=cellprofiler).
+Provides an example of selecting phenotypes using gating. For applying the machine learning tool to identify a phenotype of interest, watch this tutorial [[youtube](https://youtu.be/XMKgiRGb4IY?list=PL7CC87670239B4D10)]. Classifying cells with machine learning [[PDF](https://d1zymp9ayga15t.cloudfront.net/Classifying_Cells.pdf)].
+
+For all CellProfiler tutorials, visit our [YouTube channel](https://www.youtube.com/user/broadinstitute/search?query=cellprofiler).
+
+<div class="bottom-margin"></div>

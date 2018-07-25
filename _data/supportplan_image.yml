@@ -1,0 +1,18 @@
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/AnneTeaching.png
+  image_alt: Anne Carpenter CellProfiler Annual Support and Training Plan
+  title: Image pipeline development
+  text: Image analysis pipeline development and optimization, plus expert advice in designing an image-based experiment including sample preparation and image acquisition
+  image_href_2: http://d1zymp9ayga15t.cloudfront.net/images/DavidIAD.jpg
+  image_alt_2: David Logan Image Assay Development CellProfiler
+  title_2: Custom software engineering
+  text_2: Adding features of interest to the open-source CellProfiler project that do not conflict with CellProfiler's roadmap
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/MarkWorkshop.jpg
+  image_alt: Mark Bray CellProfiler Tutorial
+  title: Training
+  text: From basic introductions to the software, to advanced training sessions
+  image_href_2: http://d1zymp9ayga15t.cloudfront.net/images/ServerConfig.jpg
+  image_alt_2: CellProfiler consultancy
+  title_2: Configuration
+  text_2: Assistance in configuring CellProfiler to your local computing environment and infrastructure

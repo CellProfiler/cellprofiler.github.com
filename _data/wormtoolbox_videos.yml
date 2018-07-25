@@ -1,0 +1,63 @@
+
+  #Video 1
+- video_href: http://www.youtube.com/embed/J0JPUrDNHJ0
+  video_title: <b>Pipeline 1- Identify and collect measurements from individual worms and sub-regions</b>
+  pipeline_href: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline1_UntangleWormsExtractMeasurements.cppipe
+  pipeline_href_title: Pipeline1_UntangleWormsExtractMeasurements.cppipe
+  worm_model_tag: Worm model-
+  worm_model_href: http://d1zymp9ayga15t.cloudfront.net/worm_files/DefaultWormModel.xml
+  worm_model_title: DefaultWormModel
+  video_download_href: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline1.mp4
+  video_download_title: Pipeline1.mp4
+  description: This is the main pipeline for delineating worms (also those in clusters) and extracting different kinds of shape and intensity measurements. It requires a worm model as input. This model could either be the DefaultWormModel.xml provided above, or a new worm model created by pipelines 2 and 3 above. This pipeline is fully automated, does not need any user input (once optimized), and can be run on a large number of images organizing output based on information extracted from the input file names. Example image data is provided below.
+  list_title: Steps of the pipeline-
+  list_item_1: <li>Load data.</li>
+  list_item_2: <li>Pre-process data by removing artifacts such as well edges and bubbles.</li>
+  list_item_3: <li>Separate worms and worm clusters the from image background by foreground/background image segmentation.</li>
+  list_item_4: <li>Identify individual worms by worm untangling and extract measurements.</li>
+  list_item_5: <li>Straighten worms and extract measurements.</li>
+  list_item_6: <li>Identify sub-regions (fat) and extract measurements.</li>
+  list_item_7: <li>Export measurements to an SQLite database, save worm segmentation masks and images of worm and fat outlines.</li>
+  #Video 2
+  video_href_2: http://www.youtube.com/embed/o8JetgOnj5M
+  video_title_2: <b>Pipeline 2- Find, select, and save individual worms</b>
+  pipeline_href_2: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline2_SelectSingleWorms.cppipe
+  pipeline_href_title_2: Pipeline2_SelectSingleWorms.cppipe
+  video_download_href_2: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline2.mp4
+  video_download_title_2: Pipeline2.mp4
+  description_2: This pipeline may be omitted if a previously created model (e.g. DefaultWormModel.xml provided with Pipeline 1) fits the new data. Steps A-C are the same as in Pipeline 1; the same pre-processing and foreground/background segmentation should be applied both when creating the worm model and when running the analysis as changes to the pre-processing may affect the appearance of the width of the worms, in turn influencing the model. This pipeline requires manual interaction selecting representative non-touching worms.
+  list_title_2: Steps of the pipeline-
+  list_item_1_2: <li>Load data.</li>
+  list_item_2_2: <li>Pre-process data by compensating for non-uniform illumination and removing artifacts such as well edges and bubbles.</li>
+  list_item_3_2: <li>Separate worms and worm clusters the from image background by foreground/background image segmentation.</li>
+  list_item_4_2: <li>Manually select single worms for worm modeling. Approximately 50 worms representing the variability in the dataset is usually sufficient.</li>
+  list_item_5_2: <li>Make sure that the selected single worms are saved as training worms.</li>
+  note_2: NOTE- The video incorrectly states that WormObjects should be used as input for the ConvertObjectsToImage module. The correct input for that module is SelectedSingleWorms.
+
+  #Video 3
+- video_href: http://www.youtube.com/embed/2LBfR9H9bKs
+  video_title: <b>Pipeline 3- Create a new worm model from individual worms</b>
+  pipeline_href: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline3_TrainModel.cppipe
+  pipeline_href_title: Pipeline3_TrainModel.cppipe
+  video_download_href: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline3.mp4
+  video_download_title: Pipeline3.mp4
+  description: This module takes the manually selected training worms from Pipeline 2 as input. It is recommended to visually browse through the binary input images before running this pipeline to make sure that they represent single worms. The pipeline is fully automated, and the resulting model will be called MyWormModel.xml.
+  list_title: Steps of the pipeline-
+  list_item_1: <li>Load data (output from Pipeline 2).</li>
+  list_item_2: <li>Train and save model.</li>
+  #Video 4
+  video_href_2: http://www.youtube.com/embed/aMwSAxWKZRk
+  video_title_2: <b>Pipeline 4- Untangle, correct, and straighten worm clusters</b>
+  pipeline_href_2: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline4_ManuallyCorrectStraighten.cppipe
+  pipeline_href_title_2: Pipeline4_ManuallyCorrectStraighten.cppipe
+  worm_model_tag_2: Worm model-
+  worm_model_href_2: http://d1zymp9ayga15t.cloudfront.net/worm_files/DefaultWormModel.xml
+  worm_model_title_2: DefaultWormModel.xml
+  video_download_href_2: http://d1zymp9ayga15t.cloudfront.net/worm_files/Pipeline4.mp4
+  video_download_title_2: Pipeline4.mp4
+  description_2: This pipeline loads the untangling results from Pipeline 1 and allows the user to edit any errors in the untangling prior to straightening the worms for visualization and extraction of measurements. A worm model (DefaultWormModel.xml or a new model created by Pipelines 2 and 3) is needed as input for the straightening step.
+  list_title_2: Steps of the pipeline-
+  list_item_1_2: <li>Load data (output from Pipeline 1).</li>
+  list_item_2_2: <li>Manually correct segmentation errors.</li>
+  list_item_3_2: <li>Digitally align worms, select orientation (heads or tails up).</li>
+  list_item_4_2: <li>Save result.</li>

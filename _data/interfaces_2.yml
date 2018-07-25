@@ -1,0 +1,46 @@
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/bioformat.png
+  image_alt: Bioformats logo
+  image_size: image
+  title: <b>BioFormats</b>
+  link: http://www.openmicroscopy.org/site/support/bio-formats/users/cellprofiler/
+  description_1: Bio-Formats is an open source Java library for reading and writing microscopy file formats. It facilitates the exchange of microscopy data by converting proprietary microscopy data into the OME data model standard.
+  description_2: CellProfiler is packaged with Bio-Formats and uses it to read/write images from disk, as well as write movies. [<a href="http://loci.wisc.edu/bio-formats/cellprofiler">more</a>]
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/logo_ilastik.png
+  image_alt: Ilastik logo
+  image_size: small-image
+  title: <br><b>Ilastik</b>
+  link: http://www.ilastik.org/
+  description_1: Ilastik is an open source tool for pixel-based classification of 2,3 and 4D images. The user first trains a classifier by identifying areas of images that fall into one of several classes, such as cell body, nucleus, background or membrane. The classifier can then be applied to those and similar images to identify areas in those images that correspond to the trained classes.
+  description_2: >
+    CellProfiler can read a classifier file from Ilastik and apply its classifiers to an image using the <a href="http://d1zymp9ayga15t.cloudfront.net/CPmanual/ClassifyPixels.html">ClassifyPixels</a> module to produce a probability map: an image whose intensity is higher for parts of images that are likely to be the chosen class. More [<a href="http://old.ilastik.org/index.php?cat=20_Documentation&amp;page=03_Cellprofiler">here</a>] and [<a href="https://github.com/CellProfiler/CellProfiler/wiki/How-to-use-Pixel-Classification-in-CellProfiler">here</a>].
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/logo_imagej.png
+  image_alt: ImageJ logo
+  image_size: small-image
+  title: <br><b>ImageJ</b>
+  link: http://imagej.nih.gov/ij/
+  description_1: ImageJ is an open source image processing program providing extensibility via Java plugins and recordable macros. Custom acquisition, analysis and processing plugins can be developed using a built-in editor and a Java compiler.
+  description_2: Via the RunImageJ module, CellProfiler can load images, run an ImageJ macro or plugin on them, and retrieve the results for downstream analysis via the <a href="http://d1zymp9ayga15t.cloudfront.net/CPmanual/RunImageJ.html">RunImageJ</a> module.
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/ome-logo-800.png
+  image_alt: Open Microscopy Envireonment (OME) logo
+  image_size: image
+  title: <b>Open Microscopy Environment (OME)</b>
+  link: http://www.openmicroscopy.org/site
+  description_1: OMERO is an open source application for visualization, management, and analysis of biological image data. It allows the scientists to remotely manage, view, annotate and measure multi-dimensional images from anywhere.
+  description_2: The 2.1.0 release of CellProfiler has first-class support for loading images from OMERO. Details can be found by following <a href="https://github.com/CellProfiler/CellProfiler/wiki/OMERO:-Accessing-images-from-CellProfiler">this link</a>.
+
+- image_href: http://d1zymp9ayga15t.cloudfront.net/images/logo_ibrain.png
+  image_alt: iBrain logo
+  image_size: image
+  title: <b>iBrain</b><br>
+  link: http://www.imls.uzh.ch/research/pelkmans/softwareprojects/iBRAIN.html
+  image_href_2: http://d1zymp9ayga15t.cloudfront.net/images/logo_openbis.png
+  image_alt_2: openBIS logo
+  image_size_2: image
+  title_2: <b>openBIS</b>
+  link_2: https://wiki-bsse.ethz.ch/display/bis/Home
+  description_1: OpenBIS is a data management framework to track and annotate raw data for screening, proteomics, FACS and deep sequencing data. iBRAIN is a platform for performing image analysis on large datasets automatically.
+  description_2: The SyBIT project, part of <a href="http://www.SystemsX.ch">SystemsX</a>, delivers integrated analysis pipelines that use CellProfiler as a building block. SyBIT has developed automated workflows for data exchange and analysis based on the openBIS database, CellProfiler, and iBRAIN, using cluster infrastructures for data processing. The project continues to tailor these workflows to suit the research needs of several systems biology projects.

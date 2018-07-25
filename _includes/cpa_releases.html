@@ -1,0 +1,21 @@
+{% for release in site.data.cpa_releases %}
+  <div class="row">
+    <div class="col-4">
+      <h3>{{release.version}}</h3>
+      <h5>{{release.date}}</h5>
+    </div>
+
+    <div class="col-4">
+      OS X
+      <br>
+      Windows
+    </div>
+
+    <div class="col-4">
+      <a href="{{release.osx_href}}">32-bit</a><br>
+      <a href="{{release.windows_href}}">32-bit</a><br>
+      <a href="{{release.source_href}}">{{release.source}}</a>
+    </div>
+  </div>
+  <div style="margin-bottom: 35px;"></div>
+{% endfor %}

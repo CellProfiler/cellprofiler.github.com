@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 Tracer
 ======
 
@@ -36,7 +35,7 @@ The Java Development Environment (JDK) is required for Tracer to run; download f
 -   [Files needed for the tutorials](#files-needed-for-the-tutorials)
 -   [Technical and developer notes](#technical-and-developer-notes)
 
-![XYT plot screenshot](http://d1zymp9ayga15t.cloudfront.net/images/xyt_screenshot.png)
+<img src="http://d1zymp9ayga15t.cloudfront.net/images/xyt_screenshot.png" alt="XYT plot screenshot" class="image">
 
 
 * * * * *
@@ -50,13 +49,13 @@ To start a Tracer session, start the Tracer version of the CellProfiler Analyst 
 
 [here](http://d1zymp9ayga15t.cloudfront.net/files/software/CellProfiler-Analyst.exe)), which will request a properties file. The *properties file* is a human-readable configuration file which provides the configuration details for the collected data. If CellProfiler is used to produce the data to be analyzed in Tracer, the [ExportToDatabase](http://d1zymp9ayga15t.cloudfront.net/CPmanual/ExportToDatabase.html) module can be used to automatically generate a properties file. Otherwise, one can be created manually; please refer to the [Examples](http://cellprofiler.org/examples.shtml#cpa_examples) page or the "Files needed" section below for an template properties file. Once this file is loaded, the main CellProfiler Analyst user interface is displayed and Tracer is selected from the row of icons presented
 
-![CPA screenshot](http://d1zymp9ayga15t.cloudfront.net/images/cpa_screenshot.png)
+<img src="http://d1zymp9ayga15t.cloudfront.net/images/cpa_screenshot.png" alt="CPA screenshot" class="image">
 
 The data set used in this example consists of dividing cells in a Drosophila embryo ([download](#files-needed-for-the-tutorials)), in which the genes were modified to make the DNA fluorescent. CellProfiler was used to analyze this movie using the [TrackObjects](http://d1zymp9ayga15t.cloudfront.net/CPmanual/TrackObjects.html) module to track the individual cells across time, and collect measurements such as intensity, morphology and texture; the pipeline is available here ([download](#files-needed-for-the-tutorials)).
 
 When starting Tracer, this tracking data is read in order to construct a network graph that is displayed in two complementary formats:
 
-![Tracer screenshot](http://d1zymp9ayga15t.cloudfront.net/images/tracer.png)
+<img src="http://d1zymp9ayga15t.cloudfront.net/images/tracer.png" alt="Tracer screenshot" class="image">
 
 The panel on the left is an **XYT plot** which shows the evolution of the individual cells across time; the spatial axes are the horizontal plane with the vertical axes representing time.
 
@@ -131,11 +130,11 @@ Note that CellProfiler 2.1 or greater should be used to run the pipelines ([down
 
 [Two image sequences of MCF-7 cells labeled with NLS-mCerulean fusion protein, plus analysis pipeline](http://d1zymp9ayga15t.cloudfront.net/tracer/files/dataset1.zip) (ZIP, 54MB). Contributed by Albert Yeh ([Ramaswamy lab](http://www.massgeneral.org/cancer/research/researchlab.aspx?id=1188)).
 
-![MCF-7 cells labeled with NLS-mCerulean fusion protein](http://d1zymp9ayga15t.cloudfront.net/files/videos/1.gif) ![MCF-7 cells labeled with NLS-mCerulean fusion protein](http://d1zymp9ayga15t.cloudfront.net/files/videos/5.gif)
+<img src="http://d1zymp9ayga15t.cloudfront.net/files/videos/1.gif" alt="MCF-7 cells labeled with NLS-mCerulean fusion protein" class="tiny-image"> <img src="http://d1zymp9ayga15t.cloudfront.net/files/videos/5.gif" alt="MCF-7 cells labeled with NLS-mCerulean fusion protein" class="tiny-image">
 
 [An image sequence of a *Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA, plus analysis pipeline](http://d1zymp9ayga15t.cloudfront.net/files/dataset2.zip) (ZIP, 25MB). Contributed by Victoria Foe ([Foe lab](http://rusty.fhl.washington.edu/celldynamics/people/foe/index.html)).
 
-![*Drosophila* blastoderm embryo with GFP-histone marking the nuclear DNA](http://d1zymp9ayga15t.cloudfront.net/files/videos/cropped.gif)
+<img src="http://d1zymp9ayga15t.cloudfront.net/files/videos/cropped.gif" alt="Drosophila blastoderm embryo with GFP-histone marking the nuclear DNA" class="tiny-image">
 
 Note that when using the properties files associated with these datasets, the *images* and *output* subfolders must stay in the same location relative to the properties files and the SQLite database (.db) file.
 
@@ -178,3 +177,5 @@ The image and object data tables are automatically produced by the [ExportToData
 -   [verlib (required by distutils)](https://pypi.python.org/pypi/verlib)
 -   [python-bioformats](https://pypi.python.org/pypi/python-bioformats/)
 -   [python-javabridge](https://pypi.python.org/pypi/javabridge/)
+
+<div class="bottom-margin"></div>

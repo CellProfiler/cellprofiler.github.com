@@ -1,0 +1,29 @@
+{% for cite in site.data.citations %}
+  <div class="row">
+    <div class="col-12 col-lg-5 order-2 order-lg-last">
+      <h4>{{cite.header_2}}</h4>
+      {{cite.text_4}}
+      {{cite.text_5}}
+      <img src="{{cite.image_href}}" alt="{{cite.image_alt}}" class="image">
+    </div>
+
+    <div class="col-12 order-1">
+      <h1>{{cite.title}}</h1>
+      <h3>{{cite.header}}</h3>
+    </div>
+
+    <div class="col-lg-7 order-3" style="margin-top: 10px;">
+      <p>{{cite.sub_header}}</p>
+
+      <p>{{cite.text_1}}</p>
+
+      <p>{{cite.or}}</p>
+
+      <p>{{cite.text_2}}</p>
+
+      <p>{{cite.sub_header_2}}</p>
+
+      <p>{{cite.text_3}}</p>
+    </div>
+  </div>
+{% endfor %}
