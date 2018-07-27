@@ -1,4 +1,8 @@
 
+- header: <b>Software</b>
+  header_2: <b>Description</b>
+  header_3: <b>Interface</b>
+
 - image_href: http://d1zymp9ayga15t.cloudfront.net/images/bioformat.png
   image_alt: Bioformats logo
   image_size: image
