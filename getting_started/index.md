@@ -15,16 +15,16 @@ Getting Started
 
 #### CellProfiler
 
-[<span class="method-item">Manual</span>][]
-[<span class="method-item">Examples</span>][]
-[<span class="method-item">Manual for CP 2.1</span>][]
-[<span class="method-item">Manual for CP 2.0</span>][]
-[<span class="method-item">Manual for CP 1.0</span>][]
+- [<span class="method-item">Manual</span>][]
+- [<span class="method-item">Examples</span>][]
+- [<span class="method-item">Manual for CP 2.1</span>][]
+- [<span class="method-item">Manual for CP 2.0</span>][]
+- [<span class="method-item">Manual for CP 1.0</span>][]
 
 #### CellProfiler Analyst
 
-[<span class="method-item">Manual for CPA 2.0</span>][]
-[<span class="method-item">Manual for CPA 1.0</span>][]
+- [<span class="method-item">Manual for CPA 2.0</span>][]
+- [<span class="method-item">Manual for CPA 1.0</span>][]
 
   [cite our work]: /citations/
   [<span class="method-item">Manual</span>]: /manuals/

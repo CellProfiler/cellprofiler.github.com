@@ -9,4 +9,9 @@ redirect_from:
 - "/downloadCPA.shtml"
 - "/linux.html"
 ---
+Cellprofiler
+============
+
+Source code available on [Github](https://github.com/CellProfiler/CellProfiler)
+
 {% include releases.html %}

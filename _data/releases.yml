@@ -1,21 +1,11 @@
 
-- header: Cellprofiler
-
-- description: Source code available on <a href="https://github.com/CellProfiler/CellProfiler">Github</a>
-
-- title: "Stable (3.0.0):"
-  first_href: https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.0.0.dmg
+- title: "Stable (3.1.5):"
+  first_href: https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.5.app.zip
   first_tag: macOS
-  second_href: https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-3.0.0.exe
+  second_href: https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-3.1.5.exe
   second_tag: Windows
-  third_href: http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.0.0/index.html
+  third_href: http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.1.5/index.html
   third_tag: Manual
-
-- description: Java installation is <b>required</b> prior to installing CellProfiler.
-
-- title: "Java Development Kit (JKD):"
-  first_href: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-  first_tag: macOS and Windows
 
 - description: <a href="/previous_releases"><i>Previous CellProfiler releases</i></a>
 

@@ -1,6 +1,7 @@
-{% for example in site.data.examples %}
+{% for example in site.data.examples.examples %}
   <div class="media" id="{{example.id}}">
     <div class="media-body">
+      <h3>{{example.header}}</h3>
       <h5 class="mt-0 mb-1">{{example.title}}</h5>
 
       <p>{{example.description}}</p>

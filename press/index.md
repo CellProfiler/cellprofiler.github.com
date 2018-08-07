@@ -19,8 +19,9 @@ Our CellProfiler software has yielded discoveries in several translational proje
 Publications, videos, articles, and other press
 -----------------------------------------------
 
-- ![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) Our own descriptions of our work
-- ![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) Others' descriptions of our work
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) Our own descriptions of our work
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) Others' descriptions of our work
 
 ![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2017: Anne Carpenter's keynote speech on morphological profiling at the European Molecular Biology Laboratory (EMBL) Symposium [[Link to YouTube](https://www.youtube.com/watch?v=dKAJoxMoZz0)]
 

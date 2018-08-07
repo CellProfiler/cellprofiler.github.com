@@ -49,6 +49,15 @@
   height: 200px;
 }
 
+ul {
+  padding-left: 15px;
+  list-style-type: none;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
 .bottom-margin {
   margin-bottom: 100px;
 }
@@ -107,4 +116,4 @@ a:hover {
 
 }
 
-/* 3 pinks, 2 non-pinks, 5 greys: 1 off-white, 1 slightly more non-white, 1 not black, 1 slightly more not black, 1 within 25% of black, 3 fonts: sans serif, serif, proportional and then go to the google font directory for nice pairings */
+/* 3 pinks, 2 non-pinks, 5 greys: 1 off-white, 1 slightly more off-white, 1 not black, 1 slightly more not black, 1 within 25% of black, 3 fonts: sans serif, serif, proportional and then go to the google font directory for nice pairings*/

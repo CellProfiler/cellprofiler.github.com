@@ -1,6 +1,11 @@
-# To add a new example entry, create a new set of the needed identifiers shown in red here and replace/add in the new information in the corresponding identifiers for the new example
+# To add a new example entry, create a new set of the needed mappings shown in red here and replace/add in the new information in the corresponding mappings for the new example
 
+examples:
 # Basic Pipelines
+
+- header: Basic Pipelines
+  category: Basic Pipeline
+  description: These pipelines are made for simple cellular and tissue image assays, and include some basic measurements.
 
 - title: Human cells
   category: Basic Pipeline
@@ -52,7 +57,7 @@
 
 # Specialized Pipelines
 
-- title: Specialized Pipelines
+- header: Specialized Pipelines
   category: SpecializedPipelines
   description: In addition to cellular object and feature identification, these pipelines include some of the more specialized modules in CellProfiler for image pre-processing or measurement.
 
@@ -148,7 +153,7 @@
 
 # Imaging Flow Cytometry
 
-- title: Imaging Flow Cytometry
+- header: Imaging Flow Cytometry
   category: IFC
   description: Imaging flow cytometry combines the high-throughput capabilities of conventional flow cytometry with single-cell imaging. CellProfiler can be used to analyze the resulting images from imaging flow cytometry, whether brightfield, darkfield, or fluorescence.
   download_href: http://cellprofiler-examples.s3.amazonaws.com/ExampleImagingFlowCytometryObjectsInGrid.zip
@@ -159,7 +164,7 @@
 
 # Worm Toolbox
 
-- title: Worm Toolbox
+- header: Worm Toolbox
   category: WormToolbox
   description: These pipelines have been developed for high-throughput screens on <i>C. elegans</i> and extract measurements on a per-worm basis. The <a href="/wormtoolbox">Worm Toolbox</a> page has further details on this workflow, as well as video tutorials, pipelines and image data in addition to those described below. (from C Wählby <i>et al.</i> Methods, 2014) The <a href="http://www.broadinstitute.org/bbbc">BBBC</a> also has <i>C. elegans</i> sample images and information, as well as assay "ground truth" of various kinds.
 
@@ -201,7 +206,7 @@
 
 # More Advanced Pipelines
 
-- title: More Advanced Pipelines
+- header: More Advanced Pipelines
   category: AdvancedPipelines
   description: These pipelines are more complex in terms in image processing, feature identification and the desired measurements.
 
@@ -243,14 +248,14 @@
 
 # Published Pipelines
 
-- title: Published Pipelines
+- header: Published Pipelines
   category: PublishedPipelines
   description: Pipelines which have appeared in published papers are provided <a href="/examples/published_pipelines">here</a>. Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.
   id: published_pipelines
 
 # CellProfiler Analyst Example Data and Properties File
 
-- title: CellProfiler Analyst Example Data and Properties File
+- header: CellProfiler Analyst Example Data and Properties File
   category: CPAExample
   description: <b>Example database, configuration file, and images:</b> Single 96-well plate of human cellular images, for use with CellProfiler Analyst 2.0. More sample images and information on the image data can be found on the <a href="http://www.broadinstitute.org/bbbc/BBBC017/">Broad Bioimage Benchmark Collection (BBBC)</a>. Moffat J et al., A lentiviral RNAi library for human and mouse genes applied to an arrayed viral high-content screen. Cell. 2006 Mar 24;124(6):1283-98
   download_href: http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/cpa_2.0_example.zip
@@ -261,6 +266,6 @@
 
 # Previous Examples
 
-- title: Previous Examples
+- header: Previous Examples
   category: PreviousExamples
   description: Previous examples (prior to 3.0) can be found on the <a href="/previous_examples">previous examples</a> page, but we discourage their use because they are now outdated.

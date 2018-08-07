@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <tbody>
+    {% for release in include.table %}
+      <tr>
+        <td>{{release.version}}</td>
+        <td>{{release.linux}}</td>
+        <td>{{release.mac}}</td>
+        <td>{{release.mac_intel}}</td>
+        <td>{{release.matlab}}</td>
+        <td>{{release.win_32}}</td>
+        <td>{{release.win_64}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

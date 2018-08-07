@@ -1,3 +1,4 @@
+# If the text has more than one colon, include ">" and then a new line with indentation before starting the line of text
 
 - title: How to cite CellProfiler in publications
   header: (the project's survival depends on it!)

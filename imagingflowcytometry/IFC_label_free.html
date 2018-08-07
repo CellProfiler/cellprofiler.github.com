@@ -1,0 +1,56 @@
+---
+layout: default
+redirect_from: "/imagingflowcytometry/index.shtml"
+---
+<h1 id="imaging-flow-cytometry-analysis-using-cellprofiler">Imaging flow cytometry analysis using CellProfiler</h1>
+
+<p>Note: There is a newer protocol available <a href="/imagingflowcytometry/">here</a>.</p>
+
+<p>Imaging flow cytometry combines the high-throughput capabilities of conventional flow cytometry with single-cell imaging. CellProfiler can be used to analyze the resulting images from imaging flow cytometry, whether brightfield, darkfield, or fluorescence.</p>
+
+<p>In some cases, even unlabeled cells can be scored for particular phenotypes. In the workflow outlined below, we have demonstrated label-free prediction of DNA contentand quantification of the mitotic cell cycle phases by applying supervised machine learning to morphological features extracted from brightfield and the typically-ignored darkfield images of cells from an imaging cytometer. This method facilitates non-destructive monitoring of cells avoiding potentially confounding effects of fluorescent stains while maximizing available fluorescence channels. Although Blasi et al. focuses on a <em>label-free</em> analysis using bright-field and dark-field alone, we emphasize that this protocol can be applied in assays that involve any number of fluorescent channels and is not limited to label-free assays.</p>
+
+<p><strong>Paper:</strong>
+T. Blasi, H. Hennig, H.D. Summers, F.J. Theis, D. Davies, A. Filby, A.E. Carpenter, P. Rees. Label-free cell cycle analysis for high-throughput imaging flow cytometry. Nat. Comm. 7, 10256 (2016). PMID: 26739115 <a href="https://doi.org/10.1038/ncomms10256">[link to paper at Nature Communications]</a></p>
+
+<p><strong>Protocol:</strong> [<a href="http://d1zymp9ayga15t.cloudfront.net/Protocol/Protocol.pdf">Download all protocols</a>]</p>
+
+<p><strong>Step 1:</strong> Extract single cell images &amp; identify cell populations with IDEAS software</p>
+
+<p>[<a href="http://d1zymp9ayga15t.cloudfront.net/Protocol/Step1Protocol.pdf">PDF Protocol</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/input_step1.zip">example input data</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_3_Step2_input_single_tifs.zip">example output data</a>]</p>
+
+<p><img src="http://d1zymp9ayga15t.cloudfront.net/images/Ideas.jpg" class="tiny-image" alt="IDEAS" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Step1pic.jpg" class="tiny-image" alt="Step1pic" /></p>
+
+<p><strong>Step 2:</strong> Preprocess the single cell images combine them to montages of images using Matlab</p>
+
+<p>[<a href="http://d1zymp9ayga15t.cloudfront.net/Protocol/Step2Protocol.pdf">PDF Protocol</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_3_Step2_input_single_tifs.zip">example input data</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_1_Step2_make_montages.m">source code</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_4_Step2_output_tiled_tifs.zip">example output data</a>]</p>
+
+<p><img src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic1.jpg" class="tiny-image" alt="Step2pic1" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Step1pic.jpg" class="tiny-image" alt="Step1pic" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Arrow.png" alt="Arrow" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic2.jpg" class="tiny-image" alt="Step2pic2" /></p>
+
+<p><strong>Step 3:</strong> Segment images and extract features using CellProfiler</p>
+
+<p>[<a href="http://d1zymp9ayga15t.cloudfront.net/Protocol/Step3Protocol.pdf">PDF Protocol</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_4_Step2_output_tiled_tifs.zip">example input data</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_2_CellProfiler_pipeline.cpproj">example CellProfiler pipeline</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_5_Step3_output_features_txt.zip">example output data</a>]</p>
+
+<p><img src="/images/cp_logo.png" class="tiny-image" alt="CellProfiler logo" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic2.jpg" class="tiny-image" alt="Step2pic2" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Arrow.png" alt="Arrow" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Step3pic1.jpg" class="tiny-image" alt="Step3pic1" /></p>
+
+<p><strong>Step 4 (optional):</strong> Machine Learning for label-free prediction of cell phenotypes</p>
+
+<p><strong>Preprocessing:</strong> [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Step4_PreProcess.pdf">PDF protocol</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_5_Step3_output_features_txt.zip">example input data</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_3_Step4_a_prepare_data.m">source code</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/preprocessing_output.zip">example output data file</a>]</p>
+
+<p><strong>Classification:</strong> [<a href="http://d1zymp9ayga15t.cloudfront.net/Protocol/Step4_class.pdf">PDF protocol</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/input_step4_class.zip">example input file</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_5_Step4_RUSboosting.m">source code</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_10_Step4_output_estimated_phases.mat.zip">example output data file</a>]</p>
+
+<p><strong>Regression:</strong> [<a href="http://d1zymp9ayga15t.cloudfront.net/Protocol/step4_regress.pdf">PDF protocol</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/input_step4_regress.zip">example input data file</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_code_4_Step4_LSboosting.m">source code</a>] [<a href="http://d1zymp9ayga15t.cloudfront.net/imagingflow/Supplementary_data_9_Step4_output_estimated_nuclear_content.mat.zip">example output data file</a>]</p>
+
+<p><img src="http://d1zymp9ayga15t.cloudfront.net/images/Step2pic1.jpg" class="tiny-image" alt="Step2pic1" /> <img src="http://d1zymp9ayga15t.cloudfront.net/images/Step4pic1.jpg" class="small-image" alt="Step4pic1" /></p>
+
+<h2 id="future-developments">Future developments</h2>
+
+<p>A new protocol for analyzing imaging flow cytometry data in high-throughput is currently under development:</p>
+
+<p><img src="new_protocol.png" class="image" alt="new protocol" /></p>
+
+<p>In addition, analyzing imaging flow cytometry data in high-throughput will also become more streamlined using any image analysis software via the following protocol (under development):</p>
+
+<p><img src="new_protocol_python.png" class="image" alt="new protocol python" /></p>
+
+<div class="bottom-margin"></div>

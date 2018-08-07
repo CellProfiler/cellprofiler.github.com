@@ -5,9 +5,9 @@ redirect\_from:
 - "/previousReleasesCPA.shtml"
 ---
 
-### Previously Released Versions of CellProfiler Analyst
+# Previously Released Versions of CellProfiler Analyst
 
-{% include CPA.html %}
+{% include previous_releases.html table=site.data.previous_releases.CPA %}
 
 **Note:** CPAnalyst cannot run without data to analyze.
  Example data and accompanying images for use with CPAnalyst 2.0 are available [here](/examples#cellprofiler-analyst-example-data-and-properties-file).

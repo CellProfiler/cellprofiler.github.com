@@ -1,0 +1,536 @@
+---
+layout: default
+redirect_from:
+- "/previous_examples.html"
+- "/previous_examples.shtml"
+---
+
+<h1 id="old-cellprofiler-example-images-and-pipelines-prior-to-30">OLD CellProfiler example images and pipelines (Prior to 3.0)</h1>
+
+<h3 id="these-examples-are-outdated-please-see-our-current-examples-page-for-the-updated-versions">These examples are outdated, please see our current <a href="/examples/">Examples</a> page for the updated versions.</h3>
+
+<h4 id="basic-pipelines">Basic Pipelines</h4>
+
+<ul>
+  <li><a href="#human-cells">Human cells</a></li>
+  <li><a href="#fruit-fly-cells">Fruit fly cells</a></li>
+  <li><a href="#tumors">Tumors</a></li>
+  <li><a href="#comet-assay">Comet assay</a></li>
+</ul>
+
+<h4 id="specialized-pipelines">Specialized Pipelines</h4>
+
+<ul>
+  <li><a href="#cellparticle-counting-and-scoring-the-percentage-of-stained-objects">Cell/particle counting and scoring the percentage of stained objects</a></li>
+  <li><a href="#yeast-colony-classification">Yeast colony classification</a></li>
+  <li><a href="#yeast-patch-identification">Yeast patch identification</a></li>
+  <li><a href="#tissue-neighbors">Tissue Neighbors</a></li>
+  <li><a href="#wound-healing">Wound Healing</a></li>
+  <li><a href="#illumination-correction">Illumination Correction</a></li>
+  <li><a href="#colocalization">Colocalization</a></li>
+  <li><a href="#spot-detection-for-beginners">Spot Detection, for beginners</a></li>
+</ul>
+
+<h4 id="wormtoolbox-pipelines">WormToolbox Pipelines</h4>
+
+<ul>
+  <li><a href="#untangle-worms">Untangle worms</a></li>
+  <li><a href="#straighten-worms-and-extract-intensity-measurements-using-a-low-resolution-atlas">Straighten worms and extract intensity measurements using a low-resolution atlas</a></li>
+  <li><a href="#create-your-own-worm-model">Create your own worm model</a></li>
+  <li><a href="#untangle-worms-and-make-measurements-bright-field-staining-pattern-phenotype">Untangle worms and make measurements bright-field staining pattern phenotype</a></li>
+</ul>
+
+<h4 id="more-advanced-pipelines">More Advanced Pipelines</h4>
+
+<ul>
+  <li><a href="#human-cytoplasm-nucleus-translocation-assay-sbs-vitra">Human cytoplasm-nucleus translocation assay (SBS Vitra)</a></li>
+  <li><a href="#human-cytoplasm-nucleus-translocation-assay-sbs-bioimage">Human cytoplasm-nucleus translocation assay (SBS Bioimage)</a></li>
+  <li><a href="#speckle-counting">Speckle Counting</a></li>
+  <li><a href="#object-tracking-and-metadata-management">Object Tracking and Metadata Management</a></li>
+  <li><a href="#sequencing-rna-molecules-in-situ-combining-cellprofiler-with-imagej-plugins">Sequencing RNA molecules <em>in situ</em> combining CellProfiler with ImageJ plugins</a></li>
+</ul>
+
+<h4 id="file-utilities">File Utilities</h4>
+
+<ul>
+  <li><a href="#invert-for-printing">Invert For Printing</a></li>
+  <li><a href="#color-to-gray">Color To Gray</a></li>
+  <li><a href="#convert-image-file-format">Convert Image File Format</a></li>
+</ul>
+
+<h4 id="published-pipelines">Published Pipelines</h4>
+
+<ul>
+  <li><a href="#published_pipelines">Published Pipelines</a></li>
+</ul>
+
+<h3 id="basic-pipelines-1">Basic Pipelines</h3>
+
+<p>These pipelines are made for simple cellular and tissue image assays, and include some basic measurements.</p>
+
+<div class="media" id="human-cells">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Human cells</h5>
+
+      <p>Human HT29 cells are fairly smooth and elliptical. This pipeline demonstrates how to accurately identify these cells and how to measurements cellular parameters such as morphology, count, intensity and texture.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleHumanImages.zip">Download</a> (0.3 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/HumanNuclei.jpg" alt="Basic CellProfiler pipeline Human HT29 Cell example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/HumanColorNucleism.jpg" alt="Basic CellProfiler pipeline Human HT29 Cell example - segmented" />
+  </div>
+
+<div class="media" id="fruit-fly-cells">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Fruit fly cells</h5>
+
+      <p>In contrast to the HT29 cells, Drosophila Kc167 cells are a highly textured and clumpy cell type. This pipeline demonstrates how to identify these clumpy cells and obtain morphological, intensity and texture measurements.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleFlyImages.zip">Download</a> (4 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/FruitflyImg.jpg" alt="Basic CellProfiler pipeline Fruit Fly Drosophilia Kc167 Cells example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/Fruitfly-coded.jpg" alt="Basic CellProfiler pipeline Fruit Fly Drosophilia Kc167 Cells example - segmented" />
+  </div>
+
+<div class="media" id="tumors">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Tumors</h5>
+
+      <p>A simple pipeline that identifies and counts tumors in a mouse lung, and then measures their size.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleTumorImages.zip">Download</a> (0.9  MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorImg.png" alt="Basic Cellprofiler pipeline mouse lung Tumor Cell Example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleTumorID.png" alt="Basic Cellprofiler pipeline mouse lung Tumor Cell Example - segmented" />
+  </div>
+
+<div class="media" id="comet-assay">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Comet assay</h5>
+
+      <p>This is a simple example of a DNA damage assay using single cell gel electrophoresis. Here, the measurement of interest is the length and intensity of the comet tail. Also, illumination correction is used to reduce background fluorescence prior to measurement. Also shown is a silver-stained comet example in which the percentage of DNA contained in the tail is calculated.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleCometAssay.zip">Download</a> (0.4  MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometImg.png" alt="Basic CellProfiler pipeline Comet tail DNA damage assay example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleCometID.png" alt="Basic CellProfiler pipeline Comet tail DNA damage assay example - ID" />
+  </div>
+
+<div class="media">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">Specialized Pipelines</h3>
+
+      <p>In addition to cellular object and feature identification, these pipelines include some of the more specialized modules in CellProfiler for image pre-processing or measurement.</p>
+
+      <p><a href=""></a> </p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media" id="cellparticle-counting-and-scoring-the-percentage-of-stained-objects">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Cell/particle counting and scoring the percentage of stained objects</h5>
+
+      <p>CellProfiler is commonly used to count cells or other objects as well as percent-positives, by measuring the per-cell staining intensity. This pipeline shows how to do both of these tasks, and demonstrates how various modules may be used to accomplish the same result.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePercentPositive.zip">Download</a> (0.2  MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosImg.png" alt="Specialized CellProfiler pipeline Percent Positive count per-cell stain intensity example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExamplePercentPosID.png" alt="Specialized CellProfiler pipeline Percent Positive count per-cell stain intensity example - segmented" />
+  </div>
+
+<div class="media" id="yeast-colony-classification">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Yeast colony classification</h5>
+
+      <p>This pipeline demonstrates how to classify and count objects on the basis of their measured features. The example identifies uniformly round objects, in this case, yeast colonies growing on a dish. The pipeline also shows how to load a template and align it to a cropped image, as well as how to use illumination correction to subtract for background illumination.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleYeastColonies_BT_Images.zip">Download</a> (0.6  MB)</p>
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/papers/85-Bray_CurrentProtocols_2015.pdf">Tutorial</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/YeastCrop.jpg" alt="Specialized CellProfiler pipeline identify Yeast Colony Classification example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/YeastCropID.jpg" alt="Specialized CellProfiler pipeline identify Yeast Colony Classification example - segmented" />
+  </div>
+
+<div class="media" id="yeast-patch-identification">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Yeast patch identification</h5>
+
+      <p>This pipeline identifies patches of yeast growing in a 96 well plate, serving as an introduction to the grid defintion and identification modules.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleYeastPatchImages.zip">Download</a> (0.4  MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatch.png" alt="Specialized CellProfiler pipeline identify Yeast Patch example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleYeastPatchID.png" alt="Specialized CellProfiler pipeline identify Yeast Patch example" />
+  </div>
+
+<div class="media" id="tissue-neighbors">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Tissue Neighbors</h5>
+
+      <p>Tissue samples often have irregularly shaped cells with adjacent edges. This pipeline shows how to input a color tissue image, split it into its component channels, and then identify individual cells from a particular stain and record the number of neighbors that each cell has.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleNeighborsImages.zip">Download</a> (0.1  MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/TissueNeighbors.jpg" alt="Specialized CellProfiler pipeline color Tissue image identify example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/Clones1colorneighbors.jpg" alt="Specialized CellProfiler pipeline color Tissue image identify example - ID" />
+  </div>
+
+<div class="media" id="wound-healing">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Wound Healing</h5>
+
+      <p>In this example, cells are grown as a tissue monolayer. Rather than identifying individual cells, this pipeline quantifies the area occupied by the tissue sample.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleWoundHealingImages.zip">Download</a> (1.1  MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/WOUND-IMG.gif" alt="Specialized Cellprofiler pipeline quantify area Tissue Monolayer example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/WOUND-ANALYSIS.gif" alt="Specialized Cellprofiler pipeline quantify area Tissue Monolayer example" />
+  </div>
+
+<div class="media" id="illumination-correction">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Illumination Correction</h5>
+
+      <p>Illumination correction is often important for both accurate segmentation and for intensity measurements. This example shows how the CorrectIlluminationCalculate and CorrectIlluminationApply modules are used to compensate for the non-uniformities in illumination often present in microscopy images.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleIlluminationCorrection.zip">Download</a> (17.6  MB)</p>
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/ExampleIlluminationCorrection_Tutorial.pdf">Tutorial</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleIlluminationCorrection_Orig.png" alt="Specialized Cellprofiler pipeline Illumination Correction example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleIlluminationCorrection_Corr.png" alt="Specialized Cellprofiler pipeline Illumination Correction example" />
+  </div>
+
+<div class="media" id="colocalization">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Colocalization</h5>
+
+      <p>Measuring the colocalization between fluorescently labeled molecules is a widely used approach to measure the degree of spatial coincidence and potential interactions among subcellular species (e.g., proteins). This example shows how the object identifcation and RelateObjects modules are used to measure the degree of overlap between two fluorescent channels.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleColocalization.zip">Download</a> (3.7  MB)</p>
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/ExampleColocalization_Tutorial.pdf">Tutorial</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Orig.png" alt="Specialized CellProfiler Colocalization Spation Coincidence Subcellular example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleColocalization_Masked.png" alt="Specialized CellProfiler Colocalization Spation Coincidence Subcellular example" />
+  </div>
+
+<div class="media" id="spot-detection-for-beginners">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Spot Detection, for beginners</h5>
+
+      <p>In this practical you will learn how to set up an automated CellProfiler image analysis pipeline that will (1) identify individual cells in images, based on a nuclear stain, (2) identify dot-like signals, and (3) count the number of dots per cell and output this information to a spreadsheet. This quantification will enable you to compare the number of dots per cell in wild-type and mutant conditions as well as to measure how the number of dots per cell depends on primary antibody concentration.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleSpotDetection.zip">Download</a> (1.5 MB)</p>
+      <p><a href="https://github.com/tischi/cellprofiler-practical-NeuBIAS-Lisbon-2017/blob/master/practical-handout.md">Tutorial on Github</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleSpotDetection_Orig.png" alt="Specialized CellProfiler Spot Detection pipeline example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleSpotDetection_Corr.png" alt="Specialized CellProfiler Spot Detection pipeline example" />
+  </div>
+
+<div class="media">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">Imaging Flow Cytometry</h3>
+
+      <p>Imaging flow cytometry combines the high-throughput capabilities of conventional flow cytometry with single-cell imaging. CellProfiler can be used to analyze the resulting images from imaging flow cytometry, whether brightfield, darkfield, or fluorescence.</p>
+
+      <p><a href=""></a> </p>
+      <p><a href="/imagingflowcytometry/index.html">IFC website</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">Worm Toolbox</h3>
+
+      <p>These pipelines have been developed for high-throughput screens on <i>C. elegans</i> and extract measurements on a per-worm basis. The <a href="/wormtoolbox">Worm Toolbox</a> page has further details on this workflow, as well as video tutorials, pipelines and image data in addition to those described below. (from C Wählby <i>et al.</i> Methods, 2014) The <a href="http://www.broadinstitute.org/bbbc">BBBC</a> also has <i>C. elegans</i> sample images and information, as well as assay "ground truth" of various kinds.</p>
+
+      <p><a href=""></a> </p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media" id="untangle-worms">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Untangle worms</h5>
+
+      <p>In this pipeline, we identify individual worms and extract shape and intensity measurements. Worm untangling requires a worm model, which is provided together with the pipeline. If adjusting the pipeline to fit your own data, worm detection will likely improve by creating a new worm model based on your own image data.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineUntangle.zip">Download</a> (1.3 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleInput.gif" alt="Worm Toolbox CellProfiler Shape Intensity Untangle Worms CellProfiler" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleUntangleOutput.gif" alt="Worm Toolbox CellProfiler Shape Intensity Untangle Worms CellProfiler" />
+  </div>
+
+<div class="media" id="straighten-worms-and-extract-intensity-measurements-using-a-low-resolution-atlas">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Straighten worms and extract intensity measurements using a low-resolution atlas</h5>
+
+      <p>Once worms are untangled, this pipeline shows how they can be straightened and aligned with a low-resolution worm atlas to extract localized intensity measurements and compare patterns of reporter signals. Included are steps for identifying secondary objects (fluorescent marker signals) and relating these objects to individual worms, enabling count of signals on a per-worm basis.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineStraighten.zip">Download</a> (968 KB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenInput.gif" alt="Worm Toolbox CellProfiler Straighten Worms example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleStraightenOutput.gif" alt="Worm Toolbox CellProfiler Straighten Worms example" />
+  </div>
+
+<div class="media" id="create-your-own-worm-model">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Create your own worm model</h5>
+
+      <p>The UntangleWorms module has an "Untangle" mode and a "Train" mode. This pipeline describes how the "Train" mode is used to create a worm model. Training consists of providing a large number of images of worms that are representative of the worm variation within the population, and that do not touch or overlap. Note that this example download includes only two images and will not result in a good model, as it will not be representative of all possible variations of the worm shapes. We recommend using at least 60 worms to create a model.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineCreateModel.zip">Download</a> (1.6 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleCreateModelInput.gif" alt="Worm Toolbox Cellprofiler Create Untangle Train Model Worm example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleCreateModelOutput.gif" alt="Worm Toolbox Cellprofiler Create Untangle Train Model Worm example" />
+  </div>
+
+<div class="media" id="untangle-worms-and-make-measurements-bright-field-staining-pattern-phenotype">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Untangle worms and make measurements bright-field staining pattern phenotype</h5>
+
+      <p>This pipeline detects individual worms by worm untangling and finds sub-objects (fatty regions stained with oil red O) within the worms. Using bright-field data only, it detects fatty regions by intensity thresholding in a single image channel and relates the fatty regions to individual worms. This enables detection of rare phenotypes in heterogeneous populations, phenotypes that would be missed if population averages were observed. More data can be found on the <a href="http://www.broadinstitute.org/bbbc">BBBC</a>.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExamplePipelineOilRedO.zip">Download</a> (852 KB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROinput.gif" alt="Worm Toolbox CellProfiler Untangle Sub-Object Worm example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleOROoutput.gif" alt="Worm Toolbox CellProfiler Untangle Sub-Object Worm example" />
+  </div>
+
+<div class="media">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">More Advanced Pipelines</h3>
+
+      <p>These pipelines are more complex in terms in image processing, feature identification and the desired measurements.</p>
+
+      <p><a href=""></a> </p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media" id="human-cytoplasm-nucleus-translocation-assay-sbs-vitra">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Human cytoplasm-nucleus translocation assay (SBS Vitra)</h5>
+
+      <p>In this human cytoplasm-nucleus translocation assay, learn how to load a previously calculated illumination correction function for two separate channels, measure protein content in the nucleus and cytoplasm, and calculate the ratio as a measure of translocation. This is a clumpy cell type, so studying the settings in primary object identification may be helpful for users interested in the more advanced options that module offers. More about these images can be found at the <a href="http://www.broadinstitute.org/bbbc/BBBC014/">BBBC</a>.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleVitraImages.zip">Download</a> (13 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraImg.png" alt="Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleVitraID.png" alt="Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay example" />
+  </div>
+
+<div class="media" id="human-cytoplasm-nucleus-translocation-assay-sbs-bioimage">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Human cytoplasm-nucleus translocation assay (SBS Bioimage)</h5>
+
+      <p>This example includes an advanced example of illumination correction - creating an illumination correction function from all images in a 96-well plate. This pipeline also demonstrates how to load dosage information via the LoadData module, how to use advanced methods for primary and seecondary object identifcation, and how to calculate the Z' factor, a measure of assay quality. More about these images can be found at the <a href="http://www.broadinstitute.org/bbbc/BBBC014/">BBBC</a>.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleSBSImages.zip">Download</a> (40 MB)</p>
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/papers/29-Carpenter_MethodsMolBio_2009.pdf">Tutorial</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleSBSImg.png" alt="Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay Illumination example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleSBSID.png" alt="Advanced Pipeline CellProfiler Human Cytoplasm-Nucleus Translocation Assay Illumination example" />
+  </div>
+
+<div class="media" id="speckle-counting">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Speckle Counting</h5>
+
+      <p>This pipeline shows how to identify smaller objects (foci) within larger objects (nuclei) and how to use the Relate module to establish a relationship between the two as well as perform per-object aggregate measurements (such as number of foci per nucleus).</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleSpecklesImages.zip">Download</a> (3 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/SpecklesAB.gif" alt="Advanced Pipeline CellProfiler Speckle Counting example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/SpecklesCD.gif" alt="Advanced Pipeline CellProfiler Speckle Counting example" />
+  </div>
+
+<div class="media" id="object-tracking-and-metadata-management">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Object Tracking and Metadata Management</h5>
+
+      <p>This example shows an example of object tracking. This pipeline analyzes a time-lapse experiment to identify the cells and track them from frame to frame, which is challenging since the cells are also moving. In addition, this pipeline also extracts metadata from the filename and uses groups the images by metadata in order to independently process several sequences of images and output the measurements of each.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleTrackObjects.zip">Download</a> (10 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleImg.gif" alt="Advanced Pipeline CellProfiler Object Tracking Metadata Management example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/TrackingExampleID.gif" alt="Advanced Pipeline CellProfiler Object Tracking Metadata Management example" />
+  </div>
+
+<div class="media" id="sequencing-rna-molecules-in-situ-combining-cellprofiler-with-imagej-plugins">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Sequencing RNA molecules <i>in situ</i> combining CellProfiler with ImageJ plugins.</h5>
+
+      <p>Some image analysis algorithms, such as more advanced image alignment, are not available in CellProfiler. However, functions available as ImageJ plugins can be called from CellProfiler. This pipeline shows how images from subsequent base-calling cycles can be aligned using ImageJ plugins from for RNA sequencing <i>in situ</i>. Sequencing substrates are generated using gap-fill padlock probes and rolling circle amplification, followed by the sequencing-by-ligation chemistry (Ke <i>et al</i>, In situ sequencing for RNA analysis in preserved tissue and cells, Nature Methods, published online July 14, 2013, <a href="https://doi.org/10.1038/nmeth.2563">https://doi.org/10.1038/nmeth.2563</a>). Note that additional ImageJ plugins are required and can be downloaded as described in the included README file. MATLAB scripts for sequence visualization are also included in the ZIP file.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleInSituSequencing.zip">Download</a> (45 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleInSituSeqInput.jpg" alt="Advanced Pipeline CellProfiler ImageJ In Situ example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleInSituSeqOutput.jpg" alt="Advanced Pipeline CellProfiler ImageJ In Situ example" />
+  </div>
+
+<div class="media" id="file-utilities">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">File Utilities</h3>
+
+      <p>These pipelines show examples of file display and format manipulation.</p>
+
+      <p><a href=""></a> </p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media" id="invert-for-printing">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Invert for Printing</h5>
+
+      <p>Inverts RGB fluorescence microscopy images from a black background to a white background.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleInvertForPrinting.zip">Download</a> (0.2 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/NotInverted.gif" alt="File Utility CellProfiler Invert Print example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/InvertedExamples.gif" alt="File Utility CellProfiler Invert Print example" />
+  </div>
+
+<div class="media" id="color-to-gray">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Color To Gray</h5>
+
+      <p>Demonstrates how to separate a color image image into its component channels, and how to combine grayscale channel images into an RGB color image.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleColorToGray.zip">Download</a> (0.8 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleRGB.png" alt="File Utility CellProfiler color to Gray example" />
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/ExampleRGBSplit.gif" alt="File Utility CellProfiler color to Gray example" />
+  </div>
+
+<div class="media" id="convert-image-file-format">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Convert Image File Format</h5>
+
+      <p>Loads image and saves them in a different file format.</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/ExampleDIBtoTIF.zip">Download</a> (0.9 MB)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/FileConvert.png" alt="File Utility File Format Conversion example" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media" id="published_pipelines">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">Published Pipelines</h3>
+
+      <p>Pipelines which have appeared in published papers are provided <a href="/examples/published_pipelines">here</a>. Please keep in mind that the listed pipelines are specific to the published assay and that no images are provided.</p>
+
+      <p><a href=""></a> </p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="media">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1">CellProfiler Analyst Example Data and Properties File</h3>
+
+      <p><b>Example database, configuration file, and images:</b> Single 96-well plate of human cellular images, for use with CellProfiler Analyst 2.0. More sample images and information on the image data can be found on the <a href="http://www.broadinstitute.org/bbbc/BBBC017/">Broad Bioimage Benchmark Collection (BBBC)</a>. Moffat J et al., A lentiviral RNAi library for human and mouse genes applied to an arrayed viral high-content screen. Cell. 2006 Mar 24;124(6):1283-98</p>
+
+      <p><a href="http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/cpa_2.0_example.zip">Download</a> (203MB zipped)</p>
+      <p><a href=""></a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png" alt="CellProfiler Analyst logo" />
+
+    <img class="ml-3 thumbnail" src="" alt="" />
+  </div>
+
+<div class="bottom-margin"></div>

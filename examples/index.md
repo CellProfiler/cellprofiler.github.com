@@ -40,10 +40,6 @@ redirect_from:
 
 -   [Published Pipelines](#published_pipelines)
 
-### Basic Pipelines
-
-These pipelines are made for simple cellular and tissue image assays, and include some basic measurements.
-
 {% include examples.html %}
 
 <div class="bottom-margin"></div>

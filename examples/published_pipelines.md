@@ -20,7 +20,7 @@ Please note that each download link contains a compressed ZIP file with the foll
 List of publications
 --------------------
 
--   Jones, TR, Carpenter AE, Lamprecht MR, Moffat J, Silver SJ, Grenier JK, Castoreno AB, Eggert US, Root DE, Golland P, Sabatini DM (2008). Scoring diverse cellular morphologies in image-based screens with iterative feedback and machine learning. PNAS 106(6):1826–1831 / [doi](https://doi.org/10.1073/pnas.0808843106). PMID: 19188593. PMCID: PMC2634799
+-   Jones TR, Carpenter AE, Lamprecht MR, Moffat J, Silver SJ, Grenier JK, Castoreno AB, Eggert US, Root DE, Golland P, Sabatini DM (2008). Scoring diverse cellular morphologies in image-based screens with iterative feedback and machine learning. PNAS 106(6):1826–1831 / [doi](https://doi.org/10.1073/pnas.0808843106). PMID: 19188593. PMCID: PMC2634799
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/Jones_PNAS_2009_training_sets.zip)]
 -   Logan DJ, Carpenter AE (2010). Screening cellular feature measurements for image-based assay development. J Biomol Screen 15(7): 840–846 / [doi](https://doi.org/10.1177/1087057110370895). PMID: 20516293
 -   [[Broad Bioimage Benchmark Collection entry](http://www.broadinstitute.org/bbbc/BBBC013/)] (CellProfiler version [2.0.10997](/previous_releases#2.0.10997))
