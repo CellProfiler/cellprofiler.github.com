@@ -5,7 +5,7 @@ a:
   header_2: <b>Description</b>
   header_3: <b>Interface</b>
 
-- image_href: http://d1zymp9ayga15t.cloudfront.net/images/cp_128.png
+- image_href: /images/logo_cp.png
   image_alt: CellProfiler logo
   image_size: medium-image
   title: <b>CellProfiler</b>
@@ -13,7 +13,7 @@ a:
   description_1: In addition to performing image analysis to generate measurements, CellProfiler has built-in tools in the <i>Data Tools</i> menu to generate a few types of plots.
   description_2: CellProfiler output files in MATLAB (.mat) and HDF5 (.h5) can be opened by CellProfiler's data tools.
 
-- image_href: http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png
+- image_href: /images/logo_cpa.png
   image_alt: CellProfiler Analyst logo
   image_size: medium-image
   title: <b>CellProfiler Analyst</b>
