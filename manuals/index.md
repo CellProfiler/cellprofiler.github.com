@@ -8,3 +8,5 @@ Manuals
 =======
 
 {% include manuals.html %}
+
+<div class="bottom-margin"></div>

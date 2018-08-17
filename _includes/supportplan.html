@@ -34,8 +34,8 @@
 
 {% for plan in site.data.supportplan.text %}
 <!-- This page is very easy to be broken if anything is removed/changed -->
-  <div class="row" class="row justify-content-center">
-    <div class="col-lg-auto" class="row justify-content-center" style="margin-top:15px;">
+  <div class="row justify-content-center">
+    <div class="row justify-content-center" style="margin-top:15px;">
       <h4>{{plan.title}}</h4>
     </div>
 
@@ -43,36 +43,36 @@
       {{plan.text}}
     </div>
   </div>
-  <div class="row" class="bottom-margin">
-    <div class="col-6" class="row justify-content-center" style="margin-top: 20px;" style="margin-bottom: 10px;">
+  <div class="bottom-margin">
+    <div class="row justify-content-center" style="margin-bottom: 10px;">
       <h2>{{plan.title_2}}</h2>
     </div>
 
-    <div class="col-12" style="margin-bottom: 20px;" style="padding: 0px;">
+    <div class="col-12" style="padding: 0px;">
       {{plan.text_2}}
     </div>
 
-    <div class="col-12" class="row justify-content-center" style="margin: 10px;">
+    <div class="row justify-content-center" style="margin: 10px;">
       <h2>{{plan.title_3}}</h2>
     </div>
 
     <div class="w-100"></div>
 
-    <div class="col-12" class="row justify-content-center">
+    <div class="row justify-content-center">
       {{plan.text_3}}
     </div>
 
-    <div class="col-12" class="row justify-content-center">
+    <div class="row justify-content-center">
       {{plan.text_4}}
     </div>
 
     <div class="w-100"></div>
 
-    <div class="col-6" class="row justify-content-center" style="margin-top: 10px;">
+    <div class="row justify-content-center" style="margin-top: 10px;">
       <a href="{{plan.href}}"><h4>{{plan.href_text}}</h4></a>
     </div>
 
-    <div class="col-6" class="row justify-content-center">
+    <div class="row justify-content-center">
       <a href="{{plan.second_href}}"><h4>{{plan.second_href_text}}</h4></a>
     </div>
   </div>

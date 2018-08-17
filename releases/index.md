@@ -15,3 +15,5 @@ Cellprofiler
 Source code available on [Github](https://github.com/CellProfiler/CellProfiler)
 
 {% include releases.html %}
+
+<div class="bottom-margin"></div>

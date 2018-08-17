@@ -34,3 +34,5 @@ Getting Started
   [<span class="method-item">Manual for CP 1.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp1_manual_9717.pdf
   [<span class="method-item">Manual for CPA 2.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa2_manual.pdf
   [<span class="method-item">Manual for CPA 1.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa1_manual.pdf
+
+<div class="bottom-margin"></div>
