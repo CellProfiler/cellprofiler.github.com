@@ -1,0 +1,79 @@
+{% for plan in site.data.supportplan.top %}
+  <div class="row justify-content-center">
+    <div class="col-md-9 col-lg-7">
+      <img src="{{plan.image_href}}" alt="{{plan.image_alt}}" class="image">
+    </div>
+
+    <div class="col-lg-auto col-12" style="padding: 0px;">
+      <p>{{plan.text}}</p>
+    </div>
+
+    <div class="card text-center bg-warning mb-3" style="max-width: 40rem;">
+      <div class="card-body">
+        {{plan.card_text}}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% for plan in site.data.supportplan.image %}
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <img src="{{plan.image_href}}" alt="{{plan.image_alt}}" class="image">
+      <p><h4>{{plan.title}}</h4></p>
+      <p>{{plan.text}}</p>
+    </div>
+
+    <div class="col-6">
+      <img src="{{plan.image_href_2}}" alt="{{plan.image_alt_2}}" class="image">
+      <p><h4>{{plan.title_2}}</h4></p>
+      <p>{{plan.text_2}}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% for plan in site.data.supportplan.text %}
+<!-- This page is very easy to be broken if anything is removed/changed -->
+  <div class="row justify-content-center">
+    <div class="row justify-content-center" style="margin-top:15px;">
+      <h4>{{plan.title}}</h4>
+    </div>
+
+    <div class="col-lg-12" style="margin-bottom: 25px;">
+      {{plan.text}}
+    </div>
+  </div>
+  <div class="bottom-margin">
+    <div class="row justify-content-center" style="margin-bottom: 10px;">
+      <h2>{{plan.title_2}}</h2>
+    </div>
+
+    <div class="col-12" style="padding: 0px;">
+      {{plan.text_2}}
+    </div>
+
+    <div class="row justify-content-center" style="margin: 10px;">
+      <h2>{{plan.title_3}}</h2>
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="row justify-content-center">
+      {{plan.text_3}}
+    </div>
+
+    <div class="row justify-content-center">
+      {{plan.text_4}}
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="row justify-content-center" style="margin-top: 10px;">
+      <a href="{{plan.href}}"><h4>{{plan.href_text}}</h4></a>
+    </div>
+
+    <div class="row justify-content-center">
+      <a href="{{plan.second_href}}"><h4>{{plan.second_href_text}}</h4></a>
+    </div>
+  </div>
+{% endfor %}

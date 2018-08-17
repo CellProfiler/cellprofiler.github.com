@@ -1,331 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name=
-    "viewport">
-    <meta content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" http-equiv=
-    "X-UA-Compatible">
-    <meta charset="UTF-8">
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>CellProfiler | Free open-source software for measuring and analyzing
-    cell images</title>
-    <meta content="CellProfiler" property="og:title">
-    <meta content="http://cellprofiler.org" property="og:url">
-    <meta content="http://cellprofiler.org/images/gallery.png" property=
-    "og:image">
-    <meta content=
-    "CellProfiler is a free open-source software for measuring and analyzing cell images"
-    property="og:description">
-    <link href="/css/app.css" rel="stylesheet"><!--Google Analytics-->
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-83178912-1', 'auto');
-        ga('send', 'pageview');
-
-    </script><!-- Piwik -->
-
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//cellprofiler.piwikpro.com/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 1]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script><noscript>
-    <p><img alt="" src="//cellprofiler.piwikpro.com/piwik.php?idsite=1" style=
-    "border:0;"></p></noscript><!-- End Piwik Code -->
-</head>
-<body>
-    <!--Google Analytics - PHP tracking-->
-    <?php include_once("analyticstracking.php") ?>
-    <!--End of Google Analytics - PHP tracking-->
-    <div class="top bar"></div>
-    <div class="documentation-container">
-        <div class="row">
-            <div class="column-3 hidden-mobile overview-container">
-                <script src="http://code.jquery.com/jquery-latest.min.js" type=
-                "text/javascript">
-                </script> <a href="/"><img src="/images/cp_logo.png" style=
-                "margin-left:20px; margin-top:20px" width="175px"></a>
-                <section class="top">
-                    <a href="/releases/">Download</a>
-                </section>
-                <section class="top">
-                    <a href="/help">Help</a>
-                    <ul class="sub" style="list-style-type:none">
-                        <li>
-                            <a href="/getting_started/">Getting started</a>
-                        </li>
-                        <li>
-                            <a href="/examples">Examples</a>
-                        </li>
-                        <li>
-                            <a href="/tutorials">Tutorials</a>
-                        </li>
-                        <li>
-                            <a href="http://forum.cellprofiler.org/">Forum</a>
-                        </li>
-                        <li>
-                            <a href="http://blog.cellprofiler.org/">Blog</a>
-                        </li>
-                        <li>
-                            <a href="/supportplan/">Custom support</a>
-                        </li>
-                        <li>
-                            <a href="/citations/">Cite us</a>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <a href="/about/">About</a>
-                </section>
-                <section class="top">
-                    <a href="#">CellProfiler Analyst</a>
-                    <ul class="sub" style="list-style-type:none">
-                        <li>
-                            <a href=
-                            "/cp-analyst/#introduction">Introduction</a>
-                        </li>
-                        <li>
-                            <a href="/releases/#CPA">Download</a>
-                        </li>
-                        <li>
-                            <a href="/tutorials">Tutorials / Example data</a>
-                        </li>
-                        <li>
-                            <a href="/cpa/">Documentation</a>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <a href="http://www.broadinstitute.org">
-                        <img src="/images/broad_logo.png" style="vertical-align: middle;height:50px">
-                        <h3 class="hidden-mobile"></h3>
-                    </a>
-                    <a href="http://www.facebook.com/cellprofiler">
-                        <img src="/images/facebook.svg" style="margin-left:10px; margin-top:21px" width="35px">
-                    </a>
-                    <a href="http://twitter.com/CellProfiler">
-                        <img src="/images/twitter.svg" style="margin-left:10px; margin-top:21px" width="35px">
-                    </a>
-                    <a href="https://blog.cellprofiler.org/">
-                        <img src="/images/wordpress_logo.png" style="margin-left:10px; margin-top:21px" width="35px">
-                    </a>
-                    <h4 class="hidden-mobile"></h4>
-                </section>
-            </div>
-            <div class="column-3 hidden-mobile empty-container"></div>
-            <div class="column-7 mobile-column-3 details-container">
-                <section>
-                    <div class="row">
-                        <div class="column-12">
-                            <ul>
-                                <li class="navsearch">
-                                    <form action="http://google.com/search"
-                                    method="get" onsubmit=
-                                    "location.href = this.action + '?&amp;q=%2Bsite:cellprofiler.org+' + this.query.value; return false;">
-                                    <input maxlength="255" name="query"
-                                        size="20" type="text" value="">
-                                        <input type="submit" value="search">
-                                    </form>
-                                </li>
-                                <li style="list-style: none; display: inline">
-                                    <div class=
-                                    "column-3 hidden-mobile empty-container">
-                                    </div>
-                                    <div class=
-                                    "column-7 mobile-column-3 details-container">
-                                    <section>
-                                            <div class="row">
-                                                <div class="column-12">
-                                                    <div class="row header">
-                                                        <div class=
-                                                        "column-6 mobile-column-1">
-                                                        <img src=
-                                                        "/images/logo_cpa.png"
-                                                            style=
-                                                            "vertical-align: middle;"
-                                                            width="50px">
-                                                            <h1 class=
-                                                            "hidden-mobile"
-                                                            style=
-                                                            "font-size: font-family: 'AvenirNext'; color: #013F80; display:inline-block; padding-left: 30px; vertical-align: middle; margin-top: 0px">
-                                                            CellProfiler
-                                                            Analyst</h1>
-                                                            <h3 class=
-                                                            "hidden-mobile">
-                                                            <a href=
-                                                            "http://www.facebook.com/cellprofiler">
-                                                            <img src=
-                                                            "/images/facebook.svg"
-                                                            style=
-                                                            "margin-left:30px; margin-top:21px"
-                                                            width=
-                                                            "20px"></a><a href=
-                                                            "http://twitter.com/CellProfiler"><img src="/images/twitter.svg"
-                                                            style=
-                                                            "margin-left:20px; margin-top:21px"
-                                                            width=
-                                                            "20px"></a><a href=
-                                                            "https://github.com/CellProfiler/CellProfiler-Analyst"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"
-                                                            style=
-                                                            "margin-left:20px; margin-top:21px"
-                                                            width=
-                                                            "20px"></a></h3>
-                                                            <h4 class=
-                                                            "hidden-mobile">
-                                                            Interactive data
-                                                            exploration,
-                                                            analysis, and
-                                                            classification of
-                                                            large biological
-                                                            image sets</h4>
-                                                        </div>
-                                                        <p class="section">
-                                                        <img src=
-                                                        "/images/introduction/gallery.png"
-                                                        style=
-                                                        "margin-top:30px"></p>
-                                                        <div class="row" style=
-                                                        "margin-top:4%">
-                                                            <h3>CellProfiler
-                                                            Analyst in a
-                                                            nutshell</h3>
-                                                            <p>CellProfiler
-                                                            Analyst (CPA)
-                                                            allows interactive
-                                                            exploration and
-                                                            analysis of data,
-                                                            particularly from
-                                                            high-throughput,
-                                                            image-based
-                                                            experiments.
-                                                            Included is a
-                                                            supervised machine
-                                                            learning system
-                                                            which can be
-                                                            trained to
-                                                            recognize
-                                                            complicated and
-                                                            subtle phenotypes,
-                                                            for automatic
-                                                            scoring of millions
-                                                            of cells. CPA
-                                                            provides tools for
-                                                            exploring and
-                                                            analyzing
-                                                            multidimensional
-                                                            data, particularly
-                                                            data from
-                                                            high-throughput,
-                                                            image-based
-                                                            experiments
-                                                            analyzed by its
-                                                            companion image
-                                                            analysis software,
-                                                            CellProfiler.</p>
-                                                            <p>Please contact
-                                                            us to discuss
-                                                            contributing to
-                                                            CPA, or notify us
-                                                            of papers
-                                                            referencing CPA so
-                                                            that we can provide
-                                                            the link to the
-                                                            paper and its
-                                                            results.</p>
-                                                            <p>The CellProfiler
-                                                            project is based at
-                                                            the <a href=
-                                                            "http://broadinstitute.org/~anne">
-                                                            Broad Institute
-                                                            Imaging
-                                                            Platform</a>. It
-                                                            was started by Anne
-                                                            E. Carpenter and
-                                                            Thouis (Ray) Jones
-                                                            in the laboratories
-                                                            of David M.
-                                                            Sabatini and Polina
-                                                            Golland at the
-                                                            Whitehead Institute
-                                                            for Biomedical
-                                                            Research and MIT's
-                                                            CSAIL.</p>
-                                                            <p>CellProfiler
-                                                            Analyst is
-                                                            distributed under
-                                                            the BSD
-                                                            License.</p>
-                                                            <p>CPA is described
-                                                            in the following
-                                                            publications:<br>
-                                                            <br>
-                                                            <b>CellProfiler
-                                                            Analyst:
-                                                            interactive data
-                                                            exploration,
-                                                            analysis, and
-                                                            classification of
-                                                            large biological
-                                                            image sets</b><br>
-                                                            by David Dao, Adam
-                                                            N. Fraser, Jane
-                                                            Hung, Vebjorn
-                                                            Ljosa, Shantanu
-                                                            Singh and Anne E.
-                                                            Carpenter,
-                                                            Bioinformatics,
-                                                            DOI:
-                                                            10.1093/bioinformatics/btw390<br>
-
-                                                            <br>
-                                                            <b>CellProfiler
-                                                            Analyst: data
-                                                            exploration and
-                                                            analysis software
-                                                            for complex
-                                                            image-based
-                                                            screens</b><br>
-                                                            by Thouis R Jones,
-                                                            In Han Kang,
-                                                            Douglas B Wheeler,
-                                                            Robert A Lindquist,
-                                                            Adam Papallo, David
-                                                            M Sabatini, Polina
-                                                            Golland and Anne E
-                                                            Carpenter, BMC
-                                                            Bioinformatics
-                                                            20089:482, DOI:
-                                                            10.1186/1471-2105-9-482</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="bottom bar visible-mobile"></div>
-                    <script src=
-                    "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-                    </script>
-                    <script src="/js/app.js">
-                    </script>
-                </section>
-            </div>
-        </div>
+---
+layout: default
+---
+<div class="row">
+    <div class="col-9 col-sm-auto" style="margin-top: 35px;">
+      <h1>CellProfiler Analyst</h1>
     </div>
-</body>
-</html>
+
+    <div class="col-1 col-md-3 col-lg-2">
+      <img src="/images/logo_cpa.png" alt="CPA logo" class="image" />
+    </div>
+  </div>
+
+<div>
+    <h3>Interactive data exploration, analysis, and classification of large biological image sets</h3>
+  </div>
+
+<div class="col-12">
+    <img src="/images/introduction/gallery.png" alt="CPA image gallery example" class="image" />
+  </div>
+
+<h3 id="cellprofiler-analyst-in-a-nutshell">CellProfiler Analyst in a nutshell</h3>
+
+<p>CellProfiler Analyst (CPA) allows interactive exploration and analysis of data, particularly from high-throughput, image-based experiments. Included is a supervised machine learning system which can be trained to recognize complicated and subtle phenotypes, for automatic scoring of millions of cells. CPA provides tools for exploring and analyzing multidimensional data, particularly data from high-throughput, image-based experiments analyzed by its companion image analysis software, CellProfiler.</p>
+
+<p>Please contact us to discuss contributing to CPA, or notify us of papers referencing CPA so that we can provide the link to the paper and its results.</p>
+
+<p>The CellProfiler project is based at the <a href="http://broadinstitute.org/~anne">Broad Institute Imaging Platform</a>. It was started by Anne E. Carpenter and Thouis (Ray) Jones in the laboratories of David M. Sabatini and Polina Golland at the Whitehead Institute for Biomedical Research and MIT’s CSAIL.</p>
+
+<p>CellProfiler Analyst is distributed under the BSD License.</p>
+
+<p>CPA is described in the following publications:</p>
+
+<p><strong>CellProfiler Analyst: interactive data exploration, analysis, and classification of large biological image sets</strong>
+by David Dao, Adam N. Fraser, Jane Hung, Vebjorn Ljosa, Shantanu Singh and Anne E. Carpenter, Bioinformatics, DOI: 10.1093/bioinformatics/btw390</p>
+
+<p><strong>CellProfiler Analyst: data exploration and analysis software for complex image-based screens</strong>
+by Thouis R Jones, In Han Kang, Douglas B Wheeler, Robert A Lindquist, Adam Papallo, David M Sabatini, Polina Golland and Anne E Carpenter, BMC Bioinformatics 20089:482, DOI: 10.1186/1471-2105-9-482</p>
+
+<div class="bottom-margin"></div>

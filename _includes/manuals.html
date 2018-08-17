@@ -1,0 +1,11 @@
+<table>
+  <tbody>
+    {% for manual in site.data.manuals %}
+      <tr>
+        <td style="padding-bottom: 5px;">{{manual.program}}</td>
+        <td style="padding-left: 30px;">{{manual.version}}</td>
+        <td style="padding-left: 30px;">{{manual.manual}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

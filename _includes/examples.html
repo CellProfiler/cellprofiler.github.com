@@ -1,0 +1,17 @@
+{% for example in site.data.examples.examples %}
+  <div class="media" id="{{example.id}}">
+    <div class="media-body">
+      <h3>{{example.section}}</h3>
+      <h5 class="mt-0 mb-1">{{example.example_name}}</h5>
+
+      <p>{{example.description}}</p>
+
+      <p><a href="{{example.download_href}}">{{example.download_tag}}</a> {{example.download_size}}</p>
+      <p><a href="{{example.second_href}}">{{example.second_tag}}</a></p>
+    </div>
+
+    <img class="ml-3 thumbnail" src="{{example.image_a_href}}" alt="{{example.image_a_alt}}">
+
+    <img class="ml-3 thumbnail" src="{{example.image_b_href}}" alt="{{example.image_b_alt}}">
+  </div>
+{% endfor %}

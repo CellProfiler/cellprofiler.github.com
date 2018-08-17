@@ -1,0 +1,20 @@
+{% for content in site.data.index %}
+  <div class="row">
+    <div class="col-6">
+      <img src="{{content.image_href}}" alt="{{content.image_alt}}" class="image">
+    </div>
+
+    <div class="col-6">
+      <h1>{{content.title}}</h1>
+      <h5>{{content.second_title}}</h5>
+      <ul>
+        <li>{{content.list_item_1}}</li>
+        <li>{{content.list_item_2}}</li>
+        <li>{{content.list_item_3}}</li>
+        <li>{{content.list_item_4}}</li>
+        <li>{{content.list_item_5}} <a href="{{content.item_5_href}}">{{content.item_5_tag}}</a></li>
+      </ul>
+      <a href="{{content.download_href}}">Download CellProfiler</a>
+    </div>
+  </div>
+{% endfor %}

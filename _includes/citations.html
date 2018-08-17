@@ -1,0 +1,31 @@
+{% for cite in site.data.citations %}
+<!-- Impact chart -->
+  <div class="row">
+    <div class="col-12 col-lg-5 order-2 order-lg-last">
+      <h4>{{cite.impact_title}}</h4>
+      {{cite.impact_text}}
+      <img src="{{cite.image_href}}" alt="{{cite.image_alt}}" class="image">
+    </div>
+
+<!-- Title -->
+    <div class="col-12 order-1">
+      <h1>{{cite.title}}</h1>
+      <h3>{{cite.header}}</h3>
+    </div>
+
+<!-- Text -->
+    <div class="col-lg-7 order-3" style="margin-top: 10px;">
+      <p>{{cite.cp_for_cells}}</p>
+
+      <p>{{cite.cellprofiler_carpenter}}</p>
+
+      <p>{{cite.or}}</p>
+
+      <p>{{cite.cellprofiler_kamentsky}}</p>
+
+      <p>{{cite.cp_for_wt}}</p>
+
+      <p>{{cite.worm_wahlby}}</p>
+    </div>
+  </div>
+{% endfor %}

@@ -1,0 +1,22 @@
+
+- title: "Stable (3.1.5):"
+  mac_href: https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.5.app.zip
+  mac_tag: macOS
+  windows_href: https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-3.1.5.exe
+  windows_tag: Windows
+  manual_href: http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.1.5/index.html
+  manual_tag: Manual
+
+- description: <a href="/previous_releases"><i>Previous CellProfiler releases</i></a>
+
+- header: CellProfiler Analyst
+
+- description: Source code available on <a href="https://github.com/CellProfiler/CellProfiler-Analyst">Github</a>
+
+- title: "Stable (2.2.1):"
+  mac_href: http://d1zymp9ayga15t.cloudfront.net/CellProfiler-Analyst-stable.dmg
+  mac_tag: macOS
+  windows_href: http://d1zymp9ayga15t.cloudfront.net/CellProfiler-Analyst-stable.exe
+  windows_tag: Windows
+
+- description: <a href="/previous_releases/CPA"><i>Previous CellProfiler Analyst releases</i></a>
