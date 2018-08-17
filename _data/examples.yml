@@ -237,7 +237,7 @@ examples:
   download_href: http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/cpa_2.0_example.zip
   download_size: (203MB zipped)
   download_tag: Download
-  image_a_href: http://d1zymp9ayga15t.cloudfront.net/images/cpa_128.png
+  image_a_href: /images/logo_cpa.png
   image_a_alt: CellProfiler Analyst logo
 
 # Previous Examples
