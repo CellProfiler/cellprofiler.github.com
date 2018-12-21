@@ -1,10 +1,10 @@
 
-- title: "Stable (3.1.5):"
-  mac_href: https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.5.app.zip
+- title: "Stable (3.1.8):"
+  mac_href: https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.8.app.zip
   mac_tag: macOS
-  windows_href: https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-3.1.5.exe
+  windows_href: https://dpvpof9ygr7ad.cloudfront.net/CellProfiler-3.1.8.exe
   windows_tag: Windows
-  manual_href: http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.1.5/index.html
+  manual_href: http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.1.8/index.html
   manual_tag: Manual
 
 - description: <a href="/previous_releases"><i>Previous CellProfiler releases</i></a>
