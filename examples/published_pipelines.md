@@ -88,5 +88,7 @@ List of publications
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Salzmann_2018.zip)] (CellProfiler version [3.0.0](/releases))
 -   Van Tol N, Rolloos M, van Loon P, van der Zaal B. J. (2018). MeioSeed: a CellProfiler-based program to count fluorescent seeds for crossover frequency analysis in Arabidopsis thaliana. _Plant Methods,_ 14: 32. / [doi](https://dx.doi.org/10.1186%2Fs13007-018-0298-3). PMCID: PMC5905130.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Niels_2018.zip)] (includes pipeline and classifier files) (CellProfiler version [2.1.1](/previous_releases#2.1.1))
+-   Gomes-Alves AG, Maia AF, Cruz T, Castro H, Tomás AM (2018) Development of an automated image analysis protocol for quantification of intracellular forms of Leishmania spp. _PLoS ONE._ / [doi](https://doi.org/10.1371/journal.pone.0201747). PMID: 30071097 PMCID: PMC6072083.
+-   [[Github repository](https://github.com/andrefilipemaia/intramacrophagic_parasites_counter)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 
 <div class="bottom-margin"></div>
