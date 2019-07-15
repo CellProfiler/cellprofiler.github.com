@@ -33,7 +33,7 @@ Publications, videos, articles, and other press
 
 2018: Anne Carpenter quoted in a Nature special feature on deep learning in biology: [[Link to Nature article](https://www.nature.com/articles/d41586-018-02174-z)]
 
-2018: Focus on Recursion Pharma, which uses CellProfiler and Cell Painting from the Carpenter lab (note: Anne Carpenter serves on their Scientific advisory board): [[Link to Technology Review article](https://www.technologyreview.com/s/603384/machine-vision-helps-spot-new-drug-treatments/)
+2018: Focus on Recursion Pharma, which uses CellProfiler and Cell Painting from the Carpenter lab (note: Anne Carpenter serves on their Scientific advisory board): [[Link to Technology Review article](https://www.technologyreview.com/s/603384/machine-vision-helps-spot-new-drug-treatments/)]
 
 2018: Anne Carpenter profiled in Iridescent Learning: [[Link to Iridescent Learning article](http://iridescentlearning.org/2018/02/computational-drug-discovery-an-interview-with-dr-anne-carpenter/)]
 
