@@ -25,7 +25,7 @@ BLOSSOMS video/activity lesson
 
 BLOSSOMS (Blended Learning Science or Math Studies) is a large, free repository of video modules for high school math and science classes created by "star" teachers from around the world. Each video is designed for viewing in brief segments, allowing the in-class teacher between segments to engage the class in an active, goal-oriented exercise. The goal is not just to learn about an exciting area of science but also to develop deeper and richer thinking skills.
 
-**Video lesson:** Discovering Medicines, Using Robots and Computers [[link](http://blossoms.mit.edu/video/carpenter.html)]
+**Video lesson:** Discovering Medicines, Using Robots and Computers [[link](https://blossoms.mit.edu/videos/lessons/discovering_medicines_using_robots_and_computers)]
 
 **Listing in CPALMS:** [[link](http://www.cpalms.org/Public/PreviewResourceUrl/Preview/18770)]
 

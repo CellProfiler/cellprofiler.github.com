@@ -1,4 +1,4 @@
-# If the text has more than one colon, include ">" and then a new line with indentation before starting the line of text
+# If the text has more than one colon, add ">" and then a new line with indentation before starting the new line of text
 
 - title: How to cite CellProfiler in publications
   header: (the project's survival depends on it!)
@@ -13,5 +13,5 @@
     Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM, Carpenter AE (2012). An image analysis toolbox for high-throughput C. elegans assays. Nature Methods 9(7):714-716/doi: 10.1038/nmeth.1984. PMID: 22522656 PMCID: PMC3433711 [<a href="http://d1zymp9ayga15t.cloudfront.net/content/papers/59-Wahlby_NatMeth_2012.pdf">PDF</a>]
   impact_title: CellProfiler's impact
   impact_text: Citations (6,200 as of August 8, 2018) [<a href="https://scholar.google.com/scholar?q=%22www+cellprofiler+org%22+OR+CellProfiler+OR+%22cellprofiler%22&hl=en&as_sdt=0,22">list</a>].
-  image_href: http://d1zymp9ayga15t.cloudfront.net/images/CP_cite_chart26.png
+  image_href: /images/CPcitations3:20:19.png
   image_alt: CellProfiler citations chart

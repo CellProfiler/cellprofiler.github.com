@@ -23,9 +23,29 @@ Publications, videos, articles, and other press
 
 ![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) Others' descriptions of our work
 
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2018: The Times Higher Ed published an op-ed by Anne Carpenter about the challenges of funding computational support for biological projects.
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2018: Anne Carpenter quoted about the development of ghost cytometry: [[Link to Scientific American article](https://www.scientificamerican.com/article/ghost-cytometry-may-improve-cancer-detection-enable-new-experiments/)]
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2018: Anne Carpenter featured in the BEST OF ISBI section of Computer Vision News: [[Link to Computer Vision News magazine](https://www.rsipvision.com/ComputerVisionNews-2018May/24/)]
+
+![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2018: Anne Carpenter discusses her career path and the personal side of her science: [[Link to Broad blog](broad.io/CarpenterWhyIScience)]
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2018: Anne Carpenter quoted in a Nature special feature on deep learning in biology: [[Link to Nature article](https://www.nature.com/articles/d41586-018-02174-z)]
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2018: Focus on Recursion Pharma, which uses CellProfiler and Cell Painting from the Carpenter lab (note: Anne Carpenter serves on their Scientific advisory board): [[Link to Technology Review article](https://www.technologyreview.com/s/603384/machine-vision-helps-spot-new-drug-treatments/)]
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2018: Anne Carpenter profiled in Iridescent Learning: [[Link to Iridescent Learning article](http://iridescentlearning.org/2018/02/computational-drug-discovery-an-interview-with-dr-anne-carpenter/)]
+
 ![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2017: Anne Carpenter's keynote speech on morphological profiling at the European Molecular Biology Laboratory (EMBL) Symposium [[Link to YouTube](https://www.youtube.com/watch?v=dKAJoxMoZz0)]
 
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2016: Anne Carpenter profiled in her alma mater's newsletter at the University of Illinois: [[Link to PDF](https://mcb.illinois.edu/departments/cdb/downloads/2016%20CDB%20Newsletter.pdf)]
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2016: Anne Carpenter quoted in NatureJobs blog on career prospects for PhD biologists: [[Link to NatureJobs blog](http://blogs.nature.com/naturejobs/2016/11/14/thinking-of-a-phd-this-is-the-australian-story/)]
+
 ![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2016: Science talks to Anne Carpenter about cell painting and the cytomining hackathon [[Link to Science magazine article](http://science.sciencemag.org/content/352/6288/877.full)]
+
+![Red square](http://d1zymp9ayga15t.cloudfront.net/images/CP-red.gif) 2015: Anne Carpenter quoted in Nature feature on the need for staff scientist positions in biology: [[Link to Nature article](https://www.nature.com/news/wanted-staff-scientist-positions-for-postdocs-1.17303)]
 
 ![Purple square](http://d1zymp9ayga15t.cloudfront.net/images/CP-purp.gif) 2015: Anne Carpenter's keynote speech on high content morphology profiling at King's College of London in September 2015 [[Link to YouTube](https://www.youtube.com/watch?v=y3Zwj8LtRHU)]
 

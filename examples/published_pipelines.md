@@ -62,7 +62,7 @@ List of publications
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Ricci_2015.zip)] (CellProfiler version [version 2.1.1 (revision 6c2d896; for Windows 64-bit).](http://d1zymp9ayga15t.cloudfront.net/releases/2.1.1/CellProfiler_2.1.1_win64_r20140723174500.exe))
 -   Grenfell A, Strzelecka M, Crowder ME, Helmke KJ, Schlaitz AL, Heald R (2016). A versatile multivariate image analysis pipeline reveals features of Xenopus extract spindles. _Journal of Cell Biology_ 213(1): 127-136 / [doi](http://www.dx.doi.org/10.1083/jcb.201509079). PMID: 27044897.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Grenfell_2016.zip)] (CellProfiler version [2.1.1](/previous_releases#2.1.1))
--   Dordea AC, Bray MA, Allen K, Fei F, Gregory M, Carpenter AE, Buys ES (2016). An open-source computational tool to automatically quantify immunolabeled retinal ganglion cells. _Experimental Eye Research_ / [doi](https://doi.org/10.1016/j.exer.2016.04.012). PMID: 27119563. PMCID: PMC4903927.
+-   Dordea AC, Bray MA, Allen K, Logan D, Fei F, Gregory M, Carpenter AE, Buys ES (2016). An open-source computational tool to automatically quantify immunolabeled retinal ganglion cells. _Experimental Eye Research_ / [doi](https://doi.org/10.1016/j.exer.2016.04.012). PMID: 27119563. PMCID: PMC4903927.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Buys_2015.zip)] (CellProfiler version [2.1.1](/previous_releases#2.1.1))
 -   Shan J, Logan DJ, Root DE, Carpenter AE, and Bhatia SN (2016). High-throughput platform for the identification of molecular factors involved in phenotypic stabilization of primary human hepatocytes in vitro. _Journal of Biomolecular Screening._ 21(9):897-911 / [doi](https://doi.org/10.1177/1087057116660277) . PMID: 27650791. PMCID: in process.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Shan_et_al_2016.zip)]
@@ -88,5 +88,7 @@ List of publications
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Salzmann_2018.zip)] (CellProfiler version [3.0.0](/releases))
 -   Van Tol N, Rolloos M, van Loon P, van der Zaal B. J. (2018). MeioSeed: a CellProfiler-based program to count fluorescent seeds for crossover frequency analysis in Arabidopsis thaliana. _Plant Methods,_ 14: 32. / [doi](https://dx.doi.org/10.1186%2Fs13007-018-0298-3). PMCID: PMC5905130.
 -   [[Download](http://d1zymp9ayga15t.cloudfront.net/PublishedPipelines/Niels_2018.zip)] (includes pipeline and classifier files) (CellProfiler version [2.1.1](/previous_releases#2.1.1))
+-   Gomes-Alves AG, Maia AF, Cruz T, Castro H, Tomás AM (2018) Development of an automated image analysis protocol for quantification of intracellular forms of Leishmania spp. _PLoS ONE._ / [doi](https://doi.org/10.1371/journal.pone.0201747). PMID: 30071097 PMCID: PMC6072083.
+-   [[Github repository](https://github.com/andrefilipemaia/intramacrophagic_parasites_counter)] (CellProfiler version [2.2.0](/previous_releases#2.2.0))
 
 <div class="bottom-margin"></div>
