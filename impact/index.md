@@ -8,7 +8,7 @@ redirect_from:
 Impact on Human Health
 ======================
 
-Our CellProfiler software has yielded discoveries in several translational projects, some of which may ultimately have a direct impact on the treatment of disease. For example, CellProfiler has been used to identify several small molecules that are effective in treating particular diseases in mouse models. In some cases, discoveries made using CellProfiler have even led to planning clinical trials in humans, which could directly improve patient outcomes. Here we highlight instances that have come to our attention. See also: [citations](/citations)
+Our CellProfiler software has yielded discoveries in several translational projects, some of which have had a direct impact on the treatment of disease. For example, CellProfiler has been used to identify several small molecules that are effective in treating particular diseases in mouse models. In some cases, discoveries made using CellProfiler have even led to planning clinical trials in humans, which could directly improve patient outcomes. Here we highlight instances that have come to our attention. Please [let us know](mailto:imagingadmin) if you are aware of others! See also: [citations](/citations)
 
 Ebola Virus
 -----------
@@ -55,7 +55,7 @@ Cerebral Cavernous Malformation (CCM)
 
 <img src="http://d1zymp9ayga15t.cloudfront.net/images/CCM.jpg" alt="Cerebral Cavernous Malformation" class="tiny-image">
 
-Researchers at the [University of Utah](http://www.bioscience.utah.edu/faculty/molecular-biology-faculty/) used CellProfiler to identify image-based phenotypes associated with a monogenic rare disease, the hereditary stroke syndrome cerebral cavernous malformation (CCM). They then identified known drugs that could reverse the phenotype and demonstrated efficacy in a mouse model of CCM disease. This led to the launching of [Recursion Pharmaceuticals, ](http://www.recursionpharma.com/) which is pursuing a clinical trial for a compound to treat CCM, which has no currently approved therapy. The company will use a similar approach to identify compounds to target other rare genetic diseases.
+Researchers at the [University of Utah](http://www.bioscience.utah.edu/faculty/molecular-biology-faculty/) used CellProfiler to identify image-based phenotypes associated with a monogenic rare disease, the hereditary stroke syndrome cerebral cavernous malformation (CCM). They then identified known drugs that could reverse the phenotype and demonstrated efficacy in a mouse model of CCM disease. This led to the launching of [Recursion Pharmaceuticals, ](http://www.recursionpharma.com/) which is pursuing a clinical trial for a compound to treat CCM, which has no currently approved therapy. The company is using a similar approach to identify compounds to target other diseases.
 
 *For more details:*
 

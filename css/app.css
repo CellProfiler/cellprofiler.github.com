@@ -63,6 +63,24 @@ li {
   margin-bottom: 100px;
 }
 
+.btn-pink {
+  color: #FF0088;
+  background-color: #FDFDFD;
+  border-color: #FF0088;
+}
+
+.btn-pink:hover {
+  color: #FF0088;
+  background-color: #F5F5F5;
+  border-color: #FF0088;
+}
+
+.btn-pink:active {
+  color: #FF0088;
+  background-color: #CCCCCC;
+  border-color: #FF0088;
+}
+
 a {
   text-decoration: none;
   color: #FF0088;
