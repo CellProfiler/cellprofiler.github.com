@@ -9,30 +9,14 @@ title: CellProfiler | Free open-source software for measuring and analyzing cell
 Getting Started
 ===============
 
-**CellProfiler** is free, open-source software for quantitative analysis of biological images. No prior experience in programming or computer vision is required – this page is intended to help you get up and running. If you find these tools helpful, please remember to [cite our work] to help keep the project funded.
+**CellProfiler** is free, open-source software for quantitative analysis of biological images. No prior experience in programming or computer vision is required – this page is intended to help you get up and running.
 
-### Manuals
-
-#### CellProfiler
-
-- [<span class="method-item">Manual</span>][]
-- [<span class="method-item">Examples</span>][]
-- [<span class="method-item">Manual for CP 2.1</span>][]
-- [<span class="method-item">Manual for CP 2.0</span>][]
-- [<span class="method-item">Manual for CP 1.0</span>][]
-
-#### CellProfiler Analyst
-
-- [<span class="method-item">Manual for CPA 2.0</span>][]
-- [<span class="method-item">Manual for CPA 1.0</span>][]
-
-  [cite our work]: /citations/
-  [<span class="method-item">Manual</span>]: /manuals/
-  [<span class="method-item">Examples</span>]: /examples
-  [<span class="method-item">Manual for CP 2.1</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp2.1.0_manual_0c7fb94.pdf
-  [<span class="method-item">Manual for CP 2.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp2_manual_9978.pdf
-  [<span class="method-item">Manual for CP 1.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cp1_manual_9717.pdf
-  [<span class="method-item">Manual for CPA 2.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa2_manual.pdf
-  [<span class="method-item">Manual for CPA 1.0</span>]: http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa1_manual.pdf
+The quickest way to get up and running with CellProfiler is to
+1. Download [CellProfiler](/releases).
+2. Launch it by double clicking.
+3. The welcome screen pops up: choose the example pipeline (if you are connected to the internet) and run it.
+4. Find an example pipeline and images ([here](/examples)) that are similar to yours and un it.
+5. Adjust the pipeline to your own images.
+6. Post at the [online forum](http://forum.cellprofiler.org) if you have any trouble.
 
 <div class="bottom-margin"></div>

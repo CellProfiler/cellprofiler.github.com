@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-6">
-      <h1>{{content.title}}</h1>
+      <img src="{{content.logo}}" alt="{{content.logo_alt}}" class="image">
       <h5>{{content.second_title}}</h5>
       <ul>
         <li>{{content.list_item_1}}</li>
@@ -14,7 +14,7 @@
         <li>{{content.list_item_4}}</li>
         <li>{{content.list_item_5}} <a href="{{content.item_5_href}}">{{content.item_5_tag}}</a></li>
       </ul>
-      <a href="{{content.download_href}}">Download CellProfiler</a>
+      <a class="btn btn-pink" href="{{content.download_href}}" role="button">Download CellProfiler</a>
     </div>
   </div>
 {% endfor %}

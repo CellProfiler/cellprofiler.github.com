@@ -6,6 +6,12 @@ redirect_from:
 ---
 {% include citations.html %}
 
+Carpenter AE, Jones TR, Lamprecht MR, Clarke C, Kang IH, Friman O, Guertin DA, Chang JH, Lindquist RA, Moffat J, Golland P, Sabatini DM (2006) CellProfiler: image analysis software for identifying and quantifying cell phenotypes. Genome Biology 7:R100. PMID: 17076895 [<a href="http://genomebiology.com/2006/7/10/R100">link to paper at Genome Biology</a>]
+
+__CellProfiler for the Worm Toolbox:__
+
+Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM, Carpenter AE (2012). An image analysis toolbox for high-throughput C. elegans assays. Nature Methods 9(7):714-716/doi: 10.1038/nmeth.1984. PMID: 22522656 PMCID: PMC3433711 [<a href="http://d1zymp9ayga15t.cloudfront.net/content/papers/59-Wahlby_NatMeth_2012.pdf">PDF</a>]
+
 __CellProfiler for other biological images:__
 
 Lamprecht MR, Sabatini DM, Carpenter AE (2007) CellProfiler: free, versatile software for automated biological image analysis. Biotechniques 42(1):71-75. PMID: 17269487 [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/papers/26-Lamprecht_Biotech_2007.pdf)]
