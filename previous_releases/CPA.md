@@ -10,9 +10,9 @@ redirect\_from:
 {% include previous_releases.html table=site.data.previous_releases.CPA %}
 
 **Note:** CPAnalyst cannot run without data to analyze.
- Example data and accompanying images for use with CPAnalyst 2.0 are available [here](/examples#cellprofiler-analyst-example-data-and-properties-file).
+ Example data and accompanying images for use with CPAnalyst 2.0 are available [here](/examples#cellprofiler_analyst).
 
-[Manual for CPA 2.0](http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa2_manual.pdf) - [Manual for CPA 1.0](http://d1zymp9ayga15t.cloudfront.net/content/Documentation/cpa1_manual.pdf)
+[Manuals](/manuals)
 
 #### Source Code
 

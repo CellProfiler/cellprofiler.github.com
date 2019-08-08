@@ -12,6 +12,4 @@ redirect_from:
 CellProfiler
 ============
 
-Source code available on [Github](https://github.com/CellProfiler/CellProfiler)
-
 {% include releases.html %}

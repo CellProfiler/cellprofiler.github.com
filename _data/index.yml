@@ -1,7 +1,8 @@
 
 - image_href: /images/placeholder.png
   image_alt: Welcome to CellProfiler
-  title: CellProfiler
+  logo: images/cp_logo.png
+  logo_alt: CellProfiler logo
   second_title: Designed for biologists!
   list_item_1: <b>Load</b> an example CellProfiler pipeline, a series of image-processing modules
   list_item_2: <b>Adjust</b> the settings to measure the phenotypes of interest in your images

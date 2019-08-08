@@ -4,7 +4,6 @@ examples:
 # Basic Pipelines
 
 - section: Basic Pipelines
-  description: These pipelines are made for simple cellular and tissue image assays, and include some basic measurements.
 
 - example_name: Human cells
   id: human-cells
@@ -80,7 +79,7 @@ examples:
   image_b_alt: Specialized CellProfiler pipeline identify Yeast Colony Classification example - segmented
 
 - example_name: Yeast patch identification
-  id: yeast-colony-classification
+  id: yeast-patch-identification
   description: This pipeline identifies patches of yeast growing in a 96 well plate, serving as an introduction to the grid defintion and identification modules.
   download_href: http://cellprofiler-examples.s3.amazonaws.com/ExampleYeastPatches.zip
   download_size: (0.5  MB)
@@ -140,17 +139,16 @@ examples:
 
 # Imaging Flow Cytometry
 
-- section: Imaging Flow Cytometry
-  description: Imaging flow cytometry combines the high-throughput capabilities of conventional flow cytometry with single-cell imaging. CellProfiler can be used to analyze the resulting images from imaging flow cytometry, whether brightfield, darkfield, or fluorescence.
+- section: Imaging Flow Cytometry Pipelines
+  id: imaging_flow_cytometry
+  description: Imaging flow cytometry combines the high-throughput capabilities of conventional flow cytometry with single-cell imaging. CellProfiler can be used to analyze the resulting images from imaging flow cytometry, whether brightfield, darkfield, or fluorescence. The <a href="/imagingflowcytometry/index.html">IFC website</a> page has further details on this workflow.
   download_href: http://cellprofiler-examples.s3.amazonaws.com/ExampleImagingFlowCytometryObjectsInGrid.zip
   download_size: (21.2  MB)
   download_tag: Download
-  second_href: /imagingflowcytometry/index.html
-  second_tag: IFC website
 
 # Worm Toolbox
 
-- section: Worm Toolbox
+- section: Worm Toolbox Pipelines
   description: These pipelines have been developed for high-throughput screens on <i>C. elegans</i> and extract measurements on a per-worm basis. The <a href="/wormtoolbox">Worm Toolbox</a> page has further details on this workflow, as well as video tutorials, pipelines and image data in addition to those described below. (from C Wählby <i>et al.</i> Methods, 2014) The <a href="http://www.broadinstitute.org/bbbc">BBBC</a> also has <i>C. elegans</i> sample images and information, as well as assay "ground truth" of various kinds.
 
 - example_name: Untangle worms
@@ -233,7 +231,8 @@ examples:
 # CellProfiler Analyst Example Data and Properties File
 
 - section: CellProfiler Analyst Example Data and Properties File
-  description: <b>Example database, configuration file, and images:</b> Single 96-well plate of human cellular images, for use with CellProfiler Analyst 2.0. More sample images and information on the image data can be found on the <a href="http://www.broadinstitute.org/bbbc/BBBC017/">Broad Bioimage Benchmark Collection (BBBC)</a>. Moffat J et al., A lentiviral RNAi library for human and mouse genes applied to an arrayed viral high-content screen. Cell. 2006 Mar 24;124(6):1283-98
+  id: cellprofiler_analyst
+  description: <b>Example database, configuration file, and images:</b> Single 96-well plate of human cellular images, for use with CellProfiler Analyst 2.0. More sample images and information on the image data can be found on the <a href="http://www.broadinstitute.org/bbbc/BBBC017/">Broad Bioimage Benchmark Collection (BBBC)</a>. Images were created as part of the project described in Moffat J et al., A lentiviral RNAi library for human and mouse genes applied to an arrayed viral high-content screen. Cell. 2006 Mar 24;124(6):1283-98
   download_href: http://d1zymp9ayga15t.cloudfront.net/content/Examplezips/cpa_2.0_example.zip
   download_size: (203MB zipped)
   download_tag: Download
@@ -243,4 +242,5 @@ examples:
 # Previous Examples
 
 - section: Previous Examples
+  id: previous_examples
   description: Previous examples (prior to 3.0) can be found on the <a href="/previous_examples">previous examples</a> page, but we discourage their use because they are now outdated.

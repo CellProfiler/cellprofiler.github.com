@@ -24,6 +24,9 @@ redirect_from:
 -   [Illumination Correction](#illumination-correction)
 -   [Colocalization](#colocalization)
 
+#### Imaging Flow Cytometry Pipelines
+-   [Imaging Flow Cytometry Pipelines](#imaging_flow_cytometry)
+
 #### WormToolbox Pipelines
 
 -   [Untangle worms](#untangle-worms)
@@ -39,6 +42,16 @@ redirect_from:
 #### Published Pipelines
 
 -   [Published Pipelines](#published_pipelines)
+
+#### CellProfiler Analyst Example Data and Properties File
+
+-   [CellProfiler Analyst](#cellprofiler_analyst)
+
+#### Previous Examples
+
+-   [Previous Examples](#previous_examples)
+
+<hr>
 
 {% include examples.html %}
 

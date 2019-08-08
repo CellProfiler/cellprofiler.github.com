@@ -3,15 +3,22 @@
 - title: How to cite CellProfiler in publications
   header: (the project's survival depends on it!)
   cp_for_cells: "<b>CellProfiler for cells:</b>"
-  cellprofiler_carpenter: >
-    Carpenter AE, Jones TR, Lamprecht MR, Clarke C, Kang IH, Friman O, Guertin DA, Chang JH, Lindquist RA, Moffat J, Golland P, Sabatini DM (2006) CellProfiler: image analysis software for identifying and quantifying cell phenotypes. Genome Biology 7:R100. PMID: 17076895 [<a href="http://genomebiology.com/2006/7/10/R100">link to paper at Genome Biology</a>]
+  cellprofiler_mcquin: >
+    McQuin C, Goodman A, Chernyshev V, Kamentsky L, Cimini BA, Karhohs KW, Doan M, Ding L, Rafelski SM, Thirstrup D, Wiegraebe W, Singh S, Becker T, Caicedo JC, Carpenter AE (2018). CellProfiler 3.0: Next-generation image processing for biology. PLoS Biol. 16(7):e2005970 / <a href="https://doi.org/10.1371/journal.pbio.2005970">doi</a>. PMID: 29969450 (Research article)
   or: <i>or</i>
   cellprofiler_kamentsky: >
+<<<<<<< HEAD
     Kamentsky L, Jones TR, Fraser A, Bray M, Logan D, Madden K, Ljosa V, Rueden C, Harris GB, Eliceiri K, Carpenter AE (2011) Improved structure, function, and compatibility for CellProfiler: modular high-throughput image analysis software. Bioinformatics 2011/ <a href="http://bioinformatics.oxfordjournals.org/content/27/8/1179.full.pdf?keytype=ref&ijkey=ujLFUXwONdtX58c">doi</a>. PMID: 21349861 PMCID: PMC3072555
   cp_for_wt: "<b>CellProfiler for the Worm Toolbox:</b>"
   worm_wahlby: >
     Wählby C, Kamentsky L, Liu ZH, Riklin-Raviv T, Conery AL, O'Rourke EJ, Sokolnicki KL, Visvikis O, Ljosa V, Irazoqui JE, Golland P, Ruvkun G, Ausubel FM, Carpenter AE (2012). An image analysis toolbox for high-throughput C. elegans assays. Nature Methods 9(7):714-716/doi: 10.1038/nmeth.1984. PMID: 22522656 PMCID: PMC3433711 [<a href="http://d1zymp9ayga15t.cloudfront.net/content/papers/59-Wahlby_NatMeth_2012.pdf">PDF</a>]
   impact_title: CellProfiler's impact
   impact_text: Citations (6,200 as of August 8, 2018) [<a href="https://scholar.google.com/scholar?q=%22www+cellprofiler+org%22+OR+CellProfiler+OR+%22cellprofiler%22&hl=en&as_sdt=0,22">list</a>].
+=======
+    Kamentsky L, Jones TR, Fraser A, Bray M, Logan D, Madden K, Ljosa V, Rueden C, Harris GB, Eliceiri K, Carpenter AE (2011). Improved structure, function, and compatibility for CellProfiler: modular high-throughput image analysis software. Bioinformatics 2011/ <a href="http://bioinformatics.oxfordjournals.org/content/27/8/1179.full.pdf?keytype=ref&ijkey=ujLFUXwONdtX58c">doi</a>. PMID: 21349861 PMCID: PMC3072555
+  impact_button: >
+    <a class="btn btn-pink" href="https://scholar.google.com/scholar?q=%22www+cellprofiler+org%22+OR+CellProfiler+OR+%22cellprofiler%22&hl=en&as_sdt=0,22" role="button">Check citation list</a>
+  impact_text: (7,680 as of July 24, 2019)
+>>>>>>> 7164eec06524b988d5499dd7688ce208c6c28855
   image_href: /images/CPcitations3:20:19.png
   image_alt: CellProfiler citations chart
