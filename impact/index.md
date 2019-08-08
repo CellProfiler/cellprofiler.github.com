@@ -17,7 +17,7 @@ Leukemias and Lymphomas
 
 CellProfiler is being used to guide treatment decisions in a clinical trial for various types of leukemias and lymphomas. Cancer cells were collected from patients whose aggressive cancers had relapsed after conventional treatments. Cells were then treated with a panel of approved drugs and each patient was given one or more of the drugs that was most effective at killing their particular cancer cells, as judged by CellProfiler analysis of cell images. Involving a large collaboration across Vienna and Switzerland, this is the first precision medicine trial in leukemia/lymphoma that used microscopy-based functional screening.
 
-*For more details*
+*For more details:*
 
 Snijder B et al. (2017) Image-based ex-vivo drug screening for patients with aggressive haematological malignancies: interim results from a single-arm, open-labeled, pilot study. The Lancet Haematology, 4 (12), e595-e606: [paper](https://doi.org/10.1016/S2352-3026(17)30208-9)
 
@@ -28,7 +28,7 @@ Ebola Virus
 
 The 2014 outbreak of the Ebola virus in West Africa has claimed the lives of over 8,600 people worldwide; the disease currently has no approved cure or vaccine. CellProfiler was used to identify therapeutic targets within host human macrophages capable of halting infection by inhibiting viral uptake via cell surface proteins and endosomal trafficking.
 
-*For more details*
+*For more details:*
 
 Sakurai Y et al. (2015) Two-pore channels control Ebola virus host cell entry and are drug targets for disease treatment. Science, 347 (6225), 995-998: [paper](https://doi.org/10.1126/science.1258758), [press release](https://www.txbiomed.org/news-press/news-releases/research-shows-asian-herb-holds-promise-treatment-ebola-virus-disease/)
 
