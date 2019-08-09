@@ -28,7 +28,7 @@ a:
   title: <br><b>Accelrys</b>
   link: http://accelrys.com/platform/enterprise-platform.html
   description_1: The Component Collections of the Accelrys Enterprise Platform (AEP) allows researchers to build, deploy, analyze and report on complex scientific data types within the Accelrys applications framework and other third-party applications.
-  description_2: The Pipeline Pilot <a href="http://accelrys.com/products/pipeline-pilot/component-collections/imaging.html">Imaging Component Collection</a> provides a component, 'CellProfiler (on Server)', for integration with CellProfiler. The user can run a protocol and send images to be analyzed into CellProfiler as input, and allows for images and analysis data to be retrieved from CellProfiler for downstream data workflows enabled by AEP. Some details on using the component are provided <a href="http://d1zymp9ayga15t.cloudfront.net/content/Accelyrs_AEP_CellProfilerOnServer_Usage_tips.pdf).">here</a>
+  description_2: The Pipeline Pilot <a href="http://accelrys.com/products/pipeline-pilot/component-collections/imaging.html">Imaging Component Collection</a> provides a component, 'CellProfiler (on Server)', for integration with CellProfiler. The user can run a protocol and send images to be analyzed into CellProfiler as input, and allows for images and analysis data to be retrieved from CellProfiler for downstream data workflows enabled by AEP. Some details on using the component are provided <a href="http://d1zymp9ayga15t.cloudfront.net/content/Accelyrs_AEP_CellProfilerOnServer_Usage_tips.pdf">here</a>.
 
 - image_href: http://d1zymp9ayga15t.cloudfront.net/images/logo_columbus.png
   image_alt: Columbus logo
