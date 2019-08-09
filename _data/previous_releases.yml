@@ -53,7 +53,7 @@
   mac: >
     <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/5811/CompiledCellProfilerPPCBugfixFINAL.zip">PowerPC macOS (<b>Note: r5811</b>)</a> (MCR 7.6 is bundled with CP)
   mac_intel: >
-    <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_macOSI32_9717.tar.gz">Intel macOSintosh OS X 10.4+ 32/64-bit</a> (MCRInstaller: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_MacI32_MCR711.dmg">Intel32.dmg</a>)
+    Intel macOSintosh OS X 10.4+ 32/64-bit [Download currently unavailable] (MCRInstaller: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_MacI32_MCR711.dmg">Intel32.dmg</a>)
   matlab: >
     CP Cluster: CellProfiler for cluster computing: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_CPCluster_Linux64_9717.tar.gz">Linux 64-bit</a> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Linux64_MCR711.bin">MCRInstaller for GNU Linux 64-bit</a>) <br><br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CP_DevelopersVersion9717.zip">Matlab Source</a> (Requires MATLAB R2009+)
   win_32: <a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_XP32_9717.zip">Windows XP 32-bit</a> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_XP32.exe">MCRInstaller for XP32</a>) <br><br><a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/9717/CompiledCellProfiler_Vista32_9717.zip">Windows Vista (32-bit)</a> (<a href="http://d1zymp9ayga15t.cloudfront.net/content/Distributions/MCR_9717/MCRInstaller_Vista32.exe">MCRInstaller for Vista32</a>)
@@ -69,7 +69,7 @@
 
 - version: <span id="1.0.5811">1.0.5811</span>
   mac: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerMacPPC5811.zip">macOSPPC</a>
-  mac_intel: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilermacOSTiger5811.zip">macOSIntel</a>
+  mac_intel: macOSIntel [Download currently unavailable]
   matlab: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CP_DevelopersVersion5811.zip">Matlab (Developer)</a>
   win_32: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP325811.zip">WindowsXP (32-bit)</a> <br><br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista325811.zip">Windows Vista (32-bit)</a>
   win_64: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerXP645811.zip">WindowsXP (64-bit)</a> <br><br><a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/CompiledCellProfilerVista645811.zip">Windows Vista (64-bit)</a>
@@ -123,9 +123,9 @@
   win_64: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfiler_v1.0.4684.zip">WindowsXP (64-bit)</a>
 
 - version: <span id="1.0.4666">1.0.4666</span>
-  linux: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/LINUX_CellProfilerv1.0.4666.tar.gz">Linux</a>
+  linux: Linux [Download currently unavailable]
   mac: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MAC_CellProfilerv1.0.4666.zip">macOSPPC</a>
-  matlab: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/MATLAB_CellProfilerv1.0.4666.zip">Matlab (Developer)</a>
+  matlab: Matlab (Developer) [Download currently unavailable]
   win_32: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC32_CellProfilerv%201.0.4666.zip">WindowsXP (32-bit)</a>
   win_64: <a href="http://d1zymp9ayga15t.cloudfront.net/content/PreviousReleases/PC64_CellProfilerv1.0.4666.zip">WindowsXP (64-bit)</a>
 
