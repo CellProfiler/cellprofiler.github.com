@@ -54,7 +54,7 @@ Using the [Worm Toolbox](https://doi.org/10.1038/nmeth.1984) for image analysis 
 
 Performing a colocalization assay [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/ExampleColocalization_Tutorial.pdf)] ([relevant example pipeline](/examples#Colocalization))
 
-Simple nuclei identification tutorial [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/CellProfiler_BasicIntroduction.pdf)] ([sample data](http://d1zymp9ayga15t.cloudfront.net/content/Example-RawData_CountNuclei.zip)) (courtesy of the [German BioImaging](http://www.gerbi-gmb.de/) network)
+Simple nuclei identification tutorial [[PDF](http://d1zymp9ayga15t.cloudfront.net/content/CellProfiler_BasicIntroduction.pdf)] ([sample data](http://d1zymp9ayga15t.cloudfront.net/Example-RawData_CountNuclei.zip)) (courtesy of the [German BioImaging](http://www.gerbi-gmb.de/) network)
 
 We also post guided exercises as part of our educational outreach effort [here](/outreach).
 
