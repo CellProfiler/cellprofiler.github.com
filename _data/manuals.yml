@@ -3,11 +3,6 @@
   manual: Manual
 
 - program: CellProfiler
-  version: "3.1.9"
-  manual: >
-    [<a href="http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.1.9/index.html">HTML</a>]
-
-- program: CellProfiler
   version: "3.1.8"
   manual: >
     [<a href="http://cellprofiler-manual.s3.amazonaws.com/CellProfiler-3.1.8/index.html">HTML</a>]
