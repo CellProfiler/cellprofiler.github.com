@@ -1,6 +1,9 @@
 # If the text has more than one colon, include ">" and then a new line with indentation before starting the line of text
 
 3-0-0:
+- version: <span id="3.1.8">3.1.8</span>
+  mac: <a href="https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.8.app.zip">macOS</a>
+  win_64: <a href="https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.8.exe">Windows (64-bit)</a>
 - version: <span id="3.1.5">3.1.5</span>
   mac: <a href="https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.5.app.zip">macOS</a>
   win_64: <a href="https://s3.amazonaws.com/cellprofiler-releases/CellProfiler-3.1.5.exe">Windows (64-bit)</a>
