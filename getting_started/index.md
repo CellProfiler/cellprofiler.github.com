@@ -13,7 +13,7 @@ Getting Started
 
 The quickest way to get up and running with CellProfiler is to
 1. Download [CellProfiler](/releases).
-2. Launch it by double clicking ([Troubleshooting](https://github.com/CellProfiler/CellProfiler/wiki/Windows-Installation-Troubleshooting))
+2. Launch it by double clicking.
 3. The welcome screen pops up: choose the example pipeline (if you are connected to the internet) and run it.
 4. Find an example pipeline and images ([here](/examples)) that are similar to yours and un it.
 5. Adjust the pipeline to your own images.
